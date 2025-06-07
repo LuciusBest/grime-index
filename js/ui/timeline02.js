@@ -1,4 +1,4 @@
-import { loadActiveArchiveData } from "./dataLinker.js";
+import { loadActiveArchiveData } from "../data/dataLinker.js";
 
 loadActiveArchiveData()
   .then(data => {
@@ -76,7 +76,10 @@ loadActiveArchiveData()
     }
 
     function formatTime(sec) {
-      return `${Math.floor(sec)}`;
+      if (!isFinite(sec)) return "0:00";
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? "0" : ""}${s}`;
     }
 
     function updateTimelineCursor(currentTime) {

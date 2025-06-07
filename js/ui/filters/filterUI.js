@@ -1,6 +1,6 @@
 
-import { toggleFilter, activeFilters } from "./activeFilters.js";
-import { getArchiveStates } from "./filterManager.js";
+import { toggleFilter, activeFilters } from "../../data/filters/activeFilters.js";
+import { getArchiveStates } from "../../data/filters/filterManager.js";
 
 export function setupFilterUI(globalIndex) {
   const table = document.querySelector(".global-index-table");

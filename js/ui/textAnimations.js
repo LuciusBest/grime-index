@@ -1,4 +1,4 @@
-import { loadActiveArchiveData } from "./dataLinker.js";
+import { loadActiveArchiveData } from "../data/dataLinker.js";
 
 const video = document.getElementById("background-video");
 let archiveData = {};
