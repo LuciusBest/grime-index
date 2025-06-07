@@ -1,0 +1,157 @@
+/* -------------------- Fonts -------------------- */
+@font-face {
+    font-family: 'Baikal';
+    src: url('../assets/fonts/Baikal VAR-VF.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* -------------------- Audio Reactive Typo -------------------- */
+.audioType_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* Centre verticalement */
+    align-items: flex-start;
+    /* Centre horizontalement */
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1px;
+}
+
+.audioType_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* Assure un centrage vertical dans le flux */
+    gap: 0.1rem;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    /* ContrÃ´le de l'espacement entre lignes */
+
+}
+
+.module {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 500;
+}
+
+.module {
+    position: relative;
+    z-index: 500;
+    cursor: pointer;
+    /* indique que c'est cliquable */
+}
+
+
+
+.inner_text {
+    font-family: 'Baikal', sans-serif;
+    font-size: 1.2rem;
+    line-height: 0.8;
+    display: inline-block;
+    transform-origin: center center;
+    transition: font-size 0.1s ease, font-variation-settings 0.05s ease;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    text-shadow:
+        -1px -1px 0 #000,
+        /* haut-gauche */
+        1px -1px 0 #000,
+        /* haut-droite */
+        -1px 1px 0 #000,
+        /* bas-gauche */
+        1px 1px 0 #000,
+        /* bas-droite */
+        5px 5px 0 rgba(0, 0, 0, 1);
+    /* ombre portÃ©e lointaine */
+    /* Ombre portÃ©e nette */
+    transition: all 0.3s ease;
+}
+
+.module:hover .inner_text {
+    color: red;
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+
+#speaker .inner_text {
+    /* text-transform: uppercase; */
+    font-variation-settings: "wdth" 20, "wght" 600;
+    font-size: 8rem;
+    padding-left: 5rem;
+}
+
+#instrumental .inner_text {
+    /* text-transform: uppercase; */
+    font-variation-settings: "wdth" 90, "wght" 950;
+    letter-spacing: -0.02em;
+    /* font-style: italic; */
+    font-size: 9rem;
+    padding-left: 1 rem;
+}
+
+#lyrics .inner_text {
+    text-transform: none;
+    font-variation-settings: "wdth" 20, "wght" 500;
+    font-size: 6rem;
+    padding-left: 3rem;
+}
+
+.inner_text {
+    line-height: 0.65;
+}
+
+/* Lyrics */
+.lyric-word {
+    display: inline-block;
+    transition: transform 0.05s ease, color 0.05s ease;
+    color: white;
+}
+
+.lyric-word.bump {
+    transform: translate(10px, -10px);
+    color: yellow;
+}
+
+.lyric-word:hover {
+    color: red;
+}
+
+/* Speaker */
+.speaker-name {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    transition: transform 0.6s ease;
+}
+
+/* ---- CORRECTIONS POUR COMPATIBILITÃ‰ ---- */
+#speaker .inner_text {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.speaker-name {
+    z-index: 20;
+    pointer-events: auto;
+    color: white;
+    transition: transform 0.6s ease, color 0.3s ease;
+}
+
+.speaker-name:hover {
+    color: red;
+    transform: translateY(-7px);
+}

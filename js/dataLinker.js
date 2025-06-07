@@ -1,0 +1,47 @@
+// Sélection aléatoire + synchronisation vidéo + data archive
+const videoElement = document.getElementById("background-video");
+const sourceElement = videoElement.querySelector("source");
+
+const videoList = [
+  // {
+  //   file: "videos/VideoExports/Archive_001_LoganSamawithJME&NewhamGeneralsKissOct5th2010.mp4",
+  //   archive: "ARCHIVE_001_data.json"
+  // },
+  // {
+  //   file: "videos/VideoExports/Archive_003_LoganSamaKISSPRESENTSftSkepta,JME,Jammer,Frisco&Shorty(BoyBetterKnow)Jun17th2011.mp4",
+  //   archive: "ARCHIVE_003_data.json"
+  // },
+  {
+    file: "videos/VideoExports/Archive_007_TempaT,Skepta&JMEontheLoganSamashow_02_03_09Part1_2(HD).mp4",
+    archive: "ARCHIVE_007_data.json"
+  }
+];
+
+const randomIndex = Math.floor(Math.random() * videoList.length);
+const selected = videoList[randomIndex];
+
+// Mettre à jour la source vidéo
+sourceElement.src = selected.file;
+videoElement.load();
+
+// Créer ou mettre à jour la balise #active-archive
+let archiveScript = document.getElementById("active-archive");
+if (!archiveScript) {
+  archiveScript = document.createElement("script");
+  archiveScript.id = "active-archive";
+  document.body.appendChild(archiveScript);
+}
+archiveScript.setAttribute("data-archive", selected.archive);
+
+// Log pour debug
+console.log(`🎬 Vidéo : ${selected.file}`);
+console.log(`📁 Data : data/${selected.archive}`);
+
+// Export : fonction pour charger les données JSON associées
+export function loadActiveArchiveData() {
+  const archivePath = selected.archive;
+  return fetch(`data/${archivePath}`).then((res) => {
+    if (!res.ok) throw new Error(`❌ Erreur de chargement : ${archivePath}`);
+    return res.json();
+  });
+}

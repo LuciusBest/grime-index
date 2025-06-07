@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Baikal';
+    src: url('../assets/fonts/Baikal VAR-VF.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* ============= GLOBAL WRAPPER ============= */
+#header {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100dvw;
+    padding: 4px;
+    display: flex;
+    gap: 0.5rem;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+/* ================== LOGO ================== */
+#logowrapper {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid black;
+    background-color: black;
+    cursor: pointer;
+    /* mix-blend-mode: multiply; */
+}
+
+.logo_word_container {
+    padding: 0 3px;
+    font-variation-settings: "wght" 900, "wdth" 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Baikal';
+    font-size: 1.9rem;
+    color: white;
+    background-color: black;
+
+}
+
+#IndexWord {
+    padding: 0 5px;
+}
+
+.logo_word_container.invert {
+    background-color: white;
+    color: black;
+}
+
+.logo_word_container span {
+    display: block;
+}
+
+/* ================== Info Bar ================== */
+
+#infoBar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 1.9rem;
+    font-family: 'Baikal';
+    font-variation-settings: "wght" 500, "wdth" 20;
+}

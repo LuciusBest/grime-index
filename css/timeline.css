@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Baikal';
+    src: url('../assets/fonts/Baikal VAR-VF.ttf') format('truetype');
+    font-style: normal;
+}
+
+/* Container principal */
+#TimelineContainer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    z-index: 30;
+    text-align: center;
+    line-height: 1;
+    font-family: 'Baikal', sans-serif;
+}
+
+/* Zones gauche/droite */
+#TimelineLeft,
+#TimelineRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    background-color: transparent;
+}
+
+#TimelineLeft button,
+#TimelineRight button {
+    border: none;
+    background: white;
+    color: black;
+    font-size: 14px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+/* Zone centrale */
+#TimelineMiddle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Lignes temporelles */
+.timeline-row {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    font-size: 10px;
+    line-height: 1;
+    color: black;
+    background-color: transparent;
+    overflow: hidden;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+
+.timeline-row.hidden {
+    opacity: 0;
+}
+
+/* Blocs speaker/instrumental */
+.speaker-block,
+.instrumental-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 12px;
+    font-family: 'Baikal';
+    font-variation-settings: "wdth" 50, "wght" 400;
+    color: black !important;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #ffffff99;
+}
+
+/* Timeline principale */
+#CustomTimeline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 3px;
+    margin: 1px 0;
+    background-color: #b0b0b0;
+    cursor: pointer;
+}
+
+#TimelineProgress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    z-index: 2;
+}
+
+/* Curseur */
+#TimelineCursorWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    border-radius: 2px;
+    font-family: 'Baikal';
+    font-variation-settings: "wdth" 50, "wght" 400;
+    pointer-events: auto;
+    margin-left: 0;
+    flex-shrink: 0;
+    z-index: 999;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+#TimelineCursorWrapper:hover {
+    width: 34px;
+    height: 22px;
+    font-size: 11px;
+}
+
+/* Texte du curseur */
+#TimelineCursorTime {
+    font-size: 13px;
+    color: inherit;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Ligne verticale */
+#TimelineVerticalLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: black;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 998;
+}

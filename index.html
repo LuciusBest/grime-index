@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grime Index</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/main_style.css" />
+  <!-- <link rel="stylesheet" href="css/index.css" /> -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/textAnimations.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/visualizer.css" />
+
+</head>
+
+<body>
+  <!-- <div id="topbar_wrapper">
+    <div id="topbar">
+    </div>
+  </div> -->
+
+  
+  
+  <!-- header -->
+  <!-- <div id="header">
+    <div id="logowrapper">
+      <div class="logo_word_container invert" id="GrimeWord"><span>Grime</span></div>
+      <div class="logo_word_container" id="IndexWord"><span>Index</span></div>
+      <div class="logo_word_container invert" id="NetWord"><span>.Net</span></div>
+    </div>
+    <div id="infoBar">
+    </div>
+  </div> -->
+    
+  <div id="main_wrapper">
+    <div id="wrapper_1">
+      <!-- Canvas avec effet shader -->
+      <canvas id="video-canvas"></canvas>
+
+      <!-- Vidéo source, cachée -->
+      <video id="background-video" preload="auto" autoplay loop style="display: none;">
+        <source src="videos/VideoExports/Archive_001_LoganSamawithJME&NewhamGeneralsKissOct5th2010.mp4" type="video/mp4">
+      </video>
+
+      
+      <!-- Modules centraux -->
+      <div class="audioType_wrapper">
+        <div class="audioType_container">
+          <div class="module" id="speaker">
+            <div class="inner_text">Speaker</div>
+          </div>
+          <div class="module" id="instrumental">
+            <div class="inner_text">Instrumental</div>
+          </div>
+          <div class="module" id="lyrics">
+            <div class="inner_text">Lyrics</div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Timeline globale  V2-->
+      <div id="TimelineContainer">
+        <div id="TimelineLeft">
+          <button id="play-pause">▶</button>
+        </div>
+
+        <div id="TimelineMiddle">
+          <div id="FriseTemporelle" class="timeline-row hidden"></div>
+          <div id="CustomTimeline">
+            <div id="TimelineProgress"></div>
+            <div id="TimelineCursorWrapper">
+              <div id="TimelineCursorTime">00:00</div>
+            </div>
+            <div id="TimelineVerticalLine"></div>
+          </div>
+          <div id="FriseInstrumentale" class="timeline-row hidden"></div>
+        </div>
+
+        <div id="TimelineRight">
+          <button id="future-button"></button>
+        </div>
+      </div>
+
+
+    </div> <!-- Fin de wrapper 1 -->
+  </div> <!-- Fin de main_wrapper -->
+
+  <!-- Active data file -->
+  <script id="active-archive" data-archive="ARCHIVE_001_data.json"></script>
+
+  <!-- ==== Scripts ==== -->
+  
+  <!-- ==== DATA & VIDEO ==== -->
+  <script src="js/videoPlayer.js"></script>
+  <script type="module" src="js/dataLinker.js"></script>
+
+  <!-- ==== FILTRES ==== -->
+  <!-- <script type="module" src="js/filtreOpen.js"></script> -->
+
+  <!-- ==== VISUALISER ==== -->
+  <!-- <script type="module" src="js/textManagerLyricsAnimation.js"></script>  -->
+  <script type="module" src="js/textManagerLyricsAnimation02.js"></script> 
+  <!-- <script type="module" src="js/eventManager.js"></script>  -->
+  <script src="js/SHADER/videoShader.js"></script>
+  <!-- <script type="module" src="js/textManager.js"></script> 
+  <script type="module" src="js/textAnimations.js"></script>  -->
+  <!-- <script type="module" src="js/timeline.js"></script>  -->
+
+  <!-- ==== TIMELINE ==== -->
+  <!-- <script type="module" src="js/timeline02.js"></script>  -->
+  <script type="module" src="js/timeline03.js"></script> 
+  <!-- <script type="module" src="js/AudioReactiveType/audioReactiveType_02.js"></script>  -->
+  
+
+
+  <!-- ==== SHADERS ==== -->
+  <!-- <script id="active-shader" data-shader="threshold"></script> -->
+  <!-- <script id="active-shader" data-shader="threshold_base"></script> -->
+  <script id="active-shader" data-shader="threshold_grey_gradient"></script>
+  <!-- <script id="active-shader" data-shader="multi-threshold"></script> -->
+  <!-- <script id="active-shader" data-shader="threshold_grey_gradient_outline"></script> -->
+  <!-- Faire des nouveaux Shaders -->
+
+
+  
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Lyrics */
+.lyric-word {
+    display: inline-block;
+    transition: transform 0.05s ease, color 0.05s ease;
+    color: white;
+}
+
+.lyric-word.bump {
+    transform: translate(10px, -10px);
+    color: yellow;
+}
+
+.lyric-word:hover {
+    color: red !important;
+}
+
+/* Speaker */
+/* .speaker-name {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    transition: transform 0.6s ease;
+} */
