@@ -1,4 +1,4 @@
-import { loadActiveArchiveData } from "./dataLinker.js";
+import { loadActiveArchiveData } from "../data/dataLinker.js";
 
 loadActiveArchiveData()
   .then(data => {

@@ -1,15 +1,11 @@
-import { loadActiveArchiveData } from "./dataLinker.js";
+import { loadActiveArchiveData } from "../data/dataLinker.js";
 
 const video = document.getElementById("background-video");
 let archiveData = {};
 let currentSegmentId = null;
 const TOLERANCE = 0.03; // secondes
-const SILENCE_THRESHOLD = 2.0; // secondes
-let activeWords = new Set();
-
-let currentSegment = null;
-let silenceActive = false;
-let lastTime = 0;
+const activeWords = new Set();
+let previousSegmentStart = null;
 
 loadActiveArchiveData()
   .then(json => {
@@ -21,60 +17,25 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    function update() {
+    video.addEventListener("timeupdate", () => {
       const currentTime = video.currentTime;
 
-      // 🔁 Réinitialisation des animations si retour arrière
-      if (currentTime < lastTime) {
-        activeWords = new Set();
-      }
-      lastTime = currentTime;
-
-      // 🔇 Détection de silence
-      const previousSegment = [...archiveData.segments]
-        .filter(seg => seg.end <= currentTime)
-        .sort((a, b) => b.end - a.end)[0];
-      const nextSegment = [...archiveData.segments]
-        .filter(seg => seg.start >= currentTime)
-        .sort((a, b) => a.start - b.start)[0];
-
-      const silenceDetected =
-        previousSegment && nextSegment &&
-        (nextSegment.start - previousSegment.end) >= SILENCE_THRESHOLD &&
-        currentTime > previousSegment.end &&
-        currentTime < nextSegment.start;
-
-      if (silenceDetected) {
-        if (!silenceActive) {
-          silenceActive = true;
-          lyricsDiv.innerHTML = "<span class='lyric-word'>...</span>";
-        }
-        requestAnimationFrame(update);
-        return;
-      } else {
-        silenceActive = false;
-      }
-
-      // 🎙 Segment actif
-      const newSegment = archiveData.segments.find(
+      // 🔎 Trouver le segment actif
+      const currentSegment = archiveData.segments.find(
         (seg) => currentTime >= seg.start && currentTime <= seg.end
       );
-      if (!newSegment) {
-        requestAnimationFrame(update);
-        return;
-      }
-      currentSegment = newSegment;
+      if (!currentSegment) return;
 
-      // 🎤 Speaker
+      // 🎤 Afficher le speaker
       speakerDiv.textContent = currentSegment.speaker || "";
 
-      // 🎼 Instrumental
+      // 🎼 Afficher l'instrumental actif
       const activeInstrumental = (archiveData.instrumentals || []).find(
         (inst) => currentTime >= inst.start && currentTime <= inst.end
       );
       instrumentalDiv.textContent = activeInstrumental ? activeInstrumental.title : "";
 
-      // 📝 Injection mots si changement de segment
+      // 📝 Injecter les mots si le segment change
       if (currentSegment.start !== currentSegmentId) {
         currentSegmentId = currentSegment.start;
         lyricsDiv.innerHTML = "";
@@ -89,8 +50,12 @@ loadActiveArchiveData()
         });
       }
 
-      // 🌀 Animation mot à mot
-      (currentSegment.words || []).forEach((word, index) => {
+      // 🌀 Animation karaoke : état permanent
+      if (currentSegment.start !== previousSegmentStart) {
+        previousSegmentStart = currentSegment.start;
+      }
+
+      currentSegment.words.forEach((word, index) => {
         const el = document.querySelector(`#lyrics .lyric-word[data-word-index="${index}"]`);
         if (!el) return;
 
@@ -100,13 +65,6 @@ loadActiveArchiveData()
           el.classList.add("bump");
         }
       });
-
-      requestAnimationFrame(update);
-    }
-
-    // 🔄 Démarre la boucle dès que la vidéo joue
-    video.addEventListener("play", () => {
-      requestAnimationFrame(update);
     });
   })
   .catch((error) => {

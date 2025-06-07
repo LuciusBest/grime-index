@@ -8,7 +8,11 @@ This repository contains a small web application used to visualize video archive
 assets/   - fonts and logos used by the interface
 css/      - stylesheets for layout, headers, timeline and animations
 data/     - JSON archives and a globalIndex.json index of all segments
-js/       - JavaScript modules powering the site
+js/
+  audio/  - audio‑reactive experiments
+  data/   - archive loader and filter logic
+  ui/     - interface components (timeline, lyrics, filters)
+  video/  - player and WebGL controllers
 shaders/  - GLSL fragment shaders used by the WebGL visualizer
 index.html - main entry point of the site
 ```
@@ -19,11 +23,11 @@ index.html - main entry point of the site
 
 Scripts at the end of the page load data and initialize features:
 
-- `videoPlayer.js` – controls video playback and updates the progress bar.
-- `dataLinker.js` – selects a video and loads its associated JSON archive.
-- `textManagerLyricsAnimation02.js` – displays lyrics word‑by‑word in sync with the video.
-- `timeline03.js` – builds the interactive timeline for speakers and instrumentals.
-- `js/SHADER/videoShader.js` – applies a chosen fragment shader from the `shaders/` folder.
+- `video/videoPlayer.js` – controls video playback and updates the progress bar.
+- `data/dataLinker.js` – selects a video and loads its associated JSON archive.
+- `ui/lyricsDisplay.js` – displays lyrics word‑by‑word in sync with the video.
+- `ui/speakerTimeline.js` – builds the interactive timeline for speakers and instrumentals.
+- `video/shader/videoShader.js` – applies a chosen fragment shader from the `shaders/` folder.
 
 ### Stylesheets
 
@@ -37,7 +41,12 @@ The `css/` folder contains several files:
 
 ### JavaScript modules
 
-The `js/` directory contains modules used by the main page as well as utilities for future features. For example, `filters/` contains scripts to filter the global index by speaker or instrumental and `AudioReactiveType/` provides an audio‑reactive typography experiment.
+The `js/` directory now separates code by function:
+
+- `audio/` contains the audio‑reactive typography experiments.
+- `data/` bundles the archive loader and filtering logic.
+- `ui/` groups visual components like the timeline, lyrics display and filter UI.
+- `video/` hosts the player and WebGL shader controllers.
 
 ### Data files
 
