@@ -4,15 +4,15 @@ const sourceElement = videoElement.querySelector("source");
 
 const videoList = [
   // {
-  //   file: "videos/VideoExports/Archive_001_LoganSamawithJME&NewhamGeneralsKissOct5th2010.mp4",
+  //   file: "videos/VideoExports/Archive_001_LoganSama_JME_NewhamGenerals.mp4",
   //   archive: "ARCHIVE_001_data.json"
   // },
   // {
-  //   file: "videos/VideoExports/Archive_003_LoganSamaKISSPRESENTSftSkepta,JME,Jammer,Frisco&Shorty(BoyBetterKnow)Jun17th2011.mp4",
+  //   file: "videos/VideoExports/Archive_003_LoganSama_Skepta_JME_Jammer_Frisco_Shorty.mp4",
   //   archive: "ARCHIVE_003_data.json"
   // },
   {
-    file: "videos/VideoExports/Archive_007_TempaT,Skepta&JMEontheLoganSamashow_02_03_09Part1_2(HD).mp4",
+    file: "videos/VideoExports/Archive_007_TempaT_Skepta_JME_LoganSama.mp4",
     archive: "ARCHIVE_007_data.json"
   }
 ];
