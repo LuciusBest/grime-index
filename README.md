@@ -34,7 +34,7 @@ Scripts at the end of the page load data and initialize features:
 The `css/` folder contains several files:
 
 - `main_style.css` sets up global page layout.
-- `header.css`, `topbar.css` and `grid.css` style optional header elements.
+- `header.css`, `topbar.css` style optional header elements.
 - `timeline.css` contains the timeline and progress bar styles.
 - `visualizer.css` and `textAnimations.css` define animations for the lyric display.
 - `reset.css` provides a basic reset.
