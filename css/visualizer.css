@@ -130,7 +130,7 @@
 }
 
 .lyric-word.bump:hover {
-    color: red;
+    color: red !important;
 }
 
 /* Speaker */
