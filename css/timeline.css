@@ -63,7 +63,7 @@
     line-height: 1;
     color: black;
     background-color: transparent;
-    overflow: hidden;
+    overflow: visible;
     transition: opacity 0.2s ease;
     opacity: 1;
 }
