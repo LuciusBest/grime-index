@@ -22,12 +22,12 @@ loadActiveArchiveData()
     speakerContainer.innerHTML = "";
 
     speakerSegments.forEach(seg => {
-      const width = ((seg.end - seg.start) / totalTime) * 100;
+      const widthPercent = ((seg.end - seg.start) / totalTime) * 100;
       const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "speaker-block";
-      div.style.width = `${width}%`;
+      div.style.width = `calc(${widthPercent}% - 2px)`;
       div.style.left = `${left}%`;
       div.textContent = seg.speaker;
       div.title = `${seg.speaker} (${formatTime(seg.start)} - ${formatTime(seg.end)})`;
@@ -42,12 +42,12 @@ loadActiveArchiveData()
     instrContainer.innerHTML = "";
 
     instrSegments.forEach(seg => {
-      const width = ((seg.end - seg.start) / totalTime) * 100;
+      const widthPercent = ((seg.end - seg.start) / totalTime) * 100;
       const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "instrumental-block";
-      div.style.width = `${width}%`;
+      div.style.width = `calc(${widthPercent}% - 2px)`;
       div.style.left = `${left}%`;
       const key = `${seg.title} – ${seg.artist}`;
       div.textContent = key;
