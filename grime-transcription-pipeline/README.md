@@ -26,6 +26,7 @@ Amélioration de la structure JSON et détection des chevauchements.
 ### Version 06_exp_03
 Intégration du téléchargement YouTube et du découpage vidéo.
 - Utilise `yt-dlp` et `ffmpeg` pour récupérer et couper la vidéo selon `start_time` et `end_time`.
+- Calcule automatiquement la durée du clip (`end_time - start_time`).
 - Extraction audio synchronisée en WAV 16 kHz, présentation du clip via `Video()` et `Audio()`.
 - Conserve les améliorations de la version précédente (`reloads`, `chorus`, `overlaps`).
 - Nettoyage des fichiers intermédiaires après traitement.
