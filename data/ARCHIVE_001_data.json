@@ -1,6 +1,6 @@
 {
-  "title": "Kiss FM 2008 – Logan Sama After Hours Show",
-  "duration": 869.00,
+  "title": "Kiss FM 2008 \u2013 Logan Sama After Hours Show",
+  "duration": 869.0,
   "instrumentals": [
     {
       "start": 0.0,
@@ -60,10 +60,9 @@
   "reloads": [],
   "segments": [
     {
-      "id": 0,
       "start": 0.0,
-      "end": 9.78,
-      "text": "Yeah! Tired to do that, sorry. Hey! Logan loves this one. Dude,",
+      "end": 7.4,
+      "text": "Yeah! Tired to do that, sorry. Hey!",
       "words": [
         {
           "word": "Yeah!",
@@ -99,7 +98,15 @@
           "word": "Hey!",
           "start": 7.04,
           "end": 7.4
-        },
+        }
+      ],
+      "speaker": "unknown"
+    },
+    {
+      "start": 8.14,
+      "end": 9.78,
+      "text": "Logan loves this one. Dude,",
+      "words": [
         {
           "word": "Logan",
           "start": 8.14,
@@ -129,10 +136,9 @@
       "speaker": "unknown"
     },
     {
-      "id": 1,
       "start": 9.92,
-      "end": 13.66,
-      "text": "forever. Shout out to Tubby, Vigo, Foxy. So, we've got the new",
+      "end": 11.88,
+      "text": "forever. Shout out to Tubby, Vigo, Foxy.",
       "words": [
         {
           "word": "forever.",
@@ -168,7 +174,15 @@
           "word": "Foxy.",
           "start": 11.38,
           "end": 11.88
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 12.88,
+      "end": 13.66,
+      "text": "So, we've got the new",
+      "words": [
         {
           "word": "So,",
           "start": 12.88,
@@ -198,10 +212,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 2,
       "start": 13.66,
-      "end": 16.78,
-      "text": "generals inside the studio. We have got Jeremy inside the studio. So,",
+      "end": 14.9,
+      "text": "generals inside the studio.",
       "words": [
         {
           "word": "generals",
@@ -222,7 +235,15 @@
           "word": "studio.",
           "start": 14.6,
           "end": 14.9
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 15.24,
+      "end": 16.78,
+      "text": "We have got Jeremy inside the studio. So,",
+      "words": [
         {
           "word": "We",
           "start": 15.24,
@@ -267,10 +288,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 3,
       "start": 16.86,
-      "end": 20.4,
-      "text": "Tug of the Fourth is a massive day. Like blam. And we've",
+      "end": 18.14,
+      "text": "Tug of the Fourth is a massive day.",
       "words": [
         {
           "word": "Tug",
@@ -311,7 +331,15 @@
           "word": "day.",
           "start": 17.82,
           "end": 18.14
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 18.900000000000002,
+      "end": 20.4,
+      "text": "Like blam. And we've",
+      "words": [
         {
           "word": "Like",
           "start": 18.900000000000002,
@@ -336,10 +364,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 4,
       "start": 20.4,
-      "end": 22.28,
-      "text": "got 60 minutes of this show, which means I'm going to hand",
+      "end": 22.04,
+      "text": "got 60 minutes of this show, which means I'm",
       "words": [
         {
           "word": "got",
@@ -385,7 +412,15 @@
           "word": "I'm",
           "start": 21.82,
           "end": 22.04
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 22.04,
+      "end": 22.28,
+      "text": "going to hand",
+      "words": [
         {
           "word": "going",
           "start": 22.04,
@@ -405,10 +440,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 5,
       "start": 22.28,
-      "end": 25.8,
-      "text": "it straight over to you now. Everyone ready? Ready! Yeah, let's go.",
+      "end": 24.96,
+      "text": "it straight over to you now. Everyone ready? Ready!",
       "words": [
         {
           "word": "it",
@@ -454,7 +488,15 @@
           "word": "Ready!",
           "start": 24.64,
           "end": 24.96
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 25.32,
+      "end": 25.8,
+      "text": "Yeah, let's go.",
+      "words": [
         {
           "word": "Yeah,",
           "start": 25.32,
@@ -474,10 +516,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 6,
       "start": 31.08,
-      "end": 34.66,
-      "text": "No one's ready to go first. There is the head nodding team.",
+      "end": 32.82,
+      "text": "No one's ready to go first.",
       "words": [
         {
           "word": "No",
@@ -508,7 +549,15 @@
           "word": "first.",
           "start": 32.36,
           "end": 32.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 33.1,
+      "end": 35.9,
+      "text": "There is the head nodding team. Yeah.",
+      "words": [
         {
           "word": "There",
           "start": 33.1,
@@ -538,21 +587,20 @@
           "word": "team.",
           "start": 34.36,
           "end": 34.66
+        },
+        {
+          "word": "Yeah.",
+          "start": 35.34,
+          "end": 35.9
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 7,
-      "start": 35.34,
-      "end": 39.42,
-      "text": "Yeah. He's going to bop for six minutes, Logan. Oh my God.",
+      "start": 36.54,
+      "end": 38.2,
+      "text": "He's going to bop for six minutes, Logan.",
       "words": [
-        {
-          "word": "Yeah.",
-          "start": 35.34,
-          "end": 35.9
-        },
         {
           "word": "He's",
           "start": 36.54,
@@ -592,7 +640,15 @@
           "word": "Logan.",
           "start": 38.04,
           "end": 38.2
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 38.48,
+      "end": 42.0,
+      "text": "Oh my God. Yo!",
+      "words": [
         {
           "word": "Oh",
           "start": 38.48,
@@ -607,21 +663,20 @@
           "word": "God.",
           "start": 39.18,
           "end": 39.42
+        },
+        {
+          "word": "Yo!",
+          "start": 41.44,
+          "end": 42.0
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 8,
-      "start": 41.44,
-      "end": 46.78,
-      "text": "Yo! Blam out now. Bag of grease out now. It's all out",
+      "start": 42.88,
+      "end": 43.96,
+      "text": "Blam out now.",
       "words": [
-        {
-          "word": "Yo!",
-          "start": 41.44,
-          "end": 42.0
-        },
         {
           "word": "Blam",
           "start": 42.88,
@@ -636,7 +691,15 @@
           "word": "now.",
           "start": 43.66,
           "end": 43.96
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 44.18,
+      "end": 45.62,
+      "text": "Bag of grease out now.",
+      "words": [
         {
           "word": "Bag",
           "start": 44.18,
@@ -661,7 +724,15 @@
           "word": "now.",
           "start": 45.22,
           "end": 45.62
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 46.24,
+      "end": 47.06,
+      "text": "It's all out now.",
+      "words": [
         {
           "word": "It's",
           "start": 46.24,
@@ -676,21 +747,20 @@
           "word": "out",
           "start": 46.58,
           "end": 46.78
+        },
+        {
+          "word": "now.",
+          "start": 46.78,
+          "end": 47.06
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 9,
-      "start": 46.78,
-      "end": 53.02,
-      "text": "now. Cop it all. Support the cause, it's real. Real music. Yo!",
+      "start": 47.28,
+      "end": 47.8,
+      "text": "Cop it all.",
       "words": [
-        {
-          "word": "now.",
-          "start": 46.78,
-          "end": 47.06
-        },
         {
           "word": "Cop",
           "start": 47.28,
@@ -705,7 +775,15 @@
           "word": "all.",
           "start": 47.58,
           "end": 47.8
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 48.62,
+      "end": 54.7,
+      "text": "Support the cause, it's real. Real music. Yo! Listen.",
+      "words": [
         {
           "word": "Support",
           "start": 48.62,
@@ -745,28 +823,27 @@
           "word": "Yo!",
           "start": 52.56,
           "end": 53.02
+        },
+        {
+          "word": "Listen.",
+          "start": 54.14,
+          "end": 54.7
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 10,
-      "start": 54.14,
-      "end": 60.54,
-      "text": "Listen. It's Butsy again. Stuff it twice, can't look see again. Don't",
+      "start": 57.12,
+      "end": 58.28,
+      "text": "It's Footsie again.",
       "words": [
-        {
-          "word": "Listen.",
-          "start": 54.14,
-          "end": 54.7
-        },
         {
           "word": "It's",
           "start": 57.12,
           "end": 57.68
         },
         {
-          "word": "Butsy",
+          "word": "Footsie",
           "start": 57.68,
           "end": 58.0
         },
@@ -774,7 +851,15 @@
           "word": "again.",
           "start": 58.0,
           "end": 58.28
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 58.28,
+      "end": 60.54,
+      "text": "Stuff it twice, can't look see again. Don't",
+      "words": [
         {
           "word": "Stuff",
           "start": 58.28,
@@ -819,10 +904,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 11,
       "start": 60.54,
-      "end": 62.8,
-      "text": "know what with Butsy again. It's bare hooks to get your phone.",
+      "end": 61.64,
+      "text": "know what with Footsie again.",
       "words": [
         {
           "word": "know",
@@ -840,7 +924,7 @@
           "end": 61.08
         },
         {
-          "word": "Butsy",
+          "word": "Footsie",
           "start": 61.08,
           "end": 61.4
         },
@@ -848,7 +932,15 @@
           "word": "again.",
           "start": 61.4,
           "end": 61.64
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 61.76,
+      "end": 63.46,
+      "text": "It's bare hooks to get your phone. Footsie again.",
+      "words": [
         {
           "word": "It's",
           "start": 61.76,
@@ -883,18 +975,9 @@
           "word": "phone.",
           "start": 62.56,
           "end": 62.8
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 12,
-      "start": 62.9,
-      "end": 66.36,
-      "text": "Butsy again. And again, yeah. It's Butsy again. Stuff it twice, can't",
-      "words": [
+        },
         {
-          "word": "Butsy",
+          "word": "Footsie",
           "start": 62.9,
           "end": 63.18
         },
@@ -902,7 +985,15 @@
           "word": "again.",
           "start": 63.18,
           "end": 63.46
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 63.62,
+      "end": 64.06,
+      "text": "And again, yeah.",
+      "words": [
         {
           "word": "And",
           "start": 63.62,
@@ -917,14 +1008,22 @@
           "word": "yeah.",
           "start": 63.98,
           "end": 64.06
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 64.36,
+      "end": 65.16,
+      "text": "It's Footsie again.",
+      "words": [
         {
           "word": "It's",
           "start": 64.36,
           "end": 64.54
         },
         {
-          "word": "Butsy",
+          "word": "Footsie",
           "start": 64.54,
           "end": 64.84
         },
@@ -932,7 +1031,15 @@
           "word": "again.",
           "start": 64.84,
           "end": 65.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 65.46,
+      "end": 66.36,
+      "text": "Stuff it twice, can't",
+      "words": [
         {
           "word": "Stuff",
           "start": 65.46,
@@ -957,10 +1064,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 13,
       "start": 66.36,
-      "end": 69.04,
-      "text": "look see now. They're not on it. They don't want it. Watch",
+      "end": 66.9,
+      "text": "look see now.",
       "words": [
         {
           "word": "look",
@@ -976,7 +1082,15 @@
           "word": "now.",
           "start": 66.6,
           "end": 66.9
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 67.2,
+      "end": 67.84,
+      "text": "They're not on it.",
+      "words": [
         {
           "word": "They're",
           "start": 67.2,
@@ -996,7 +1110,15 @@
           "word": "it.",
           "start": 67.7,
           "end": 67.84
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 68.02,
+      "end": 69.04,
+      "text": "They don't want it. Watch",
+      "words": [
         {
           "word": "They",
           "start": 68.02,
@@ -1026,10 +1148,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 14,
       "start": 69.04,
-      "end": 72.08,
-      "text": "the Haramika boy run. You get bare right hooks. Bare left hooks.",
+      "end": 69.92,
+      "text": "the Haramika boy run.",
       "words": [
         {
           "word": "the",
@@ -1050,7 +1171,15 @@
           "word": "run.",
           "start": 69.64,
           "end": 69.92
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 70.16,
+      "end": 71.16,
+      "text": "You get bare right hooks.",
+      "words": [
         {
           "word": "You",
           "start": 70.16,
@@ -1075,7 +1204,15 @@
           "word": "hooks.",
           "start": 70.92,
           "end": 71.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 71.48,
+      "end": 72.08,
+      "text": "Bare left hooks.",
+      "words": [
         {
           "word": "Bare",
           "start": 71.48,
@@ -1095,10 +1232,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 15,
       "start": 72.44,
-      "end": 75.24,
-      "text": "Bare upper cuts. Bare head behind. Left the face of bare cuts.",
+      "end": 72.9,
+      "text": "Bare upper cuts.",
       "words": [
         {
           "word": "Bare",
@@ -1114,7 +1250,15 @@
           "word": "cuts.",
           "start": 72.68,
           "end": 72.9
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 73.28,
+      "end": 73.82,
+      "text": "Bare head behind.",
+      "words": [
         {
           "word": "Bare",
           "start": 73.28,
@@ -1129,7 +1273,15 @@
           "word": "behind.",
           "start": 73.54,
           "end": 73.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 74.44,
+      "end": 75.24,
+      "text": "Left the face of bare cuts.",
+      "words": [
         {
           "word": "Left",
           "start": 74.44,
@@ -1164,10 +1316,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 16,
       "start": 75.24,
-      "end": 77.62,
-      "text": "Don't let me get deep and dry. But then you'll get bare",
+      "end": 76.74,
+      "text": "Don't let me get deep and dry.",
       "words": [
         {
           "word": "Don't",
@@ -1203,7 +1354,15 @@
           "word": "dry.",
           "start": 76.54,
           "end": 76.74
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 76.9,
+      "end": 78.12,
+      "text": "But then you'll get bare right hooks.",
+      "words": [
         {
           "word": "But",
           "start": 76.9,
@@ -1228,16 +1387,7 @@
           "word": "bare",
           "start": 77.4,
           "end": 77.62
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 17,
-      "start": 77.62,
-      "end": 81.42,
-      "text": "right hooks. Bare left hooks. Bare upper cuts. Bare head behind. Left",
-      "words": [
+        },
         {
           "word": "right",
           "start": 77.62,
@@ -1247,7 +1397,15 @@
           "word": "hooks.",
           "start": 77.8,
           "end": 78.12
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 78.4,
+      "end": 78.98,
+      "text": "Bare left hooks.",
+      "words": [
         {
           "word": "Bare",
           "start": 78.4,
@@ -1262,7 +1420,15 @@
           "word": "hooks.",
           "start": 78.68,
           "end": 78.98
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 79.2,
+      "end": 79.82,
+      "text": "Bare upper cuts.",
+      "words": [
         {
           "word": "Bare",
           "start": 79.2,
@@ -1277,7 +1443,15 @@
           "word": "cuts.",
           "start": 79.5,
           "end": 79.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 80.12,
+      "end": 81.42,
+      "text": "Bare head behind. Left",
+      "words": [
         {
           "word": "Bare",
           "start": 80.12,
@@ -1302,10 +1476,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 18,
       "start": 81.42,
-      "end": 85.06,
-      "text": "the face of bare cut. Hey, don't beat my job. I'm not",
+      "end": 82.2,
+      "text": "the face of bare cut.",
       "words": [
         {
           "word": "the",
@@ -1331,7 +1504,15 @@
           "word": "cut.",
           "start": 82.08,
           "end": 82.2
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 82.4,
+      "end": 85.06,
+      "text": "Hey, don't beat my job. I'm not",
+      "words": [
         {
           "word": "Hey,",
           "start": 82.4,
@@ -1371,10 +1552,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 19,
       "start": 85.06,
-      "end": 88.64,
-      "text": "a liberal father. Name an MC that rich father. Then you really",
+      "end": 85.84,
+      "text": "a liberal father.",
       "words": [
         {
           "word": "a",
@@ -1390,7 +1570,15 @@
           "word": "father.",
           "start": 85.32,
           "end": 85.84
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 85.84,
+      "end": 87.62,
+      "text": "Name an MC that rich father.",
+      "words": [
         {
           "word": "Name",
           "start": 85.84,
@@ -1420,7 +1608,15 @@
           "word": "father.",
           "start": 87.22,
           "end": 87.62
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 88.2,
+      "end": 88.64,
+      "text": "Then you really",
+      "words": [
         {
           "word": "Then",
           "start": 88.2,
@@ -1440,10 +1636,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 20,
       "start": 88.64,
-      "end": 91.82,
-      "text": "are my partner. Cause you really are my partner. Ain't got time",
+      "end": 89.32,
+      "text": "are my partner.",
       "words": [
         {
           "word": "are",
@@ -1459,7 +1654,15 @@
           "word": "partner.",
           "start": 88.92,
           "end": 89.32
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 89.7,
+      "end": 91.02,
+      "text": "Cause you really are my partner.",
+      "words": [
         {
           "word": "Cause",
           "start": 89.7,
@@ -1489,7 +1692,15 @@
           "word": "partner.",
           "start": 90.6,
           "end": 91.02
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 91.34,
+      "end": 91.82,
+      "text": "Ain't got time",
+      "words": [
         {
           "word": "Ain't",
           "start": 91.34,
@@ -1509,10 +1720,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 21,
       "start": 91.82,
-      "end": 94.86,
-      "text": "for mucking around. No one to maintain things that got done. Getting",
+      "end": 92.56,
+      "text": "for mucking around.",
       "words": [
         {
           "word": "for",
@@ -1528,7 +1738,15 @@
           "word": "around.",
           "start": 92.26,
           "end": 92.56
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 92.98,
+      "end": 94.86,
+      "text": "No one to maintain things that got done. Getting",
+      "words": [
         {
           "word": "No",
           "start": 92.98,
@@ -1578,10 +1796,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 22,
       "start": 94.86,
-      "end": 97.56,
-      "text": "around, getting around, getting around, getting around, the dick tent to the",
+      "end": 97.14,
+      "text": "around, getting around, getting around, getting around, the dick",
       "words": [
         {
           "word": "around,",
@@ -1627,7 +1844,15 @@
           "word": "dick",
           "start": 96.94,
           "end": 97.14
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 97.14,
+      "end": 97.56,
+      "text": "tent to the",
+      "words": [
         {
           "word": "tent",
           "start": 97.14,
@@ -1647,10 +1872,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 23,
       "start": 97.56,
-      "end": 100.02,
-      "text": "tan like brown. The dick tent to the tan like crack, you're",
+      "end": 98.26,
+      "text": "tan like brown.",
       "words": [
         {
           "word": "tan",
@@ -1666,7 +1890,15 @@
           "word": "brown.",
           "start": 97.96,
           "end": 98.26
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 98.54,
+      "end": 100.02,
+      "text": "The dick tent to the tan like crack, you're",
+      "words": [
         {
           "word": "The",
           "start": 98.54,
@@ -1716,10 +1948,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 24,
       "start": 100.02,
-      "end": 103.0,
-      "text": "the tall soldier. It's for the back. The inside, the inside, the",
+      "end": 100.66,
+      "text": "the tall soldier.",
       "words": [
         {
           "word": "the",
@@ -1735,7 +1966,15 @@
           "word": "soldier.",
           "start": 100.28,
           "end": 100.66
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 101.06,
+      "end": 101.68,
+      "text": "It's for the back.",
+      "words": [
         {
           "word": "It's",
           "start": 101.06,
@@ -1755,7 +1994,15 @@
           "word": "back.",
           "start": 101.38,
           "end": 101.68
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 102.02,
+      "end": 103.28,
+      "text": "The inside, the inside, the back.",
+      "words": [
         {
           "word": "The",
           "start": 102.02,
@@ -1780,21 +2027,20 @@
           "word": "the",
           "start": 102.8,
           "end": 103.0
+        },
+        {
+          "word": "back.",
+          "start": 103.0,
+          "end": 103.28
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 25,
-      "start": 103.0,
-      "end": 104.84,
-      "text": "back. Keep up with the time, think I'm who I'm for the",
+      "start": 103.38,
+      "end": 104.6,
+      "text": "Keep up with the time, think I'm who I'm",
       "words": [
-        {
-          "word": "back.",
-          "start": 103.0,
-          "end": 103.28
-        },
         {
           "word": "Keep",
           "start": 103.38,
@@ -1839,7 +2085,15 @@
           "word": "I'm",
           "start": 104.56,
           "end": 104.6
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 104.6,
+      "end": 105.14,
+      "text": "for the back.",
+      "words": [
         {
           "word": "for",
           "start": 104.6,
@@ -1849,21 +2103,20 @@
           "word": "the",
           "start": 104.72,
           "end": 104.84
+        },
+        {
+          "word": "back.",
+          "start": 104.84,
+          "end": 105.14
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 26,
-      "start": 104.84,
-      "end": 107.2,
-      "text": "back. I'm boxing some more, so I'm gonna get in my come",
+      "start": 105.54,
+      "end": 106.94,
+      "text": "I'm boxing some more, so I'm gonna get in",
       "words": [
-        {
-          "word": "back.",
-          "start": 104.84,
-          "end": 105.14
-        },
         {
           "word": "I'm",
           "start": 105.54,
@@ -1908,7 +2161,15 @@
           "word": "in",
           "start": 106.8,
           "end": 106.94
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 106.94,
+      "end": 108.02,
+      "text": "my come and eat my toes.",
+      "words": [
         {
           "word": "my",
           "start": 106.94,
@@ -1918,16 +2179,7 @@
           "word": "come",
           "start": 107.06,
           "end": 107.2
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 27,
-      "start": 107.2,
-      "end": 109.8,
-      "text": "and eat my toes. Come and eat plan and your friend cross.",
-      "words": [
+        },
         {
           "word": "and",
           "start": 107.2,
@@ -1947,7 +2199,15 @@
           "word": "toes.",
           "start": 107.76,
           "end": 108.02
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 108.38,
+      "end": 109.8,
+      "text": "Come and eat plan and your friend cross.",
+      "words": [
         {
           "word": "Come",
           "start": 108.38,
@@ -1992,10 +2252,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 28,
       "start": 110.08,
-      "end": 114.32,
-      "text": "So from the winner, my truck, my heart. I'm like an intervention.",
+      "end": 112.0,
+      "text": "So from the winner, my truck, my heart.",
       "words": [
         {
           "word": "So",
@@ -2036,7 +2295,15 @@
           "word": "heart.",
           "start": 111.62,
           "end": 112.0
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 113.2,
+      "end": 114.32,
+      "text": "I'm like an intervention.",
+      "words": [
         {
           "word": "I'm",
           "start": 113.2,
@@ -2061,10 +2328,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 29,
       "start": 114.32,
-      "end": 118.44,
-      "text": "Silence, sniper, filled attention. No silence, sub -bear attention. You could be",
+      "end": 116.1,
+      "text": "Silence, sniper, filled attention.",
       "words": [
         {
           "word": "Silence,",
@@ -2085,7 +2351,15 @@
           "word": "attention.",
           "start": 115.7,
           "end": 116.1
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 116.3,
+      "end": 117.74,
+      "text": "No silence, sub -bear attention.",
+      "words": [
         {
           "word": "No",
           "start": 116.3,
@@ -2110,7 +2384,15 @@
           "word": "attention.",
           "start": 117.38,
           "end": 117.74
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 118.06,
+      "end": 118.44,
+      "text": "You could be",
+      "words": [
         {
           "word": "You",
           "start": 118.06,
@@ -2130,10 +2412,9 @@
       "speaker": "JME"
     },
     {
-      "id": 30,
       "start": 118.44,
-      "end": 121.82,
-      "text": "young or old, collecting your gyro or receiving pension. You could be",
+      "end": 121.16,
+      "text": "young or old, collecting your gyro or receiving pension.",
       "words": [
         {
           "word": "young",
@@ -2179,7 +2460,15 @@
           "word": "pension.",
           "start": 120.78,
           "end": 121.16
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 121.46,
+      "end": 121.82,
+      "text": "You could be",
+      "words": [
         {
           "word": "You",
           "start": 121.46,
@@ -2199,10 +2488,9 @@
       "speaker": "JME"
     },
     {
-      "id": 31,
       "start": 121.82,
-      "end": 125.14,
-      "text": "a little kid in detention. You man get smoked like Benson. Head",
+      "end": 122.84,
+      "text": "a little kid in detention.",
       "words": [
         {
           "word": "a",
@@ -2228,7 +2516,15 @@
           "word": "detention.",
           "start": 122.48,
           "end": 122.84
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 123.34,
+      "end": 125.14,
+      "text": "You man get smoked like Benson. Head",
+      "words": [
         {
           "word": "You",
           "start": 123.34,
@@ -2268,10 +2564,9 @@
       "speaker": "JME"
     },
     {
-      "id": 32,
       "start": 125.14,
-      "end": 128.58,
-      "text": "up way too many dimension. Come like a cranium convention. You don't",
+      "end": 126.22,
+      "text": "up way too many dimension.",
       "words": [
         {
           "word": "up",
@@ -2297,7 +2592,15 @@
           "word": "dimension.",
           "start": 125.9,
           "end": 126.22
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 126.58,
+      "end": 128.58,
+      "text": "Come like a cranium convention. You don't",
+      "words": [
         {
           "word": "Come",
           "start": 126.58,
@@ -2337,10 +2640,9 @@
       "speaker": "JME"
     },
     {
-      "id": 33,
       "start": 128.58,
-      "end": 133.9,
-      "text": "hedge that's water retention. So, check out the new invention. Slap man",
+      "end": 129.74,
+      "text": "hedge that's water retention.",
       "words": [
         {
           "word": "hedge",
@@ -2361,7 +2663,15 @@
           "word": "retention.",
           "start": 129.22,
           "end": 129.74
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 131.52,
+      "end": 133.9,
+      "text": "So, check out the new invention. Slap man",
+      "words": [
         {
           "word": "So,",
           "start": 131.52,
@@ -2406,10 +2716,9 @@
       "speaker": "JME"
     },
     {
-      "id": 34,
       "start": 133.9,
-      "end": 136.86,
-      "text": "into the fourth dimension. You know I'm dirty and stank, but I'm",
+      "end": 134.9,
+      "text": "into the fourth dimension.",
       "words": [
         {
           "word": "into",
@@ -2430,7 +2739,15 @@
           "word": "dimension.",
           "start": 134.5,
           "end": 134.9
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 135.28,
+      "end": 136.86,
+      "text": "You know I'm dirty and stank, but I'm",
+      "words": [
         {
           "word": "You",
           "start": 135.28,
@@ -2475,10 +2792,9 @@
       "speaker": "JME"
     },
     {
-      "id": 35,
       "start": 136.86,
-      "end": 140.42,
-      "text": "behind these two like Mr. Depplin. Say, look, I'm going with the",
+      "end": 138.4,
+      "text": "behind these two like Mr. Depplin.",
       "words": [
         {
           "word": "behind",
@@ -2509,7 +2825,15 @@
           "word": "Depplin.",
           "start": 138.04,
           "end": 138.4
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 138.62,
+      "end": 140.42,
+      "text": "Say, look, I'm going with the",
+      "words": [
         {
           "word": "Say,",
           "start": 138.62,
@@ -2544,10 +2868,9 @@
       "speaker": "JME"
     },
     {
-      "id": 36,
       "start": 140.42,
-      "end": 143.34,
-      "text": "rats. Flip the food chain, eating the cats. Cats with food and",
+      "end": 142.34,
+      "text": "rats. Flip the food chain, eating the cats.",
       "words": [
         {
           "word": "rats.",
@@ -2588,7 +2911,15 @@
           "word": "cats.",
           "start": 142.08,
           "end": 142.34
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 142.34,
+      "end": 143.34,
+      "text": "Cats with food and",
+      "words": [
         {
           "word": "Cats",
           "start": 142.34,
@@ -2613,10 +2944,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 37,
       "start": 143.34,
-      "end": 146.24,
-      "text": "cats with B. Cats with white and cats with B. None of",
+      "end": 144.04,
+      "text": "cats with B.",
       "words": [
         {
           "word": "cats",
@@ -2632,7 +2962,15 @@
           "word": "B.",
           "start": 143.76,
           "end": 144.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 144.24,
+      "end": 146.24,
+      "text": "Cats with white and cats with B. None of",
+      "words": [
         {
           "word": "Cats",
           "start": 144.24,
@@ -2682,10 +3020,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 38,
       "start": 146.24,
-      "end": 148.22,
-      "text": "these cats can't f with me. They can get done, no, I",
+      "end": 147.38,
+      "text": "these cats can't f with me.",
       "words": [
         {
           "word": "these",
@@ -2716,7 +3053,15 @@
           "word": "me.",
           "start": 147.18,
           "end": 147.38
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 147.48,
+      "end": 148.22,
+      "text": "They can get done, no, I",
+      "words": [
         {
           "word": "They",
           "start": 147.48,
@@ -2751,10 +3096,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 39,
       "start": 148.22,
-      "end": 150.38,
-      "text": "beg at F and G. What do I get by the N",
+      "end": 149.12,
+      "text": "beg at F and G.",
       "words": [
         {
           "word": "beg",
@@ -2780,7 +3124,15 @@
           "word": "G.",
           "start": 148.88,
           "end": 149.12
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 149.5,
+      "end": 150.38,
+      "text": "What do I get by the N",
+      "words": [
         {
           "word": "What",
           "start": 149.5,
@@ -2820,10 +3172,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 40,
       "start": 150.38,
-      "end": 152.32,
-      "text": "in the G? And I can't forget by the N in the",
+      "end": 150.8,
+      "text": "in the G?",
       "words": [
         {
           "word": "in",
@@ -2839,7 +3190,15 @@
           "word": "G?",
           "start": 150.62,
           "end": 150.8
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 150.92,
+      "end": 152.32,
+      "text": "And I can't forget by the N in the",
+      "words": [
         {
           "word": "And",
           "start": 150.92,
@@ -2889,10 +3248,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 41,
       "start": 152.32,
-      "end": 155.14,
-      "text": "G right now. N in the G. What do you get about",
+      "end": 153.04,
+      "text": "G right now.",
       "words": [
         {
           "word": "G",
@@ -2908,7 +3266,15 @@
           "word": "now.",
           "start": 152.72,
           "end": 153.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 153.6,
+      "end": 154.32,
+      "text": "N in the G.",
+      "words": [
         {
           "word": "N",
           "start": 153.6,
@@ -2928,7 +3294,15 @@
           "word": "G.",
           "start": 154.02,
           "end": 154.32
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 154.58,
+      "end": 155.14,
+      "text": "What do you get about",
+      "words": [
         {
           "word": "What",
           "start": 154.58,
@@ -2958,10 +3332,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 42,
       "start": 155.14,
-      "end": 157.36,
-      "text": "the N in the G? I got the power, the N in",
+      "end": 156.0,
+      "text": "the N in the G?",
       "words": [
         {
           "word": "the",
@@ -2987,7 +3360,15 @@
           "word": "G?",
           "start": 155.74,
           "end": 156.0
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 156.18,
+      "end": 157.36,
+      "text": "I got the power, the N in",
+      "words": [
         {
           "word": "I",
           "start": 156.18,
@@ -3027,10 +3408,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 43,
       "start": 157.36,
-      "end": 159.38,
-      "text": "the G to send them why they get send me to me.",
+      "end": 158.88,
+      "text": "the G to send them why they get send",
       "words": [
         {
           "word": "the",
@@ -3076,7 +3456,15 @@
           "word": "send",
           "start": 158.74,
           "end": 158.88
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 158.88,
+      "end": 159.38,
+      "text": "me to me.",
+      "words": [
         {
           "word": "me",
           "start": 158.88,
@@ -3096,10 +3484,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 44,
       "start": 159.46,
-      "end": 162.06,
-      "text": "Now none of them youths hate me, to me, they youths. They're",
+      "end": 161.1,
+      "text": "Now none of them youths hate me, to me,",
       "words": [
         {
           "word": "Now",
@@ -3145,7 +3532,15 @@
           "word": "me,",
           "start": 160.88,
           "end": 161.1
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 161.16,
+      "end": 162.06,
+      "text": "they youths. They're",
+      "words": [
         {
           "word": "they",
           "start": 161.16,
@@ -3165,10 +3560,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 45,
       "start": 162.06,
-      "end": 165.18,
-      "text": "not ready to me. They're not goons, they're men of fruits. They're",
+      "end": 162.84,
+      "text": "not ready to me.",
       "words": [
         {
           "word": "not",
@@ -3189,7 +3583,15 @@
           "word": "me.",
           "start": 162.6,
           "end": 162.84
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 163.12,
+      "end": 165.18,
+      "text": "They're not goons, they're men of fruits. They're",
+      "words": [
         {
           "word": "They're",
           "start": 163.12,
@@ -3234,10 +3636,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 46,
       "start": 165.18,
-      "end": 173.72,
-      "text": "little strawberries to me. Hey, ooh, save it. Go T .T. T",
+      "end": 166.34,
+      "text": "little strawberries to me.",
       "words": [
         {
           "word": "little",
@@ -3258,7 +3659,15 @@
           "word": "me.",
           "start": 166.08,
           "end": 166.34
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 168.16,
+      "end": 169.96,
+      "text": "Hey, ooh, save it.",
+      "words": [
         {
           "word": "Hey,",
           "start": 168.16,
@@ -3278,7 +3687,15 @@
           "word": "it.",
           "start": 169.72,
           "end": 169.96
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 172.34,
+      "end": 173.72,
+      "text": "Go T .T. T",
+      "words": [
         {
           "word": "Go",
           "start": 172.34,
@@ -3303,10 +3720,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 47,
       "start": 173.72,
-      "end": 180.64,
-      "text": ".T .T .T .T. What? T .T .T .T .T. Don't be",
+      "end": 177.64,
+      "text": ".T .T .T .T. What?",
       "words": [
         {
           "word": ".T",
@@ -3332,7 +3748,15 @@
           "word": "What?",
           "start": 177.04,
           "end": 177.64
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 179.0,
+      "end": 180.64,
+      "text": "T .T .T .T .T. Don't be",
+      "words": [
         {
           "word": "T",
           "start": 179.0,
@@ -3372,10 +3796,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 48,
       "start": 180.64,
-      "end": 184.94,
-      "text": "a peanut like a man. Fast 50 like a man. Hey, man,",
+      "end": 181.56,
+      "text": "a peanut like a man.",
       "words": [
         {
           "word": "a",
@@ -3401,7 +3824,15 @@
           "word": "man.",
           "start": 181.48,
           "end": 181.56
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 181.96,
+      "end": 184.94,
+      "text": "Fast 50 like a man. Hey, man,",
+      "words": [
         {
           "word": "Fast",
           "start": 181.96,
@@ -3441,10 +3872,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 49,
       "start": 185.02,
-      "end": 192.48,
-      "text": "don't be a peanut. Stop everything, my son. Too much, bro. T",
+      "end": 187.98,
+      "text": "don't be a peanut.",
       "words": [
         {
           "word": "don't",
@@ -3465,7 +3895,15 @@
           "word": "peanut.",
           "start": 187.68,
           "end": 187.98
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 188.3,
+      "end": 189.52,
+      "text": "Stop everything, my son.",
+      "words": [
         {
           "word": "Stop",
           "start": 188.3,
@@ -3485,7 +3923,15 @@
           "word": "son.",
           "start": 189.34,
           "end": 189.52
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 191.0,
+      "end": 192.82,
+      "text": "Too much, bro. T .T .T.",
+      "words": [
         {
           "word": "Too",
           "start": 191.0,
@@ -3505,16 +3951,7 @@
           "word": "T",
           "start": 192.34,
           "end": 192.48
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 50,
-      "start": 192.48,
-      "end": 198.94,
-      "text": ".T .T. This one skipped out. Pick up everybody that's locked. Oh,",
-      "words": [
+        },
         {
           "word": ".T",
           "start": 192.48,
@@ -3524,7 +3961,15 @@
           "word": ".T.",
           "start": 192.66,
           "end": 192.82
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 192.92,
+      "end": 194.08,
+      "text": "This one skipped out.",
+      "words": [
         {
           "word": "This",
           "start": 192.92,
@@ -3544,7 +3989,15 @@
           "word": "out.",
           "start": 193.48,
           "end": 194.08
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 195.08,
+      "end": 199.74,
+      "text": "Pick up everybody that's locked. Oh, my word.",
+      "words": [
         {
           "word": "Pick",
           "start": 195.08,
@@ -3574,16 +4027,7 @@
           "word": "Oh,",
           "start": 198.4,
           "end": 198.94
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 51,
-      "start": 199.02,
-      "end": 204.92,
-      "text": "my word. Oh, my word. Like M &M. Fast 50 like M",
-      "words": [
+        },
         {
           "word": "my",
           "start": 199.02,
@@ -3593,7 +4037,15 @@
           "word": "word.",
           "start": 199.18,
           "end": 199.74
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 201.28,
+      "end": 202.32,
+      "text": "Oh, my word.",
+      "words": [
         {
           "word": "Oh,",
           "start": 201.28,
@@ -3608,7 +4060,15 @@
           "word": "word.",
           "start": 202.32,
           "end": 202.32
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 202.32,
+      "end": 203.72,
+      "text": "Like M &M.",
+      "words": [
         {
           "word": "Like",
           "start": 202.32,
@@ -3623,7 +4083,15 @@
           "word": "&M.",
           "start": 203.22,
           "end": 203.72
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 203.8,
+      "end": 205.26,
+      "text": "Fast 50 like M &M.",
+      "words": [
         {
           "word": "Fast",
           "start": 203.8,
@@ -3643,21 +4111,20 @@
           "word": "M",
           "start": 204.74,
           "end": 204.92
+        },
+        {
+          "word": "&M.",
+          "start": 204.92,
+          "end": 205.26
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 52,
-      "start": 204.92,
-      "end": 209.14,
-      "text": "&M. Aim at them if you miss. Reload aim it again. Because",
+      "start": 205.26,
+      "end": 207.38,
+      "text": "Aim at them if you miss.",
       "words": [
-        {
-          "word": "&M.",
-          "start": 204.92,
-          "end": 205.26
-        },
         {
           "word": "Aim",
           "start": 205.26,
@@ -3687,7 +4154,15 @@
           "word": "miss.",
           "start": 207.14,
           "end": 207.38
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 207.62,
+      "end": 209.14,
+      "text": "Reload aim it again. Because",
+      "words": [
         {
           "word": "Reload",
           "start": 207.62,
@@ -3717,10 +4192,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 53,
       "start": 209.14,
-      "end": 212.22,
-      "text": "you know that the roads are bumpy. Just like a pump here",
+      "end": 210.46,
+      "text": "you know that the roads are bumpy.",
       "words": [
         {
           "word": "you",
@@ -3756,7 +4230,15 @@
           "word": "bumpy.",
           "start": 210.08,
           "end": 210.46
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 210.78,
+      "end": 212.22,
+      "text": "Just like a pump here",
+      "words": [
         {
           "word": "Just",
           "start": 210.78,
@@ -3786,10 +4268,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 54,
       "start": 212.22,
-      "end": 215.5,
-      "text": "like a glock 26. There's no safety. Listen for your own safety.",
+      "end": 212.92,
+      "text": "like a glock 26.",
       "words": [
         {
           "word": "like",
@@ -3810,7 +4291,15 @@
           "word": "26.",
           "start": 212.66,
           "end": 212.92
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 213.14,
+      "end": 213.9,
+      "text": "There's no safety.",
+      "words": [
         {
           "word": "There's",
           "start": 213.14,
@@ -3825,7 +4314,15 @@
           "word": "safety.",
           "start": 213.54,
           "end": 213.9
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 214.48,
+      "end": 215.5,
+      "text": "Listen for your own safety.",
+      "words": [
         {
           "word": "Listen",
           "start": 214.48,
@@ -3855,10 +4352,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 55,
       "start": 215.82,
-      "end": 218.92,
-      "text": "Don't be a peanut like M &M. Fast 50 like M &M.",
+      "end": 217.4,
+      "text": "Don't be a peanut like M &M.",
       "words": [
         {
           "word": "Don't",
@@ -3894,7 +4390,15 @@
           "word": "&M.",
           "start": 216.94,
           "end": 217.4
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 217.72,
+      "end": 218.92,
+      "text": "Fast 50 like M &M.",
+      "words": [
         {
           "word": "Fast",
           "start": 217.72,
@@ -3924,10 +4428,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 56,
       "start": 218.98,
-      "end": 223.02,
-      "text": "Aim at them if you miss. Reload aim it again. Because you",
+      "end": 221.12,
+      "text": "Aim at them if you miss.",
       "words": [
         {
           "word": "Aim",
@@ -3958,7 +4461,15 @@
           "word": "miss.",
           "start": 220.8,
           "end": 221.12
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 221.38,
+      "end": 223.02,
+      "text": "Reload aim it again. Because you",
+      "words": [
         {
           "word": "Reload",
           "start": 221.38,
@@ -3993,10 +4504,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 57,
       "start": 223.02,
-      "end": 226.08,
-      "text": "know that the roads are bumpy. Just like a pump here like",
+      "end": 224.2,
+      "text": "know that the roads are bumpy.",
       "words": [
         {
           "word": "know",
@@ -4027,7 +4537,15 @@
           "word": "bumpy.",
           "start": 223.8,
           "end": 224.2
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 224.52,
+      "end": 226.08,
+      "text": "Just like a pump here like",
+      "words": [
         {
           "word": "Just",
           "start": 224.52,
@@ -4062,10 +4580,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 58,
       "start": 226.08,
-      "end": 232.42000000000002,
-      "text": "a glock 26. There's no safety. Listen for your own safety. Too",
+      "end": 226.6,
+      "text": "a glock 26.",
       "words": [
         {
           "word": "a",
@@ -4081,7 +4598,15 @@
           "word": "26.",
           "start": 226.38,
           "end": 226.6
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 226.6,
+      "end": 227.6,
+      "text": "There's no safety.",
+      "words": [
         {
           "word": "There's",
           "start": 226.6,
@@ -4096,7 +4621,15 @@
           "word": "safety.",
           "start": 227.06,
           "end": 227.6
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 228.1,
+      "end": 232.42000000000002,
+      "text": "Listen for your own safety. Too",
+      "words": [
         {
           "word": "Listen",
           "start": 228.1,
@@ -4131,10 +4664,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 59,
       "start": 232.42000000000002,
-      "end": 236.88,
-      "text": "much. Rewind up. I don't care, Rewind boy. I'll slap guys. I",
+      "end": 234.54,
+      "text": "much. Rewind up.",
       "words": [
         {
           "word": "much.",
@@ -4150,7 +4682,15 @@
           "word": "up.",
           "start": 234.26,
           "end": 234.54
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 235.08,
+      "end": 236.0,
+      "text": "I don't care, Rewind boy.",
+      "words": [
         {
           "word": "I",
           "start": 235.08,
@@ -4175,7 +4715,15 @@
           "word": "boy.",
           "start": 235.78,
           "end": 236.0
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 236.08,
+      "end": 236.88,
+      "text": "I'll slap guys. I",
+      "words": [
         {
           "word": "I'll",
           "start": 236.08,
@@ -4200,10 +4748,9 @@
       "speaker": "JME"
     },
     {
-      "id": 60,
       "start": 236.88,
-      "end": 242.54,
-      "text": "don't care, Rewind boy. I don't care, Rewind boy. Hey, that's the",
+      "end": 237.72,
+      "text": "don't care, Rewind boy.",
       "words": [
         {
           "word": "don't",
@@ -4224,7 +4771,15 @@
           "word": "boy.",
           "start": 237.54,
           "end": 237.72
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 237.86,
+      "end": 239.38,
+      "text": "I don't care, Rewind boy.",
+      "words": [
         {
           "word": "I",
           "start": 237.86,
@@ -4249,7 +4804,15 @@
           "word": "boy.",
           "start": 239.24,
           "end": 239.38
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 241.26,
+      "end": 242.54,
+      "text": "Hey, that's the",
+      "words": [
         {
           "word": "Hey,",
           "start": 241.26,
@@ -4269,10 +4832,9 @@
       "speaker": "JME"
     },
     {
-      "id": 61,
       "start": 242.54,
-      "end": 245.48,
-      "text": "moj, I swear. When I'm driving, that's all I say, bro. I",
+      "end": 243.04,
+      "text": "moj, I swear.",
       "words": [
         {
           "word": "moj,",
@@ -4288,7 +4850,15 @@
           "word": "swear.",
           "start": 242.88,
           "end": 243.04
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 243.4,
+      "end": 245.48,
+      "text": "When I'm driving, that's all I say, bro. I",
+      "words": [
         {
           "word": "When",
           "start": 243.4,
@@ -4338,10 +4908,9 @@
       "speaker": "JME"
     },
     {
-      "id": 62,
       "start": 245.48,
-      "end": 247.98,
-      "text": "don't care, Rewind boy. I'll slap guys. I don't care, Rewind boy.",
+      "end": 246.26,
+      "text": "don't care, Rewind boy.",
       "words": [
         {
           "word": "don't",
@@ -4362,7 +4931,15 @@
           "word": "boy.",
           "start": 246.08,
           "end": 246.26
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 246.38,
+      "end": 246.98,
+      "text": "I'll slap guys.",
+      "words": [
         {
           "word": "I'll",
           "start": 246.38,
@@ -4377,7 +4954,15 @@
           "word": "guys.",
           "start": 246.64,
           "end": 246.98
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 247.14,
+      "end": 247.98,
+      "text": "I don't care, Rewind boy.",
+      "words": [
         {
           "word": "I",
           "start": 247.14,
@@ -4407,10 +4992,9 @@
       "speaker": "JME"
     },
     {
-      "id": 63,
       "start": 248.16,
-      "end": 250.62,
-      "text": "I'll slap guys. I don't care, Rewind boy. I'll slap guys. I",
+      "end": 248.7,
+      "text": "I'll slap guys.",
       "words": [
         {
           "word": "I'll",
@@ -4426,7 +5010,15 @@
           "word": "guys.",
           "start": 248.38,
           "end": 248.7
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 248.7,
+      "end": 249.84,
+      "text": "I don't care, Rewind boy.",
+      "words": [
         {
           "word": "I",
           "start": 248.7,
@@ -4451,7 +5043,15 @@
           "word": "boy.",
           "start": 249.66,
           "end": 249.84
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 249.84,
+      "end": 250.62,
+      "text": "I'll slap guys. I",
+      "words": [
         {
           "word": "I'll",
           "start": 249.84,
@@ -4476,10 +5076,9 @@
       "speaker": "JME"
     },
     {
-      "id": 64,
       "start": 250.62,
-      "end": 257.44,
-      "text": "don't care, Rewind boy. Alright, big up teaser. Look in my bow,",
+      "end": 251.4,
+      "text": "don't care, Rewind boy.",
       "words": [
         {
           "word": "don't",
@@ -4500,7 +5099,15 @@
           "word": "boy.",
           "start": 251.22,
           "end": 251.4
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 253.72000000000003,
+      "end": 254.84,
+      "text": "Alright, big up teaser.",
+      "words": [
         {
           "word": "Alright,",
           "start": 253.72000000000003,
@@ -4520,7 +5127,15 @@
           "word": "teaser.",
           "start": 254.56,
           "end": 254.84
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 256.64,
+      "end": 257.88,
+      "text": "Look in my bow, fine.",
+      "words": [
         {
           "word": "Look",
           "start": 256.64,
@@ -4540,21 +5155,20 @@
           "word": "bow,",
           "start": 257.3,
           "end": 257.44
+        },
+        {
+          "word": "fine.",
+          "start": 257.66,
+          "end": 257.88
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 65,
-      "start": 257.66,
-      "end": 260.5,
-      "text": "fine. You're the reason I rode this rhyme. Yo man, I bait",
+      "start": 258.16,
+      "end": 259.6,
+      "text": "You're the reason I rode this rhyme.",
       "words": [
-        {
-          "word": "fine.",
-          "start": 257.66,
-          "end": 257.88
-        },
         {
           "word": "You're",
           "start": 258.16,
@@ -4589,7 +5203,15 @@
           "word": "rhyme.",
           "start": 259.4,
           "end": 259.6
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 259.9,
+      "end": 260.82,
+      "text": "Yo man, I bait as man.",
+      "words": [
         {
           "word": "Yo",
           "start": 259.9,
@@ -4609,16 +5231,7 @@
           "word": "bait",
           "start": 260.32,
           "end": 260.5
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 66,
-      "start": 260.5,
-      "end": 262.38,
-      "text": "as man. I've had man, man, I ain't seen a fight. I",
-      "words": [
+        },
         {
           "word": "as",
           "start": 260.5,
@@ -4628,7 +5241,15 @@
           "word": "man.",
           "start": 260.66,
           "end": 260.82
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 260.9,
+      "end": 262.18,
+      "text": "I've had man, man, I ain't seen a fight.",
+      "words": [
         {
           "word": "I've",
           "start": 260.9,
@@ -4673,21 +5294,20 @@
           "word": "fight.",
           "start": 262.0,
           "end": 262.18
-        },
-        {
-          "word": "I",
-          "start": 262.38,
-          "end": 262.38
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 67,
       "start": 262.38,
-      "end": 265.64,
-      "text": "know in time. Yo, can't disappoint of mine. Trust me, you don't",
+      "end": 263.02,
+      "text": "I know in time.",
       "words": [
+        {
+          "word": "I",
+          "start": 262.38,
+          "end": 262.38
+        },
         {
           "word": "know",
           "start": 262.38,
@@ -4702,7 +5322,15 @@
           "word": "time.",
           "start": 262.76,
           "end": 263.02
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 263.32,
+      "end": 264.72,
+      "text": "Yo, can't disappoint of mine.",
+      "words": [
         {
           "word": "Yo,",
           "start": 263.32,
@@ -4727,7 +5355,15 @@
           "word": "mine.",
           "start": 264.48,
           "end": 264.72
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 264.96,
+      "end": 265.64,
+      "text": "Trust me, you don't",
+      "words": [
         {
           "word": "Trust",
           "start": 264.96,
@@ -4752,10 +5388,9 @@
       "speaker": "JME"
     },
     {
-      "id": 68,
       "start": 265.64,
-      "end": 268.02,
-      "text": "wanna cross this line. Don't think you can stand in the background",
+      "end": 266.46,
+      "text": "wanna cross this line.",
       "words": [
         {
           "word": "wanna",
@@ -4776,7 +5411,15 @@
           "word": "line.",
           "start": 266.22,
           "end": 266.46
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 266.72,
+      "end": 268.02,
+      "text": "Don't think you can stand in the background",
+      "words": [
         {
           "word": "Don't",
           "start": 266.72,
@@ -4821,10 +5464,9 @@
       "speaker": "JME"
     },
     {
-      "id": 69,
       "start": 268.02,
-      "end": 271.12,
-      "text": "to the video ad libbing X -Men's rhyme. Slap, do you think",
+      "end": 269.84,
+      "text": "to the video ad libbing X -Men's rhyme.",
       "words": [
         {
           "word": "to",
@@ -4865,7 +5507,15 @@
           "word": "rhyme.",
           "start": 269.7,
           "end": 269.84
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 270.22,
+      "end": 271.54,
+      "text": "Slap, do you think I'm dumb?",
+      "words": [
         {
           "word": "Slap,",
           "start": 270.22,
@@ -4885,16 +5535,7 @@
           "word": "think",
           "start": 270.98,
           "end": 271.12
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 70,
-      "start": 271.12,
-      "end": 273.94,
-      "text": "I'm dumb? Try to boy me, nah, that can't run. Yo, you",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 271.12,
@@ -4904,7 +5545,15 @@
           "word": "dumb?",
           "start": 271.4,
           "end": 271.54
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 271.84,
+      "end": 273.26,
+      "text": "Try to boy me, nah, that can't run.",
+      "words": [
         {
           "word": "Try",
           "start": 271.84,
@@ -4944,7 +5593,15 @@
           "word": "run.",
           "start": 273.1,
           "end": 273.26
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 273.26,
+      "end": 275.0,
+      "text": "Yo, you lucky, the old jammy.",
+      "words": [
         {
           "word": "Yo,",
           "start": 273.26,
@@ -4954,16 +5611,7 @@
           "word": "you",
           "start": 273.72,
           "end": 273.94
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 71,
-      "start": 273.94,
-      "end": 277.06,
-      "text": "lucky, the old jammy. But I am just like Jamaican rum. Cos",
-      "words": [
+        },
         {
           "word": "lucky,",
           "start": 273.94,
@@ -4983,7 +5631,15 @@
           "word": "jammy.",
           "start": 274.6,
           "end": 275.0
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 275.14,
+      "end": 277.06,
+      "text": "But I am just like Jamaican rum. Cos",
+      "words": [
         {
           "word": "But",
           "start": 275.14,
@@ -5028,10 +5684,9 @@
       "speaker": "JME"
     },
     {
-      "id": 72,
       "start": 277.06,
-      "end": 278.98,
-      "text": "you got a name in your night care dumps. Cos you got",
+      "end": 278.6,
+      "text": "you got a name in your night care dumps.",
       "words": [
         {
           "word": "you",
@@ -5077,7 +5732,15 @@
           "word": "dumps.",
           "start": 278.2,
           "end": 278.6
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 278.62,
+      "end": 278.98,
+      "text": "Cos you got",
+      "words": [
         {
           "word": "Cos",
           "start": 278.62,
@@ -5097,10 +5760,9 @@
       "speaker": "JME"
     },
     {
-      "id": 73,
       "start": 278.98,
-      "end": 281.0,
-      "text": "a name in your Air Force once. You could have a name",
+      "end": 280.12,
+      "text": "a name in your Air Force once.",
       "words": [
         {
           "word": "a",
@@ -5136,7 +5798,15 @@
           "word": "once.",
           "start": 279.88,
           "end": 280.12
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 280.44,
+      "end": 281.0,
+      "text": "You could have a name",
+      "words": [
         {
           "word": "You",
           "start": 280.44,
@@ -5166,10 +5836,9 @@
       "speaker": "JME"
     },
     {
-      "id": 74,
       "start": 281.0,
-      "end": 284.4,
-      "text": "in your Re -Whip pumps. No victim could ever disman once. Serious.",
+      "end": 281.88,
+      "text": "in your Re -Whip pumps.",
       "words": [
         {
           "word": "in",
@@ -5195,7 +5864,15 @@
           "word": "pumps.",
           "start": 281.6,
           "end": 281.88
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 282.16,
+      "end": 284.4,
+      "text": "No victim could ever disman once. Serious.",
+      "words": [
         {
           "word": "No",
           "start": 282.16,
@@ -5235,10 +5912,9 @@
       "speaker": "JME"
     },
     {
-      "id": 75,
       "start": 286.82,
-      "end": 292.62,
-      "text": "Yo, party. Look, it's going in. It is not the Nola mixing.",
+      "end": 290.28,
+      "text": "Yo, party. Look, it's going in.",
       "words": [
         {
           "word": "Yo,",
@@ -5269,7 +5945,15 @@
           "word": "in.",
           "start": 289.92,
           "end": 290.28
-        },
+        }
+      ],
+      "speaker": "unknown"
+    },
+    {
+      "start": 290.96,
+      "end": 292.62,
+      "text": "It is not the Nola mixing.",
+      "words": [
         {
           "word": "It",
           "start": 290.96,
@@ -5304,10 +5988,9 @@
       "speaker": "unknown"
     },
     {
-      "id": 76,
       "start": 292.94,
-      "end": 300.02,
-      "text": "Ha ha ha. Hey, hey, hey, hey, hey. Look, layman down. Don't",
+      "end": 294.38,
+      "text": "Ha ha ha.",
       "words": [
         {
           "word": "Ha",
@@ -5323,7 +6006,15 @@
           "word": "ha.",
           "start": 293.94,
           "end": 294.38
-        },
+        }
+      ],
+      "speaker": "SPEAKER_06"
+    },
+    {
+      "start": 294.82,
+      "end": 296.1,
+      "text": "Hey, hey, hey, hey, hey.",
+      "words": [
         {
           "word": "Hey,",
           "start": 294.82,
@@ -5348,7 +6039,15 @@
           "word": "hey.",
           "start": 295.76,
           "end": 296.1
-        },
+        }
+      ],
+      "speaker": "SPEAKER_06"
+    },
+    {
+      "start": 296.1,
+      "end": 300.02,
+      "text": "Look, layman down. Don't",
+      "words": [
         {
           "word": "Look,",
           "start": 296.1,
@@ -5373,10 +6072,9 @@
       "speaker": "SPEAKER_06"
     },
     {
-      "id": 77,
       "start": 300.02,
-      "end": 302.68,
-      "text": "think I won't layman down. Last break came to the war with",
+      "end": 301.22,
+      "text": "think I won't layman down.",
       "words": [
         {
           "word": "think",
@@ -5402,7 +6100,15 @@
           "word": "down.",
           "start": 300.9,
           "end": 301.22
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 301.22,
+      "end": 302.68,
+      "text": "Last break came to the war with",
+      "words": [
         {
           "word": "Last",
           "start": 301.22,
@@ -5442,10 +6148,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 78,
       "start": 302.68,
-      "end": 305.5,
-      "text": "20 men and left the war like 10 men down. The other",
+      "end": 304.32,
+      "text": "20 men and left the war like 10 men",
       "words": [
         {
           "word": "20",
@@ -5491,7 +6196,15 @@
           "word": "men",
           "start": 304.14,
           "end": 304.32
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 304.32,
+      "end": 305.5,
+      "text": "down. The other",
+      "words": [
         {
           "word": "down.",
           "start": 304.32,
@@ -5511,10 +6224,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 79,
       "start": 305.5,
-      "end": 308.7,
-      "text": "teams did get hit. Then I keep ass justin' and die. Don't",
+      "end": 306.38,
+      "text": "teams did get hit.",
       "words": [
         {
           "word": "teams",
@@ -5535,7 +6247,15 @@
           "word": "hit.",
           "start": 306.08,
           "end": 306.38
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 306.7,
+      "end": 308.7,
+      "text": "Then I keep ass justin' and die. Don't",
+      "words": [
         {
           "word": "Then",
           "start": 306.7,
@@ -5580,10 +6300,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 80,
       "start": 308.7,
-      "end": 310.8,
-      "text": "think man, I off with the aim. Confuse, fussy man, I'll be",
+      "end": 309.7,
+      "text": "think man, I off with the aim.",
       "words": [
         {
           "word": "think",
@@ -5619,7 +6338,15 @@
           "word": "aim.",
           "start": 309.54,
           "end": 309.7
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 309.8,
+      "end": 310.8,
+      "text": "Confuse, fussy man, I'll be",
+      "words": [
         {
           "word": "Confuse,",
           "start": 309.8,
@@ -5649,10 +6376,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 81,
       "start": 310.8,
-      "end": 312.82,
-      "text": "off with your chain and I couldn't give a f about what's",
+      "end": 312.1,
+      "text": "off with your chain and I couldn't give a",
       "words": [
         {
           "word": "off",
@@ -5698,7 +6424,15 @@
           "word": "a",
           "start": 312.02,
           "end": 312.1
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 312.1,
+      "end": 313.24,
+      "text": "f about what's his name.",
+      "words": [
         {
           "word": "f",
           "start": 312.1,
@@ -5713,16 +6447,7 @@
           "word": "what's",
           "start": 312.44,
           "end": 312.82
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 82,
-      "start": 312.82,
-      "end": 315.58,
-      "text": "his name. All about what's his face. Man, I'm hitting with a",
-      "words": [
+        },
         {
           "word": "his",
           "start": 312.82,
@@ -5732,7 +6457,15 @@
           "word": "name.",
           "start": 312.92,
           "end": 313.24
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 313.78,
+      "end": 314.82,
+      "text": "All about what's his face.",
+      "words": [
         {
           "word": "All",
           "start": 313.78,
@@ -5757,7 +6490,15 @@
           "word": "face.",
           "start": 314.64,
           "end": 314.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 314.96,
+      "end": 315.58,
+      "text": "Man, I'm hitting with a",
+      "words": [
         {
           "word": "Man,",
           "start": 314.96,
@@ -5787,10 +6528,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 83,
       "start": 315.58,
-      "end": 317.28,
-      "text": "sin and I watch his face and I make up what I",
+      "end": 316.94,
+      "text": "sin and I watch his face and I make",
       "words": [
         {
           "word": "sin",
@@ -5836,7 +6576,15 @@
           "word": "make",
           "start": 316.8,
           "end": 316.94
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 316.94,
+      "end": 317.5,
+      "text": "up what I know.",
+      "words": [
         {
           "word": "up",
           "start": 316.94,
@@ -5851,21 +6599,20 @@
           "word": "I",
           "start": 317.22,
           "end": 317.28
+        },
+        {
+          "word": "know.",
+          "start": 317.28,
+          "end": 317.5
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 84,
-      "start": 317.28,
-      "end": 320.08,
-      "text": "know. What's his face? He don't believe me. Just watch his face.",
+      "start": 317.82,
+      "end": 318.32,
+      "text": "What's his face?",
       "words": [
-        {
-          "word": "know.",
-          "start": 317.28,
-          "end": 317.5
-        },
         {
           "word": "What's",
           "start": 317.82,
@@ -5880,7 +6627,15 @@
           "word": "face?",
           "start": 318.12,
           "end": 318.32
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 318.44,
+      "end": 319.16,
+      "text": "He don't believe me.",
+      "words": [
         {
           "word": "He",
           "start": 318.44,
@@ -5900,7 +6655,15 @@
           "word": "me.",
           "start": 318.92,
           "end": 319.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 319.32,
+      "end": 320.08,
+      "text": "Just watch his face.",
+      "words": [
         {
           "word": "Just",
           "start": 319.32,
@@ -5925,10 +6688,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 85,
       "start": 320.34,
-      "end": 322.64,
-      "text": "Man, I bad man, no watch, no face. I got a four,",
+      "end": 321.8,
+      "text": "Man, I bad man, no watch, no face.",
       "words": [
         {
           "word": "Man,",
@@ -5969,7 +6731,15 @@
           "word": "face.",
           "start": 321.46,
           "end": 321.8
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 322.22,
+      "end": 322.64,
+      "text": "I got a four,",
+      "words": [
         {
           "word": "I",
           "start": 322.22,
@@ -5994,10 +6764,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 86,
       "start": 322.72,
-      "end": 325.48,
-      "text": "five and I'm a juicy twain. Don't get lucky in my face.",
+      "end": 323.96,
+      "text": "five and I'm a juicy twain.",
       "words": [
         {
           "word": "five",
@@ -6028,7 +6797,15 @@
           "word": "twain.",
           "start": 323.5,
           "end": 323.96
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 323.96,
+      "end": 325.48,
+      "text": "Don't get lucky in my face.",
+      "words": [
         {
           "word": "Don't",
           "start": 323.96,
@@ -6063,10 +6840,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 87,
       "start": 325.96,
-      "end": 331.2,
-      "text": "Ha ha ha. That one's a party. That, that, that, that, that.",
+      "end": 326.78,
+      "text": "Ha ha ha.",
       "words": [
         {
           "word": "Ha",
@@ -6082,7 +6858,15 @@
           "word": "ha.",
           "start": 326.66,
           "end": 326.78
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 327.82,
+      "end": 328.98,
+      "text": "That one's a party.",
+      "words": [
         {
           "word": "That",
           "start": 327.82,
@@ -6102,7 +6886,15 @@
           "word": "party.",
           "start": 328.64,
           "end": 328.98
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 329.8,
+      "end": 331.2,
+      "text": "That, that, that, that, that.",
+      "words": [
         {
           "word": "That,",
           "start": 329.8,
@@ -6132,10 +6924,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 88,
       "start": 331.28,
-      "end": 335.54,
-      "text": "I got a four, five and I'm a juicy twain. Yo, what",
+      "end": 332.9,
+      "text": "I got a four, five and I'm a juicy",
       "words": [
         {
           "word": "I",
@@ -6181,7 +6972,15 @@
           "word": "juicy",
           "start": 332.7,
           "end": 332.9
-        },
+        }
+      ],
+      "speaker": "unknown"
+    },
+    {
+      "start": 332.9,
+      "end": 335.54,
+      "text": "twain. Yo, what",
+      "words": [
         {
           "word": "twain.",
           "start": 332.9,
@@ -6201,10 +7000,9 @@
       "speaker": "unknown"
     },
     {
-      "id": 89,
       "start": 335.54,
-      "end": 341.48,
-      "text": "me sing? I've been doing this thing from early. I've been doing",
+      "end": 340.8,
+      "text": "me sing? I've been doing this thing from early.",
       "words": [
         {
           "word": "me",
@@ -6250,7 +7048,15 @@
           "word": "early.",
           "start": 340.36,
           "end": 340.8
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 341.16,
+      "end": 341.48,
+      "text": "I've been doing",
+      "words": [
         {
           "word": "I've",
           "start": 341.16,
@@ -6270,10 +7076,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 90,
       "start": 341.48,
-      "end": 344.58,
-      "text": "this thing from day. Don't believe me, you cannot choke early. She",
+      "end": 342.38,
+      "text": "this thing from day.",
       "words": [
         {
           "word": "this",
@@ -6294,7 +7099,15 @@
           "word": "day.",
           "start": 342.06,
           "end": 342.38
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 342.7,
+      "end": 344.58,
+      "text": "Don't believe me, you cannot choke early. She",
+      "words": [
         {
           "word": "Don't",
           "start": 342.7,
@@ -6339,10 +7152,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 91,
       "start": 344.58,
-      "end": 347.3,
-      "text": "be listenin' to me from day. She got a shoebox in her",
+      "end": 345.84,
+      "text": "be listenin' to me from day.",
       "words": [
         {
           "word": "be",
@@ -6373,7 +7185,15 @@
           "word": "day.",
           "start": 345.5,
           "end": 345.84
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 346.16,
+      "end": 347.3,
+      "text": "She got a shoebox in her",
+      "words": [
         {
           "word": "She",
           "start": 346.16,
@@ -6408,10 +7228,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 92,
       "start": 347.3,
-      "end": 350.22,
-      "text": "bedroom and it's full of fatigue, decay, but the beddie double from",
+      "end": 349.46,
+      "text": "bedroom and it's full of fatigue, decay, but the",
       "words": [
         {
           "word": "bedroom",
@@ -6457,7 +7276,15 @@
           "word": "the",
           "start": 349.34,
           "end": 349.46
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 349.46,
+      "end": 350.22,
+      "text": "beddie double from",
+      "words": [
         {
           "word": "beddie",
           "start": 349.46,
@@ -6477,10 +7304,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 93,
       "start": 350.22,
-      "end": 353.82,
-      "text": "back and the beddie double from back and the day. I make",
+      "end": 352.54,
+      "text": "back and the beddie double from back and the",
       "words": [
         {
           "word": "back",
@@ -6526,7 +7352,15 @@
           "word": "the",
           "start": 352.42,
           "end": 352.54
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 352.54,
+      "end": 353.82,
+      "text": "day. I make",
+      "words": [
         {
           "word": "day.",
           "start": 352.54,
@@ -6546,10 +7380,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 94,
       "start": 353.82,
-      "end": 356.44,
-      "text": "it say cool, fly me. That voice got wicked style, he wants",
+      "end": 354.74,
+      "text": "it say cool, fly me.",
       "words": [
         {
           "word": "it",
@@ -6575,7 +7408,15 @@
           "word": "me.",
           "start": 354.58,
           "end": 354.74
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 354.9,
+      "end": 356.98,
+      "text": "That voice got wicked style, he wants his name.",
+      "words": [
         {
           "word": "That",
           "start": 354.9,
@@ -6610,16 +7451,7 @@
           "word": "wants",
           "start": 356.26,
           "end": 356.44
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 95,
-      "start": 356.44,
-      "end": 359.72,
-      "text": "his name. D -double E, best in treating the industry. When I",
-      "words": [
+        },
         {
           "word": "his",
           "start": 356.44,
@@ -6629,7 +7461,15 @@
           "word": "name.",
           "start": 356.66,
           "end": 356.98
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 357.24,
+      "end": 358.9,
+      "text": "D -double E, best in treating the",
+      "words": [
         {
           "word": "D",
           "start": 357.24,
@@ -6664,7 +7504,15 @@
           "word": "the",
           "start": 358.66,
           "end": 358.9
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 358.9,
+      "end": 359.72,
+      "text": "industry. When I",
+      "words": [
         {
           "word": "industry.",
           "start": 358.9,
@@ -6684,10 +7532,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 96,
       "start": 359.72,
-      "end": 362.06,
-      "text": "chop up on the mic, I make it say cool. That voice",
+      "end": 360.92,
+      "text": "chop up on the mic, I make it say",
       "words": [
         {
           "word": "chop",
@@ -6733,7 +7580,15 @@
           "word": "say",
           "start": 360.8,
           "end": 360.92
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 360.92,
+      "end": 362.06,
+      "text": "cool. That voice",
+      "words": [
         {
           "word": "cool.",
           "start": 360.92,
@@ -6753,10 +7608,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 97,
       "start": 362.06,
-      "end": 365.44,
-      "text": "got lyrics cool. He's supported Dizzy on tour. Has got a mix",
+      "end": 362.76,
+      "text": "got lyrics cool.",
       "words": [
         {
           "word": "got",
@@ -6772,7 +7626,15 @@
           "word": "cool.",
           "start": 362.44,
           "end": 362.76
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 363.2,
+      "end": 364.64,
+      "text": "He's supported Dizzy on tour.",
+      "words": [
         {
           "word": "He's",
           "start": 363.2,
@@ -6797,7 +7659,15 @@
           "word": "tour.",
           "start": 364.38,
           "end": 364.64
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 364.94,
+      "end": 365.44,
+      "text": "Has got a mix",
+      "words": [
         {
           "word": "Has",
           "start": 364.94,
@@ -6822,10 +7692,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 98,
       "start": 365.44,
-      "end": 370.3,
-      "text": "up and want to hear more. What's going on in fam? Bare",
+      "end": 366.4,
+      "text": "up and want to hear more.",
       "words": [
         {
           "word": "up",
@@ -6856,7 +7725,15 @@
           "word": "more.",
           "start": 366.04,
           "end": 366.4
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 368.78,
+      "end": 370.3,
+      "text": "What's going on in fam? Bare",
+      "words": [
         {
           "word": "What's",
           "start": 368.78,
@@ -6891,10 +7768,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 99,
       "start": 370.3,
-      "end": 372.72,
-      "text": "wraps, cats trying to bite me like I put my whole arm",
+      "end": 372.12,
+      "text": "wraps, cats trying to bite me like I put",
       "words": [
         {
           "word": "wraps,",
@@ -6940,7 +7816,15 @@
           "word": "put",
           "start": 372.06,
           "end": 372.12
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 372.12,
+      "end": 373.12,
+      "text": "my whole arm in jam.",
+      "words": [
         {
           "word": "my",
           "start": 372.12,
@@ -6955,16 +7839,7 @@
           "word": "arm",
           "start": 372.46,
           "end": 372.72
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 100,
-      "start": 372.72,
-      "end": 375.56,
-      "text": "in jam. Step out of the whip, fill up the tank. Boss",
-      "words": [
+        },
         {
           "word": "in",
           "start": 372.72,
@@ -6974,7 +7849,15 @@
           "word": "jam.",
           "start": 372.9,
           "end": 373.12
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 373.38,
+      "end": 374.96,
+      "text": "Step out of the whip, fill up the tank.",
+      "words": [
         {
           "word": "Step",
           "start": 373.38,
@@ -7019,21 +7902,20 @@
           "word": "tank.",
           "start": 374.64,
           "end": 374.96
-        },
-        {
-          "word": "Boss",
-          "start": 375.36,
-          "end": 375.56
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 101,
-      "start": 375.56,
-      "end": 379.62,
-      "text": "mic, fill up my bank. Mom's life, damn man. I keep my",
+      "start": 375.36,
+      "end": 376.62,
+      "text": "Boss mic, fill up my bank.",
       "words": [
+        {
+          "word": "Boss",
+          "start": 375.36,
+          "end": 375.56
+        },
         {
           "word": "mic,",
           "start": 375.56,
@@ -7058,7 +7940,15 @@
           "word": "bank.",
           "start": 376.36,
           "end": 376.62
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 377.02,
+      "end": 378.06,
+      "text": "Mom's life, damn man.",
+      "words": [
         {
           "word": "Mom's",
           "start": 377.02,
@@ -7078,7 +7968,15 @@
           "word": "man.",
           "start": 377.84,
           "end": 378.06
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 378.92,
+      "end": 379.62,
+      "text": "I keep my",
+      "words": [
         {
           "word": "I",
           "start": 378.92,
@@ -7098,10 +7996,9 @@
       "speaker": "JME"
     },
     {
-      "id": 102,
       "start": 379.62,
-      "end": 382.16,
-      "text": "hands dirty on the other hand. I keep my hands clean, you",
+      "end": 380.86,
+      "text": "hands dirty on the other hand.",
       "words": [
         {
           "word": "hands",
@@ -7132,7 +8029,15 @@
           "word": "hand.",
           "start": 380.58,
           "end": 380.86
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 380.86,
+      "end": 382.78,
+      "text": "I keep my hands clean, you get murked.",
+      "words": [
         {
           "word": "I",
           "start": 380.86,
@@ -7162,16 +8067,7 @@
           "word": "you",
           "start": 381.92,
           "end": 382.16
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 103,
-      "start": 382.16,
-      "end": 386.32,
-      "text": "get murked. Hands free, Bluetooth, Wi -Fi. I speak the truth at",
-      "words": [
+        },
         {
           "word": "get",
           "start": 382.16,
@@ -7181,7 +8077,15 @@
           "word": "murked.",
           "start": 382.32,
           "end": 382.78
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 382.86,
+      "end": 385.22,
+      "text": "Hands free, Bluetooth, Wi -Fi.",
+      "words": [
         {
           "word": "Hands",
           "start": 382.86,
@@ -7206,7 +8110,15 @@
           "word": "-Fi.",
           "start": 384.94,
           "end": 385.22
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 385.46,
+      "end": 386.32,
+      "text": "I speak the truth at",
+      "words": [
         {
           "word": "I",
           "start": 385.46,
@@ -7236,10 +8148,9 @@
       "speaker": "JME"
     },
     {
-      "id": 104,
       "start": 386.32,
-      "end": 388.92,
-      "text": "your hi -fi. When I'm on the mic, headphones don't lie. I",
+      "end": 386.78,
+      "text": "your hi -fi.",
       "words": [
         {
           "word": "your",
@@ -7255,7 +8166,15 @@
           "word": "-fi.",
           "start": 386.6,
           "end": 386.78
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 387.1,
+      "end": 388.92,
+      "text": "When I'm on the mic, headphones don't lie. I",
+      "words": [
         {
           "word": "When",
           "start": 387.1,
@@ -7305,10 +8224,9 @@
       "speaker": "JME"
     },
     {
-      "id": 105,
       "start": 388.92,
-      "end": 392.98,
-      "text": "take your sh -ini, meanie, mine. Nemo, yeah, you can't find. Reload,",
+      "end": 390.32,
+      "text": "take your sh -ini, meanie, mine.",
       "words": [
         {
           "word": "take",
@@ -7339,7 +8257,15 @@
           "word": "mine.",
           "start": 390.2,
           "end": 390.32
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 390.8,
+      "end": 392.98,
+      "text": "Nemo, yeah, you can't find. Reload,",
+      "words": [
         {
           "word": "Nemo,",
           "start": 390.8,
@@ -7374,10 +8300,9 @@
       "speaker": "JME"
     },
     {
-      "id": 106,
       "start": 393.04,
-      "end": 399.96,
-      "text": "yeah, the bars, cram. Padding them, if... Easy, easy, easy. Let me",
+      "end": 393.96,
+      "text": "yeah, the bars, cram.",
       "words": [
         {
           "word": "yeah,",
@@ -7398,7 +8323,15 @@
           "word": "cram.",
           "start": 393.58,
           "end": 393.96
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 394.9,
+      "end": 396.92,
+      "text": "Padding them, if...",
+      "words": [
         {
           "word": "Padding",
           "start": 394.9,
@@ -7413,7 +8346,15 @@
           "word": "if...",
           "start": 395.9,
           "end": 396.92
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 396.92,
+      "end": 399.96,
+      "text": "Easy, easy, easy. Let me",
+      "words": [
         {
           "word": "Easy,",
           "start": 396.92,
@@ -7443,10 +8384,9 @@
       "speaker": "JME"
     },
     {
-      "id": 107,
       "start": 399.96,
-      "end": 403.3,
-      "text": "come back again. Ween, let me come back again. Everybody knows that",
+      "end": 400.64,
+      "text": "come back again.",
       "words": [
         {
           "word": "come",
@@ -7462,7 +8402,15 @@
           "word": "again.",
           "start": 400.26,
           "end": 400.64
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 401.06,
+      "end": 402.38,
+      "text": "Ween, let me come back again.",
+      "words": [
         {
           "word": "Ween,",
           "start": 401.06,
@@ -7492,7 +8440,15 @@
           "word": "again.",
           "start": 402.02,
           "end": 402.38
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 402.66,
+      "end": 403.3,
+      "text": "Everybody knows that",
+      "words": [
         {
           "word": "Everybody",
           "start": 402.66,
@@ -7512,10 +8468,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 108,
       "start": 403.3,
-      "end": 405.72,
-      "text": "we're better than, better than look. Ween, let me come back again.",
+      "end": 404.44,
+      "text": "we're better than, better than look.",
       "words": [
         {
           "word": "we're",
@@ -7546,7 +8501,15 @@
           "word": "look.",
           "start": 404.28,
           "end": 404.44
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 404.68,
+      "end": 405.72,
+      "text": "Ween, let me come back again.",
+      "words": [
         {
           "word": "Ween,",
           "start": 404.68,
@@ -7581,10 +8544,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 109,
       "start": 406.02,
-      "end": 409.0,
-      "text": "Everybody knows that we're better than look, look, look. We're better than",
+      "end": 407.84,
+      "text": "Everybody knows that we're better than look, look, look.",
       "words": [
         {
           "word": "Everybody",
@@ -7630,7 +8592,15 @@
           "word": "look.",
           "start": 407.76,
           "end": 407.84
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 407.84,
+      "end": 409.0,
+      "text": "We're better than",
+      "words": [
         {
           "word": "We're",
           "start": 407.84,
@@ -7650,10 +8620,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 110,
       "start": 409.0,
-      "end": 412.26,
-      "text": "them, bad wifey. Oh, now, bad wifey them. They've got bars, we've",
+      "end": 409.88,
+      "text": "them, bad wifey.",
       "words": [
         {
           "word": "them,",
@@ -7669,7 +8638,15 @@
           "word": "wifey.",
           "start": 409.58,
           "end": 409.88
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 409.98,
+      "end": 410.9,
+      "text": "Oh, now, bad wifey them.",
+      "words": [
         {
           "word": "Oh,",
           "start": 409.98,
@@ -7694,7 +8671,15 @@
           "word": "them.",
           "start": 410.7,
           "end": 410.9
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 411.08,
+      "end": 412.6,
+      "text": "They've got bars, we've got bars.",
+      "words": [
         {
           "word": "They've",
           "start": 411.08,
@@ -7714,16 +8699,7 @@
           "word": "we've",
           "start": 412.06,
           "end": 412.26
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 111,
-      "start": 412.26,
-      "end": 416.52,
-      "text": "got bars. Everybody knows that we're better than them. Damn, you don't",
-      "words": [
+        },
         {
           "word": "got",
           "start": 412.26,
@@ -7733,7 +8709,15 @@
           "word": "bars.",
           "start": 412.36,
           "end": 412.6
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 412.72,
+      "end": 414.5,
+      "text": "Everybody knows that we're better than them.",
+      "words": [
         {
           "word": "Everybody",
           "start": 412.72,
@@ -7768,7 +8752,15 @@
           "word": "them.",
           "start": 414.1,
           "end": 414.5
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 414.96,
+      "end": 416.52,
+      "text": "Damn, you don't",
+      "words": [
         {
           "word": "Damn,",
           "start": 414.96,
@@ -7788,10 +8780,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 112,
       "start": 416.52,
-      "end": 418.98,
-      "text": "know who I be talking to. Don't know if you get deaf",
+      "end": 417.74,
+      "text": "know who I be talking to.",
       "words": [
         {
           "word": "know",
@@ -7822,7 +8813,15 @@
           "word": "to.",
           "start": 417.36,
           "end": 417.74
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 418.14,
+      "end": 419.22,
+      "text": "Don't know if you get deaf or not.",
+      "words": [
         {
           "word": "Don't",
           "start": 418.14,
@@ -7852,16 +8851,7 @@
           "word": "deaf",
           "start": 418.82,
           "end": 418.98
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 113,
-      "start": 418.98,
-      "end": 422.06,
-      "text": "or not. I think when we a double, come rolling through. Through,",
-      "words": [
+        },
         {
           "word": "or",
           "start": 418.98,
@@ -7871,7 +8861,15 @@
           "word": "not.",
           "start": 419.1,
           "end": 419.22
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 419.36,
+      "end": 421.16,
+      "text": "I think when we a double, come rolling through.",
+      "words": [
         {
           "word": "I",
           "start": 419.36,
@@ -7916,21 +8914,20 @@
           "word": "through.",
           "start": 420.78,
           "end": 421.16
-        },
-        {
-          "word": "Through,",
-          "start": 421.66,
-          "end": 422.06
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 114,
-      "start": 422.52,
-      "end": 426.0,
-      "text": "through. Rolling him and I'll roll on you. Rolling anyone who you",
+      "start": 421.66,
+      "end": 424.58,
+      "text": "Through, through. Rolling him and I'll roll on you.",
       "words": [
+        {
+          "word": "Through,",
+          "start": 421.66,
+          "end": 422.06
+        },
         {
           "word": "through.",
           "start": 422.52,
@@ -7970,7 +8967,15 @@
           "word": "you.",
           "start": 424.36,
           "end": 424.58
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 424.88,
+      "end": 426.0,
+      "text": "Rolling anyone who you",
+      "words": [
         {
           "word": "Rolling",
           "start": 424.88,
@@ -7995,10 +9000,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 115,
       "start": 426.0,
-      "end": 430.26,
-      "text": "be rolling with. Because that's what I'm rolling to. Through, melee, you're",
+      "end": 426.66,
+      "text": "be rolling with.",
       "words": [
         {
           "word": "be",
@@ -8014,7 +9018,15 @@
           "word": "with.",
           "start": 426.4,
           "end": 426.66
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 426.84,
+      "end": 428.04,
+      "text": "Because that's what I'm rolling to.",
+      "words": [
         {
           "word": "Because",
           "start": 426.84,
@@ -8044,7 +9056,15 @@
           "word": "to.",
           "start": 427.66,
           "end": 428.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 429.04,
+      "end": 430.26,
+      "text": "Through, melee, you're",
+      "words": [
         {
           "word": "Through,",
           "start": 429.04,
@@ -8064,10 +9084,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 116,
       "start": 430.26,
-      "end": 436.5,
-      "text": "not a bad boy. Don't be silly. You're a bad boy. You're",
+      "end": 430.8,
+      "text": "not a bad boy.",
       "words": [
         {
           "word": "not",
@@ -8088,7 +9107,15 @@
           "word": "boy.",
           "start": 430.6,
           "end": 430.8
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 430.9,
+      "end": 431.44,
+      "text": "Don't be silly.",
+      "words": [
         {
           "word": "Don't",
           "start": 430.9,
@@ -8103,7 +9130,15 @@
           "word": "silly.",
           "start": 431.18,
           "end": 431.44
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 431.76,
+      "end": 436.5,
+      "text": "You're a bad boy. You're",
+      "words": [
         {
           "word": "You're",
           "start": 431.76,
@@ -8133,10 +9168,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 117,
       "start": 436.5,
-      "end": 438.18,
-      "text": "a bad boy. You're a bad boy. You're a bad boy for",
+      "end": 437.16,
+      "text": "a bad boy.",
       "words": [
         {
           "word": "a",
@@ -8152,7 +9186,15 @@
           "word": "boy.",
           "start": 436.9,
           "end": 437.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 437.24,
+      "end": 438.0,
+      "text": "You're a bad boy.",
+      "words": [
         {
           "word": "You're",
           "start": 437.24,
@@ -8172,7 +9214,15 @@
           "word": "boy.",
           "start": 437.84,
           "end": 438.0
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 438.16,
+      "end": 438.38,
+      "text": "You're a bad boy for them.",
+      "words": [
         {
           "word": "You're",
           "start": 438.16,
@@ -8197,21 +9247,20 @@
           "word": "for",
           "start": 438.16,
           "end": 438.18
+        },
+        {
+          "word": "them.",
+          "start": 438.18,
+          "end": 438.38
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 118,
-      "start": 438.18,
-      "end": 441.86,
-      "text": "them. It's a lovin' in at the mix. And I rake and",
+      "start": 439.78000000000003,
+      "end": 441.3,
+      "text": "It's a lovin' in at the mix.",
       "words": [
-        {
-          "word": "them.",
-          "start": 438.18,
-          "end": 438.38
-        },
         {
           "word": "It's",
           "start": 439.78000000000003,
@@ -8246,7 +9295,15 @@
           "word": "mix.",
           "start": 441.12,
           "end": 441.3
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 441.44,
+      "end": 442.22,
+      "text": "And I rake and I blend.",
+      "words": [
         {
           "word": "And",
           "start": 441.44,
@@ -8266,16 +9323,7 @@
           "word": "and",
           "start": 441.7,
           "end": 441.86
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 119,
-      "start": 441.86,
-      "end": 445.0,
-      "text": "I blend. Bad boy for you and I'm a bad boy for",
-      "words": [
+        },
         {
           "word": "I",
           "start": 441.86,
@@ -8285,7 +9333,15 @@
           "word": "blend.",
           "start": 441.98,
           "end": 442.22
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 443.42,
+      "end": 444.84,
+      "text": "Bad boy for you and I'm a bad boy",
+      "words": [
         {
           "word": "Bad",
           "start": 443.42,
@@ -8330,21 +9386,20 @@
           "word": "boy",
           "start": 444.72,
           "end": 444.84
-        },
-        {
-          "word": "for",
-          "start": 444.84,
-          "end": 445.0
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 120,
-      "start": 445.0,
-      "end": 455.56,
-      "text": "them. Oh, my God. Bad, bad, bad. It's ooh, ooh. Serious. Dirty,",
+      "start": 444.84,
+      "end": 447.54,
+      "text": "for them. Oh, my God.",
       "words": [
+        {
+          "word": "for",
+          "start": 444.84,
+          "end": 445.0
+        },
         {
           "word": "them.",
           "start": 445.0,
@@ -8364,7 +9419,15 @@
           "word": "God.",
           "start": 447.06,
           "end": 447.54
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 448.26,
+      "end": 448.84,
+      "text": "Bad, bad, bad.",
+      "words": [
         {
           "word": "Bad,",
           "start": 448.26,
@@ -8379,7 +9442,15 @@
           "word": "bad.",
           "start": 448.74,
           "end": 448.84
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 451.06,
+      "end": 455.56,
+      "text": "It's ooh, ooh. Serious. Dirty,",
+      "words": [
         {
           "word": "It's",
           "start": 451.06,
@@ -8409,10 +9480,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 121,
       "start": 455.78,
-      "end": 465.12,
-      "text": "t. That's ooh, ooh. Bad, bad, bad. In a war, know that",
+      "end": 459.5,
+      "text": "t. That's ooh, ooh.",
       "words": [
         {
           "word": "t.",
@@ -8433,7 +9503,15 @@
           "word": "ooh.",
           "start": 459.3,
           "end": 459.5
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 461.66,
+      "end": 462.5,
+      "text": "Bad, bad, bad.",
+      "words": [
         {
           "word": "Bad,",
           "start": 461.66,
@@ -8448,7 +9526,15 @@
           "word": "bad.",
           "start": 462.28,
           "end": 462.5
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 463.84000000000003,
+      "end": 465.12,
+      "text": "In a war, know that",
+      "words": [
         {
           "word": "In",
           "start": 463.84000000000003,
@@ -8478,10 +9564,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 122,
       "start": 465.12,
-      "end": 467.44,
-      "text": "I do my thing. My want to try and do my thing.",
+      "end": 465.88,
+      "text": "I do my thing.",
       "words": [
         {
           "word": "I",
@@ -8502,7 +9587,15 @@
           "word": "thing.",
           "start": 465.52,
           "end": 465.88
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 466.14,
+      "end": 467.44,
+      "text": "My want to try and do my thing.",
+      "words": [
         {
           "word": "My",
           "start": 466.14,
@@ -8547,10 +9640,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 123,
       "start": 467.5,
-      "end": 469.58,
-      "text": "Don't go on like saying it's a new my thing. Call I",
+      "end": 468.96,
+      "text": "Don't go on like saying it's a new my",
       "words": [
         {
           "word": "Don't",
@@ -8596,7 +9688,15 @@
           "word": "my",
           "start": 468.74,
           "end": 468.96
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 468.96,
+      "end": 469.58,
+      "text": "thing. Call I",
+      "words": [
         {
           "word": "thing.",
           "start": 468.96,
@@ -8616,10 +9716,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 124,
       "start": 469.58,
-      "end": 471.3,
-      "text": "do what I want to make it a high thing. You know,",
+      "end": 470.68,
+      "text": "do what I want to make it a high",
       "words": [
         {
           "word": "do",
@@ -8665,7 +9764,15 @@
           "word": "high",
           "start": 470.54,
           "end": 470.68
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 470.68,
+      "end": 471.3,
+      "text": "thing. You know,",
+      "words": [
         {
           "word": "thing.",
           "start": 470.68,
@@ -8685,10 +9792,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 125,
       "start": 471.72,
-      "end": 473.44,
-      "text": "when they come to my thing. My the baby from the war,",
+      "end": 472.62,
+      "text": "when they come to my thing.",
       "words": [
         {
           "word": "when",
@@ -8719,7 +9825,15 @@
           "word": "thing.",
           "start": 472.4,
           "end": 472.62
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 472.7,
+      "end": 473.44,
+      "text": "My the baby from the war,",
+      "words": [
         {
           "word": "My",
           "start": 472.7,
@@ -8754,10 +9868,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 126,
       "start": 473.5,
-      "end": 476.72,
-      "text": "just like a Viking. And the MC that I'm not liking. Stop",
+      "end": 474.12,
+      "text": "just like a Viking.",
       "words": [
         {
           "word": "just",
@@ -8778,7 +9891,15 @@
           "word": "Viking.",
           "start": 473.92,
           "end": 474.12
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 474.76,
+      "end": 476.72,
+      "text": "And the MC that I'm not liking. Stop",
+      "words": [
         {
           "word": "And",
           "start": 474.76,
@@ -8823,10 +9944,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 127,
       "start": 476.72,
-      "end": 480.16,
-      "text": "waving goodbye king. Call when they come to the classroom. They're mine",
+      "end": 477.84,
+      "text": "waving goodbye king.",
       "words": [
         {
           "word": "waving",
@@ -8842,7 +9962,15 @@
           "word": "king.",
           "start": 477.4,
           "end": 477.84
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 478.28,
+      "end": 480.16,
+      "text": "Call when they come to the classroom. They're mine",
+      "words": [
         {
           "word": "Call",
           "start": 478.28,
@@ -8892,10 +10020,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 128,
       "start": 480.16,
-      "end": 483.38,
-      "text": "too when they're pirating. But don't get no high rating from me.",
+      "end": 481.04,
+      "text": "too when they're pirating.",
       "words": [
         {
           "word": "too",
@@ -8916,7 +10043,15 @@
           "word": "pirating.",
           "start": 480.62,
           "end": 481.04
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 481.32,
+      "end": 483.38,
+      "text": "But don't get no high rating from me.",
+      "words": [
         {
           "word": "But",
           "start": 481.32,
@@ -8961,10 +10096,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 129,
       "start": 483.62,
-      "end": 487.28,
-      "text": "Not lovin' no AMC like me. I've won the MC. Maybe, watching",
+      "end": 485.04,
+      "text": "Not lovin' no AMC like me.",
       "words": [
         {
           "word": "Not",
@@ -8995,7 +10129,15 @@
           "word": "me.",
           "start": 484.76,
           "end": 485.04
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 485.42,
+      "end": 487.64,
+      "text": "I've won the MC. Maybe, watching the MC.",
+      "words": [
         {
           "word": "I've",
           "start": 485.42,
@@ -9025,16 +10167,7 @@
           "word": "watching",
           "start": 487.04,
           "end": 487.28
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 130,
-      "start": 487.28,
-      "end": 491.0,
-      "text": "the MC. I'm gonna try and lead the poverty. Well, well, well.",
-      "words": [
+        },
         {
           "word": "the",
           "start": 487.28,
@@ -9044,7 +10177,15 @@
           "word": "MC.",
           "start": 487.46,
           "end": 487.64
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 488.0,
+      "end": 489.26,
+      "text": "I'm gonna try and lead the poverty.",
+      "words": [
         {
           "word": "I'm",
           "start": 488.0,
@@ -9079,7 +10220,15 @@
           "word": "poverty.",
           "start": 489.04,
           "end": 489.26
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 490.0,
+      "end": 491.0,
+      "text": "Well, well, well.",
+      "words": [
         {
           "word": "Well,",
           "start": 490.0,
@@ -9099,10 +10248,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 131,
       "start": 491.46,
-      "end": 494.26,
-      "text": "Don't think you can screw me cause you're boffin' cause JME don't",
+      "end": 493.2,
+      "text": "Don't think you can screw me cause you're boffin'",
       "words": [
         {
           "word": "Don't",
@@ -9148,7 +10296,15 @@
           "word": "boffin'",
           "start": 492.94,
           "end": 493.2
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 493.26,
+      "end": 494.26,
+      "text": "cause JME don't",
+      "words": [
         {
           "word": "cause",
           "start": 493.26,
@@ -9168,10 +10324,9 @@
       "speaker": "JME"
     },
     {
-      "id": 132,
       "start": 494.26,
-      "end": 496.74,
-      "text": "care about nothin'. I'll cross the road and do my sign like",
+      "end": 495.0,
+      "text": "care about nothin'.",
       "words": [
         {
           "word": "care",
@@ -9187,7 +10342,15 @@
           "word": "nothin'.",
           "start": 494.58,
           "end": 495.0
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 495.0,
+      "end": 496.74,
+      "text": "I'll cross the road and do my sign like",
+      "words": [
         {
           "word": "I'll",
           "start": 495.0,
@@ -9237,10 +10400,9 @@
       "speaker": "JME"
     },
     {
-      "id": 133,
       "start": 496.74,
-      "end": 499.4,
-      "text": "blam. You gotta punch in the jaw like blam. Check your face",
+      "end": 498.8,
+      "text": "blam. You gotta punch in the jaw like blam.",
       "words": [
         {
           "word": "blam.",
@@ -9286,7 +10448,15 @@
           "word": "blam.",
           "start": 498.46,
           "end": 498.8
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 498.96,
+      "end": 499.4,
+      "text": "Check your face",
+      "words": [
         {
           "word": "Check",
           "start": 498.96,
@@ -9306,10 +10476,9 @@
       "speaker": "JME"
     },
     {
-      "id": 134,
       "start": 499.4,
-      "end": 502.5,
-      "text": "cross the floor like blam. Do that elbow drop like blam. You",
+      "end": 500.46,
+      "text": "cross the floor like blam.",
       "words": [
         {
           "word": "cross",
@@ -9335,7 +10504,15 @@
           "word": "blam.",
           "start": 500.14,
           "end": 500.46
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 500.72,
+      "end": 502.5,
+      "text": "Do that elbow drop like blam. You",
+      "words": [
         {
           "word": "Do",
           "start": 500.72,
@@ -9375,10 +10552,9 @@
       "speaker": "JME"
     },
     {
-      "id": 135,
       "start": 502.5,
-      "end": 505.94,
-      "text": "gotta hit, I said well, well, well. Don't think you can screw",
+      "end": 504.56,
+      "text": "gotta hit, I said well, well, well.",
       "words": [
         {
           "word": "gotta",
@@ -9414,7 +10590,15 @@
           "word": "well.",
           "start": 504.4,
           "end": 504.56
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 505.2,
+      "end": 505.94,
+      "text": "Don't think you can screw",
+      "words": [
         {
           "word": "Don't",
           "start": 505.2,
@@ -9444,10 +10628,9 @@
       "speaker": "JME"
     },
     {
-      "id": 136,
       "start": 505.94,
-      "end": 507.94,
-      "text": "me cause you're at work. You can be the boss for the",
+      "end": 506.84,
+      "text": "me cause you're at work.",
       "words": [
         {
           "word": "me",
@@ -9473,7 +10656,15 @@
           "word": "work.",
           "start": 506.6,
           "end": 506.84
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 507.12,
+      "end": 508.52,
+      "text": "You can be the boss for the office club.",
+      "words": [
         {
           "word": "You",
           "start": 507.12,
@@ -9508,16 +10699,7 @@
           "word": "the",
           "start": 507.86,
           "end": 507.94
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 137,
-      "start": 507.94,
-      "end": 510.78,
-      "text": "office club. I'll roll my sleeves up and go berserk like blam.",
-      "words": [
+        },
         {
           "word": "office",
           "start": 507.94,
@@ -9527,7 +10709,15 @@
           "word": "club.",
           "start": 508.26,
           "end": 508.52
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 508.66,
+      "end": 510.42,
+      "text": "I'll roll my sleeves up and go berserk like",
+      "words": [
         {
           "word": "I'll",
           "start": 508.66,
@@ -9572,21 +10762,20 @@
           "word": "like",
           "start": 510.24,
           "end": 510.42
-        },
-        {
-          "word": "blam.",
-          "start": 510.42,
-          "end": 510.78
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 138,
-      "start": 511.02,
-      "end": 513.18,
-      "text": "Dash your head off the screen like blam. Click your head in",
+      "start": 510.42,
+      "end": 512.48,
+      "text": "blam. Dash your head off the screen like blam.",
       "words": [
+        {
+          "word": "blam.",
+          "start": 510.42,
+          "end": 510.78
+        },
         {
           "word": "Dash",
           "start": 511.02,
@@ -9626,7 +10815,15 @@
           "word": "blam.",
           "start": 512.16,
           "end": 512.48
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 512.72,
+      "end": 513.18,
+      "text": "Click your head in",
+      "words": [
         {
           "word": "Click",
           "start": 512.72,
@@ -9651,10 +10848,9 @@
       "speaker": "JME"
     },
     {
-      "id": 139,
       "start": 513.18,
-      "end": 515.6,
-      "text": "the keyboard like blam. Dash your head out of the room like",
+      "end": 514.18,
+      "text": "the keyboard like blam.",
       "words": [
         {
           "word": "the",
@@ -9675,7 +10871,15 @@
           "word": "blam.",
           "start": 513.84,
           "end": 514.18
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 514.18,
+      "end": 515.88,
+      "text": "Dash your head out of the room like blam.",
+      "words": [
         {
           "word": "Dash",
           "start": 514.18,
@@ -9715,21 +10919,20 @@
           "word": "like",
           "start": 515.44,
           "end": 515.6
+        },
+        {
+          "word": "blam.",
+          "start": 515.6,
+          "end": 515.88
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 140,
-      "start": 515.6,
-      "end": 519.32,
-      "text": "blam. Clink into the water cool off. Well, well, well. Don't try",
+      "start": 516.0,
+      "end": 517.34,
+      "text": "Clink into the water cool off.",
       "words": [
-        {
-          "word": "blam.",
-          "start": 515.6,
-          "end": 515.88
-        },
         {
           "word": "Clink",
           "start": 516.0,
@@ -9759,7 +10962,15 @@
           "word": "off.",
           "start": 517.14,
           "end": 517.34
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 517.52,
+      "end": 519.32,
+      "text": "Well, well, well. Don't try",
+      "words": [
         {
           "word": "Well,",
           "start": 517.52,
@@ -9789,10 +11000,9 @@
       "speaker": "JME"
     },
     {
-      "id": 141,
       "start": 519.32,
-      "end": 522.12,
-      "text": "this man on the YouTube. I don't know why you think you",
+      "end": 520.46,
+      "text": "this man on the YouTube.",
       "words": [
         {
           "word": "this",
@@ -9818,7 +11028,15 @@
           "word": "YouTube.",
           "start": 520.18,
           "end": 520.46
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 520.7,
+      "end": 522.12,
+      "text": "I don't know why you think you",
+      "words": [
         {
           "word": "I",
           "start": 520.7,
@@ -9858,10 +11076,9 @@
       "speaker": "JME"
     },
     {
-      "id": 142,
       "start": 522.12,
-      "end": 524.42,
-      "text": "can get tiger up a car. Out of the ring like blam.",
+      "end": 523.34,
+      "text": "can get tiger up a car.",
       "words": [
         {
           "word": "can",
@@ -9892,7 +11109,15 @@
           "word": "car.",
           "start": 523.3,
           "end": 523.34
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 523.6,
+      "end": 524.42,
+      "text": "Out of the ring like blam.",
+      "words": [
         {
           "word": "Out",
           "start": 523.6,
@@ -9927,10 +11152,9 @@
       "speaker": "JME"
     },
     {
-      "id": 143,
       "start": 524.74,
-      "end": 527.6,
-      "text": "You gotta knock through 10 like blam. You gotta argue girl like",
+      "end": 526.14,
+      "text": "You gotta knock through 10 like blam.",
       "words": [
         {
           "word": "You",
@@ -9966,7 +11190,15 @@
           "word": "blam.",
           "start": 525.82,
           "end": 526.14
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 526.46,
+      "end": 527.86,
+      "text": "You gotta argue girl like blam.",
+      "words": [
         {
           "word": "You",
           "start": 526.46,
@@ -9991,21 +11223,20 @@
           "word": "like",
           "start": 527.48,
           "end": 527.6
+        },
+        {
+          "word": "blam.",
+          "start": 527.6,
+          "end": 527.86
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 144,
-      "start": 527.6,
-      "end": 530.58,
-      "text": "blam. You gotta tag a nail like blam. Do that punch in",
+      "start": 528.16,
+      "end": 529.6,
+      "text": "You gotta tag a nail like blam.",
       "words": [
-        {
-          "word": "blam.",
-          "start": 527.6,
-          "end": 527.86
-        },
         {
           "word": "You",
           "start": 528.16,
@@ -10040,7 +11271,15 @@
           "word": "blam.",
           "start": 529.3,
           "end": 529.6
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 529.84,
+      "end": 530.58,
+      "text": "Do that punch in",
+      "words": [
         {
           "word": "Do",
           "start": 529.84,
@@ -10065,10 +11304,9 @@
       "speaker": "JME"
     },
     {
-      "id": 145,
       "start": 530.58,
-      "end": 532.84,
-      "text": "the jaw like. You know that race just full of dead rats.",
+      "end": 531.04,
+      "text": "the jaw like.",
       "words": [
         {
           "word": "the",
@@ -10084,7 +11322,15 @@
           "word": "like.",
           "start": 530.82,
           "end": 531.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 531.18,
+      "end": 532.42,
+      "text": "You know that race just full of dead",
+      "words": [
         {
           "word": "You",
           "start": 531.18,
@@ -10124,21 +11370,20 @@
           "word": "dead",
           "start": 532.24,
           "end": 532.42
-        },
-        {
-          "word": "rats.",
-          "start": 532.42,
-          "end": 532.84
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 146,
-      "start": 533.28,
-      "end": 536.18,
-      "text": "Over us. Get that grinding high and do the death trap. Spoken",
+      "start": 532.42,
+      "end": 533.84,
+      "text": "rats. Over us.",
       "words": [
+        {
+          "word": "rats.",
+          "start": 532.42,
+          "end": 532.84
+        },
         {
           "word": "Over",
           "start": 533.28,
@@ -10148,7 +11393,15 @@
           "word": "us.",
           "start": 533.62,
           "end": 533.84
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 534.06,
+      "end": 535.78,
+      "text": "Get that grinding high and do the death trap.",
+      "words": [
         {
           "word": "Get",
           "start": 534.06,
@@ -10193,21 +11446,20 @@
           "word": "trap.",
           "start": 535.6,
           "end": 535.78
-        },
-        {
-          "word": "Spoken",
-          "start": 535.98,
-          "end": 536.18
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 147,
-      "start": 536.18,
-      "end": 538.74,
-      "text": "a spliff while writing an X -Rap. Track no goals. Is it",
+      "start": 535.98,
+      "end": 537.52,
+      "text": "Spoken a spliff while writing an X -Rap.",
       "words": [
+        {
+          "word": "Spoken",
+          "start": 535.98,
+          "end": 536.18
+        },
         {
           "word": "a",
           "start": 536.18,
@@ -10242,7 +11494,15 @@
           "word": "-Rap.",
           "start": 537.34,
           "end": 537.52
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 537.6,
+      "end": 538.74,
+      "text": "Track no goals. Is it",
+      "words": [
         {
           "word": "Track",
           "start": 537.6,
@@ -10272,10 +11532,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 148,
       "start": 538.74,
-      "end": 540.74,
-      "text": "the face, my brother? It's an X -Cat. Get on the scales",
+      "end": 539.36,
+      "text": "the face, my brother?",
       "words": [
         {
           "word": "the",
@@ -10296,7 +11555,15 @@
           "word": "brother?",
           "start": 539.2,
           "end": 539.36
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 539.54,
+      "end": 540.04,
+      "text": "It's an X -Cat.",
+      "words": [
         {
           "word": "It's",
           "start": 539.54,
@@ -10316,7 +11583,15 @@
           "word": "-Cat.",
           "start": 539.84,
           "end": 540.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 540.04,
+      "end": 540.74,
+      "text": "Get on the scales",
+      "words": [
         {
           "word": "Get",
           "start": 540.04,
@@ -10341,10 +11616,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 149,
       "start": 540.74,
-      "end": 543.12,
-      "text": "and weigh out an X -Rap. Get a grind, keep going. Jack",
+      "end": 541.96,
+      "text": "and weigh out an X -Rap.",
       "words": [
         {
           "word": "and",
@@ -10375,7 +11649,15 @@
           "word": "-Rap.",
           "start": 541.58,
           "end": 541.96
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 542.0,
+      "end": 543.12,
+      "text": "Get a grind, keep going. Jack",
+      "words": [
         {
           "word": "Get",
           "start": 542.0,
@@ -10410,10 +11692,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 150,
       "start": 543.12,
-      "end": 545.96,
-      "text": "is mid a in -sport. I keep blowing. I keep showing. All",
+      "end": 543.9,
+      "text": "is mid a in -sport.",
       "words": [
         {
           "word": "is",
@@ -10439,7 +11720,15 @@
           "word": "-sport.",
           "start": 543.68,
           "end": 543.9
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 544.06,
+      "end": 544.58,
+      "text": "I keep blowing.",
+      "words": [
         {
           "word": "I",
           "start": 544.06,
@@ -10454,7 +11743,15 @@
           "word": "blowing.",
           "start": 544.3,
           "end": 544.58
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 544.96,
+      "end": 545.96,
+      "text": "I keep showing. All",
+      "words": [
         {
           "word": "I",
           "start": 544.96,
@@ -10479,10 +11776,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 151,
       "start": 545.96,
-      "end": 548.5,
-      "text": "of your hits. I'm gonna eat up all of your papers. Oh",
+      "end": 546.38,
+      "text": "of your hits.",
       "words": [
         {
           "word": "of",
@@ -10498,7 +11794,15 @@
           "word": "hits.",
           "start": 546.18,
           "end": 546.38
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 546.72,
+      "end": 548.5,
+      "text": "I'm gonna eat up all of your papers. Oh",
+      "words": [
         {
           "word": "I'm",
           "start": 546.72,
@@ -10548,10 +11852,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 152,
       "start": 548.5,
-      "end": 552.12,
-      "text": "no, not talking Mr. Bandana and the Dark Soul like Sizzler. Mastana",
+      "end": 549.74,
+      "text": "no, not talking Mr.",
       "words": [
         {
           "word": "no,",
@@ -10572,7 +11875,15 @@
           "word": "Mr.",
           "start": 549.38,
           "end": 549.74
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 550.04,
+      "end": 552.12,
+      "text": "Bandana and the Dark Soul like Sizzler. Mastana",
+      "words": [
         {
           "word": "Bandana",
           "start": 550.04,
@@ -10617,10 +11928,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 153,
       "start": 552.12,
-      "end": 554.66,
-      "text": "and the MC like Ninja. In the war I would more than",
+      "end": 553.16,
+      "text": "and the MC like Ninja.",
       "words": [
         {
           "word": "and",
@@ -10646,7 +11956,15 @@
           "word": "Ninja.",
           "start": 552.9,
           "end": 553.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 553.52,
+      "end": 554.66,
+      "text": "In the war I would more than",
+      "words": [
         {
           "word": "In",
           "start": 553.52,
@@ -10686,10 +12004,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 154,
       "start": 554.66,
-      "end": 557.52,
-      "text": "injure a guy. Start that ninja by guiding your thunder. I'm moving",
+      "end": 555.34,
+      "text": "injure a guy.",
       "words": [
         {
           "word": "injure",
@@ -10705,7 +12022,15 @@
           "word": "guy.",
           "start": 555.12,
           "end": 555.34
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 555.62,
+      "end": 557.52,
+      "text": "Start that ninja by guiding your thunder. I'm moving",
+      "words": [
         {
           "word": "Start",
           "start": 555.62,
@@ -10755,10 +12080,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 155,
       "start": 557.52,
-      "end": 561.74,
-      "text": "ninja by life. I'm that guy. Everyone wants to be my code.",
+      "end": 558.5,
+      "text": "ninja by life.",
       "words": [
         {
           "word": "ninja",
@@ -10774,7 +12098,15 @@
           "word": "life.",
           "start": 558.14,
           "end": 558.5
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 559.28,
+      "end": 560.16,
+      "text": "I'm that guy.",
+      "words": [
         {
           "word": "I'm",
           "start": 559.28,
@@ -10789,7 +12121,15 @@
           "word": "guy.",
           "start": 559.78,
           "end": 560.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 560.52,
+      "end": 561.74,
+      "text": "Everyone wants to be my code.",
+      "words": [
         {
           "word": "Everyone",
           "start": 560.52,
@@ -10824,10 +12164,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 156,
       "start": 562.16,
-      "end": 564.46,
-      "text": "Cause you know you want me a you. To get a perfect",
+      "end": 563.34,
+      "text": "Cause you know you want me a you.",
       "words": [
         {
           "word": "Cause",
@@ -10868,7 +12207,15 @@
           "word": "you.",
           "start": 563.2,
           "end": 563.34
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 563.8,
+      "end": 564.46,
+      "text": "To get a perfect",
+      "words": [
         {
           "word": "To",
           "start": 563.8,
@@ -10893,10 +12240,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 157,
       "start": 564.46,
-      "end": 566.94,
-      "text": "or get close. Let me get them out of the cool doors.",
+      "end": 565.22,
+      "text": "or get close.",
       "words": [
         {
           "word": "or",
@@ -10912,7 +12258,15 @@
           "word": "close.",
           "start": 564.92,
           "end": 565.22
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 565.7,
+      "end": 566.94,
+      "text": "Let me get them out of the cool doors.",
+      "words": [
         {
           "word": "Let",
           "start": 565.7,
@@ -10962,10 +12316,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 158,
       "start": 567.3,
-      "end": 569.7,
-      "text": "This actually can put on my get rolls. As soon as I",
+      "end": 568.68,
+      "text": "This actually can put on my get rolls.",
       "words": [
         {
           "word": "This",
@@ -11006,7 +12359,15 @@
           "word": "rolls.",
           "start": 568.36,
           "end": 568.68
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 568.68,
+      "end": 569.7,
+      "text": "As soon as I",
+      "words": [
         {
           "word": "As",
           "start": 568.68,
@@ -11031,10 +12392,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 159,
       "start": 569.7,
-      "end": 572.64,
-      "text": "box my soul for the whole park. Cause I'm an old school",
+      "end": 571.6,
+      "text": "box my soul for the whole park.",
       "words": [
         {
           "word": "box",
@@ -11070,7 +12430,15 @@
           "word": "park.",
           "start": 570.9,
           "end": 571.6
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 571.62,
+      "end": 572.94,
+      "text": "Cause I'm an old school G.",
+      "words": [
         {
           "word": "Cause",
           "start": 571.62,
@@ -11095,21 +12463,20 @@
           "word": "school",
           "start": 572.42,
           "end": 572.64
+        },
+        {
+          "word": "G.",
+          "start": 572.64,
+          "end": 572.94
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 160,
-      "start": 572.64,
-      "end": 575.84,
-      "text": "G. Just like you can hit him with the argue. Can match",
+      "start": 573.1,
+      "end": 574.76,
+      "text": "Just like you can hit him with the argue.",
       "words": [
-        {
-          "word": "G.",
-          "start": 572.64,
-          "end": 572.94
-        },
         {
           "word": "Just",
           "start": 573.1,
@@ -11154,7 +12521,15 @@
           "word": "argue.",
           "start": 574.5,
           "end": 574.76
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 574.96,
+      "end": 577.4,
+      "text": "Can match my level and see your two -kun.",
+      "words": [
         {
           "word": "Can",
           "start": 574.96,
@@ -11164,16 +12539,7 @@
           "word": "match",
           "start": 575.06,
           "end": 575.84
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 161,
-      "start": 575.84,
-      "end": 578.64,
-      "text": "my level and see your two -kun. Beat this, let's see your",
-      "words": [
+        },
         {
           "word": "my",
           "start": 575.84,
@@ -11208,7 +12574,15 @@
           "word": "-kun.",
           "start": 577.1,
           "end": 577.4
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 577.6,
+      "end": 579.02,
+      "text": "Beat this, let's see your two -kun.",
+      "words": [
         {
           "word": "Beat",
           "start": 577.6,
@@ -11233,16 +12607,7 @@
           "word": "your",
           "start": 578.44,
           "end": 578.64
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 162,
-      "start": 578.64,
-      "end": 581.12,
-      "text": "two -kun. You better charge. You better cheer me up and control",
-      "words": [
+        },
         {
           "word": "two",
           "start": 578.64,
@@ -11252,7 +12617,15 @@
           "word": "-kun.",
           "start": 578.82,
           "end": 579.02
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 579.16,
+      "end": 579.8,
+      "text": "You better charge.",
+      "words": [
         {
           "word": "You",
           "start": 579.16,
@@ -11267,7 +12640,15 @@
           "word": "charge.",
           "start": 579.44,
           "end": 579.8
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 580.18,
+      "end": 581.62,
+      "text": "You better cheer me up and control my eye.",
+      "words": [
         {
           "word": "You",
           "start": 580.18,
@@ -11302,16 +12683,7 @@
           "word": "control",
           "start": 581.02,
           "end": 581.12
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 163,
-      "start": 581.12,
-      "end": 584.42,
-      "text": "my eye. See the fury here be pissed. Like a Ruri sick",
-      "words": [
+        },
         {
           "word": "my",
           "start": 581.12,
@@ -11321,7 +12693,15 @@
           "word": "eye.",
           "start": 581.28,
           "end": 581.62
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 581.88,
+      "end": 583.3,
+      "text": "See the fury here be pissed.",
+      "words": [
         {
           "word": "See",
           "start": 581.88,
@@ -11351,7 +12731,15 @@
           "word": "pissed.",
           "start": 582.88,
           "end": 583.3
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 583.58,
+      "end": 584.42,
+      "text": "Like a Ruri sick",
+      "words": [
         {
           "word": "Like",
           "start": 583.58,
@@ -11376,10 +12764,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 164,
       "start": 584.42,
-      "end": 587.22,
-      "text": "in the head. No breathing can cure me. If it's me or",
+      "end": 584.84,
+      "text": "in the head.",
       "words": [
         {
           "word": "in",
@@ -11395,7 +12782,15 @@
           "word": "head.",
           "start": 584.68,
           "end": 584.84
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 584.94,
+      "end": 586.06,
+      "text": "No breathing can cure me.",
+      "words": [
         {
           "word": "No",
           "start": 584.94,
@@ -11420,7 +12815,15 @@
           "word": "me.",
           "start": 585.8,
           "end": 586.06
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 586.58,
+      "end": 587.56,
+      "text": "If it's me or my dad.",
+      "words": [
         {
           "word": "If",
           "start": 586.58,
@@ -11440,16 +12843,7 @@
           "word": "or",
           "start": 587.04,
           "end": 587.22
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 165,
-      "start": 587.22,
-      "end": 589.78,
-      "text": "my dad. You get a scar in the chest like Saga. She",
-      "words": [
+        },
         {
           "word": "my",
           "start": 587.22,
@@ -11459,7 +12853,15 @@
           "word": "dad.",
           "start": 587.4,
           "end": 587.56
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 587.84,
+      "end": 589.22,
+      "text": "You get a scar in the chest like Saga.",
+      "words": [
         {
           "word": "You",
           "start": 587.84,
@@ -11504,21 +12906,20 @@
           "word": "Saga.",
           "start": 588.92,
           "end": 589.22
-        },
-        {
-          "word": "She",
-          "start": 589.62,
-          "end": 589.78
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 166,
-      "start": 589.78,
-      "end": 593.28,
-      "text": "fighting that's what I'm about. My thing working. Perfect. Cause I come",
+      "start": 589.62,
+      "end": 590.88,
+      "text": "She fighting that's what I'm about.",
       "words": [
+        {
+          "word": "She",
+          "start": 589.62,
+          "end": 589.78
+        },
         {
           "word": "fighting",
           "start": 589.78,
@@ -11543,7 +12944,15 @@
           "word": "about.",
           "start": 590.72,
           "end": 590.88
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 591.08,
+      "end": 592.36,
+      "text": "My thing working. Perfect.",
+      "words": [
         {
           "word": "My",
           "start": 591.08,
@@ -11563,7 +12972,15 @@
           "word": "Perfect.",
           "start": 592.02,
           "end": 592.36
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 592.66,
+      "end": 593.28,
+      "text": "Cause I come",
+      "words": [
         {
           "word": "Cause",
           "start": 592.66,
@@ -11583,10 +13000,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 167,
       "start": 593.28,
-      "end": 595.4,
-      "text": "through when I beat up Honda. If I'm not on, just stop",
+      "end": 594.36,
+      "text": "through when I beat up Honda.",
       "words": [
         {
           "word": "through",
@@ -11617,7 +13033,15 @@
           "word": "Honda.",
           "start": 594.08,
           "end": 594.36
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 594.62,
+      "end": 595.82,
+      "text": "If I'm not on, just stop like it.",
+      "words": [
         {
           "word": "If",
           "start": 594.62,
@@ -11647,16 +13071,7 @@
           "word": "stop",
           "start": 595.22,
           "end": 595.4
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 168,
-      "start": 595.4,
-      "end": 597.68,
-      "text": "like it. Give it to Mike and then we ride. Invite them",
-      "words": [
+        },
         {
           "word": "like",
           "start": 595.4,
@@ -11666,7 +13081,15 @@
           "word": "it.",
           "start": 595.66,
           "end": 595.82
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 596.08,
+      "end": 597.28,
+      "text": "Give it to Mike and then we ride.",
+      "words": [
         {
           "word": "Give",
           "start": 596.08,
@@ -11706,7 +13129,15 @@
           "word": "ride.",
           "start": 597.1,
           "end": 597.28
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 597.42,
+      "end": 598.0,
+      "text": "Invite them to the fire.",
+      "words": [
         {
           "word": "Invite",
           "start": 597.42,
@@ -11716,16 +13147,7 @@
           "word": "them",
           "start": 597.5,
           "end": 597.68
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 169,
-      "start": 597.68,
-      "end": 601.66,
-      "text": "to the fire. Just like they'll sing. I'm an electrical invader. Find",
-      "words": [
+        },
         {
           "word": "to",
           "start": 597.68,
@@ -11740,7 +13162,15 @@
           "word": "fire.",
           "start": 597.96,
           "end": 598.0
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 598.76,
+      "end": 599.48,
+      "text": "Just like they'll sing.",
+      "words": [
         {
           "word": "Just",
           "start": 598.76,
@@ -11760,7 +13190,15 @@
           "word": "sing.",
           "start": 599.2,
           "end": 599.48
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 600.0,
+      "end": 601.66,
+      "text": "I'm an electrical invader. Find",
+      "words": [
         {
           "word": "I'm",
           "start": 600.0,
@@ -11790,10 +13228,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 170,
       "start": 601.66,
-      "end": 607.58,
-      "text": "me until the time feels like it. Cheezer. Trust me. Big up",
+      "end": 604.08,
+      "text": "me until the time feels like it. Cheezer.",
       "words": [
         {
           "word": "me",
@@ -11834,7 +13271,15 @@
           "word": "Cheezer.",
           "start": 603.5600000000001,
           "end": 604.08
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 605.62,
+      "end": 607.94,
+      "text": "Trust me. Big up Teddy.",
+      "words": [
         {
           "word": "Trust",
           "start": 605.62,
@@ -11854,21 +13299,20 @@
           "word": "up",
           "start": 607.42,
           "end": 607.58
+        },
+        {
+          "word": "Teddy.",
+          "start": 607.58,
+          "end": 607.94
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 171,
-      "start": 607.58,
-      "end": 613.96,
-      "text": "Teddy. Old type J and me in a building. It's Newham Generals.",
+      "start": 610.46,
+      "end": 612.36,
+      "text": "Old type J and me in a building.",
       "words": [
-        {
-          "word": "Teddy.",
-          "start": 607.58,
-          "end": 607.94
-        },
         {
           "word": "Old",
           "start": 610.46,
@@ -11908,7 +13352,15 @@
           "word": "building.",
           "start": 612.0,
           "end": 612.36
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 612.96,
+      "end": 614.94,
+      "text": "It's Newham Generals. Logan, Sama.",
+      "words": [
         {
           "word": "It's",
           "start": 612.96,
@@ -11923,16 +13375,7 @@
           "word": "Generals.",
           "start": 613.42,
           "end": 613.96
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 172,
-      "start": 614.16,
-      "end": 620.32,
-      "text": "Logan, Sama. Big up Skits. Supermotion day today. Blam bag of crease.",
-      "words": [
+        },
         {
           "word": "Logan,",
           "start": 614.16,
@@ -11942,7 +13385,15 @@
           "word": "Sama.",
           "start": 614.66,
           "end": 614.94
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 615.42,
+      "end": 616.34,
+      "text": "Big up Skits.",
+      "words": [
         {
           "word": "Big",
           "start": 615.42,
@@ -11957,7 +13408,15 @@
           "word": "Skits.",
           "start": 615.7,
           "end": 616.34
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 617.7,
+      "end": 618.88,
+      "text": "Supermotion day today.",
+      "words": [
         {
           "word": "Supermotion",
           "start": 617.7,
@@ -11972,7 +13431,15 @@
           "word": "today.",
           "start": 618.58,
           "end": 618.88
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 619.28,
+      "end": 621.22,
+      "text": "Blam bag of crease. Double B.",
+      "words": [
         {
           "word": "Blam",
           "start": 619.28,
@@ -11992,16 +13459,7 @@
           "word": "crease.",
           "start": 620.04,
           "end": 620.32
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 173,
-      "start": 620.5,
-      "end": 658.7,
-      "text": "Double B. Go and cop that. Trust. J. Yeah. Alright. I'm a",
-      "words": [
+        },
         {
           "word": "Double",
           "start": 620.5,
@@ -12011,7 +13469,15 @@
           "word": "B.",
           "start": 620.74,
           "end": 621.22
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 621.58,
+      "end": 629.7,
+      "text": "Go and cop that. Trust. J. Yeah.",
+      "words": [
         {
           "word": "Go",
           "start": 621.58,
@@ -12046,7 +13512,15 @@
           "word": "Yeah.",
           "start": 629.46,
           "end": 629.7
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 631.06,
+      "end": 658.7,
+      "text": "Alright. I'm a",
+      "words": [
         {
           "word": "Alright.",
           "start": 631.06,
@@ -12066,10 +13540,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 174,
       "start": 658.7,
-      "end": 661.22,
-      "text": "bad man. I've never been pranked. When I chat about you better",
+      "end": 660.2,
+      "text": "bad man. I've never been pranked.",
       "words": [
         {
           "word": "bad",
@@ -12100,7 +13573,15 @@
           "word": "pranked.",
           "start": 659.66,
           "end": 660.2
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 660.26,
+      "end": 661.66,
+      "text": "When I chat about you better than man.",
+      "words": [
         {
           "word": "When",
           "start": 660.26,
@@ -12130,16 +13611,7 @@
           "word": "better",
           "start": 661.0,
           "end": 661.22
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 175,
-      "start": 661.22,
-      "end": 664.32,
-      "text": "than man. Little man taking my shredder and crying. Ain't bus one",
-      "words": [
+        },
         {
           "word": "than",
           "start": 661.22,
@@ -12149,7 +13621,15 @@
           "word": "man.",
           "start": 661.44,
           "end": 661.66
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 661.9,
+      "end": 663.52,
+      "text": "Little man taking my shredder and crying.",
+      "words": [
         {
           "word": "Little",
           "start": 661.9,
@@ -12184,7 +13664,15 @@
           "word": "crying.",
           "start": 663.24,
           "end": 663.52
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 663.8,
+      "end": 664.32,
+      "text": "Ain't bus one",
+      "words": [
         {
           "word": "Ain't",
           "start": 663.8,
@@ -12204,10 +13692,9 @@
       "speaker": "JME"
     },
     {
-      "id": 176,
       "start": 664.32,
-      "end": 666.94,
-      "text": "gun shot in my life. But I'm still standing here. You wish",
+      "end": 665.16,
+      "text": "gun shot in my life.",
       "words": [
         {
           "word": "gun",
@@ -12233,7 +13720,15 @@
           "word": "life.",
           "start": 664.92,
           "end": 665.16
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 665.3,
+      "end": 666.94,
+      "text": "But I'm still standing here. You wish",
+      "words": [
         {
           "word": "But",
           "start": 665.3,
@@ -12273,10 +13768,9 @@
       "speaker": "JME"
     },
     {
-      "id": 177,
       "start": 666.94,
-      "end": 669.54,
-      "text": "you was in these night airs. You're there licking off shots in",
+      "end": 668.24,
+      "text": "you was in these night airs.",
       "words": [
         {
           "word": "you",
@@ -12307,7 +13801,15 @@
           "word": "airs.",
           "start": 667.86,
           "end": 668.24
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 668.4,
+      "end": 669.82,
+      "text": "You're there licking off shots in the air.",
+      "words": [
         {
           "word": "You're",
           "start": 668.4,
@@ -12337,16 +13839,7 @@
           "word": "in",
           "start": 669.32,
           "end": 669.54
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 178,
-      "start": 669.54,
-      "end": 672.18,
-      "text": "the air. You've got a silence out and you squeeze. Yeah, but",
-      "words": [
+        },
         {
           "word": "the",
           "start": 669.54,
@@ -12356,7 +13849,15 @@
           "word": "air.",
           "start": 669.66,
           "end": 669.82
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 670.08,
+      "end": 671.44,
+      "text": "You've got a silence out and you squeeze.",
+      "words": [
         {
           "word": "You've",
           "start": 670.08,
@@ -12396,7 +13897,15 @@
           "word": "squeeze.",
           "start": 671.24,
           "end": 671.44
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 671.86,
+      "end": 673.24,
+      "text": "Yeah, but really none of that matters.",
+      "words": [
         {
           "word": "Yeah,",
           "start": 671.86,
@@ -12406,16 +13915,7 @@
           "word": "but",
           "start": 672.0,
           "end": 672.18
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 179,
-      "start": 672.18,
-      "end": 675.38,
-      "text": "really none of that matters. One minute silence for your enemies. One",
-      "words": [
+        },
         {
           "word": "really",
           "start": 672.18,
@@ -12440,7 +13940,15 @@
           "word": "matters.",
           "start": 672.94,
           "end": 673.24
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 673.52,
+      "end": 675.38,
+      "text": "One minute silence for your enemies. One",
+      "words": [
         {
           "word": "One",
           "start": 673.52,
@@ -12480,10 +13988,9 @@
       "speaker": "JME"
     },
     {
-      "id": 180,
       "start": 675.38,
-      "end": 678.36,
-      "text": "minute silence for your bank balance. Whoa. Common sense needs to be",
+      "end": 677.16,
+      "text": "minute silence for your bank balance. Whoa.",
       "words": [
         {
           "word": "minute",
@@ -12519,7 +14026,15 @@
           "word": "Whoa.",
           "start": 676.9,
           "end": 677.16
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 677.44,
+      "end": 678.76,
+      "text": "Common sense needs to be renamed.",
+      "words": [
         {
           "word": "Common",
           "start": 677.44,
@@ -12544,21 +14059,20 @@
           "word": "be",
           "start": 678.18,
           "end": 678.36
+        },
+        {
+          "word": "renamed.",
+          "start": 678.36,
+          "end": 678.76
         }
       ],
       "speaker": "JME"
     },
     {
-      "id": 181,
-      "start": 678.36,
-      "end": 681.42,
-      "text": "renamed. Cause nowadays it's rare. When I was young my mum used",
+      "start": 678.98,
+      "end": 680.12,
+      "text": "Cause nowadays it's rare.",
       "words": [
-        {
-          "word": "renamed.",
-          "start": 678.36,
-          "end": 678.76
-        },
         {
           "word": "Cause",
           "start": 678.98,
@@ -12578,7 +14092,15 @@
           "word": "rare.",
           "start": 679.9,
           "end": 680.12
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 680.34,
+      "end": 681.42,
+      "text": "When I was young my mum used",
+      "words": [
         {
           "word": "When",
           "start": 680.34,
@@ -12618,10 +14140,9 @@
       "speaker": "JME"
     },
     {
-      "id": 182,
       "start": 681.42,
-      "end": 684.36,
-      "text": "to say, Jamie use what's in between your ears. So I did.",
+      "end": 683.56,
+      "text": "to say, Jamie use what's in between your ears.",
       "words": [
         {
           "word": "to",
@@ -12667,7 +14188,15 @@
           "word": "ears.",
           "start": 683.26,
           "end": 683.56
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 683.84,
+      "end": 684.36,
+      "text": "So I did.",
+      "words": [
         {
           "word": "So",
           "start": 683.84,
@@ -12687,10 +14216,9 @@
       "speaker": "JME"
     },
     {
-      "id": 183,
       "start": 684.36,
-      "end": 687.0,
-      "text": "And now I'm here. If I said the same to you, Briss,",
+      "end": 685.3,
+      "text": "And now I'm here.",
       "words": [
         {
           "word": "And",
@@ -12711,7 +14239,15 @@
           "word": "here.",
           "start": 685.04,
           "end": 685.3
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 685.52,
+      "end": 687.0,
+      "text": "If I said the same to you, Briss,",
+      "words": [
         {
           "word": "If",
           "start": 685.52,
@@ -12756,10 +14292,9 @@
       "speaker": "JME"
     },
     {
-      "id": 184,
       "start": 687.1,
-      "end": 689.98,
-      "text": "our future stand there all day. And the rest of you will",
+      "end": 688.68,
+      "text": "our future stand there all day.",
       "words": [
         {
           "word": "our",
@@ -12790,7 +14325,15 @@
           "word": "day.",
           "start": 688.42,
           "end": 688.68
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 688.92,
+      "end": 689.98,
+      "text": "And the rest of you will",
+      "words": [
         {
           "word": "And",
           "start": 688.92,
@@ -12825,10 +14368,9 @@
       "speaker": "JME"
     },
     {
-      "id": 185,
       "start": 689.98,
-      "end": 693.04,
-      "text": "just stare at Syria. So you'll just pull us very back. If",
+      "end": 690.9,
+      "text": "just stare at Syria.",
       "words": [
         {
           "word": "just",
@@ -12849,7 +14391,15 @@
           "word": "Syria.",
           "start": 690.58,
           "end": 690.9
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 690.94,
+      "end": 693.04,
+      "text": "So you'll just pull us very back. If",
+      "words": [
         {
           "word": "So",
           "start": 690.94,
@@ -12894,10 +14444,9 @@
       "speaker": "JME"
     },
     {
-      "id": 186,
       "start": 693.04,
-      "end": 695.42,
-      "text": "you're a hate heart then eff you. Get too close and I'll",
+      "end": 694.3,
+      "text": "you're a hate heart then eff you.",
       "words": [
         {
           "word": "you're",
@@ -12933,7 +14482,15 @@
           "word": "you.",
           "start": 694.06,
           "end": 694.3
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 694.52,
+      "end": 695.42,
+      "text": "Get too close and I'll",
+      "words": [
         {
           "word": "Get",
           "start": 694.52,
@@ -12963,10 +14520,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 187,
       "start": 695.42,
-      "end": 698.28,
-      "text": "hit by you. Front of a hook to the loco too. Bring",
+      "end": 696.02,
+      "text": "hit by you.",
       "words": [
         {
           "word": "hit",
@@ -12982,7 +14538,15 @@
           "word": "you.",
           "start": 695.72,
           "end": 696.02
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 696.38,
+      "end": 698.28,
+      "text": "Front of a hook to the loco too. Bring",
+      "words": [
         {
           "word": "Front",
           "start": 696.38,
@@ -13032,10 +14596,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 188,
       "start": 698.28,
-      "end": 701.16,
-      "text": "your mate in on a loco. You, you and a loco here.",
+      "end": 699.08,
+      "text": "your mate in on a loco.",
       "words": [
         {
           "word": "your",
@@ -13066,7 +14629,15 @@
           "word": "loco.",
           "start": 699.0,
           "end": 699.08
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 699.46,
+      "end": 701.16,
+      "text": "You, you and a loco here.",
+      "words": [
         {
           "word": "You,",
           "start": 699.46,
@@ -13101,10 +14672,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 189,
       "start": 701.62,
-      "end": 703.32,
-      "text": "I don't care what you do. In the gym. Cause if you",
+      "end": 702.4,
+      "text": "I don't care what you do.",
       "words": [
         {
           "word": "I",
@@ -13135,7 +14705,15 @@
           "word": "do.",
           "start": 702.22,
           "end": 702.4
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 702.5,
+      "end": 702.86,
+      "text": "In the gym.",
+      "words": [
         {
           "word": "In",
           "start": 702.5,
@@ -13150,7 +14728,15 @@
           "word": "gym.",
           "start": 702.68,
           "end": 702.86
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 702.98,
+      "end": 703.32,
+      "text": "Cause if you",
+      "words": [
         {
           "word": "Cause",
           "start": 702.98,
@@ -13170,10 +14756,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 190,
       "start": 703.32,
-      "end": 705.86,
-      "text": "do, wait for no time for the pain. I don't bling. I",
+      "end": 704.62,
+      "text": "do, wait for no time for the pain.",
       "words": [
         {
           "word": "do,",
@@ -13214,7 +14799,15 @@
           "word": "pain.",
           "start": 704.36,
           "end": 704.62
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 704.94,
+      "end": 706.3,
+      "text": "I don't bling. I despise.",
+      "words": [
         {
           "word": "I",
           "start": 704.94,
@@ -13234,21 +14827,20 @@
           "word": "I",
           "start": 705.86,
           "end": 705.86
+        },
+        {
+          "word": "despise.",
+          "start": 705.86,
+          "end": 706.3
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 191,
-      "start": 705.86,
-      "end": 709.52,
-      "text": "despise. All they knew when last night. I put food. Yeah, I",
+      "start": 706.58,
+      "end": 707.6,
+      "text": "All they knew when last night.",
       "words": [
-        {
-          "word": "despise.",
-          "start": 705.86,
-          "end": 706.3
-        },
         {
           "word": "All",
           "start": 706.58,
@@ -13278,7 +14870,15 @@
           "word": "night.",
           "start": 707.54,
           "end": 707.6
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 707.7,
+      "end": 709.84,
+      "text": "I put food. Yeah, I sling.",
+      "words": [
         {
           "word": "I",
           "start": 707.7,
@@ -13303,21 +14903,20 @@
           "word": "I",
           "start": 709.46,
           "end": 709.52
+        },
+        {
+          "word": "sling.",
+          "start": 709.52,
+          "end": 709.84
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 192,
-      "start": 709.52,
-      "end": 713.38,
-      "text": "sling. All my sects are up for the ring. Whether you like",
+      "start": 710.12,
+      "end": 711.56,
+      "text": "All my sects are up for the ring.",
       "words": [
-        {
-          "word": "sling.",
-          "start": 709.52,
-          "end": 709.84
-        },
         {
           "word": "All",
           "start": 710.12,
@@ -13357,7 +14956,15 @@
           "word": "ring.",
           "start": 711.38,
           "end": 711.56
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 712.6,
+      "end": 713.38,
+      "text": "Whether you like",
+      "words": [
         {
           "word": "Whether",
           "start": 712.6,
@@ -13377,10 +14984,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 193,
       "start": 713.38,
-      "end": 717.08,
-      "text": "it or not, this was other. Trust. They got skipped off. Don't",
+      "end": 715.18,
+      "text": "it or not, this was other. Trust.",
       "words": [
         {
           "word": "it",
@@ -13416,7 +15022,15 @@
           "word": "Trust.",
           "start": 715.0,
           "end": 715.18
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 715.76,
+      "end": 718.46,
+      "text": "They got skipped off. Don't know. Classical.",
+      "words": [
         {
           "word": "They",
           "start": 715.76,
@@ -13441,16 +15055,7 @@
           "word": "Don't",
           "start": 716.94,
           "end": 717.08
-        }
-      ],
-      "speaker": "Footsie"
-    },
-    {
-      "id": 194,
-      "start": 717.08,
-      "end": 726.38,
-      "text": "know. Classical. Oh, that's a skip top. Okay then. Very spec. If",
-      "words": [
+        },
         {
           "word": "know.",
           "start": 717.08,
@@ -13460,7 +15065,15 @@
           "word": "Classical.",
           "start": 718.1,
           "end": 718.46
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 718.76,
+      "end": 725.82,
+      "text": "Oh, that's a skip top. Okay then. Very spec.",
+      "words": [
         {
           "word": "Oh,",
           "start": 718.76,
@@ -13505,21 +15118,20 @@
           "word": "spec.",
           "start": 725.46,
           "end": 725.82
-        },
-        {
-          "word": "If",
-          "start": 726.26,
-          "end": 726.38
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 195,
-      "start": 726.38,
-      "end": 728.76,
-      "text": "you're a hate heart then eff you. Get too close and I'll",
+      "start": 726.26,
+      "end": 727.68,
+      "text": "If you're a hate heart then eff you.",
       "words": [
+        {
+          "word": "If",
+          "start": 726.26,
+          "end": 726.38
+        },
         {
           "word": "you're",
           "start": 726.38,
@@ -13554,7 +15166,15 @@
           "word": "you.",
           "start": 727.44,
           "end": 727.68
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 727.98,
+      "end": 728.76,
+      "text": "Get too close and I'll",
+      "words": [
         {
           "word": "Get",
           "start": 727.98,
@@ -13584,10 +15204,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 196,
       "start": 728.76,
-      "end": 731.54,
-      "text": "hit by you. Front of a hook to the loco too. Bring",
+      "end": 729.3,
+      "text": "hit by you.",
       "words": [
         {
           "word": "hit",
@@ -13603,7 +15222,15 @@
           "word": "you.",
           "start": 729.04,
           "end": 729.3
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 729.62,
+      "end": 731.54,
+      "text": "Front of a hook to the loco too. Bring",
+      "words": [
         {
           "word": "Front",
           "start": 729.62,
@@ -13653,10 +15280,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 197,
       "start": 731.54,
-      "end": 734.42,
-      "text": "your mate in on a loco. You, you and a loco here.",
+      "end": 732.4,
+      "text": "your mate in on a loco.",
       "words": [
         {
           "word": "your",
@@ -13687,7 +15313,15 @@
           "word": "loco.",
           "start": 732.28,
           "end": 732.4
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 732.76,
+      "end": 734.42,
+      "text": "You, you and a loco here.",
+      "words": [
         {
           "word": "You,",
           "start": 732.76,
@@ -13722,10 +15356,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 198,
       "start": 734.84,
-      "end": 736.6,
-      "text": "I don't care what you do. In the gym. Cause if you",
+      "end": 735.72,
+      "text": "I don't care what you do.",
       "words": [
         {
           "word": "I",
@@ -13756,7 +15389,15 @@
           "word": "do.",
           "start": 735.54,
           "end": 735.72
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 735.82,
+      "end": 736.16,
+      "text": "In the gym.",
+      "words": [
         {
           "word": "In",
           "start": 735.82,
@@ -13771,7 +15412,15 @@
           "word": "gym.",
           "start": 735.98,
           "end": 736.16
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 736.28,
+      "end": 736.6,
+      "text": "Cause if you",
+      "words": [
         {
           "word": "Cause",
           "start": 736.28,
@@ -13791,10 +15440,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 199,
       "start": 736.6,
-      "end": 739.16,
-      "text": "do, wait for no time for the pain. I don't bling. I",
+      "end": 737.94,
+      "text": "do, wait for no time for the pain.",
       "words": [
         {
           "word": "do,",
@@ -13835,7 +15483,15 @@
           "word": "pain.",
           "start": 737.68,
           "end": 737.94
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 738.26,
+      "end": 739.64,
+      "text": "I don't bling. I despise.",
+      "words": [
         {
           "word": "I",
           "start": 738.26,
@@ -13855,21 +15511,20 @@
           "word": "I",
           "start": 739.16,
           "end": 739.16
+        },
+        {
+          "word": "despise.",
+          "start": 739.16,
+          "end": 739.64
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 200,
-      "start": 739.16,
-      "end": 742.8,
-      "text": "despise. All they knew when last night. I put food. Yeah, I",
+      "start": 739.64,
+      "end": 741.04,
+      "text": "All they knew when last night.",
       "words": [
-        {
-          "word": "despise.",
-          "start": 739.16,
-          "end": 739.64
-        },
         {
           "word": "All",
           "start": 739.64,
@@ -13899,7 +15554,15 @@
           "word": "night.",
           "start": 740.86,
           "end": 741.04
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 741.42,
+      "end": 743.16,
+      "text": "I put food. Yeah, I sling.",
+      "words": [
         {
           "word": "I",
           "start": 741.42,
@@ -13924,21 +15587,20 @@
           "word": "I",
           "start": 742.66,
           "end": 742.8
+        },
+        {
+          "word": "sling.",
+          "start": 742.8,
+          "end": 743.16
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 201,
-      "start": 742.8,
-      "end": 745.4,
-      "text": "sling. All my sects are up for the ring. I want to",
+      "start": 743.4,
+      "end": 744.82,
+      "text": "All my sects are up for the ring.",
       "words": [
-        {
-          "word": "sling.",
-          "start": 742.8,
-          "end": 743.16
-        },
         {
           "word": "All",
           "start": 743.4,
@@ -13978,7 +15640,15 @@
           "word": "ring.",
           "start": 744.54,
           "end": 744.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 745.16,
+      "end": 745.4,
+      "text": "I want to",
+      "words": [
         {
           "word": "I",
           "start": 745.16,
@@ -13998,10 +15668,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 202,
       "start": 745.4,
-      "end": 748.22,
-      "text": "get through with no hold ups. I ain't got time for throwing",
+      "end": 746.92,
+      "text": "get through with no hold ups.",
       "words": [
         {
           "word": "get",
@@ -14032,7 +15701,15 @@
           "word": "ups.",
           "start": 746.52,
           "end": 746.92
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 747.14,
+      "end": 748.56,
+      "text": "I ain't got time for throwing up.",
+      "words": [
         {
           "word": "I",
           "start": 747.14,
@@ -14062,21 +15739,20 @@
           "word": "throwing",
           "start": 747.9,
           "end": 748.22
+        },
+        {
+          "word": "up.",
+          "start": 748.22,
+          "end": 748.56
         }
       ],
       "speaker": "Footsie"
     },
     {
-      "id": 203,
-      "start": 748.22,
-      "end": 750.7,
-      "text": "up. So now me I'm going through. Cause I'm gonna drop one",
+      "start": 748.74,
+      "end": 749.82,
+      "text": "So now me I'm going through.",
       "words": [
-        {
-          "word": "up.",
-          "start": 748.22,
-          "end": 748.56
-        },
         {
           "word": "So",
           "start": 748.74,
@@ -14106,7 +15782,15 @@
           "word": "through.",
           "start": 749.46,
           "end": 749.82
-        },
+        }
+      ],
+      "speaker": "Footsie"
+    },
+    {
+      "start": 749.98,
+      "end": 750.7,
+      "text": "Cause I'm gonna drop one",
+      "words": [
         {
           "word": "Cause",
           "start": 749.98,
@@ -14136,10 +15820,9 @@
       "speaker": "Footsie"
     },
     {
-      "id": 204,
       "start": 750.7,
-      "end": 753.38,
-      "text": "album in two. Call me. Do you like it or do you",
+      "end": 752.38,
+      "text": "album in two. Call me.",
       "words": [
         {
           "word": "album",
@@ -14165,7 +15848,15 @@
           "word": "me.",
           "start": 752.24,
           "end": 752.38
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 752.4,
+      "end": 753.38,
+      "text": "Do you like it or do you",
+      "words": [
         {
           "word": "Do",
           "start": 752.4,
@@ -14205,10 +15896,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 205,
       "start": 753.38,
-      "end": 757.1,
-      "text": "like it or not? I smell like the number one. The number",
+      "end": 755.02,
+      "text": "like it or not?",
       "words": [
         {
           "word": "like",
@@ -14229,7 +15919,15 @@
           "word": "not?",
           "start": 754.78,
           "end": 755.02
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 755.28,
+      "end": 757.4,
+      "text": "I smell like the number one. The number one.",
+      "words": [
         {
           "word": "I",
           "start": 755.28,
@@ -14269,21 +15967,20 @@
           "word": "number",
           "start": 756.88,
           "end": 757.1
+        },
+        {
+          "word": "one.",
+          "start": 757.1,
+          "end": 757.4
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 206,
-      "start": 757.1,
-      "end": 760.08,
-      "text": "one. The number one. I say, Do you like it or do",
+      "start": 757.52,
+      "end": 758.3,
+      "text": "The number one.",
       "words": [
-        {
-          "word": "one.",
-          "start": 757.1,
-          "end": 757.4
-        },
         {
           "word": "The",
           "start": 757.52,
@@ -14298,7 +15995,15 @@
           "word": "one.",
           "start": 757.96,
           "end": 758.3
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 758.32,
+      "end": 760.08,
+      "text": "I say, Do you like it or do",
+      "words": [
         {
           "word": "I",
           "start": 758.32,
@@ -14343,10 +16048,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 207,
       "start": 760.08,
-      "end": 763.68,
-      "text": "you like it or not? I smell like the number one. The",
+      "end": 761.84,
+      "text": "you like it or not?",
       "words": [
         {
           "word": "you",
@@ -14372,7 +16076,15 @@
           "word": "not?",
           "start": 761.6,
           "end": 761.84
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 762.16,
+      "end": 764.22,
+      "text": "I smell like the number one. The number one.",
+      "words": [
         {
           "word": "I",
           "start": 762.16,
@@ -14407,16 +16119,7 @@
           "word": "The",
           "start": 763.52,
           "end": 763.68
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 208,
-      "start": 763.68,
-      "end": 766.44,
-      "text": "number one. The number one. The number one. Two moves in a",
-      "words": [
+        },
         {
           "word": "number",
           "start": 763.68,
@@ -14426,7 +16129,15 @@
           "word": "one.",
           "start": 763.9,
           "end": 764.22
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 764.34,
+      "end": 764.52,
+      "text": "The number one.",
+      "words": [
         {
           "word": "The",
           "start": 764.34,
@@ -14441,7 +16152,15 @@
           "word": "one.",
           "start": 764.52,
           "end": 764.52
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 764.52,
+      "end": 765.02,
+      "text": "The number one.",
+      "words": [
         {
           "word": "The",
           "start": 764.52,
@@ -14456,7 +16175,15 @@
           "word": "one.",
           "start": 764.78,
           "end": 765.02
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 765.54,
+      "end": 766.72,
+      "text": "Two moves in a bucket.",
+      "words": [
         {
           "word": "Two",
           "start": 765.54,
@@ -14476,21 +16203,20 @@
           "word": "a",
           "start": 766.36,
           "end": 766.44
+        },
+        {
+          "word": "bucket.",
+          "start": 766.44,
+          "end": 766.72
         }
       ],
       "speaker": "D Double E"
     },
     {
-      "id": 209,
-      "start": 766.44,
-      "end": 769.54,
-      "text": "bucket. Don't even know man. I'm gonna chuck it. Is it because",
+      "start": 767.26,
+      "end": 768.06,
+      "text": "Don't even know man.",
       "words": [
-        {
-          "word": "bucket.",
-          "start": 766.44,
-          "end": 766.72
-        },
         {
           "word": "Don't",
           "start": 767.26,
@@ -14510,7 +16236,15 @@
           "word": "man.",
           "start": 767.9,
           "end": 768.06
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 768.14,
+      "end": 768.96,
+      "text": "I'm gonna chuck it.",
+      "words": [
         {
           "word": "I'm",
           "start": 768.14,
@@ -14530,7 +16264,15 @@
           "word": "it.",
           "start": 768.74,
           "end": 768.96
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 768.96,
+      "end": 769.54,
+      "text": "Is it because",
+      "words": [
         {
           "word": "Is",
           "start": 768.96,
@@ -14550,10 +16292,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 210,
       "start": 769.54,
-      "end": 771.92,
-      "text": "your crew's not big yet? Is it because you ain't done one",
+      "end": 770.66,
+      "text": "your crew's not big yet?",
       "words": [
         {
           "word": "your",
@@ -14579,7 +16320,15 @@
           "word": "yet?",
           "start": 770.46,
           "end": 770.66
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 770.72,
+      "end": 772.36,
+      "text": "Is it because you ain't done one kick yet?",
+      "words": [
         {
           "word": "Is",
           "start": 770.72,
@@ -14614,16 +16363,7 @@
           "word": "one",
           "start": 771.7,
           "end": 771.92
-        }
-      ],
-      "speaker": "D Double E"
-    },
-    {
-      "id": 211,
-      "start": 771.92,
-      "end": 774.68,
-      "text": "kick yet? Is it because this music like the Usman running up",
-      "words": [
+        },
         {
           "word": "kick",
           "start": 771.92,
@@ -14633,7 +16373,15 @@
           "word": "yet?",
           "start": 772.14,
           "end": 772.36
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 772.6,
+      "end": 773.94,
+      "text": "Is it because this music like the",
+      "words": [
         {
           "word": "Is",
           "start": 772.6,
@@ -14668,7 +16416,15 @@
           "word": "the",
           "start": 773.78,
           "end": 773.94
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 773.94,
+      "end": 774.68,
+      "text": "Usman running up",
+      "words": [
         {
           "word": "Usman",
           "start": 773.94,
@@ -14688,10 +16444,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 212,
       "start": 774.68,
-      "end": 776.72,
-      "text": "and you're going from watch man to put something up because you're",
+      "end": 776.16,
+      "text": "and you're going from watch man to put something",
       "words": [
         {
           "word": "and",
@@ -14737,7 +16492,15 @@
           "word": "something",
           "start": 775.94,
           "end": 776.16
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 776.16,
+      "end": 776.72,
+      "text": "up because you're",
+      "words": [
         {
           "word": "up",
           "start": 776.16,
@@ -14757,10 +16520,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 213,
       "start": 776.72,
-      "end": 779.2,
-      "text": "going in like you're not feeling man. It is the DJs and",
+      "end": 778.2,
+      "text": "going in like you're not feeling man.",
       "words": [
         {
           "word": "going",
@@ -14796,7 +16558,15 @@
           "word": "man.",
           "start": 777.88,
           "end": 778.2
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 778.26,
+      "end": 779.2,
+      "text": "It is the DJs and",
+      "words": [
         {
           "word": "It",
           "start": 778.26,
@@ -14826,10 +16596,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 214,
       "start": 779.2,
-      "end": 781.64,
-      "text": "the wheelie man. I got sweat coming up from the ceiling. I",
+      "end": 779.78,
+      "text": "the wheelie man.",
       "words": [
         {
           "word": "the",
@@ -14845,7 +16614,15 @@
           "word": "man.",
           "start": 779.64,
           "end": 779.78
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 779.9,
+      "end": 781.64,
+      "text": "I got sweat coming up from the ceiling. I",
+      "words": [
         {
           "word": "I",
           "start": 779.9,
@@ -14895,10 +16672,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 215,
       "start": 781.64,
-      "end": 784.78,
-      "text": "thought you're going from space and feeling. Too much foundation. Don't even",
+      "end": 782.94,
+      "text": "thought you're going from space and feeling.",
       "words": [
         {
           "word": "thought",
@@ -14934,7 +16710,15 @@
           "word": "feeling.",
           "start": 782.62,
           "end": 782.94
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 783.36,
+      "end": 784.78,
+      "text": "Too much foundation. Don't even",
+      "words": [
         {
           "word": "Too",
           "start": 783.36,
@@ -14964,10 +16748,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 216,
       "start": 784.78,
-      "end": 787.64,
-      "text": "know the Usman foundation. Man, when I slew me on radio station,",
+      "end": 785.72,
+      "text": "know the Usman foundation.",
       "words": [
         {
           "word": "know",
@@ -14988,7 +16771,15 @@
           "word": "foundation.",
           "start": 785.34,
           "end": 785.72
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 786.28,
+      "end": 787.64,
+      "text": "Man, when I slew me on radio station,",
+      "words": [
         {
           "word": "Man,",
           "start": 786.28,
@@ -15033,10 +16824,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 217,
       "start": 787.7,
-      "end": 789.98,
-      "text": "the two boots fit in bars in an oven nation. D .W",
+      "end": 789.04,
+      "text": "the two boots fit in bars in an oven",
       "words": [
         {
           "word": "the",
@@ -15082,7 +16872,15 @@
           "word": "oven",
           "start": 788.94,
           "end": 789.04
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 789.04,
+      "end": 789.98,
+      "text": "nation. D .W",
+      "words": [
         {
           "word": "nation.",
           "start": 789.04,
@@ -15102,10 +16900,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 218,
       "start": 789.98,
-      "end": 799.36,
-      "text": ".F .T. combination. Around the world with you the rotation. Fringe. I'm",
+      "end": 791.06,
+      "text": ".F .T. combination.",
       "words": [
         {
           "word": ".F",
@@ -15121,7 +16918,15 @@
           "word": "combination.",
           "start": 790.7,
           "end": 791.06
-        },
+        }
+      ],
+      "speaker": "D Double E"
+    },
+    {
+      "start": 791.32,
+      "end": 799.36,
+      "text": "Around the world with you the rotation. Fringe. I'm",
+      "words": [
         {
           "word": "Around",
           "start": 791.32,
@@ -15171,10 +16976,9 @@
       "speaker": "D Double E"
     },
     {
-      "id": 219,
       "start": 799.36,
-      "end": 802.32,
-      "text": "the first to quench. Trust. That's your over that fin. Next time",
+      "end": 800.38,
+      "text": "the first to quench. Trust.",
       "words": [
         {
           "word": "the",
@@ -15200,7 +17004,15 @@
           "word": "Trust.",
           "start": 800.08,
           "end": 800.38
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 800.64,
+      "end": 802.32,
+      "text": "That's your over that fin. Next time",
+      "words": [
         {
           "word": "That's",
           "start": 800.64,
@@ -15240,10 +17052,9 @@
       "speaker": "JME"
     },
     {
-      "id": 220,
       "start": 802.32,
-      "end": 805.8,
-      "text": "think about consequences. If you had any sense you would not ask.",
+      "end": 803.16,
+      "text": "think about consequences.",
       "words": [
         {
           "word": "think",
@@ -15259,7 +17070,15 @@
           "word": "consequences.",
           "start": 802.72,
           "end": 803.16
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 804.28,
+      "end": 805.8,
+      "text": "If you had any sense you would not ask.",
+      "words": [
         {
           "word": "If",
           "start": 804.28,
@@ -15309,10 +17128,9 @@
       "speaker": "JME"
     },
     {
-      "id": 221,
       "start": 805.94,
-      "end": 809.28,
-      "text": "Jamey for 10 pence. See you later. Trust me. See you. That",
+      "end": 806.78,
+      "text": "Jamey for 10 pence.",
       "words": [
         {
           "word": "Jamey",
@@ -15333,7 +17151,15 @@
           "word": "pence.",
           "start": 806.5,
           "end": 806.78
-        },
+        }
+      ],
+      "speaker": "SPEAKER_06"
+    },
+    {
+      "start": 807.12,
+      "end": 809.28,
+      "text": "See you later. Trust me. See you. That",
+      "words": [
         {
           "word": "See",
           "start": 807.12,
@@ -15378,10 +17204,9 @@
       "speaker": "SPEAKER_06"
     },
     {
-      "id": 222,
       "start": 809.28,
-      "end": 811.84,
-      "text": "was in my head bro. Nothing else. I swear I'm looking down",
+      "end": 810.34,
+      "text": "was in my head bro. Nothing else.",
       "words": [
         {
           "word": "was",
@@ -15417,7 +17242,15 @@
           "word": "else.",
           "start": 810.08,
           "end": 810.34
-        },
+        }
+      ],
+      "speaker": "SPEAKER_06"
+    },
+    {
+      "start": 810.84,
+      "end": 812.04,
+      "text": "I swear I'm looking down there.",
+      "words": [
         {
           "word": "I",
           "start": 810.84,
@@ -15442,21 +17275,20 @@
           "word": "down",
           "start": 811.62,
           "end": 811.84
+        },
+        {
+          "word": "there.",
+          "start": 811.84,
+          "end": 812.04
         }
       ],
       "speaker": "SPEAKER_06"
     },
     {
-      "id": 223,
-      "start": 811.84,
-      "end": 817.48,
-      "text": "there. Nothing else bro. Had to be that. Sick lyrics. Words and",
+      "start": 812.48,
+      "end": 813.34,
+      "text": "Nothing else bro.",
       "words": [
-        {
-          "word": "there.",
-          "start": 811.84,
-          "end": 812.04
-        },
         {
           "word": "Nothing",
           "start": 812.48,
@@ -15471,7 +17303,15 @@
           "word": "bro.",
           "start": 813.12,
           "end": 813.34
-        },
+        }
+      ],
+      "speaker": "SPEAKER_06"
+    },
+    {
+      "start": 813.9,
+      "end": 817.48,
+      "text": "Had to be that. Sick lyrics. Words and",
+      "words": [
         {
           "word": "Had",
           "start": 813.9,
@@ -15516,10 +17356,9 @@
       "speaker": "SPEAKER_06"
     },
     {
-      "id": 224,
       "start": 817.48,
-      "end": 820.8,
-      "text": "verbs. Cosmo herbs. Outside parked up next to the curb. I've got",
+      "end": 818.56,
+      "text": "verbs. Cosmo herbs.",
       "words": [
         {
           "word": "verbs.",
@@ -15535,7 +17374,15 @@
           "word": "herbs.",
           "start": 818.24,
           "end": 818.56
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 818.86,
+      "end": 820.8,
+      "text": "Outside parked up next to the curb. I've got",
+      "words": [
         {
           "word": "Outside",
           "start": 818.86,
@@ -15585,10 +17432,9 @@
       "speaker": "JME"
     },
     {
-      "id": 225,
       "start": 820.8,
-      "end": 854.12,
-      "text": "a map that soup tops herbs. Fools. That was a scout opinion.",
+      "end": 822.5,
+      "text": "a map that soup tops herbs. Fools.",
       "words": [
         {
           "word": "a",
@@ -15624,7 +17470,15 @@
           "word": "Fools.",
           "start": 822.28,
           "end": 822.5
-        },
+        }
+      ],
+      "speaker": "JME"
+    },
+    {
+      "start": 852.7,
+      "end": 854.12,
+      "text": "That was a scout opinion.",
+      "words": [
         {
           "word": "That",
           "start": 852.7,
@@ -15654,10 +17508,9 @@
       "speaker": "JME"
     },
     {
-      "id": 226,
       "start": 854.32,
-      "end": 857.22,
-      "text": "Of course. I can't ever have D .W .E. and Jamey in",
+      "end": 856.64,
+      "text": "Of course. I can't ever have D .W .E.",
       "words": [
         {
           "word": "Of",
@@ -15703,7 +17556,15 @@
           "word": ".E.",
           "start": 856.46,
           "end": 856.64
-        },
+        }
+      ],
+      "speaker": "SPEAKER_02"
+    },
+    {
+      "start": 856.72,
+      "end": 857.54,
+      "text": "and Jamey in the studio.",
+      "words": [
         {
           "word": "and",
           "start": 856.72,
@@ -15718,16 +17579,7 @@
           "word": "in",
           "start": 857.16,
           "end": 857.22
-        }
-      ],
-      "speaker": "SPEAKER_02"
-    },
-    {
-      "id": 227,
-      "start": 857.22,
-      "end": 861.72,
-      "text": "the studio. We don't get the foundation records. Played never that. It's",
-      "words": [
+        },
         {
           "word": "the",
           "start": 857.22,
@@ -15737,7 +17589,15 @@
           "word": "studio.",
           "start": 857.3,
           "end": 857.54
-        },
+        }
+      ],
+      "speaker": "SPEAKER_02"
+    },
+    {
+      "start": 857.72,
+      "end": 859.54,
+      "text": "We don't get the foundation records.",
+      "words": [
         {
           "word": "We",
           "start": 857.72,
@@ -15767,7 +17627,15 @@
           "word": "records.",
           "start": 858.96,
           "end": 859.54
-        },
+        }
+      ],
+      "speaker": "SPEAKER_02"
+    },
+    {
+      "start": 859.92,
+      "end": 861.72,
+      "text": "Played never that. It's",
+      "words": [
         {
           "word": "Played",
           "start": 859.92,
@@ -15792,10 +17660,9 @@
       "speaker": "SPEAKER_02"
     },
     {
-      "id": 228,
       "start": 861.72,
-      "end": 863.42,
-      "text": "come to the end of the show. I've got five seconds. So",
+      "end": 862.44,
+      "text": "come to the end of the show.",
       "words": [
         {
           "word": "come",
@@ -15831,7 +17698,15 @@
           "word": "show.",
           "start": 862.26,
           "end": 862.44
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 862.52,
+      "end": 863.42,
+      "text": "I've got five seconds. So",
+      "words": [
         {
           "word": "I've",
           "start": 862.52,
@@ -15861,10 +17736,9 @@
       "speaker": "Logan Sama"
     },
     {
-      "id": 229,
       "start": 863.42,
-      "end": 866.16,
-      "text": "back agrees out now. Blames out now. I'll be back next Monday.",
+      "end": 864.34,
+      "text": "back agrees out now.",
       "words": [
         {
           "word": "back",
@@ -15885,7 +17759,15 @@
           "word": "now.",
           "start": 864.14,
           "end": 864.34
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 864.46,
+      "end": 865.16,
+      "text": "Blames out now.",
+      "words": [
         {
           "word": "Blames",
           "start": 864.46,
@@ -15900,7 +17782,15 @@
           "word": "now.",
           "start": 864.96,
           "end": 865.16
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "start": 865.28,
+      "end": 866.16,
+      "text": "I'll be back next Monday.",
+      "words": [
         {
           "word": "I'll",
           "start": 865.28,

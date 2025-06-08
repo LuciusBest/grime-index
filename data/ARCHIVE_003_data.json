@@ -1,9 +1,9 @@
 {
   "title": "KISS FM 2006 Logan Sama & Boy Better Know Crew",
-  "duration": 1580.00,
+  "duration": 1580.0,
   "instrumentals": [
     {
-      "start": 0.00,
+      "start": 0.0,
       "end": 36.85,
       "title": "PLACEHOLDER 1",
       "artist": "TODO"
@@ -208,8 +208,8 @@
     {
       "id": 4,
       "start": 7.33,
-      "end": 10.91,
-      "text": "got the full Boy Better Know crew inside the",
+      "end": 9.85,
+      "text": "got the full Boy Better Know crew",
       "words": [
         {
           "word": "got",
@@ -252,7 +252,16 @@
           "start": 9.47,
           "end": 9.85,
           "probability": 0.8809945583343506
-        },
+        }
+      ],
+      "speaker": "Logan Sama"
+    },
+    {
+      "id": 5,
+      "start": 9.85,
+      "end": 11.27,
+      "text": "inside the studio.",
+      "words": [
         {
           "word": "inside",
           "start": 9.85,
@@ -264,16 +273,7 @@
           "start": 10.73,
           "end": 10.91,
           "probability": 0.976901113986969
-        }
-      ],
-      "speaker": "Logan Sama"
-    },
-    {
-      "id": 5,
-      "start": 10.91,
-      "end": 11.27,
-      "text": "studio.",
-      "words": [
+        },
         {
           "word": "studio.",
           "start": 10.91,
@@ -497,10 +497,10 @@
       "speaker": "JME"
     },
     {
-      "id": 11,
+      "id": 12,
       "start": 24.45,
-      "end": 25.19,
-      "text": "that time",
+      "end": 27.99,
+      "text": "that time Yo Yo You better know what's crackin'",
       "words": [
         {
           "word": "that",
@@ -513,16 +513,7 @@
           "start": 24.67,
           "end": 25.19,
           "probability": 0.9887079000473022
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 12,
-      "start": 25.19,
-      "end": 27.99,
-      "text": "Yo Yo You better know what's crackin'",
-      "words": [
+        },
         {
           "word": "Yo",
           "start": 25.19,
@@ -871,8 +862,8 @@
     {
       "id": 19,
       "start": 36.63,
-      "end": 38.37,
-      "text": "Boy better know if Boy better knows in a",
+      "end": 38.07,
+      "text": "Boy better know if Boy better knows",
       "words": [
         {
           "word": "Boy",
@@ -915,7 +906,16 @@
           "start": 37.87,
           "end": 38.07,
           "probability": 0.6799355149269104
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 20,
+      "start": 38.07,
+      "end": 38.45,
+      "text": "in a bill",
+      "words": [
         {
           "word": "in",
           "start": 38.07,
@@ -927,16 +927,7 @@
           "start": 38.23,
           "end": 38.37,
           "probability": 0.601111114025116
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 20,
-      "start": 38.37,
-      "end": 38.45,
-      "text": "bill",
-      "words": [
+        },
         {
           "word": "bill",
           "start": 38.37,
@@ -1057,8 +1048,8 @@
     {
       "id": 23,
       "start": 41.39,
-      "end": 43.05,
-      "text": "And if the record ain't broke then I'm breakin'",
+      "end": 42.45,
+      "text": "And if the record ain't broke then",
       "words": [
         {
           "word": "And",
@@ -1101,7 +1092,16 @@
           "start": 42.31,
           "end": 42.45,
           "probability": 0.8141984343528748
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 24,
+      "start": 42.45,
+      "end": 43.13,
+      "text": "I'm breakin' that",
+      "words": [
         {
           "word": "I'm",
           "start": 42.45,
@@ -1113,16 +1113,7 @@
           "start": 42.61,
           "end": 43.05,
           "probability": 0.9539828896522522
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 24,
-      "start": 43.07,
-      "end": 43.13,
-      "text": "that",
-      "words": [
+        },
         {
           "word": "that",
           "start": 43.07,
@@ -1135,8 +1126,8 @@
     {
       "id": 25,
       "start": 43.13,
-      "end": 44.79,
-      "text": "Don't care what you're makin' back I just want",
+      "end": 44.65,
+      "text": "Don't care what you're makin' back I just",
       "words": [
         {
           "word": "Don't",
@@ -1185,22 +1176,22 @@
           "start": 44.47,
           "end": 44.65,
           "probability": 0.9793175458908081
-        },
-        {
-          "word": "want",
-          "start": 44.65,
-          "end": 44.79,
-          "probability": 0.8718274831771851
         }
       ],
       "speaker": "Jammer"
     },
     {
       "id": 26,
-      "start": 44.79,
+      "start": 44.65,
       "end": 45.37,
-      "text": "what's mine",
+      "text": "want what's mine",
       "words": [
+        {
+          "word": "want",
+          "start": 44.65,
+          "end": 44.79,
+          "probability": 0.8718274831771851
+        },
         {
           "word": "what's",
           "start": 44.79,
@@ -1282,8 +1273,8 @@
     {
       "id": 28,
       "start": 48.33,
-      "end": 50.25,
-      "text": "Make a man happy like he's takin' crack I",
+      "end": 49.95,
+      "text": "Make a man happy like he's takin' crack",
       "words": [
         {
           "word": "Make",
@@ -1332,22 +1323,22 @@
           "start": 49.85,
           "end": 49.95,
           "probability": 0.9843093156814575
-        },
-        {
-          "word": "I",
-          "start": 49.95,
-          "end": 50.25,
-          "probability": 0.9559065699577332
         }
       ],
       "speaker": "Jammer"
     },
     {
       "id": 29,
-      "start": 50.25,
+      "start": 49.95,
       "end": 50.79,
-      "text": "do music",
+      "text": "I do music",
       "words": [
+        {
+          "word": "I",
+          "start": 49.95,
+          "end": 50.25,
+          "probability": 0.9559065699577332
+        },
         {
           "word": "do",
           "start": 50.25,
@@ -1462,8 +1453,8 @@
     {
       "id": 32,
       "start": 53.43,
-      "end": 56.29,
-      "text": "I got to make this clear Big Frisco totally",
+      "end": 55.45,
+      "text": "I got to make this clear Big",
       "words": [
         {
           "word": "I",
@@ -1506,7 +1497,16 @@
           "start": 55.17,
           "end": 55.45,
           "probability": 0.8785129189491272
-        },
+        }
+      ],
+      "speaker": "Frisco"
+    },
+    {
+      "id": 33,
+      "start": 55.45,
+      "end": 56.83,
+      "text": "Frisco totally unruly",
+      "words": [
         {
           "word": "Frisco",
           "start": 55.45,
@@ -1518,16 +1518,7 @@
           "start": 55.75,
           "end": 56.29,
           "probability": 0.5458931922912598
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 33,
-      "start": 56.29,
-      "end": 56.83,
-      "text": "unruly",
-      "words": [
+        },
         {
           "word": "unruly",
           "start": 56.29,
@@ -1648,8 +1639,8 @@
     {
       "id": 36,
       "start": 60.47,
-      "end": 63.31,
-      "text": "And even though everything's nice now Still got a",
+      "end": 63.19,
+      "text": "And even though everything's nice now Still got",
       "words": [
         {
           "word": "And",
@@ -1698,22 +1689,22 @@
           "start": 62.99,
           "end": 63.19,
           "probability": 0.907217264175415
-        },
-        {
-          "word": "a",
-          "start": 63.19,
-          "end": 63.31,
-          "probability": 0.8355207443237305
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 37,
-      "start": 63.31,
+      "start": 63.19,
       "end": 63.71,
-      "text": "mind now",
+      "text": "a mind now",
       "words": [
+        {
+          "word": "a",
+          "start": 63.19,
+          "end": 63.31,
+          "probability": 0.8355207443237305
+        },
         {
           "word": "mind",
           "start": 63.31,
@@ -1981,8 +1972,8 @@
     {
       "id": 43,
       "start": 70.65,
-      "end": 73.71,
-      "text": "We're never gonna be done with it Run with",
+      "end": 73.13,
+      "text": "We're never gonna be done with it",
       "words": [
         {
           "word": "We're",
@@ -2025,7 +2016,16 @@
           "start": 72.05,
           "end": 73.13,
           "probability": 0.9969618916511536
-        },
+        }
+      ],
+      "speaker": "Frisco"
+    },
+    {
+      "id": 44,
+      "start": 73.13,
+      "end": 73.93,
+      "text": "Run with it",
+      "words": [
         {
           "word": "Run",
           "start": 73.13,
@@ -2037,16 +2037,7 @@
           "start": 73.49,
           "end": 73.71,
           "probability": 0.9810839295387268
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 44,
-      "start": 73.71,
-      "end": 73.93,
-      "text": "it",
-      "words": [
+        },
         {
           "word": "it",
           "start": 73.71,
@@ -2896,8 +2887,8 @@
     {
       "id": 60,
       "start": 98.91,
-      "end": 100.31,
-      "text": "boy He better know it's not gonna be a",
+      "end": 100.15,
+      "text": "boy He better know it's not gonna be",
       "words": [
         {
           "word": "boy",
@@ -2946,22 +2937,22 @@
           "start": 99.95,
           "end": 100.15,
           "probability": 0.9904246926307678
-        },
-        {
-          "word": "a",
-          "start": 100.15,
-          "end": 100.31,
-          "probability": 0.9916919469833374
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 61,
-      "start": 100.31,
+      "start": 100.15,
       "end": 100.83,
-      "text": "re -ball",
+      "text": "a re -ball",
       "words": [
+        {
+          "word": "a",
+          "start": 100.15,
+          "end": 100.31,
+          "probability": 0.9916919469833374
+        },
         {
           "word": "re",
           "start": 100.31,
@@ -2980,8 +2971,8 @@
     {
       "id": 62,
       "start": 100.83,
-      "end": 103.55,
-      "text": "99 % it's an auto So you better respect",
+      "end": 103.13,
+      "text": "99 % it's an auto So you better",
       "words": [
         {
           "word": "99",
@@ -3030,22 +3021,22 @@
           "start": 102.95,
           "end": 103.13,
           "probability": 0.965236485004425
-        },
-        {
-          "word": "respect",
-          "start": 103.13,
-          "end": 103.55,
-          "probability": 0.9915846586227417
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 63,
-      "start": 103.55,
+      "start": 103.13,
       "end": 104.09,
-      "text": "your torso",
+      "text": "respect your torso",
       "words": [
+        {
+          "word": "respect",
+          "start": 103.13,
+          "end": 103.55,
+          "probability": 0.9915846586227417
+        },
         {
           "word": "your",
           "start": 103.55,
@@ -3127,8 +3118,8 @@
     {
       "id": 65,
       "start": 109.03,
-      "end": 111.47,
-      "text": "Danger Tell these babies there's no space in the",
+      "end": 111.19,
+      "text": "Danger Tell these babies there's no space",
       "words": [
         {
           "word": "Danger",
@@ -3171,7 +3162,16 @@
           "start": 110.95,
           "end": 111.19,
           "probability": 0.9909945130348206
-        },
+        }
+      ],
+      "speaker": "Skepta"
+    },
+    {
+      "id": 66,
+      "start": 111.19,
+      "end": 111.73,
+      "text": "in the manger",
+      "words": [
         {
           "word": "in",
           "start": 111.19,
@@ -3183,16 +3183,7 @@
           "start": 111.37,
           "end": 111.47,
           "probability": 0.5694700479507446
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 66,
-      "start": 111.47,
-      "end": 111.73,
-      "text": "manger",
-      "words": [
+        },
         {
           "word": "manger",
           "start": 111.47,
@@ -4135,8 +4126,8 @@
     {
       "id": 85,
       "start": 148.31,
-      "end": 150.95,
-      "text": "5 for 5 and I'm vibing Music artists and",
+      "end": 150.81,
+      "text": "5 for 5 and I'm vibing Music artists",
       "words": [
         {
           "word": "5",
@@ -4185,22 +4176,22 @@
           "start": 150.37,
           "end": 150.81,
           "probability": 0.65003502368927
-        },
-        {
-          "word": "and",
-          "start": 150.81,
-          "end": 150.95,
-          "probability": 0.8340951204299927
         }
       ],
       "speaker": "Shorty"
     },
     {
       "id": 86,
-      "start": 150.95,
+      "start": 150.81,
       "end": 151.57,
-      "text": "I'm rising",
+      "text": "and I'm rising",
       "words": [
+        {
+          "word": "and",
+          "start": 150.81,
+          "end": 150.95,
+          "probability": 0.8340951204299927
+        },
         {
           "word": "I'm",
           "start": 150.95,
@@ -4531,8 +4522,8 @@
     {
       "id": 93,
       "start": 161.83,
-      "end": 163.91,
-      "text": "Alright check this Mash up the rave with no",
+      "end": 163.65,
+      "text": "Alright check this Mash up the rave with",
       "words": [
         {
           "word": "Alright",
@@ -4581,22 +4572,22 @@
           "start": 163.47,
           "end": 163.65,
           "probability": 0.9804254174232483
-        },
-        {
-          "word": "no",
-          "start": 163.65,
-          "end": 163.91,
-          "probability": 0.9785048961639404
         }
       ],
       "speaker": "JME"
     },
     {
       "id": 94,
-      "start": 163.91,
+      "start": 163.65,
       "end": 164.37,
-      "text": "set list",
+      "text": "no set list",
       "words": [
+        {
+          "word": "no",
+          "start": 163.65,
+          "end": 163.91,
+          "probability": 0.9785048961639404
+        },
         {
           "word": "set",
           "start": 163.91,
@@ -5449,8 +5440,8 @@
     {
       "id": 111,
       "start": 190.47,
-      "end": 192.13,
-      "text": "Never came for fame I came to make my",
+      "end": 191.89,
+      "text": "Never came for fame I came to make",
       "words": [
         {
           "word": "Never",
@@ -5499,22 +5490,22 @@
           "start": 191.77,
           "end": 191.89,
           "probability": 0.9924330711364746
-        },
-        {
-          "word": "my",
-          "start": 191.89,
-          "end": 192.13,
-          "probability": 0.9511753916740417
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 112,
-      "start": 192.13,
+      "start": 191.89,
       "end": 192.53,
-      "text": "P's blood",
+      "text": "my P's blood",
       "words": [
+        {
+          "word": "my",
+          "start": 191.89,
+          "end": 192.13,
+          "probability": 0.9511753916740417
+        },
         {
           "word": "P's",
           "start": 192.13,
@@ -5812,8 +5803,8 @@
     {
       "id": 118,
       "start": 201.05,
-      "end": 202.45,
-      "text": "what I want how I want when I feel",
+      "end": 202.01,
+      "text": "what I want how I want when",
       "words": [
         {
           "word": "what",
@@ -5856,7 +5847,16 @@
           "start": 201.87,
           "end": 202.01,
           "probability": 0.7518973350524902
-        },
+        }
+      ],
+      "speaker": "Frisco"
+    },
+    {
+      "id": 119,
+      "start": 202.01,
+      "end": 202.77,
+      "text": "I feel like",
+      "words": [
         {
           "word": "I",
           "start": 202.01,
@@ -5868,16 +5868,7 @@
           "start": 202.21,
           "end": 202.45,
           "probability": 0.9925577640533447
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 119,
-      "start": 202.45,
-      "end": 202.77,
-      "text": "like",
-      "words": [
+        },
         {
           "word": "like",
           "start": 202.45,
@@ -6304,8 +6295,8 @@
     {
       "id": 128,
       "start": 216.15,
-      "end": 218.93,
-      "text": "Brand new comeback reinvented And I ain't taking back",
+      "end": 218.67,
+      "text": "Brand new comeback reinvented And I ain't taking",
       "words": [
         {
           "word": "Brand",
@@ -6354,22 +6345,22 @@
           "start": 218.43,
           "end": 218.67,
           "probability": 0.7939057946205139
-        },
-        {
-          "word": "back",
-          "start": 218.67,
-          "end": 218.93,
-          "probability": 0.99122554063797
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 129,
-      "start": 218.93,
+      "start": 218.67,
       "end": 219.23,
-      "text": "no talk",
+      "text": "back no talk",
       "words": [
+        {
+          "word": "back",
+          "start": 218.67,
+          "end": 218.93,
+          "probability": 0.99122554063797
+        },
         {
           "word": "no",
           "start": 218.93,
@@ -6388,8 +6379,8 @@
     {
       "id": 130,
       "start": 219.23,
-      "end": 220.79,
-      "text": "Cause I wouldn't have said it if I never",
+      "end": 220.53,
+      "text": "Cause I wouldn't have said it if I",
       "words": [
         {
           "word": "Cause",
@@ -6438,22 +6429,22 @@
           "start": 220.43,
           "end": 220.53,
           "probability": 0.9703086018562317
-        },
-        {
-          "word": "never",
-          "start": 220.53,
-          "end": 220.79,
-          "probability": 0.968353271484375
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 131,
-      "start": 220.79,
+      "start": 220.53,
       "end": 221.33,
-      "text": "meant it",
+      "text": "never meant it",
       "words": [
+        {
+          "word": "never",
+          "start": 220.53,
+          "end": 220.79,
+          "probability": 0.968353271484375
+        },
         {
           "word": "meant",
           "start": 220.79,
@@ -6706,8 +6697,8 @@
     {
       "id": 136,
       "start": 227.91,
-      "end": 230.81,
-      "text": "Still going to skeg man more In case he",
+      "end": 230.65,
+      "text": "Still going to skeg man more In case",
       "words": [
         {
           "word": "Still",
@@ -6756,22 +6747,22 @@
           "start": 230.47,
           "end": 230.65,
           "probability": 0.9803598523139954
-        },
-        {
-          "word": "he",
-          "start": 230.65,
-          "end": 230.81,
-          "probability": 0.6177960634231567
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 137,
-      "start": 230.81,
+      "start": 230.65,
       "end": 231.83,
-      "text": "fucks up",
+      "text": "he fucks up",
       "words": [
+        {
+          "word": "he",
+          "start": 230.65,
+          "end": 230.81,
+          "probability": 0.6177960634231567
+        },
         {
           "word": "fucks",
           "start": 230.81,
@@ -6790,8 +6781,8 @@
     {
       "id": 138,
       "start": 231.83,
-      "end": 235.81,
-      "text": "Them man know I'm ready for combat Prepare for",
+      "end": 235.65,
+      "text": "Them man know I'm ready for combat Prepare",
       "words": [
         {
           "word": "Them",
@@ -6840,22 +6831,22 @@
           "start": 234.73,
           "end": 235.65,
           "probability": 0.7917049527168274
-        },
-        {
-          "word": "for",
-          "start": 235.65,
-          "end": 235.81,
-          "probability": 0.9951328635215759
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 139,
-      "start": 235.81,
+      "start": 235.65,
       "end": 236.37,
-      "text": "the worst",
+      "text": "for the worst",
       "words": [
+        {
+          "word": "for",
+          "start": 235.65,
+          "end": 235.81,
+          "probability": 0.9951328635215759
+        },
         {
           "word": "the",
           "start": 235.81,
@@ -7273,8 +7264,8 @@
     {
       "id": 147,
       "start": 249.99,
-      "end": 252.69,
-      "text": "My eyebrows red oh yeah For Escobar I smoked",
+      "end": 252.49,
+      "text": "My eyebrows red oh yeah For Escobar I",
       "words": [
         {
           "word": "My",
@@ -7323,22 +7314,22 @@
           "start": 252.31,
           "end": 252.49,
           "probability": 0.8747376203536987
-        },
-        {
-          "word": "smoked",
-          "start": 252.49,
-          "end": 252.69,
-          "probability": 0.6370925903320312
         }
       ],
       "speaker": "Jammer"
     },
     {
       "id": 148,
-      "start": 252.69,
+      "start": 252.49,
       "end": 253.27,
-      "text": "the herbal",
+      "text": "smoked the herbal",
       "words": [
+        {
+          "word": "smoked",
+          "start": 252.49,
+          "end": 252.69,
+          "probability": 0.6370925903320312
+        },
         {
           "word": "the",
           "start": 252.69,
@@ -7420,8 +7411,8 @@
     {
       "id": 150,
       "start": 255.39,
-      "end": 256.69,
-      "text": ".P for my fam that I lost in the",
+      "end": 256.37,
+      "text": ".P for my fam that I lost",
       "words": [
         {
           "word": ".P",
@@ -7464,7 +7455,16 @@
           "start": 256.25,
           "end": 256.37,
           "probability": 0.9159753918647766
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 151,
+      "start": 256.37,
+      "end": 257.01,
+      "text": "in the past",
+      "words": [
         {
           "word": "in",
           "start": 256.37,
@@ -7476,16 +7476,7 @@
           "start": 256.57,
           "end": 256.69,
           "probability": 0.9953000545501709
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 151,
-      "start": 256.69,
-      "end": 257.01,
-      "text": "past",
-      "words": [
+        },
         {
           "word": "past",
           "start": 256.69,
@@ -7498,8 +7489,8 @@
     {
       "id": 152,
       "start": 257.01,
-      "end": 259.25,
-      "text": "Trust I said well When I come through it's",
+      "end": 258.73,
+      "text": "Trust I said well When I come",
       "words": [
         {
           "word": "Trust",
@@ -7542,7 +7533,16 @@
           "start": 258.51,
           "end": 258.73,
           "probability": 0.9861918687820435
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 153,
+      "start": 258.73,
+      "end": 259.49,
+      "text": "through it's warning",
+      "words": [
         {
           "word": "through",
           "start": 258.73,
@@ -7554,16 +7554,7 @@
           "start": 258.93,
           "end": 259.25,
           "probability": 0.8510830700397491
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 153,
-      "start": 259.25,
-      "end": 259.49,
-      "text": "warning",
-      "words": [
+        },
         {
           "word": "warning",
           "start": 259.25,
@@ -7915,8 +7906,8 @@
     {
       "id": 161,
       "start": 272.69,
-      "end": 274.81,
-      "text": "Salt and pepper S man the bass watch no",
+      "end": 274.25,
+      "text": "Salt and pepper S man the bass",
       "words": [
         {
           "word": "Salt",
@@ -7959,7 +7950,16 @@
           "start": 274.03,
           "end": 274.25,
           "probability": 0.47908735275268555
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 162,
+      "start": 274.25,
+      "end": 275.11,
+      "text": "watch no face",
+      "words": [
         {
           "word": "watch",
           "start": 274.25,
@@ -7971,16 +7971,7 @@
           "start": 274.57,
           "end": 274.81,
           "probability": 0.9115926027297974
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 162,
-      "start": 274.81,
-      "end": 275.11,
-      "text": "face",
-      "words": [
+        },
         {
           "word": "face",
           "start": 274.81,
@@ -7993,8 +7984,8 @@
     {
       "id": 163,
       "start": 275.11,
-      "end": 276.91,
-      "text": "We put the work in Black and black across",
+      "end": 276.65,
+      "text": "We put the work in Black and black",
       "words": [
         {
           "word": "We",
@@ -8043,22 +8034,22 @@
           "start": 276.53,
           "end": 276.65,
           "probability": 0.10698377341032028
-        },
-        {
-          "word": "across",
-          "start": 276.65,
-          "end": 276.91,
-          "probability": 0.742216169834137
         }
       ],
       "speaker": "Jammer"
     },
     {
       "id": 164,
-      "start": 276.91,
+      "start": 276.65,
       "end": 277.17,
-      "text": "the deck",
+      "text": "across the deck",
       "words": [
+        {
+          "word": "across",
+          "start": 276.65,
+          "end": 276.91,
+          "probability": 0.742216169834137
+        },
         {
           "word": "the",
           "start": 276.91,
@@ -9052,8 +9043,8 @@
     {
       "id": 184,
       "start": 310.85,
-      "end": 312.85,
-      "text": "get to save my piece Can't believe the singles",
+      "end": 312.61,
+      "text": "get to save my piece Can't believe the",
       "words": [
         {
           "word": "get",
@@ -9102,22 +9093,22 @@
           "start": 312.39,
           "end": 312.61,
           "probability": 0.9934158325195312
-        },
-        {
-          "word": "singles",
-          "start": 312.61,
-          "end": 312.85,
-          "probability": 0.9783932566642761
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 185,
-      "start": 312.85,
+      "start": 312.61,
       "end": 313.49,
-      "text": "I released",
+      "text": "singles I released",
       "words": [
+        {
+          "word": "singles",
+          "start": 312.61,
+          "end": 312.85,
+          "probability": 0.9783932566642761
+        },
         {
           "word": "I",
           "start": 312.85,
@@ -9311,26 +9302,17 @@
       "speaker": "Skepta"
     },
     {
-      "id": 189,
+      "id": 190,
       "start": 318.41,
-      "end": 318.79,
-      "text": "for",
+      "end": 320.53,
+      "text": "for Ayy Logan",
       "words": [
         {
           "word": "for",
           "start": 318.41,
           "end": 318.79,
           "probability": 0.5183525085449219
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 190,
-      "start": 319.53,
-      "end": 320.53,
-      "text": "Ayy Logan",
-      "words": [
+        },
         {
           "word": "Ayy",
           "start": 319.53,
@@ -9506,26 +9488,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 194,
+      "id": 195,
       "start": 329.13,
-      "end": 329.87,
-      "text": "Logan",
+      "end": 330.89,
+      "text": "Logan And Jim!",
       "words": [
         {
           "word": "Logan",
           "start": 329.13,
           "end": 329.87,
           "probability": 0.48471254110336304
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 195,
-      "start": 329.87,
-      "end": 330.89,
-      "text": "And Jim!",
-      "words": [
+        },
         {
           "word": "And",
           "start": 329.87,
@@ -9628,8 +9601,8 @@
     {
       "id": 198,
       "start": 333.81,
-      "end": 334.73,
-      "text": "Oh my god",
+      "end": 335.79,
+      "text": "Oh my god Jacum! Jacum!",
       "words": [
         {
           "word": "Oh",
@@ -9648,31 +9621,13 @@
           "start": 334.49,
           "end": 334.73,
           "probability": 0.4905370771884918
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 199,
-      "start": 334.73,
-      "end": 335.15,
-      "text": "Jacum!",
-      "words": [
+        },
         {
           "word": "Jacum!",
           "start": 334.73,
           "end": 335.15,
           "probability": 0.1691773720085621
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 200,
-      "start": 335.27,
-      "end": 335.79,
-      "text": "Jacum!",
-      "words": [
+        },
         {
           "word": "Jacum!",
           "start": 335.27,
@@ -10025,26 +9980,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 215,
+      "id": 216,
       "start": 358.41,
-      "end": 358.91,
-      "text": "easy,",
+      "end": 359.83,
+      "text": "easy, you done know",
       "words": [
         {
           "word": "easy,",
           "start": 358.41,
           "end": 358.91,
           "probability": 0.962226927280426
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 216,
-      "start": 359.17,
-      "end": 359.83,
-      "text": "you done know",
-      "words": [
+        },
         {
           "word": "you",
           "start": 359.17,
@@ -10069,8 +10015,8 @@
     {
       "id": 217,
       "start": 359.83,
-      "end": 362.27,
-      "text": "Too much style for one flow So try interrupt",
+      "end": 361.95,
+      "text": "Too much style for one flow So try",
       "words": [
         {
           "word": "Too",
@@ -10119,22 +10065,22 @@
           "start": 361.79,
           "end": 361.95,
           "probability": 0.836205005645752
-        },
-        {
-          "word": "interrupt",
-          "start": 361.95,
-          "end": 362.27,
-          "probability": 0.45384615659713745
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 218,
-      "start": 362.27,
+      "start": 361.95,
       "end": 362.95,
-      "text": "my income",
+      "text": "interrupt my income",
       "words": [
+        {
+          "word": "interrupt",
+          "start": 361.95,
+          "end": 362.27,
+          "probability": 0.45384615659713745
+        },
         {
           "word": "my",
           "start": 362.27,
@@ -10214,10 +10160,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 220,
+      "id": 221,
       "start": 365.53,
-      "end": 366.73,
-      "text": "Jamek Power",
+      "end": 368.45,
+      "text": "Jamek Power Merkle Man",
       "words": [
         {
           "word": "Jamek",
@@ -10230,16 +10176,7 @@
           "start": 366.13,
           "end": 366.73,
           "probability": 0.33959323167800903
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 221,
-      "start": 366.73,
-      "end": 368.45,
-      "text": "Merkle Man",
-      "words": [
+        },
         {
           "word": "Merkle",
           "start": 366.73,
@@ -10291,8 +10228,8 @@
     {
       "id": 223,
       "start": 370.11,
-      "end": 371.39,
-      "text": "I don't circle Man",
+      "end": 375.13,
+      "text": "I don't circle Man Green Bandana Purple Gang",
       "words": [
         {
           "word": "I",
@@ -10317,16 +10254,7 @@
           "start": 371.07,
           "end": 371.39,
           "probability": 0.4892610013484955
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 224,
-      "start": 372.07,
-      "end": 373.07,
-      "text": "Green Bandana",
-      "words": [
+        },
         {
           "word": "Green",
           "start": 372.07,
@@ -10338,16 +10266,7 @@
           "start": 372.49,
           "end": 373.07,
           "probability": 0.8264071345329285
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 225,
-      "start": 373.93,
-      "end": 375.13,
-      "text": "Purple Gang",
-      "words": [
+        },
         {
           "word": "Purple",
           "start": 373.93,
@@ -10364,10 +10283,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 226,
+      "id": 227,
       "start": 375.13,
-      "end": 376.39,
-      "text": "Or Robert",
+      "end": 378.31,
+      "text": "Or Robert Purple Man",
       "words": [
         {
           "word": "Or",
@@ -10380,16 +10299,7 @@
           "start": 375.69,
           "end": 376.39,
           "probability": 0.4852752089500427
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 227,
-      "start": 377.12,
-      "end": 378.31,
-      "text": "Purple Man",
-      "words": [
+        },
         {
           "word": "Purple",
           "start": 377.12,
@@ -10408,8 +10318,8 @@
     {
       "id": 228,
       "start": 378.31,
-      "end": 380.03,
-      "text": "I think I'm legendary",
+      "end": 383.61,
+      "text": "I think I'm legendary Scratch Perry iPhone 4",
       "words": [
         {
           "word": "I",
@@ -10434,16 +10344,7 @@
           "start": 379.19,
           "end": 380.03,
           "probability": 0.7486281394958496
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 229,
-      "start": 380.03,
-      "end": 381.83,
-      "text": "Scratch Perry",
-      "words": [
+        },
         {
           "word": "Scratch",
           "start": 380.03,
@@ -10455,16 +10356,7 @@
           "start": 381.17,
           "end": 381.83,
           "probability": 0.7922332286834717
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 230,
-      "start": 381.83,
-      "end": 383.61,
-      "text": "iPhone 4",
-      "words": [
+        },
         {
           "word": "iPhone",
           "start": 381.83,
@@ -10543,8 +10435,8 @@
     {
       "id": 233,
       "start": 386.97,
-      "end": 388.44,
-      "text": "A Papa Jerry",
+      "end": 393.7,
+      "text": "A Papa Jerry Good French Lenny Henry Nando's",
       "words": [
         {
           "word": "A",
@@ -10563,16 +10455,7 @@
           "start": 387.87,
           "end": 388.44,
           "probability": 0.945883572101593
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 234,
-      "start": 388.85,
-      "end": 390.0,
-      "text": "Good French",
-      "words": [
+        },
         {
           "word": "Good",
           "start": 388.85,
@@ -10584,16 +10467,7 @@
           "start": 389.43,
           "end": 390.0,
           "probability": 0.9091206192970276
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 235,
-      "start": 390.47,
-      "end": 391.84,
-      "text": "Lenny Henry",
-      "words": [
+        },
         {
           "word": "Lenny",
           "start": 390.47,
@@ -10605,16 +10479,7 @@
           "start": 391.27,
           "end": 391.84,
           "probability": 0.9662008285522461
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 236,
-      "start": 393.13,
-      "end": 393.7,
-      "text": "Nando's",
-      "words": [
+        },
         {
           "word": "Nando's",
           "start": 393.13,
@@ -10625,10 +10490,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 237,
+      "id": 238,
       "start": 394.27,
-      "end": 395.39,
-      "text": "Perry Perry",
+      "end": 398.65,
+      "text": "Perry Perry A kiss a chick Katy Perry",
       "words": [
         {
           "word": "Perry",
@@ -10641,16 +10506,7 @@
           "start": 394.61,
           "end": 395.39,
           "probability": 0.9800281524658203
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 238,
-      "start": 395.39,
-      "end": 397.35,
-      "text": "A kiss a chick",
-      "words": [
+        },
         {
           "word": "A",
           "start": 395.39,
@@ -10674,16 +10530,7 @@
           "start": 396.43,
           "end": 397.35,
           "probability": 0.916210412979126
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 239,
-      "start": 397.35,
-      "end": 398.65,
-      "text": "Katy Perry",
-      "words": [
+        },
         {
           "word": "Katy",
           "start": 397.35,
@@ -10795,8 +10642,8 @@
     {
       "id": 243,
       "start": 404.31,
-      "end": 405.13,
-      "text": "R .F .E.",
+      "end": 405.65,
+      "text": "R .F .E. Shorty",
       "words": [
         {
           "word": "R",
@@ -10815,16 +10662,7 @@
           "start": 404.99,
           "end": 405.13,
           "probability": 0.5514729768037796
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 244,
-      "start": 405.25,
-      "end": 405.65,
-      "text": "Shorty",
-      "words": [
+        },
         {
           "word": "Shorty",
           "start": 405.25,
@@ -10837,8 +10675,8 @@
     {
       "id": 245,
       "start": 405.65,
-      "end": 406.71,
-      "text": "I'm the smallest one",
+      "end": 408.39,
+      "text": "I'm the smallest one 5 '5 Everything's live",
       "words": [
         {
           "word": "I'm",
@@ -10863,16 +10701,7 @@
           "start": 406.29,
           "end": 406.71,
           "probability": 0.9711722135543823
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 246,
-      "start": 406.71,
-      "end": 407.41,
-      "text": "5 '5",
-      "words": [
+        },
         {
           "word": "5",
           "start": 406.71,
@@ -10884,16 +10713,7 @@
           "start": 407.07,
           "end": 407.41,
           "probability": 0.4458566904067993
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 247,
-      "start": 407.85,
-      "end": 408.39,
-      "text": "Everything's live",
-      "words": [
+        },
         {
           "word": "Everything's",
           "start": 407.85,
@@ -11279,26 +11099,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 255,
+      "id": 256,
       "start": 418.71,
-      "end": 418.91,
-      "text": "on",
+      "end": 420.45,
+      "text": "on When I say BBK Sing along",
       "words": [
         {
           "word": "on",
           "start": 418.71,
           "end": 418.91,
           "probability": 0.998145341873169
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 256,
-      "start": 418.91,
-      "end": 419.99,
-      "text": "When I say BBK",
-      "words": [
+        },
         {
           "word": "When",
           "start": 418.91,
@@ -11322,16 +11133,7 @@
           "start": 419.43,
           "end": 419.99,
           "probability": 0.8760689198970795
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 257,
-      "start": 419.99,
-      "end": 420.45,
-      "text": "Sing along",
-      "words": [
+        },
         {
           "word": "Sing",
           "start": 419.99,
@@ -11350,8 +11152,8 @@
     {
       "id": 258,
       "start": 420.45,
-      "end": 421.67,
-      "text": "We need some more girls in here",
+      "end": 422.31,
+      "text": "We need some more girls in here Sing along",
       "words": [
         {
           "word": "We",
@@ -11394,16 +11196,7 @@
           "start": 421.61,
           "end": 421.67,
           "probability": 0.9770673513412476
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 259,
-      "start": 421.67,
-      "end": 422.31,
-      "text": "Sing along",
-      "words": [
+        },
         {
           "word": "Sing",
           "start": 421.67,
@@ -11530,8 +11323,8 @@
     {
       "id": 262,
       "start": 425.69,
-      "end": 426.55,
-      "text": "Boy better know",
+      "end": 427.55,
+      "text": "Boy better know CEO",
       "words": [
         {
           "word": "Boy",
@@ -11550,16 +11343,7 @@
           "start": 426.17,
           "end": 426.55,
           "probability": 0.9851104021072388
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 263,
-      "start": 427.15,
-      "end": 427.55,
-      "text": "CEO",
-      "words": [
+        },
         {
           "word": "CEO",
           "start": 427.15,
@@ -11572,8 +11356,8 @@
     {
       "id": 264,
       "start": 427.55,
-      "end": 428.31,
-      "text": "Sharp your mat",
+      "end": 428.93,
+      "text": "Sharp your mat Sing along",
       "words": [
         {
           "word": "Sharp",
@@ -11592,16 +11376,7 @@
           "start": 428.13,
           "end": 428.31,
           "probability": 0.22630378603935242
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 265,
-      "start": 428.31,
-      "end": 428.93,
-      "text": "Sing along",
-      "words": [
+        },
         {
           "word": "Sing",
           "start": 428.31,
@@ -12122,41 +11897,23 @@
       "speaker": "Frisco"
     },
     {
-      "id": 276,
+      "id": 278,
       "start": 447.39,
-      "end": 447.83,
-      "text": "Yeah",
+      "end": 451.17,
+      "text": "Yeah Logan Boy better know in session full crew",
       "words": [
         {
           "word": "Yeah",
           "start": 447.39,
           "end": 447.83,
           "probability": 0.3357374370098114
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 277,
-      "start": 448.63,
-      "end": 449.07,
-      "text": "Logan",
-      "words": [
+        },
         {
           "word": "Logan",
           "start": 448.63,
           "end": 449.07,
           "probability": 0.5385593771934509
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 278,
-      "start": 449.07,
-      "end": 451.17,
-      "text": "Boy better know in session full crew",
-      "words": [
+        },
         {
           "word": "Boy",
           "start": 449.07,
@@ -12205,8 +11962,8 @@
     {
       "id": 279,
       "start": 451.17,
-      "end": 453.35,
-      "text": "Big shout to Solo45",
+      "end": 454.17,
+      "text": "Big shout to Solo45 Wiley",
       "words": [
         {
           "word": "Big",
@@ -12231,16 +11988,7 @@
           "start": 452.03,
           "end": 453.35,
           "probability": 0.508558377623558
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 280,
-      "start": 453.35,
-      "end": 454.17,
-      "text": "Wiley",
-      "words": [
+        },
         {
           "word": "Wiley",
           "start": 453.35,
@@ -12253,8 +12001,8 @@
     {
       "id": 281,
       "start": 454.17,
-      "end": 456.43,
-      "text": "Maximum can't forget Sam that's BBK",
+      "end": 458.83,
+      "text": "Maximum can't forget Sam that's BBK Listen Yeah Yeah",
       "words": [
         {
           "word": "Maximum",
@@ -12291,46 +12039,19 @@
           "start": 455.95,
           "end": 456.43,
           "probability": 0.9105907082557678
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 282,
-      "start": 457.09,
-      "end": 457.53,
-      "text": "Listen",
-      "words": [
+        },
         {
           "word": "Listen",
           "start": 457.09,
           "end": 457.53,
           "probability": 0.5300664305686951
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 283,
-      "start": 457.53,
-      "end": 458.23,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "word": "Yeah",
           "start": 457.53,
           "end": 458.23,
           "probability": 0.49704697728157043
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 284,
-      "start": 458.23,
-      "end": 458.83,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "word": "Yeah",
           "start": 458.23,
@@ -12524,10 +12245,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 288,
+      "id": 289,
       "start": 463.91,
-      "end": 464.51,
-      "text": "my CD",
+      "end": 465.83,
+      "text": "my CD Look in the mirror and mine",
       "words": [
         {
           "word": "my",
@@ -12540,16 +12261,7 @@
           "start": 464.17,
           "end": 464.51,
           "probability": 0.8979441523551941
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 289,
-      "start": 464.51,
-      "end": 465.83,
-      "text": "Look in the mirror and mine",
-      "words": [
+        },
         {
           "word": "Look",
           "start": 464.51,
@@ -13220,26 +12932,17 @@
       "speaker": "Skepta"
     },
     {
-      "id": 302,
+      "id": 303,
       "start": 486.05,
-      "end": 486.61,
-      "text": "around",
+      "end": 488.07,
+      "text": "around With a flow that broke down",
       "words": [
         {
           "word": "around",
           "start": 486.05,
           "end": 486.61,
           "probability": 0.987199604511261
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 303,
-      "start": 486.61,
-      "end": 488.07,
-      "text": "With a flow that broke down",
-      "words": [
+        },
         {
           "word": "With",
           "start": 486.61,
@@ -13564,8 +13267,8 @@
     {
       "id": 310,
       "start": 498.43,
-      "end": 500.55,
-      "text": "Nocturnal creature like chipmunk in a league of my",
+      "end": 500.23,
+      "text": "Nocturnal creature like chipmunk in a league",
       "words": [
         {
           "word": "Nocturnal",
@@ -13608,7 +13311,16 @@
           "start": 500.11,
           "end": 500.23,
           "probability": 0.9882782101631165
-        },
+        }
+      ],
+      "speaker": "Skepta"
+    },
+    {
+      "id": 311,
+      "start": 500.23,
+      "end": 500.99,
+      "text": "of my own",
+      "words": [
         {
           "word": "of",
           "start": 500.23,
@@ -13620,16 +13332,7 @@
           "start": 500.37,
           "end": 500.55,
           "probability": 0.984778106212616
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 311,
-      "start": 500.55,
-      "end": 500.99,
-      "text": "own",
-      "words": [
+        },
         {
           "word": "own",
           "start": 500.55,
@@ -13966,8 +13669,8 @@
     {
       "id": 320,
       "start": 510.99,
-      "end": 512.59,
-      "text": "Skepto I'm in my own zone",
+      "end": 513.83,
+      "text": "Skepto I'm in my own zone Yeah Capital",
       "words": [
         {
           "word": "Skepto",
@@ -14004,52 +13707,34 @@
           "start": 512.35,
           "end": 512.59,
           "probability": 0.9938474297523499
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 321,
-      "start": 512.59,
-      "end": 513.17,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "word": "Yeah",
           "start": 512.59,
           "end": 513.17,
           "probability": 0.3308185040950775
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 322,
-      "start": 513.17,
-      "end": 514.17,
-      "text": "Capital J,",
-      "words": [
+        },
         {
           "word": "Capital",
           "start": 513.17,
           "end": 513.83,
           "probability": 0.022371478378772736
-        },
-        {
-          "word": "J,",
-          "start": 513.83,
-          "end": 514.17,
-          "probability": 0.9392639994621277
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 323,
-      "start": 514.23,
+      "start": 513.83,
       "end": 514.55,
-      "text": "little M,",
+      "text": "J, little M,",
       "words": [
+        {
+          "word": "J,",
+          "start": 513.83,
+          "end": 514.17,
+          "probability": 0.9392639994621277
+        },
         {
           "word": "little",
           "start": 514.23,
@@ -14395,8 +14080,8 @@
     {
       "id": 331,
       "start": 523.57,
-      "end": 525.27,
-      "text": "Big 5 series not a little 3",
+      "end": 526.07,
+      "text": "Big 5 series not a little 3 Swag, swag",
       "words": [
         {
           "word": "Big",
@@ -14439,31 +14124,13 @@
           "start": 524.85,
           "end": 525.27,
           "probability": 0.5311781764030457
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 332,
-      "start": 525.27,
-      "end": 525.73,
-      "text": "Swag,",
-      "words": [
+        },
         {
           "word": "Swag,",
           "start": 525.27,
           "end": 525.73,
           "probability": 0.6160338670015335
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 333,
-      "start": 525.73,
-      "end": 526.07,
-      "text": "swag",
-      "words": [
+        },
         {
           "word": "swag",
           "start": 525.73,
@@ -14476,8 +14143,8 @@
     {
       "id": 334,
       "start": 526.07,
-      "end": 526.93,
-      "text": "Like a little B",
+      "end": 527.77,
+      "text": "Like a little B Capital J, little",
       "words": [
         {
           "word": "Like",
@@ -14502,16 +14169,7 @@
           "start": 526.65,
           "end": 526.93,
           "probability": 0.8833440542221069
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 335,
-      "start": 526.93,
-      "end": 527.59,
-      "text": "Capital J,",
-      "words": [
+        },
         {
           "word": "Capital",
           "start": 526.93,
@@ -14523,37 +14181,28 @@
           "start": 527.31,
           "end": 527.59,
           "probability": 0.964665412902832
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 336,
-      "start": 527.61,
-      "end": 527.99,
-      "text": "little M,",
-      "words": [
+        },
         {
           "word": "little",
           "start": 527.61,
           "end": 527.77,
           "probability": 0.8548870086669922
-        },
-        {
-          "word": "M,",
-          "start": 527.77,
-          "end": 527.99,
-          "probability": 0.9635591506958008
         }
       ],
       "speaker": "JME"
     },
     {
       "id": 337,
-      "start": 527.99,
+      "start": 527.77,
       "end": 528.59,
-      "text": "little E",
+      "text": "M, little E",
       "words": [
+        {
+          "word": "M,",
+          "start": 527.77,
+          "end": 527.99,
+          "probability": 0.9635591506958008
+        },
         {
           "word": "little",
           "start": 527.99,
@@ -14917,8 +14566,8 @@
     {
       "id": 345,
       "start": 538.75,
-      "end": 539.71,
-      "text": "Big 5 series",
+      "end": 541.55,
+      "text": "Big 5 series Never had",
       "words": [
         {
           "word": "Big",
@@ -14937,16 +14586,7 @@
           "start": 539.31,
           "end": 539.71,
           "probability": 0.1473952680826187
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 346,
-      "start": 540.67,
-      "end": 541.55,
-      "text": "Never had",
-      "words": [
+        },
         {
           "word": "Never",
           "start": 540.67,
@@ -14965,8 +14605,8 @@
     {
       "id": 347,
       "start": 542.19,
-      "end": 543.11,
-      "text": "I never had",
+      "end": 546.03,
+      "text": "I never had Swag",
       "words": [
         {
           "word": "I",
@@ -14985,16 +14625,7 @@
           "start": 542.89,
           "end": 543.11,
           "probability": 0.9923601746559143
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 348,
-      "start": 545.59,
-      "end": 546.03,
-      "text": "Swag",
-      "words": [
+        },
         {
           "word": "Swag",
           "start": 545.59,
@@ -15032,26 +14663,17 @@
       "speaker": "unknown"
     },
     {
-      "id": 350,
+      "id": 351,
       "start": 548.07,
-      "end": 548.51,
-      "text": "Listen",
+      "end": 550.09,
+      "text": "Listen Gold chain remix",
       "words": [
         {
           "word": "Listen",
           "start": 548.07,
           "end": 548.51,
           "probability": 0.9042399525642395
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 351,
-      "start": 548.51,
-      "end": 550.09,
-      "text": "Gold chain remix",
-      "words": [
+        },
         {
           "word": "Gold",
           "start": 548.51,
@@ -15298,8 +14920,8 @@
     {
       "id": 358,
       "start": 559.21,
-      "end": 560.89,
-      "text": "I'm a star sent for the sofa",
+      "end": 561.75,
+      "text": "I'm a star sent for the sofa I'm a",
       "words": [
         {
           "word": "I'm",
@@ -15342,16 +14964,7 @@
           "start": 560.51,
           "end": 560.89,
           "probability": 0.29462164640426636
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 359,
-      "start": 560.89,
-      "end": 561.75,
-      "text": "I'm a",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 560.89,
@@ -15368,10 +14981,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 360,
+      "id": 361,
       "start": 561.75,
-      "end": 562.37,
-      "text": "Ay Logan",
+      "end": 563.55,
+      "text": "Ay Logan Ay Logan",
       "words": [
         {
           "word": "Ay",
@@ -15384,16 +14997,7 @@
           "start": 561.99,
           "end": 562.37,
           "probability": 0.7464371919631958
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 361,
-      "start": 562.37,
-      "end": 563.55,
-      "text": "Ay Logan",
-      "words": [
+        },
         {
           "word": "Ay",
           "start": 562.37,
@@ -15722,26 +15326,17 @@
       "speaker": "Jammer"
     },
     {
-      "id": 370,
+      "id": 371,
       "start": 575.19,
-      "end": 575.57,
-      "text": "B",
+      "end": 576.49,
+      "text": "B On the drop ass,",
       "words": [
         {
           "word": "B",
           "start": 575.19,
           "end": 575.57,
           "probability": 0.9851085543632507
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 371,
-      "start": 575.57,
-      "end": 576.49,
-      "text": "On the drop ass,",
-      "words": [
+        },
         {
           "word": "On",
           "start": 575.57,
@@ -16178,26 +15773,17 @@
       "speaker": "Jammer"
     },
     {
-      "id": 382,
+      "id": 383,
       "start": 588.71,
-      "end": 589.13,
-      "text": "B",
+      "end": 589.99,
+      "text": "B On the drop ass,",
       "words": [
         {
           "word": "B",
           "start": 588.71,
           "end": 589.13,
           "probability": 0.9526758193969727
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 383,
-      "start": 589.13,
-      "end": 589.99,
-      "text": "On the drop ass,",
-      "words": [
+        },
         {
           "word": "On",
           "start": 589.13,
@@ -16304,26 +15890,17 @@
       "speaker": "Jammer"
     },
     {
-      "id": 386,
+      "id": 387,
       "start": 592.23,
-      "end": 592.67,
-      "text": "What?",
+      "end": 595.09,
+      "text": "What? In the A &E Alright then",
       "words": [
         {
           "word": "What?",
           "start": 592.23,
           "end": 592.67,
           "probability": 0.1953422576189041
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 387,
-      "start": 593.13,
-      "end": 594.41,
-      "text": "In the A &E",
-      "words": [
+        },
         {
           "word": "In",
           "start": 593.13,
@@ -16347,16 +15924,7 @@
           "start": 593.67,
           "end": 594.41,
           "probability": 0.972348541021347
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 388,
-      "start": 594.41,
-      "end": 595.09,
-      "text": "Alright then",
-      "words": [
+        },
         {
           "word": "Alright",
           "start": 594.41,
@@ -16436,10 +16004,10 @@
       "speaker": "JME"
     },
     {
-      "id": 390,
+      "id": 391,
       "start": 596.67,
-      "end": 597.35,
-      "text": "Big face,",
+      "end": 598.37,
+      "text": "Big face, gold ticket, baiting",
       "words": [
         {
           "word": "Big",
@@ -16452,16 +16020,7 @@
           "start": 597.07,
           "end": 597.35,
           "probability": 0.8361325860023499
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 391,
-      "start": 597.35,
-      "end": 597.83,
-      "text": "gold ticket,",
-      "words": [
+        },
         {
           "word": "gold",
           "start": 597.35,
@@ -16473,16 +16032,7 @@
           "start": 597.49,
           "end": 597.83,
           "probability": 0.9520241022109985
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 392,
-      "start": 598.09,
-      "end": 598.37,
-      "text": "baiting",
-      "words": [
+        },
         {
           "word": "baiting",
           "start": 598.09,
@@ -16597,8 +16147,8 @@
     {
       "id": 395,
       "start": 601.63,
-      "end": 602.83,
-      "text": "Man will headlock the ticket,",
+      "end": 603.45,
+      "text": "Man will headlock the ticket, inspector",
       "words": [
         {
           "word": "Man",
@@ -16629,16 +16179,7 @@
           "start": 602.65,
           "end": 602.83,
           "probability": 0.9823251962661743
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 396,
-      "start": 602.83,
-      "end": 603.45,
-      "text": "inspector",
-      "words": [
+        },
         {
           "word": "inspector",
           "start": 602.83,
@@ -16702,8 +16243,8 @@
     {
       "id": 398,
       "start": 604.97,
-      "end": 606.79,
-      "text": "Better make it big like Chipie and Skepta",
+      "end": 607.47,
+      "text": "Better make it big like Chipie and Skepta Bruv,",
       "words": [
         {
           "word": "Better",
@@ -16752,16 +16293,7 @@
           "start": 606.43,
           "end": 606.79,
           "probability": 0.5538849383592606
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 399,
-      "start": 606.79,
-      "end": 607.47,
-      "text": "Bruv,",
-      "words": [
+        },
         {
           "word": "Bruv,",
           "start": 606.79,
@@ -16774,8 +16306,8 @@
     {
       "id": 400,
       "start": 607.55,
-      "end": 608.27,
-      "text": "I'm sick on the mic,",
+      "end": 608.65,
+      "text": "I'm sick on the mic, don't hate",
       "words": [
         {
           "word": "I'm",
@@ -16806,16 +16338,7 @@
           "start": 608.13,
           "end": 608.27,
           "probability": 0.9787946939468384
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 401,
-      "start": 608.29,
-      "end": 608.65,
-      "text": "don't hate",
-      "words": [
+        },
         {
           "word": "don't",
           "start": 608.29,
@@ -16873,8 +16396,8 @@
     {
       "id": 403,
       "start": 609.57,
-      "end": 610.41,
-      "text": "too sick on the beat",
+      "end": 610.65,
+      "text": "too sick on the beat Sick,",
       "words": [
         {
           "word": "too",
@@ -16905,16 +16428,7 @@
           "start": 610.23,
           "end": 610.41,
           "probability": 0.8732783794403076
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 404,
-      "start": 610.41,
-      "end": 610.65,
-      "text": "Sick,",
-      "words": [
+        },
         {
           "word": "Sick,",
           "start": 610.41,
@@ -17032,8 +16546,8 @@
     {
       "id": 408,
       "start": 613.95,
-      "end": 615.05,
-      "text": "I come so sick on the mic,",
+      "end": 615.59,
+      "text": "I come so sick on the mic, don't hate",
       "words": [
         {
           "word": "I",
@@ -17076,16 +16590,7 @@
           "start": 614.89,
           "end": 615.05,
           "probability": 0.9873418211936951
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 409,
-      "start": 615.05,
-      "end": 615.59,
-      "text": "don't hate",
-      "words": [
+        },
         {
           "word": "don't",
           "start": 615.05,
@@ -17137,8 +16642,8 @@
     {
       "id": 411,
       "start": 616.41,
-      "end": 617.17,
-      "text": "too sick on the beat",
+      "end": 618.03,
+      "text": "too sick on the beat So sick,",
       "words": [
         {
           "word": "too",
@@ -17169,16 +16674,7 @@
           "start": 617.01,
           "end": 617.17,
           "probability": 0.9945520758628845
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 412,
-      "start": 617.17,
-      "end": 618.03,
-      "text": "So sick,",
-      "words": [
+        },
         {
           "word": "So",
           "start": 617.17,
@@ -17800,8 +17296,8 @@
     {
       "id": 428,
       "start": 636.91,
-      "end": 637.35,
-      "text": "no man chat,",
+      "end": 637.87,
+      "text": "no man chat, no boo",
       "words": [
         {
           "word": "no",
@@ -17820,16 +17316,7 @@
           "start": 637.19,
           "end": 637.35,
           "probability": 0.33679214119911194
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 429,
-      "start": 637.49,
-      "end": 637.87,
-      "text": "no boo",
-      "words": [
+        },
         {
           "word": "no",
           "start": 637.49,
@@ -17881,8 +17368,8 @@
     {
       "id": 431,
       "start": 639.25,
-      "end": 639.93,
-      "text": "there's no party boy",
+      "end": 640.73,
+      "text": "there's no party boy Better know, don't try,",
       "words": [
         {
           "word": "there's",
@@ -17907,16 +17394,7 @@
           "start": 639.73,
           "end": 639.93,
           "probability": 0.42725279927253723
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 432,
-      "start": 639.93,
-      "end": 640.35,
-      "text": "Better know,",
-      "words": [
+        },
         {
           "word": "Better",
           "start": 639.93,
@@ -17928,16 +17406,7 @@
           "start": 640.13,
           "end": 640.35,
           "probability": 0.6045835614204407
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 433,
-      "start": 640.37,
-      "end": 640.73,
-      "text": "don't try,",
-      "words": [
+        },
         {
           "word": "don't",
           "start": 640.37,
@@ -18022,8 +17491,8 @@
     {
       "id": 436,
       "start": 643.55,
-      "end": 644.13,
-      "text": "no man chat,",
+      "end": 644.69,
+      "text": "no man chat, no boo",
       "words": [
         {
           "word": "no",
@@ -18042,16 +17511,7 @@
           "start": 643.93,
           "end": 644.13,
           "probability": 0.9824351668357849
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 437,
-      "start": 644.23,
-      "end": 644.69,
-      "text": "no boo",
-      "words": [
+        },
         {
           "word": "no",
           "start": 644.23,
@@ -18103,8 +17563,8 @@
     {
       "id": 439,
       "start": 645.99,
-      "end": 646.65,
-      "text": "there's no party boy",
+      "end": 647.47,
+      "text": "there's no party boy Better know, don't try,",
       "words": [
         {
           "word": "there's",
@@ -18129,16 +17589,7 @@
           "start": 646.49,
           "end": 646.65,
           "probability": 0.9897125959396362
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 440,
-      "start": 646.65,
-      "end": 647.07,
-      "text": "Better know,",
-      "words": [
+        },
         {
           "word": "Better",
           "start": 646.65,
@@ -18150,16 +17601,7 @@
           "start": 646.87,
           "end": 647.07,
           "probability": 0.9958653450012207
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 441,
-      "start": 647.17,
-      "end": 647.47,
-      "text": "don't try,",
-      "words": [
+        },
         {
           "word": "don't",
           "start": 647.17,
@@ -18412,8 +17854,8 @@
     {
       "id": 448,
       "start": 655.35,
-      "end": 656.39,
-      "text": "Fully grown fritz major,",
+      "end": 657.03,
+      "text": "Fully grown fritz major, like laser",
       "words": [
         {
           "word": "Fully",
@@ -18438,16 +17880,7 @@
           "start": 656.07,
           "end": 656.39,
           "probability": 0.666093647480011
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 449,
-      "start": 656.61,
-      "end": 657.03,
-      "text": "like laser",
-      "words": [
+        },
         {
           "word": "like",
           "start": 656.61,
@@ -18466,8 +17899,8 @@
     {
       "id": 450,
       "start": 657.03,
-      "end": 658.65,
-      "text": "Them man are in a relegation battle",
+      "end": 659.05,
+      "text": "Them man are in a relegation battle Me,",
       "words": [
         {
           "word": "Them",
@@ -18510,16 +17943,7 @@
           "start": 658.33,
           "end": 658.65,
           "probability": 0.9744952321052551
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 451,
-      "start": 658.65,
-      "end": 659.05,
-      "text": "Me,",
-      "words": [
+        },
         {
           "word": "Me,",
           "start": 658.65,
@@ -18646,8 +18070,8 @@
     {
       "id": 454,
       "start": 662.49,
-      "end": 664.35,
-      "text": "Don't seem that long ago when my doctor told",
+      "end": 663.93,
+      "text": "Don't seem that long ago when my",
       "words": [
         {
           "word": "Don't",
@@ -18690,7 +18114,16 @@
           "start": 663.79,
           "end": 663.93,
           "probability": 0.9858422875404358
-        },
+        }
+      ],
+      "speaker": "Frisco"
+    },
+    {
+      "id": 455,
+      "start": 663.93,
+      "end": 664.53,
+      "text": "doctor told me",
+      "words": [
         {
           "word": "doctor",
           "start": 663.93,
@@ -18702,16 +18135,7 @@
           "start": 664.11,
           "end": 664.35,
           "probability": 0.9980509281158447
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 455,
-      "start": 664.35,
-      "end": 664.53,
-      "text": "me",
-      "words": [
+        },
         {
           "word": "me",
           "start": 664.35,
@@ -18787,8 +18211,8 @@
     {
       "id": 457,
       "start": 666.25,
-      "end": 667.15,
-      "text": "I don't wanna know,",
+      "end": 667.91,
+      "text": "I don't wanna know, I repeat,",
       "words": [
         {
           "word": "I",
@@ -18813,16 +18237,7 @@
           "start": 666.83,
           "end": 667.15,
           "probability": 0.994564414024353
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 458,
-      "start": 667.39,
-      "end": 667.91,
-      "text": "I repeat,",
-      "words": [
+        },
         {
           "word": "I",
           "start": 667.39,
@@ -18976,8 +18391,8 @@
     {
       "id": 462,
       "start": 672.51,
-      "end": 674.09,
-      "text": "And it ends and don't wanna go",
+      "end": 675.81,
+      "text": "And it ends and don't wanna go I'm major,",
       "words": [
         {
           "word": "And",
@@ -19020,16 +18435,7 @@
           "start": 673.55,
           "end": 674.09,
           "probability": 0.9969332218170166
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 463,
-      "start": 674.93,
-      "end": 675.81,
-      "text": "I'm major,",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 674.93,
@@ -19367,10 +18773,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 471,
+      "id": 472,
       "start": 687.73,
-      "end": 688.29,
-      "text": "Yo Jam",
+      "end": 690.09,
+      "text": "Yo Jam It all started",
       "words": [
         {
           "word": "Yo",
@@ -19383,16 +18789,7 @@
           "start": 687.91,
           "end": 688.29,
           "probability": 0.44665947556495667
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 472,
-      "start": 688.95,
-      "end": 690.09,
-      "text": "It all started",
-      "words": [
+        },
         {
           "word": "It",
           "start": 688.95,
@@ -19711,8 +19108,8 @@
     {
       "id": 479,
       "start": 700.33,
-      "end": 701.65,
-      "text": "Cause you wanna sit in my jazz,",
+      "end": 702.05,
+      "text": "Cause you wanna sit in my jazz, my world,",
       "words": [
         {
           "word": "Cause",
@@ -19755,16 +19152,7 @@
           "start": 701.47,
           "end": 701.65,
           "probability": 0.18255817890167236
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 480,
-      "start": 701.79,
-      "end": 702.05,
-      "text": "my world,",
-      "words": [
+        },
         {
           "word": "my",
           "start": 701.79,
@@ -19781,10 +19169,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 481,
+      "id": 482,
       "start": 702.21,
-      "end": 702.43,
-      "text": "my space",
+      "end": 704.17,
+      "text": "my space My time, my place, swad",
       "words": [
         {
           "word": "my",
@@ -19797,16 +19185,7 @@
           "start": 702.23,
           "end": 702.43,
           "probability": 0.9881622195243835
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 482,
-      "start": 702.43,
-      "end": 702.93,
-      "text": "My time,",
-      "words": [
+        },
         {
           "word": "My",
           "start": 702.43,
@@ -19818,16 +19197,7 @@
           "start": 702.71,
           "end": 702.93,
           "probability": 0.919127345085144
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 483,
-      "start": 702.97,
-      "end": 703.43,
-      "text": "my place,",
-      "words": [
+        },
         {
           "word": "my",
           "start": 702.97,
@@ -19839,16 +19209,7 @@
           "start": 703.09,
           "end": 703.43,
           "probability": 0.9958244562149048
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 484,
-      "start": 703.61,
-      "end": 704.17,
-      "text": "swad",
-      "words": [
+        },
         {
           "word": "swad",
           "start": 703.61,
@@ -19922,10 +19283,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 486,
+      "id": 487,
       "start": 706.09,
-      "end": 706.81,
-      "text": "take off",
+      "end": 708.11,
+      "text": "take off Blow up, no paper,",
       "words": [
         {
           "word": "take",
@@ -19938,16 +19299,7 @@
           "start": 706.43,
           "end": 706.81,
           "probability": 0.9621701240539551
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 487,
-      "start": 706.81,
-      "end": 707.41,
-      "text": "Blow up,",
-      "words": [
+        },
         {
           "word": "Blow",
           "start": 706.81,
@@ -19959,16 +19311,7 @@
           "start": 707.13,
           "end": 707.41,
           "probability": 0.9869500994682312
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 488,
-      "start": 707.59,
-      "end": 708.11,
-      "text": "no paper,",
-      "words": [
+        },
         {
           "word": "no",
           "start": 707.59,
@@ -20020,8 +19363,8 @@
     {
       "id": 490,
       "start": 709.03,
-      "end": 710.11,
-      "text": "But if it ain't no too sick,",
+      "end": 710.69,
+      "text": "But if it ain't no too sick, throw up",
       "words": [
         {
           "word": "But",
@@ -20064,16 +19407,7 @@
           "start": 709.95,
           "end": 710.11,
           "probability": 0.965477466583252
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 491,
-      "start": 710.25,
-      "end": 710.69,
-      "text": "throw up",
-      "words": [
+        },
         {
           "word": "throw",
           "start": 710.25,
@@ -20092,8 +19426,8 @@
     {
       "id": 492,
       "start": 710.69,
-      "end": 711.91,
-      "text": "I keep telling these pricks,",
+      "end": 712.45,
+      "text": "I keep telling these pricks, blow up",
       "words": [
         {
           "word": "I",
@@ -20124,16 +19458,7 @@
           "start": 711.59,
           "end": 711.91,
           "probability": 0.9268682301044464
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 493,
-      "start": 712.07,
-      "end": 712.45,
-      "text": "blow up",
-      "words": [
+        },
         {
           "word": "blow",
           "start": 712.07,
@@ -20152,8 +19477,8 @@
     {
       "id": 494,
       "start": 712.45,
-      "end": 713.45,
-      "text": "You can't sink my boat,",
+      "end": 713.93,
+      "text": "You can't sink my boat, I'm Noah",
       "words": [
         {
           "word": "You",
@@ -20184,16 +19509,7 @@
           "start": 713.27,
           "end": 713.45,
           "probability": 0.9885474443435669
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 495,
-      "start": 713.55,
-      "end": 713.93,
-      "text": "I'm Noah",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 713.55,
@@ -20795,26 +20111,17 @@
       "speaker": "Skepta"
     },
     {
-      "id": 507,
+      "id": 508,
       "start": 741.53,
-      "end": 741.99,
-      "text": "Yo,",
+      "end": 743.27,
+      "text": "Yo, the bad boys are back",
       "words": [
         {
           "word": "Yo,",
           "start": 741.53,
           "end": 741.99,
           "probability": 0.6582362055778503
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 508,
-      "start": 742.19,
-      "end": 743.27,
-      "text": "the bad boys are back",
-      "words": [
+        },
         {
           "word": "the",
           "start": 742.19,
@@ -21046,8 +20353,8 @@
     {
       "id": 514,
       "start": 748.77,
-      "end": 750.27,
-      "text": "Legion pull up the trowel",
+      "end": 750.61,
+      "text": "Legion pull up the trowel Shut up,",
       "words": [
         {
           "word": "Legion",
@@ -21078,16 +20385,7 @@
           "start": 749.71,
           "end": 750.27,
           "probability": 0.7526116172472636
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 515,
-      "start": 750.27,
-      "end": 750.61,
-      "text": "Shut up,",
-      "words": [
+        },
         {
           "word": "Shut",
           "start": 750.27,
@@ -21106,8 +20404,8 @@
     {
       "id": 516,
       "start": 750.61,
-      "end": 750.61,
-      "text": "I'm not a fucking idiot",
+      "end": 751.27,
+      "text": "I'm not a fucking idiot It's down,",
       "words": [
         {
           "word": "I'm",
@@ -21138,16 +20436,7 @@
           "start": 750.61,
           "end": 750.61,
           "probability": 0.02653549797832966
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 517,
-      "start": 750.61,
-      "end": 751.27,
-      "text": "It's down,",
-      "words": [
+        },
         {
           "word": "It's",
           "start": 750.61,
@@ -21317,10 +20606,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 521,
+      "id": 522,
       "start": 755.67,
-      "end": 756.47,
-      "text": "right now",
+      "end": 756.89,
+      "text": "right now Wow,",
       "words": [
         {
           "word": "right",
@@ -21333,16 +20622,7 @@
           "start": 755.99,
           "end": 756.47,
           "probability": 0.9682909846305847
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 522,
-      "start": 756.47,
-      "end": 756.89,
-      "text": "Wow,",
-      "words": [
+        },
         {
           "word": "Wow,",
           "start": 756.47,
@@ -21394,8 +20674,8 @@
     {
       "id": 524,
       "start": 758.19,
-      "end": 759.23,
-      "text": "and if you don't like it",
+      "end": 759.85,
+      "text": "and if you don't like it Lump it,",
       "words": [
         {
           "word": "and",
@@ -21432,16 +20712,7 @@
           "start": 758.97,
           "end": 759.23,
           "probability": 0.9965477585792542
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 525,
-      "start": 759.23,
-      "end": 759.85,
-      "text": "Lump it,",
-      "words": [
+        },
         {
           "word": "Lump",
           "start": 759.23,
@@ -21458,10 +20729,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 526,
+      "id": 527,
       "start": 760.01,
-      "end": 760.65,
-      "text": "bad boy",
+      "end": 761.49,
+      "text": "bad boy Just be the record,",
       "words": [
         {
           "word": "bad",
@@ -21474,16 +20745,7 @@
           "start": 760.17,
           "end": 760.65,
           "probability": 0.06570453196763992
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 527,
-      "start": 760.65,
-      "end": 761.49,
-      "text": "Just be the record,",
-      "words": [
+        },
         {
           "word": "Just",
           "start": 760.65,
@@ -21655,8 +20917,8 @@
     {
       "id": 531,
       "start": 766.15,
-      "end": 767.53,
-      "text": "me and Diddy got both hands on a big",
+      "end": 767.37,
+      "text": "me and Diddy got both hands on a",
       "words": [
         {
           "word": "me",
@@ -21705,22 +20967,22 @@
           "start": 767.25,
           "end": 767.37,
           "probability": 0.882518470287323
-        },
-        {
-          "word": "big",
-          "start": 767.37,
-          "end": 767.53,
-          "probability": 0.9752757549285889
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 532,
-      "start": 767.53,
+      "start": 767.37,
       "end": 767.91,
-      "text": "red button",
+      "text": "big red button",
       "words": [
+        {
+          "word": "big",
+          "start": 767.37,
+          "end": 767.53,
+          "probability": 0.9752757549285889
+        },
         {
           "word": "red",
           "start": 767.53,
@@ -21739,8 +21001,8 @@
     {
       "id": 533,
       "start": 767.91,
-      "end": 770.09,
-      "text": "Just say the word and shut down the world",
+      "end": 769.33,
+      "text": "Just say the word and shut down",
       "words": [
         {
           "word": "Just",
@@ -21783,7 +21045,16 @@
           "start": 769.09,
           "end": 769.33,
           "probability": 0.9968922734260559
-        },
+        }
+      ],
+      "speaker": "Skepta"
+    },
+    {
+      "id": 534,
+      "start": 769.33,
+      "end": 770.57,
+      "text": "the world Wow,",
+      "words": [
         {
           "word": "the",
           "start": 769.33,
@@ -21795,16 +21066,7 @@
           "start": 769.57,
           "end": 770.09,
           "probability": 0.4895642399787903
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 534,
-      "start": 770.09,
-      "end": 770.57,
-      "text": "Wow,",
-      "words": [
+        },
         {
           "word": "Wow,",
           "start": 770.09,
@@ -21913,8 +21175,8 @@
     {
       "id": 537,
       "start": 773.37,
-      "end": 774.09,
-      "text": "I go hard mate,",
+      "end": 774.79,
+      "text": "I go hard mate, MC tap,",
       "words": [
         {
           "word": "I",
@@ -21939,16 +21201,7 @@
           "start": 773.95,
           "end": 774.09,
           "probability": 0.36714819073677063
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 538,
-      "start": 774.11,
-      "end": 774.79,
-      "text": "MC tap,",
-      "words": [
+        },
         {
           "word": "MC",
           "start": 774.11,
@@ -22096,8 +21349,8 @@
     {
       "id": 542,
       "start": 778.39,
-      "end": 780.03,
-      "text": "So violate and I'm liable to lash out",
+      "end": 782.95,
+      "text": "So violate and I'm liable to lash out Wow,",
       "words": [
         {
           "word": "So",
@@ -22146,16 +21399,7 @@
           "start": 779.87,
           "end": 780.03,
           "probability": 0.797010064125061
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 543,
-      "start": 782.55,
-      "end": 782.95,
-      "text": "Wow,",
-      "words": [
+        },
         {
           "word": "Wow,",
           "start": 782.55,
@@ -22264,8 +21508,8 @@
     {
       "id": 546,
       "start": 786.85,
-      "end": 787.61,
-      "text": "I go hard mate,",
+      "end": 788.25,
+      "text": "I go hard mate, MC tap,",
       "words": [
         {
           "word": "I",
@@ -22290,16 +21534,7 @@
           "start": 787.43,
           "end": 787.61,
           "probability": 0.0011135127861052752
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 547,
-      "start": 787.93,
-      "end": 788.25,
-      "text": "MC tap,",
-      "words": [
+        },
         {
           "word": "MC",
           "start": 787.93,
@@ -22609,8 +21844,8 @@
     {
       "id": 555,
       "start": 796.39,
-      "end": 797.23,
-      "text": "I'm gas now",
+      "end": 798.07,
+      "text": "I'm gas now Gas now,",
       "words": [
         {
           "word": "I'm",
@@ -22629,16 +21864,7 @@
           "start": 796.77,
           "end": 797.23,
           "probability": 0.9438381791114807
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 556,
-      "start": 797.23,
-      "end": 798.07,
-      "text": "Gas now,",
-      "words": [
+        },
         {
           "word": "Gas",
           "start": 797.23,
@@ -22786,8 +22012,8 @@
     {
       "id": 560,
       "start": 802.11,
-      "end": 803.79,
-      "text": "Presidential think it's that now",
+      "end": 804.27,
+      "text": "Presidential think it's that now Start slipping,",
       "words": [
         {
           "word": "Presidential",
@@ -22818,16 +22044,7 @@
           "start": 803.47,
           "end": 803.79,
           "probability": 0.9433713555335999
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 561,
-      "start": 803.79,
-      "end": 804.27,
-      "text": "Start slipping,",
-      "words": [
+        },
         {
           "word": "Start",
           "start": 803.79,
@@ -22952,10 +22169,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 564,
+      "id": 565,
       "start": 806.69,
-      "end": 807.09,
-      "text": "that foul",
+      "end": 808.67,
+      "text": "that foul My light skinned dog in the background",
       "words": [
         {
           "word": "that",
@@ -22968,16 +22185,7 @@
           "start": 806.91,
           "end": 807.09,
           "probability": 0.9764308333396912
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 565,
-      "start": 807.09,
-      "end": 808.67,
-      "text": "My light skinned dog in the background",
-      "words": [
+        },
         {
           "word": "My",
           "start": 807.09,
@@ -23087,41 +22295,23 @@
       "speaker": "Frisco"
     },
     {
-      "id": 567,
+      "id": 569,
       "start": 810.33,
-      "end": 810.63,
-      "text": "down",
+      "end": 812.13,
+      "text": "down Well, I will never back down",
       "words": [
         {
           "word": "down",
           "start": 810.33,
           "end": 810.63,
           "probability": 0.9909780025482178
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 568,
-      "start": 810.63,
-      "end": 811.13,
-      "text": "Well,",
-      "words": [
+        },
         {
           "word": "Well,",
           "start": 810.63,
           "end": 811.13,
           "probability": 0.5413055419921875
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 569,
-      "start": 811.23,
-      "end": 812.13,
-      "text": "I will never back down",
-      "words": [
+        },
         {
           "word": "I",
           "start": 811.23,
@@ -23248,8 +22438,8 @@
     {
       "id": 572,
       "start": 814.85,
-      "end": 815.45,
-      "text": "go get it",
+      "end": 816.51,
+      "text": "go get it Straight uncut, no edit,",
       "words": [
         {
           "word": "go",
@@ -23268,16 +22458,7 @@
           "start": 815.23,
           "end": 815.45,
           "probability": 0.9933634996414185
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 573,
-      "start": 815.45,
-      "end": 816.05,
-      "text": "Straight uncut,",
-      "words": [
+        },
         {
           "word": "Straight",
           "start": 815.45,
@@ -23289,16 +22470,7 @@
           "start": 815.67,
           "end": 816.05,
           "probability": 0.8272630572319031
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 574,
-      "start": 816.19,
-      "end": 816.51,
-      "text": "no edit,",
-      "words": [
+        },
         {
           "word": "no",
           "start": 816.19,
@@ -23762,10 +22934,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 586,
+      "id": 587,
       "start": 828.87,
-      "end": 829.55,
-      "text": "Capital F,",
+      "end": 830.47,
+      "text": "Capital F, the R's moving again",
       "words": [
         {
           "word": "Capital",
@@ -23778,16 +22950,7 @@
           "start": 829.29,
           "end": 829.55,
           "probability": 0.9552769660949707
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 587,
-      "start": 829.55,
-      "end": 830.47,
-      "text": "the R's moving again",
-      "words": [
+        },
         {
           "word": "the",
           "start": 829.55,
@@ -24181,8 +23344,8 @@
     {
       "id": 597,
       "start": 841.59,
-      "end": 842.69,
-      "text": "ain't got one shell",
+      "end": 844.27,
+      "text": "ain't got one shell Logan!",
       "words": [
         {
           "word": "ain't",
@@ -24207,16 +23370,7 @@
           "start": 842.39,
           "end": 842.69,
           "probability": 0.5156259536743164
-        }
-      ],
-      "speaker": "Shorty"
-    },
-    {
-      "id": 598,
-      "start": 843.87,
-      "end": 844.27,
-      "text": "Logan!",
-      "words": [
+        },
         {
           "word": "Logan!",
           "start": 843.87,
@@ -24229,8 +23383,8 @@
     {
       "id": 599,
       "start": 845.39,
-      "end": 846.43,
-      "text": "I want some of this as well,",
+      "end": 846.87,
+      "text": "I want some of this as well, Shorty",
       "words": [
         {
           "word": "I",
@@ -24273,16 +23427,7 @@
           "start": 846.25,
           "end": 846.43,
           "probability": 0.9718402028083801
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 600,
-      "start": 846.63,
-      "end": 846.87,
-      "text": "Shorty",
-      "words": [
+        },
         {
           "word": "Shorty",
           "start": 846.63,
@@ -24314,10 +23459,10 @@
       "speaker": "Shorty"
     },
     {
-      "id": 602,
+      "id": 603,
       "start": 847.63,
-      "end": 847.93,
-      "text": "let's go,",
+      "end": 848.79,
+      "text": "let's go, let's go",
       "words": [
         {
           "word": "let's",
@@ -24330,16 +23475,7 @@
           "start": 847.75,
           "end": 847.93,
           "probability": 0.997395396232605
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 603,
-      "start": 847.93,
-      "end": 848.79,
-      "text": "let's go",
-      "words": [
+        },
         {
           "word": "let's",
           "start": 847.93,
@@ -24383,26 +23519,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 605,
+      "id": 606,
       "start": 849.97,
-      "end": 850.39,
-      "text": "Yo",
+      "end": 853.21,
+      "text": "Yo Nuff man wanna talk about strats",
       "words": [
         {
           "word": "Yo",
           "start": 849.97,
           "end": 850.39,
           "probability": 0.7928423285484314
-        }
-      ],
-      "speaker": "Shorty"
-    },
-    {
-      "id": 606,
-      "start": 851.15,
-      "end": 853.21,
-      "text": "Nuff man wanna talk about strats",
-      "words": [
+        },
         {
           "word": "Nuff",
           "start": 851.15,
@@ -24763,8 +23890,8 @@
     {
       "id": 615,
       "start": 862.13,
-      "end": 862.81,
-      "text": "ain't seen one shell",
+      "end": 863.65,
+      "text": "ain't seen one shell Brainwashed man,",
       "words": [
         {
           "word": "ain't",
@@ -24789,16 +23916,7 @@
           "start": 862.59,
           "end": 862.81,
           "probability": 0.4301886558532715
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 616,
-      "start": 862.81,
-      "end": 863.65,
-      "text": "Brainwashed man,",
-      "words": [
+        },
         {
           "word": "Brainwashed",
           "start": 862.81,
@@ -26056,8 +25174,8 @@
     {
       "id": 646,
       "start": 903.33,
-      "end": 905.33,
-      "text": "Let off my neck shot like Marco",
+      "end": 906.85,
+      "text": "Let off my neck shot like Marco Van Basten,",
       "words": [
         {
           "word": "Let",
@@ -26100,16 +25218,7 @@
           "start": 904.51,
           "end": 905.33,
           "probability": 0.5032020211219788
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 647,
-      "start": 906.05,
-      "end": 906.85,
-      "text": "Van Basten,",
-      "words": [
+        },
         {
           "word": "Van",
           "start": 906.05,
@@ -26669,10 +25778,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 659,
+      "id": 660,
       "start": 926.61,
-      "end": 927.27,
-      "text": "private caller",
+      "end": 928.93,
+      "text": "private caller So I just told my dealer",
       "words": [
         {
           "word": "private",
@@ -26685,16 +25794,7 @@
           "start": 926.91,
           "end": 927.27,
           "probability": 0.9647600650787354
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 660,
-      "start": 927.27,
-      "end": 928.93,
-      "text": "So I just told my dealer",
-      "words": [
+        },
         {
           "word": "So",
           "start": 927.27,
@@ -27394,8 +26494,8 @@
     {
       "id": 674,
       "start": 951.11,
-      "end": 952.55,
-      "text": "And he doesn't wanna say that I got a",
+      "end": 952.33,
+      "text": "And he doesn't wanna say that I",
       "words": [
         {
           "word": "And",
@@ -27438,7 +26538,16 @@
           "start": 952.21,
           "end": 952.33,
           "probability": 0.554580807685852
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 675,
+      "start": 952.33,
+      "end": 952.69,
+      "text": "got a small",
+      "words": [
         {
           "word": "got",
           "start": 952.33,
@@ -27450,16 +26559,7 @@
           "start": 952.41,
           "end": 952.55,
           "probability": 0.7328909039497375
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 675,
-      "start": 952.55,
-      "end": 952.69,
-      "text": "small",
-      "words": [
+        },
         {
           "word": "small",
           "start": 952.55,
@@ -27596,10 +26696,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 678,
+      "id": 679,
       "start": 956.33,
-      "end": 956.77,
-      "text": "not flattered",
+      "end": 959.67,
+      "text": "not flattered The DJ's really For real,",
       "words": [
         {
           "word": "not",
@@ -27612,16 +26712,7 @@
           "start": 956.57,
           "end": 956.77,
           "probability": 0.39716050773859024
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 679,
-      "start": 956.77,
-      "end": 957.97,
-      "text": "The DJ's really",
-      "words": [
+        },
         {
           "word": "The",
           "start": 956.77,
@@ -27639,16 +26730,7 @@
           "start": 957.97,
           "end": 957.97,
           "probability": 0.399982750415802
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 680,
-      "start": 957.97,
-      "end": 959.67,
-      "text": "For real,",
-      "words": [
+        },
         {
           "word": "For",
           "start": 957.97,
@@ -28271,26 +27353,17 @@
       "speaker": "JME"
     },
     {
-      "id": 693,
+      "id": 694,
       "start": 979.79,
-      "end": 980.01,
-      "text": "goes",
+      "end": 981.69,
+      "text": "goes I don't care what anyone's saying",
       "words": [
         {
           "word": "goes",
           "start": 979.79,
           "end": 980.01,
           "probability": 0.9919330477714539
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 694,
-      "start": 980.01,
-      "end": 981.69,
-      "text": "I don't care what anyone's saying",
-      "words": [
+        },
         {
           "word": "I",
           "start": 980.01,
@@ -28807,8 +27880,8 @@
     {
       "id": 705,
       "start": 998.21,
-      "end": 1000.03,
-      "text": "You get big upper cuts like footsie",
+      "end": 1000.65,
+      "text": "You get big upper cuts like footsie I'm Mac,",
       "words": [
         {
           "word": "You",
@@ -28851,16 +27924,7 @@
           "start": 999.47,
           "end": 1000.03,
           "probability": 0.7393542428811392
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 706,
-      "start": 1000.03,
-      "end": 1000.65,
-      "text": "I'm Mac,",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 1000.03,
@@ -29225,26 +28289,17 @@
       "speaker": "JME"
     },
     {
-      "id": 715,
+      "id": 716,
       "start": 1013.03,
-      "end": 1013.39,
-      "text": "Serious",
+      "end": 1015.01,
+      "text": "Serious Man wanna pray for my damn pool safe",
       "words": [
         {
           "word": "Serious",
           "start": 1013.03,
           "end": 1013.39,
           "probability": 0.49006646778434515
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 716,
-      "start": 1013.39,
-      "end": 1015.01,
-      "text": "Man wanna pray for my damn pool safe",
-      "words": [
+        },
         {
           "word": "Man",
           "start": 1013.39,
@@ -29350,8 +28405,8 @@
     {
       "id": 718,
       "start": 1016.19,
-      "end": 1017.57,
-      "text": "Give me the rhythm and let me get grime",
+      "end": 1017.35,
+      "text": "Give me the rhythm and let me get",
       "words": [
         {
           "word": "Give",
@@ -29400,22 +28455,22 @@
           "start": 1017.13,
           "end": 1017.35,
           "probability": 0.9946479201316833
-        },
-        {
-          "word": "grime",
-          "start": 1017.35,
-          "end": 1017.57,
-          "probability": 0.9050579965114594
         }
       ],
       "speaker": "Frisco"
     },
     {
       "id": 719,
-      "start": 1017.57,
+      "start": 1017.35,
       "end": 1017.89,
-      "text": "on them",
+      "text": "grime on them",
       "words": [
+        {
+          "word": "grime",
+          "start": 1017.35,
+          "end": 1017.57,
+          "probability": 0.9050579965114594
+        },
         {
           "word": "on",
           "start": 1017.57,
@@ -29495,26 +28550,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 721,
+      "id": 722,
       "start": 1019.49,
-      "end": 1019.63,
-      "text": "them",
+      "end": 1021.33,
+      "text": "them New flow let me fire one again",
       "words": [
         {
           "word": "them",
           "start": 1019.49,
           "end": 1019.63,
           "probability": 0.9881332516670227
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 722,
-      "start": 1019.63,
-      "end": 1021.33,
-      "text": "New flow let me fire one again",
-      "words": [
+        },
         {
           "word": "New",
           "start": 1019.63,
@@ -29563,8 +28609,8 @@
     {
       "id": 723,
       "start": 1021.33,
-      "end": 1022.81,
-      "text": "I ain't gonna force it but if you force",
+      "end": 1022.49,
+      "text": "I ain't gonna force it but if",
       "words": [
         {
           "word": "I",
@@ -29607,7 +28653,16 @@
           "start": 1022.33,
           "end": 1022.49,
           "probability": 0.9797558784484863
-        },
+        }
+      ],
+      "speaker": "Frisco"
+    },
+    {
+      "id": 724,
+      "start": 1022.49,
+      "end": 1022.97,
+      "text": "you force it",
+      "words": [
         {
           "word": "you",
           "start": 1022.49,
@@ -29619,16 +28674,7 @@
           "start": 1022.67,
           "end": 1022.81,
           "probability": 0.9806298613548279
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 724,
-      "start": 1022.81,
-      "end": 1022.97,
-      "text": "it",
-      "words": [
+        },
         {
           "word": "it",
           "start": 1022.81,
@@ -29702,26 +28748,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 726,
+      "id": 727,
       "start": 1024.65,
-      "end": 1025.21,
-      "text": "forklift",
+      "end": 1026.33,
+      "text": "forklift So mind that you're speaking to me",
       "words": [
         {
           "word": "forklift",
           "start": 1024.65,
           "end": 1025.21,
           "probability": 0.9078447024027506
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 727,
-      "start": 1025.21,
-      "end": 1026.33,
-      "text": "So mind that you're speaking to me",
-      "words": [
+        },
         {
           "word": "So",
           "start": 1025.21,
@@ -29981,26 +29018,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 733,
+      "id": 734,
       "start": 1031.25,
-      "end": 1031.55,
-      "text": "them",
+      "end": 1032.31,
+      "text": "them Lose my sight,",
       "words": [
         {
           "word": "them",
           "start": 1031.25,
           "end": 1031.55,
           "probability": 0.8143700361251831
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 734,
-      "start": 1031.55,
-      "end": 1032.31,
-      "text": "Lose my sight,",
-      "words": [
+        },
         {
           "word": "Lose",
           "start": 1031.55,
@@ -30187,8 +29215,8 @@
     {
       "id": 739,
       "start": 1036.45,
-      "end": 1038.35,
-      "text": "Sometimes I wanna take back mine from them",
+      "end": 1038.77,
+      "text": "Sometimes I wanna take back mine from them Miner,",
       "words": [
         {
           "word": "Sometimes",
@@ -30237,16 +29265,7 @@
           "start": 1037.97,
           "end": 1038.35,
           "probability": 0.9953023195266724
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 740,
-      "start": 1038.35,
-      "end": 1038.77,
-      "text": "Miner,",
-      "words": [
+        },
         {
           "word": "Miner,",
           "start": 1038.35,
@@ -30259,8 +29278,8 @@
     {
       "id": 741,
       "start": 1038.87,
-      "end": 1040.03,
-      "text": "what's a new style on me",
+      "end": 1040.39,
+      "text": "what's a new style on me Serious",
       "words": [
         {
           "word": "what's",
@@ -30297,16 +29316,7 @@
           "start": 1039.71,
           "end": 1040.03,
           "probability": 0.3581306040287018
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 742,
-      "start": 1040.03,
-      "end": 1040.39,
-      "text": "Serious",
-      "words": [
+        },
         {
           "word": "Serious",
           "start": 1040.03,
@@ -30317,10 +29327,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 743,
+      "id": 744,
       "start": 1041.25,
-      "end": 1041.97,
-      "text": "Total package,",
+      "end": 1043.49,
+      "text": "Total package, F in them in Buckingham Palace",
       "words": [
         {
           "word": "Total",
@@ -30333,16 +29343,7 @@
           "start": 1041.61,
           "end": 1041.97,
           "probability": 0.9644010066986084
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 744,
-      "start": 1042.17,
-      "end": 1043.49,
-      "text": "F in them in Buckingham Palace",
-      "words": [
+        },
         {
           "word": "F",
           "start": 1042.17,
@@ -30694,8 +29695,8 @@
     {
       "id": 752,
       "start": 1052.53,
-      "end": 1053.63,
-      "text": "Like Prada trainers",
+      "end": 1054.51,
+      "text": "Like Prada trainers New money,",
       "words": [
         {
           "word": "Like",
@@ -30714,16 +29715,7 @@
           "start": 1053.17,
           "end": 1053.63,
           "probability": 0.711017906665802
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 753,
-      "start": 1053.63,
-      "end": 1054.51,
-      "text": "New money,",
-      "words": [
+        },
         {
           "word": "New",
           "start": 1053.63,
@@ -30893,26 +29885,17 @@
       "speaker": "Skepta"
     },
     {
-      "id": 757,
+      "id": 758,
       "start": 1058.53,
-      "end": 1058.81,
-      "text": "birthday",
+      "end": 1061.19,
+      "text": "birthday Cause you ain't got no direction No future,",
       "words": [
         {
           "word": "birthday",
           "start": 1058.53,
           "end": 1058.81,
           "probability": 0.9854846596717834
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 758,
-      "start": 1058.81,
-      "end": 1060.41,
-      "text": "Cause you ain't got no direction",
-      "words": [
+        },
         {
           "word": "Cause",
           "start": 1058.81,
@@ -30948,16 +29931,7 @@
           "start": 1059.73,
           "end": 1060.41,
           "probability": 0.8133549094200134
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 759,
-      "start": 1060.41,
-      "end": 1061.19,
-      "text": "No future,",
-      "words": [
+        },
         {
           "word": "No",
           "start": 1060.41,
@@ -30974,10 +29948,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 760,
+      "id": 761,
       "start": 1061.45,
-      "end": 1061.99,
-      "text": "no plans",
+      "end": 1063.65,
+      "text": "no plans That's why you get air from friends",
       "words": [
         {
           "word": "no",
@@ -30990,16 +29964,7 @@
           "start": 1061.63,
           "end": 1061.99,
           "probability": 0.9941703081130981
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 761,
-      "start": 1061.99,
-      "end": 1063.65,
-      "text": "That's why you get air from friends",
-      "words": [
+        },
         {
           "word": "That's",
           "start": 1061.99,
@@ -31174,8 +30139,8 @@
     {
       "id": 764,
       "start": 1066.15,
-      "end": 1067.09,
-      "text": "the 28 grand",
+      "end": 1068.01,
+      "text": "the 28 grand Bounce",
       "words": [
         {
           "word": "the",
@@ -31194,16 +30159,7 @@
           "start": 1066.71,
           "end": 1067.09,
           "probability": 0.5854170918464661
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 765,
-      "start": 1067.65,
-      "end": 1068.01,
-      "text": "Bounce",
-      "words": [
+        },
         {
           "word": "Bounce",
           "start": 1067.65,
@@ -31214,26 +30170,17 @@
       "speaker": "Skepta"
     },
     {
-      "id": 766,
+      "id": 767,
       "start": 1068.85,
-      "end": 1069.21,
-      "text": "Bounce",
+      "end": 1071.55,
+      "text": "Bounce Bounce",
       "words": [
         {
           "word": "Bounce",
           "start": 1068.85,
           "end": 1069.21,
           "probability": 0.5741925835609436
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 767,
-      "start": 1071.19,
-      "end": 1071.55,
-      "text": "Bounce",
-      "words": [
+        },
         {
           "word": "Bounce",
           "start": 1071.19,
@@ -31244,26 +30191,17 @@
       "speaker": "unknown"
     },
     {
-      "id": 768,
+      "id": 769,
       "start": 1072.71,
-      "end": 1073.07,
-      "text": "Logan",
+      "end": 1075.93,
+      "text": "Logan Legolo",
       "words": [
         {
           "word": "Logan",
           "start": 1072.71,
           "end": 1073.07,
           "probability": 0.4654169976711273
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 769,
-      "start": 1075.57,
-      "end": 1075.93,
-      "text": "Legolo",
-      "words": [
+        },
         {
           "word": "Legolo",
           "start": 1075.57,
@@ -31303,8 +30241,8 @@
     {
       "id": 771,
       "start": 1079.25,
-      "end": 1080.43,
-      "text": "Will I hide?",
+      "end": 1085.77,
+      "text": "Will I hide? Damn Ah",
       "words": [
         {
           "word": "Will",
@@ -31323,31 +30261,13 @@
           "start": 1079.89,
           "end": 1080.43,
           "probability": 0.13414283096790314
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 772,
-      "start": 1081.83,
-      "end": 1082.23,
-      "text": "Damn",
-      "words": [
+        },
         {
           "word": "Damn",
           "start": 1081.83,
           "end": 1082.23,
           "probability": 0.5599251985549927
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 773,
-      "start": 1085.37,
-      "end": 1085.77,
-      "text": "Ah",
-      "words": [
+        },
         {
           "word": "Ah",
           "start": 1085.37,
@@ -31642,8 +30562,8 @@
     {
       "id": 782,
       "start": 1099.25,
-      "end": 1100.77,
-      "text": "Girls wanna come round the back and swear to",
+      "end": 1100.47,
+      "text": "Girls wanna come round the back and",
       "words": [
         {
           "word": "Girls",
@@ -31686,7 +30606,16 @@
           "start": 1100.31,
           "end": 1100.47,
           "probability": 0.3209187388420105
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 783,
+      "start": 1100.47,
+      "end": 1100.97,
+      "text": "swear to man",
+      "words": [
         {
           "word": "swear",
           "start": 1100.47,
@@ -31698,16 +30627,7 @@
           "start": 1100.63,
           "end": 1100.77,
           "probability": 0.3696202337741852
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 783,
-      "start": 1100.77,
-      "end": 1100.97,
-      "text": "man",
-      "words": [
+        },
         {
           "word": "man",
           "start": 1100.77,
@@ -31936,8 +30856,8 @@
     {
       "id": 788,
       "start": 1107.41,
-      "end": 1108.45,
-      "text": "I'm like wow,",
+      "end": 1108.93,
+      "text": "I'm like wow, who's that?",
       "words": [
         {
           "word": "I'm",
@@ -31956,16 +30876,7 @@
           "start": 1108.03,
           "end": 1108.45,
           "probability": 0.7603939175605774
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 789,
-      "start": 1108.67,
-      "end": 1108.93,
-      "text": "who's that?",
-      "words": [
+        },
         {
           "word": "who's",
           "start": 1108.67,
@@ -32207,10 +31118,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 795,
+      "id": 796,
       "start": 1117.85,
-      "end": 1118.51,
-      "text": "Michael man,",
+      "end": 1119.37,
+      "text": "Michael man, kill it off fast",
       "words": [
         {
           "word": "Michael",
@@ -32223,16 +31134,7 @@
           "start": 1118.21,
           "end": 1118.51,
           "probability": 0.9937095642089844
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 796,
-      "start": 1118.73,
-      "end": 1119.37,
-      "text": "kill it off fast",
-      "words": [
+        },
         {
           "word": "kill",
           "start": 1118.73,
@@ -32296,8 +31198,8 @@
     {
       "id": 798,
       "start": 1120.73,
-      "end": 1122.37,
-      "text": "I want pounds,",
+      "end": 1122.85,
+      "text": "I want pounds, pennies,",
       "words": [
         {
           "word": "I",
@@ -32316,16 +31218,7 @@
           "start": 1122.01,
           "end": 1122.37,
           "probability": 0.9812684655189514
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 799,
-      "start": 1122.53,
-      "end": 1122.85,
-      "text": "pennies,",
-      "words": [
+        },
         {
           "word": "pennies,",
           "start": 1122.53,
@@ -32497,8 +31390,8 @@
     {
       "id": 803,
       "start": 1127.97,
-      "end": 1129.49,
-      "text": "Prang outing when miles in the deli",
+      "end": 1129.91,
+      "text": "Prang outing when miles in the deli B .B.",
       "words": [
         {
           "word": "Prang",
@@ -32541,16 +31434,7 @@
           "start": 1129.25,
           "end": 1129.49,
           "probability": 0.6304520815610886
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 804,
-      "start": 1129.49,
-      "end": 1129.91,
-      "text": "B .B.",
-      "words": [
+        },
         {
           "word": "B",
           "start": 1129.49,
@@ -33005,10 +31889,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 815,
+      "id": 816,
       "start": 1147.49,
-      "end": 1147.79,
-      "text": "Shoot it!",
+      "end": 1148.21,
+      "text": "Shoot it! Yo,",
       "words": [
         {
           "word": "Shoot",
@@ -33021,16 +31905,7 @@
           "start": 1147.73,
           "end": 1147.79,
           "probability": 0.7939791679382324
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 816,
-      "start": 1148.21,
-      "end": 1148.21,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "word": "Yo,",
           "start": 1148.21,
@@ -34103,26 +32978,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 845,
+      "id": 846,
       "start": 1179.53,
-      "end": 1179.77,
-      "text": "pole",
+      "end": 1181.37,
+      "text": "pole Top corner and I look at the pole",
       "words": [
         {
           "word": "pole",
           "start": 1179.53,
           "end": 1179.77,
           "probability": 0.5218819379806519
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 846,
-      "start": 1179.77,
-      "end": 1181.37,
-      "text": "Top corner and I look at the pole",
-      "words": [
+        },
         {
           "word": "Top",
           "start": 1179.77,
@@ -34345,8 +33211,8 @@
     {
       "id": 851,
       "start": 1186.51,
-      "end": 1188.65,
-      "text": "Henny for the tops but I can't wait",
+      "end": 1189.47,
+      "text": "Henny for the tops but I can't wait No,",
       "words": [
         {
           "word": "Henny",
@@ -34395,16 +33261,7 @@
           "start": 1187.93,
           "end": 1188.65,
           "probability": 0.9955254197120667
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 852,
-      "start": 1189.07,
-      "end": 1189.47,
-      "text": "No,",
-      "words": [
+        },
         {
           "word": "No,",
           "start": 1189.07,
@@ -34562,26 +33419,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 856,
+      "id": 857,
       "start": 1194.07,
-      "end": 1194.51,
-      "text": "Myth,",
+      "end": 1195.61,
+      "text": "Myth, that's all a fairy dream",
       "words": [
         {
           "word": "Myth,",
           "start": 1194.07,
           "end": 1194.51,
           "probability": 0.9481061697006226
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 857,
-      "start": 1194.71,
-      "end": 1195.61,
-      "text": "that's all a fairy dream",
-      "words": [
+        },
         {
           "word": "that's",
           "start": 1194.71,
@@ -35308,8 +34156,8 @@
     {
       "id": 876,
       "start": 1214.01,
-      "end": 1215.27,
-      "text": "I stay lyrically sick,",
+      "end": 1215.57,
+      "text": "I stay lyrically sick, vomit",
       "words": [
         {
           "word": "I",
@@ -35334,16 +34182,7 @@
           "start": 1214.85,
           "end": 1215.27,
           "probability": 0.9884117245674133
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 877,
-      "start": 1215.35,
-      "end": 1215.57,
-      "text": "vomit",
-      "words": [
+        },
         {
           "word": "vomit",
           "start": 1215.35,
@@ -35503,8 +34342,8 @@
     {
       "id": 881,
       "start": 1220.97,
-      "end": 1221.97,
-      "text": "That temper I'm shouting,",
+      "end": 1223.01,
+      "text": "That temper I'm shouting, Ss",
       "words": [
         {
           "word": "That",
@@ -35529,16 +34368,7 @@
           "start": 1221.73,
           "end": 1221.97,
           "probability": 0.9596145749092102
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 882,
-      "start": 1222.65,
-      "end": 1223.01,
-      "text": "Ss",
-      "words": [
+        },
         {
           "word": "Ss",
           "start": 1222.65,
@@ -35695,8 +34525,8 @@
     {
       "id": 887,
       "start": 1227.37,
-      "end": 1228.79,
-      "text": "That's got the world scared of a man in",
+      "end": 1228.61,
+      "text": "That's got the world scared of a man",
       "words": [
         {
           "word": "That's",
@@ -35745,22 +34575,22 @@
           "start": 1228.49,
           "end": 1228.61,
           "probability": 0.9870758652687073
-        },
-        {
-          "word": "in",
-          "start": 1228.61,
-          "end": 1228.79,
-          "probability": 0.9910507202148438
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 888,
-      "start": 1228.79,
+      "start": 1228.61,
       "end": 1229.47,
-      "text": "a turban",
+      "text": "in a turban",
       "words": [
+        {
+          "word": "in",
+          "start": 1228.61,
+          "end": 1228.79,
+          "probability": 0.9910507202148438
+        },
         {
           "word": "a",
           "start": 1228.79,
@@ -36202,8 +35032,8 @@
     {
       "id": 898,
       "start": 1240.85,
-      "end": 1242.21,
-      "text": "I'm laughing out loud so much",
+      "end": 1242.81,
+      "text": "I'm laughing out loud so much LUL",
       "words": [
         {
           "word": "I'm",
@@ -36240,16 +35070,7 @@
           "start": 1241.97,
           "end": 1242.21,
           "probability": 0.9964266419410706
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 899,
-      "start": 1242.21,
-      "end": 1242.81,
-      "text": "LUL",
-      "words": [
+        },
         {
           "word": "LUL",
           "start": 1242.21,
@@ -36379,8 +35200,8 @@
     {
       "id": 903,
       "start": 1267.99,
-      "end": 1270.09,
-      "text": "Look on man ting like shredder and crack",
+      "end": 1270.67,
+      "text": "Look on man ting like shredder and crack Bop,",
       "words": [
         {
           "word": "Look",
@@ -36429,16 +35250,7 @@
           "start": 1269.49,
           "end": 1270.09,
           "probability": 0.3377707898616791
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 904,
-      "start": 1270.09,
-      "end": 1270.67,
-      "text": "Bop,",
-      "words": [
+        },
         {
           "word": "Bop,",
           "start": 1270.09,
@@ -36449,26 +35261,17 @@
       "speaker": "JME"
     },
     {
-      "id": 905,
+      "id": 906,
       "start": 1270.75,
-      "end": 1271.03,
-      "text": "bop,",
+      "end": 1272.61,
+      "text": "bop, when I'm on I'ma come like an intervention",
       "words": [
         {
           "word": "bop,",
           "start": 1270.75,
           "end": 1271.03,
           "probability": 0.904144674539566
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 906,
-      "start": 1271.19,
-      "end": 1272.61,
-      "text": "when I'm on I'ma come like an intervention",
-      "words": [
+        },
         {
           "word": "when",
           "start": 1271.19,
@@ -36521,10 +35324,10 @@
       "speaker": "JME"
     },
     {
-      "id": 907,
+      "id": 908,
       "start": 1272.61,
-      "end": 1273.51,
-      "text": "Silent sniper,",
+      "end": 1275.05,
+      "text": "Silent sniper, full detention No silence,",
       "words": [
         {
           "word": "Silent",
@@ -36537,16 +35340,7 @@
           "start": 1273.17,
           "end": 1273.51,
           "probability": 0.9364637136459351
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 908,
-      "start": 1273.63,
-      "end": 1274.27,
-      "text": "full detention",
-      "words": [
+        },
         {
           "word": "full",
           "start": 1273.63,
@@ -36558,16 +35352,7 @@
           "start": 1273.79,
           "end": 1274.27,
           "probability": 0.5962439775466919
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 909,
-      "start": 1274.27,
-      "end": 1275.05,
-      "text": "No silence,",
-      "words": [
+        },
         {
           "word": "No",
           "start": 1274.27,
@@ -36958,8 +35743,8 @@
     {
       "id": 920,
       "start": 1287.49,
-      "end": 1289.45,
-      "text": "In that itch that's what I'm retention",
+      "end": 1290.07,
+      "text": "In that itch that's what I'm retention Yo,",
       "words": [
         {
           "word": "In",
@@ -37002,16 +35787,7 @@
           "start": 1289.05,
           "end": 1289.45,
           "probability": 0.41797760128974915
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 921,
-      "start": 1289.45,
-      "end": 1290.07,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "word": "Yo,",
           "start": 1289.45,
@@ -37063,8 +35839,8 @@
     {
       "id": 923,
       "start": 1292.65,
-      "end": 1293.83,
-      "text": "Boy better know",
+      "end": 1297.49,
+      "text": "Boy better know I'm joining Alright, alright, alright",
       "words": [
         {
           "word": "Boy",
@@ -37083,16 +35859,7 @@
           "start": 1293.33,
           "end": 1293.83,
           "probability": 0.9261079430580139
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 924,
-      "start": 1295.63,
-      "end": 1296.15,
-      "text": "I'm joining",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 1295.63,
@@ -37104,46 +35871,19 @@
           "start": 1296.03,
           "end": 1296.15,
           "probability": 0.14313161373138428
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 925,
-      "start": 1296.15,
-      "end": 1296.27,
-      "text": "Alright,",
-      "words": [
+        },
         {
           "word": "Alright,",
           "start": 1296.15,
           "end": 1296.27,
           "probability": 0.032058682292699814
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 926,
-      "start": 1296.27,
-      "end": 1296.77,
-      "text": "alright,",
-      "words": [
+        },
         {
           "word": "alright,",
           "start": 1296.27,
           "end": 1296.77,
           "probability": 0.9533429145812988
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 927,
-      "start": 1296.77,
-      "end": 1297.49,
-      "text": "alright",
-      "words": [
+        },
         {
           "word": "alright",
           "start": 1296.77,
@@ -37156,8 +35896,8 @@
     {
       "id": 928,
       "start": 1299.65,
-      "end": 1301.33,
-      "text": "It's getting hot in here man",
+      "end": 1303.25,
+      "text": "It's getting hot in here man Yeah Ay",
       "words": [
         {
           "word": "It's",
@@ -37194,31 +35934,13 @@
           "start": 1301.11,
           "end": 1301.33,
           "probability": 0.6762005090713501
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 929,
-      "start": 1301.33,
-      "end": 1301.93,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "word": "Yeah",
           "start": 1301.33,
           "end": 1301.93,
           "probability": 0.16847674548625946
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 930,
-      "start": 1302.85,
-      "end": 1303.25,
-      "text": "Ay",
-      "words": [
+        },
         {
           "word": "Ay",
           "start": 1302.85,
@@ -37540,8 +36262,8 @@
     {
       "id": 938,
       "start": 1312.41,
-      "end": 1312.97,
-      "text": "To no one,",
+      "end": 1313.95,
+      "text": "To no one, Frisco certified",
       "words": [
         {
           "word": "To",
@@ -37560,16 +36282,7 @@
           "start": 1312.87,
           "end": 1312.97,
           "probability": 0.9284264445304871
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 939,
-      "start": 1313.15,
-      "end": 1313.95,
-      "text": "Frisco certified",
-      "words": [
+        },
         {
           "word": "Frisco",
           "start": 1313.15,
@@ -37970,26 +36683,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 948,
+      "id": 949,
       "start": 1324.03,
-      "end": 1324.33,
-      "text": "side",
+      "end": 1325.03,
+      "text": "side Grime can't die,",
       "words": [
         {
           "word": "side",
           "start": 1324.03,
           "end": 1324.33,
           "probability": 0.5873339772224426
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 949,
-      "start": 1324.33,
-      "end": 1325.03,
-      "text": "Grime can't die,",
-      "words": [
+        },
         {
           "word": "Grime",
           "start": 1324.33,
@@ -38312,41 +37016,23 @@
       "speaker": "JME"
     },
     {
-      "id": 958,
+      "id": 960,
       "start": 1342.17,
-      "end": 1342.53,
-      "text": "Char,",
+      "end": 1343.73,
+      "text": "Char, ay, can I go in now?",
       "words": [
         {
           "word": "Char,",
           "start": 1342.17,
           "end": 1342.53,
           "probability": 0.22024236619472504
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 959,
-      "start": 1342.71,
-      "end": 1342.91,
-      "text": "ay,",
-      "words": [
+        },
         {
           "word": "ay,",
           "start": 1342.71,
           "end": 1342.91,
           "probability": 0.14313523471355438
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 960,
-      "start": 1343.03,
-      "end": 1343.73,
-      "text": "can I go in now?",
-      "words": [
+        },
         {
           "word": "can",
           "start": 1343.03,
@@ -38383,8 +37069,8 @@
     {
       "id": 961,
       "start": 1345.47,
-      "end": 1346.89,
-      "text": "Canary Wharf and the Gherkin",
+      "end": 1347.25,
+      "text": "Canary Wharf and the Gherkin Ay,",
       "words": [
         {
           "word": "Canary",
@@ -38415,16 +37101,7 @@
           "start": 1346.45,
           "end": 1346.89,
           "probability": 0.8217163483301798
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 962,
-      "start": 1346.89,
-      "end": 1347.25,
-      "text": "Ay,",
-      "words": [
+        },
         {
           "word": "Ay,",
           "start": 1346.89,
@@ -38578,8 +37255,8 @@
     {
       "id": 966,
       "start": 1352.37,
-      "end": 1353.53,
-      "text": "That my chest is hurting",
+      "end": 1354.01,
+      "text": "That my chest is hurting See,",
       "words": [
         {
           "word": "That",
@@ -38610,16 +37287,7 @@
           "start": 1353.21,
           "end": 1353.53,
           "probability": 0.982731282711029
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 967,
-      "start": 1353.53,
-      "end": 1354.01,
-      "text": "See,",
-      "words": [
+        },
         {
           "word": "See,",
           "start": 1353.53,
@@ -38807,41 +37475,23 @@
       "speaker": "Skepta"
     },
     {
-      "id": 971,
+      "id": 973,
       "start": 1359.95,
-      "end": 1360.57,
-      "text": "calls",
+      "end": 1362.55,
+      "text": "calls Chris, no less than section 18",
       "words": [
         {
           "word": "calls",
           "start": 1359.95,
           "end": 1360.57,
           "probability": 0.9943304061889648
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 972,
-      "start": 1360.57,
-      "end": 1361.21,
-      "text": "Chris,",
-      "words": [
+        },
         {
           "word": "Chris,",
           "start": 1360.57,
           "end": 1361.21,
           "probability": 0.4443376958370209
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 973,
-      "start": 1361.45,
-      "end": 1362.55,
-      "text": "no less than section 18",
-      "words": [
+        },
         {
           "word": "no",
           "start": 1361.45,
@@ -38878,8 +37528,8 @@
     {
       "id": 974,
       "start": 1362.55,
-      "end": 1363.57,
-      "text": "When I catch them fools",
+      "end": 1363.97,
+      "text": "When I catch them fools Ay,",
       "words": [
         {
           "word": "When",
@@ -38910,16 +37560,7 @@
           "start": 1363.25,
           "end": 1363.57,
           "probability": 0.9922296404838562
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 975,
-      "start": 1363.57,
-      "end": 1363.97,
-      "text": "Ay,",
-      "words": [
+        },
         {
           "word": "Ay,",
           "start": 1363.57,
@@ -38989,8 +37630,8 @@
     {
       "id": 977,
       "start": 1365.33,
-      "end": 1367.01,
-      "text": "Cause that pussy ain't got no balls",
+      "end": 1367.43,
+      "text": "Cause that pussy ain't got no balls Ay,",
       "words": [
         {
           "word": "Cause",
@@ -39033,16 +37674,7 @@
           "start": 1366.71,
           "end": 1367.01,
           "probability": 0.988878071308136
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 978,
-      "start": 1367.01,
-      "end": 1367.43,
-      "text": "Ay,",
-      "words": [
+        },
         {
           "word": "Ay,",
           "start": 1367.01,
@@ -39316,8 +37948,8 @@
     {
       "id": 984,
       "start": 1375.73,
-      "end": 1376.47,
-      "text": "A drink filled man,",
+      "end": 1377.21,
+      "text": "A drink filled man, a Ravina",
       "words": [
         {
           "word": "A",
@@ -39342,16 +37974,7 @@
           "start": 1376.29,
           "end": 1376.47,
           "probability": 0.7550411820411682
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 985,
-      "start": 1376.51,
-      "end": 1377.21,
-      "text": "a Ravina",
-      "words": [
+        },
         {
           "word": "a",
           "start": 1376.51,
@@ -39427,8 +38050,8 @@
     {
       "id": 987,
       "start": 1379.05,
-      "end": 1380.49,
-      "text": "Maradona or Argentina",
+      "end": 1380.97,
+      "text": "Maradona or Argentina See,",
       "words": [
         {
           "word": "Maradona",
@@ -39447,16 +38070,7 @@
           "start": 1379.71,
           "end": 1380.49,
           "probability": 0.9883155822753906
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 988,
-      "start": 1380.49,
-      "end": 1380.97,
-      "text": "See,",
-      "words": [
+        },
         {
           "word": "See,",
           "start": 1380.49,
@@ -39530,10 +38144,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 990,
+      "id": 991,
       "start": 1382.37,
-      "end": 1382.61,
-      "text": "the dark",
+      "end": 1383.87,
+      "text": "the dark From my hot jungle fever",
       "words": [
         {
           "word": "the",
@@ -39546,16 +38160,7 @@
           "start": 1382.49,
           "end": 1382.61,
           "probability": 0.9838758111000061
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 991,
-      "start": 1382.61,
-      "end": 1383.87,
-      "text": "From my hot jungle fever",
-      "words": [
+        },
         {
           "word": "From",
           "start": 1382.61,
@@ -39814,8 +38419,8 @@
     {
       "id": 996,
       "start": 1390.01,
-      "end": 1391.27,
-      "text": "If it's this J and me then it costs",
+      "end": 1391.13,
+      "text": "If it's this J and me then it",
       "words": [
         {
           "word": "If",
@@ -39864,22 +38469,22 @@
           "start": 1390.97,
           "end": 1391.13,
           "probability": 0.7976886630058289
-        },
-        {
-          "word": "costs",
-          "start": 1391.13,
-          "end": 1391.27,
-          "probability": 0.3440302908420563
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 997,
-      "start": 1391.27,
+      "start": 1391.13,
       "end": 1391.77,
-      "text": "my line",
+      "text": "costs my line",
       "words": [
+        {
+          "word": "costs",
+          "start": 1391.13,
+          "end": 1391.27,
+          "probability": 0.3440302908420563
+        },
         {
           "word": "my",
           "start": 1391.27,
@@ -40069,8 +38674,8 @@
     {
       "id": 1001,
       "start": 1396.81,
-      "end": 1398.07,
-      "text": "If it's this J and me then it costs",
+      "end": 1397.93,
+      "text": "If it's this J and me then it",
       "words": [
         {
           "word": "If",
@@ -40119,22 +38724,22 @@
           "start": 1397.79,
           "end": 1397.93,
           "probability": 0.9717402458190918
-        },
-        {
-          "word": "costs",
-          "start": 1397.93,
-          "end": 1398.07,
-          "probability": 0.4104987382888794
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 1002,
-      "start": 1398.07,
+      "start": 1397.93,
       "end": 1398.73,
-      "text": "my line",
+      "text": "costs my line",
       "words": [
+        {
+          "word": "costs",
+          "start": 1397.93,
+          "end": 1398.07,
+          "probability": 0.4104987382888794
+        },
         {
           "word": "my",
           "start": 1398.07,
@@ -40252,8 +38857,8 @@
     {
       "id": 1006,
       "start": 1403.83,
-      "end": 1405.79,
-      "text": "Hand on the Bible spit like a Pella",
+      "end": 1406.45,
+      "text": "Hand on the Bible spit like a Pella Listeners,",
       "words": [
         {
           "word": "Hand",
@@ -40302,16 +38907,7 @@
           "start": 1405.21,
           "end": 1405.79,
           "probability": 0.5627827942371368
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1007,
-      "start": 1405.79,
-      "end": 1406.45,
-      "text": "Listeners,",
-      "words": [
+        },
         {
           "word": "Listeners,",
           "start": 1405.79,
@@ -40424,10 +39020,10 @@
       "speaker": "JME"
     },
     {
-      "id": 1010,
+      "id": 1011,
       "start": 1409.63,
-      "end": 1410.53,
-      "text": "Like Salmanilla",
+      "end": 1412.21,
+      "text": "Like Salmanilla Get beatboxed like Jilop Keller",
       "words": [
         {
           "word": "Like",
@@ -40440,16 +39036,7 @@
           "start": 1409.89,
           "end": 1410.53,
           "probability": 0.5735305150349935
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1011,
-      "start": 1410.53,
-      "end": 1412.21,
-      "text": "Get beatboxed like Jilop Keller",
-      "words": [
+        },
         {
           "word": "Get",
           "start": 1410.53,
@@ -40486,8 +39073,8 @@
     {
       "id": 1012,
       "start": 1412.21,
-      "end": 1414.09,
-      "text": "Puff Man Ting with a stella",
+      "end": 1414.81,
+      "text": "Puff Man Ting with a stella Left hook,",
       "words": [
         {
           "word": "Puff",
@@ -40524,16 +39111,7 @@
           "start": 1413.71,
           "end": 1414.09,
           "probability": 0.5600824803113937
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1013,
-      "start": 1414.09,
-      "end": 1414.81,
-      "text": "Left hook,",
-      "words": [
+        },
         {
           "word": "Left",
           "start": 1414.09,
@@ -40550,10 +39128,10 @@
       "speaker": "JME"
     },
     {
-      "id": 1014,
+      "id": 1015,
       "start": 1415.01,
-      "end": 1415.27,
-      "text": "top lip,",
+      "end": 1417.31,
+      "text": "top lip, swell up Wobbly tooth, fairvon Jella",
       "words": [
         {
           "word": "top",
@@ -40566,16 +39144,7 @@
           "start": 1415.13,
           "end": 1415.27,
           "probability": 0.37399429082870483
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1015,
-      "start": 1415.31,
-      "end": 1415.73,
-      "text": "swell up",
-      "words": [
+        },
         {
           "word": "swell",
           "start": 1415.31,
@@ -40587,16 +39156,7 @@
           "start": 1415.51,
           "end": 1415.73,
           "probability": 0.23632994294166565
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1016,
-      "start": 1415.73,
-      "end": 1416.51,
-      "text": "Wobbly tooth,",
-      "words": [
+        },
         {
           "word": "Wobbly",
           "start": 1415.73,
@@ -40608,16 +39168,7 @@
           "start": 1416.15,
           "end": 1416.51,
           "probability": 0.5749741792678833
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1017,
-      "start": 1416.75,
-      "end": 1417.31,
-      "text": "fairvon Jella",
-      "words": [
+        },
         {
           "word": "fairvon",
           "start": 1416.75,
@@ -40846,8 +39397,8 @@
     {
       "id": 1022,
       "start": 1424.43,
-      "end": 1425.37,
-      "text": "You don't believe me?",
+      "end": 1426.11,
+      "text": "You don't believe me? Ask Mella",
       "words": [
         {
           "word": "You",
@@ -40872,16 +39423,7 @@
           "start": 1425.09,
           "end": 1425.37,
           "probability": 0.9934095144271851
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1023,
-      "start": 1425.37,
-      "end": 1426.11,
-      "text": "Ask Mella",
-      "words": [
+        },
         {
           "word": "Ask",
           "start": 1425.37,
@@ -41188,8 +39730,8 @@
     {
       "id": 1032,
       "start": 1436.07,
-      "end": 1437.93,
-      "text": "You get a Texas chainsaw massacre",
+      "end": 1439.17,
+      "text": "You get a Texas chainsaw massacre Modern warfare, silence,",
       "words": [
         {
           "word": "You",
@@ -41226,16 +39768,7 @@
           "start": 1437.39,
           "end": 1437.93,
           "probability": 0.9680748581886292
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1033,
-      "start": 1437.93,
-      "end": 1438.63,
-      "text": "Modern warfare,",
-      "words": [
+        },
         {
           "word": "Modern",
           "start": 1437.93,
@@ -41247,16 +39780,7 @@
           "start": 1438.31,
           "end": 1438.63,
           "probability": 0.8923967480659485
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1034,
-      "start": 1438.73,
-      "end": 1439.17,
-      "text": "silence,",
-      "words": [
+        },
         {
           "word": "silence,",
           "start": 1438.73,
@@ -41267,10 +39791,10 @@
       "speaker": "JME"
     },
     {
-      "id": 1035,
+      "id": 1036,
       "start": 1439.95,
-      "end": 1440.21,
-      "text": "no chaps,",
+      "end": 1441.23,
+      "text": "no chaps, no chain, no manager",
       "words": [
         {
           "word": "no",
@@ -41283,16 +39807,7 @@
           "start": 1439.95,
           "end": 1440.21,
           "probability": 0.7809481024742126
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1036,
-      "start": 1440.33,
-      "end": 1440.63,
-      "text": "no chain,",
-      "words": [
+        },
         {
           "word": "no",
           "start": 1440.33,
@@ -41304,16 +39819,7 @@
           "start": 1440.47,
           "end": 1440.63,
           "probability": 0.9285630583763123
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1037,
-      "start": 1440.65,
-      "end": 1441.23,
-      "text": "no manager",
-      "words": [
+        },
         {
           "word": "no",
           "start": 1440.65,
@@ -41444,26 +39950,17 @@
       "speaker": "JME"
     },
     {
-      "id": 1040,
+      "id": 1041,
       "start": 1445.05,
-      "end": 1445.25,
-      "text": "them",
+      "end": 1447.15,
+      "text": "them With a lens and an aperture, professional",
       "words": [
         {
           "word": "them",
           "start": 1445.05,
           "end": 1445.25,
           "probability": 0.9769630432128906
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1041,
-      "start": 1445.25,
-      "end": 1446.45,
-      "text": "With a lens and an aperture,",
-      "words": [
+        },
         {
           "word": "With",
           "start": 1445.25,
@@ -41499,16 +39996,7 @@
           "start": 1446.05,
           "end": 1446.45,
           "probability": 0.9903355836868286
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1042,
-      "start": 1446.81,
-      "end": 1447.15,
-      "text": "professional",
-      "words": [
+        },
         {
           "word": "professional",
           "start": 1446.81,
@@ -41519,10 +40007,10 @@
       "speaker": "JME"
     },
     {
-      "id": 1043,
+      "id": 1044,
       "start": 1447.15,
-      "end": 1448.05,
-      "text": "Not amateur,",
+      "end": 1449.91,
+      "text": "Not amateur, cause I work all night like Dracula",
       "words": [
         {
           "word": "Not",
@@ -41535,16 +40023,7 @@
           "start": 1447.59,
           "end": 1448.05,
           "probability": 0.9852105975151062
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1044,
-      "start": 1448.31,
-      "end": 1449.91,
-      "text": "cause I work all night like Dracula",
-      "words": [
+        },
         {
           "word": "cause",
           "start": 1448.31,
@@ -41699,26 +40178,17 @@
       "speaker": "JME"
     },
     {
-      "id": 1047,
+      "id": 1048,
       "start": 1453.77,
-      "end": 1454.05,
-      "text": "Yo,",
+      "end": 1455.37,
+      "text": "Yo, I ain't taking you nowhere",
       "words": [
         {
           "word": "Yo,",
           "start": 1453.77,
           "end": 1454.05,
           "probability": 0.8355693817138672
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1048,
-      "start": 1454.19,
-      "end": 1455.37,
-      "text": "I ain't taking you nowhere",
-      "words": [
+        },
         {
           "word": "I",
           "start": 1454.19,
@@ -42110,41 +40580,23 @@
       "speaker": "Frisco"
     },
     {
-      "id": 1056,
+      "id": 1058,
       "start": 1465.63,
-      "end": 1465.89,
-      "text": "doctor",
+      "end": 1466.55,
+      "text": "doctor Remember, boy,",
       "words": [
         {
           "word": "doctor",
           "start": 1465.63,
           "end": 1465.89,
           "probability": 0.499493807554245
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1057,
-      "start": 1465.89,
-      "end": 1466.31,
-      "text": "Remember,",
-      "words": [
+        },
         {
           "word": "Remember,",
           "start": 1465.89,
           "end": 1466.31,
           "probability": 0.17501908540725708
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1058,
-      "start": 1466.49,
-      "end": 1466.55,
-      "text": "boy,",
-      "words": [
+        },
         {
           "word": "boy,",
           "start": 1466.49,
@@ -43069,8 +41521,8 @@
     {
       "id": 1081,
       "start": 1492.67,
-      "end": 1494.07,
-      "text": "this me a thump in the mouth",
+      "end": 1494.47,
+      "text": "this me a thump in the mouth Shout,",
       "words": [
         {
           "word": "this",
@@ -43113,16 +41565,7 @@
           "start": 1493.73,
           "end": 1494.07,
           "probability": 0.9954220652580261
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1082,
-      "start": 1494.07,
-      "end": 1494.47,
-      "text": "Shout,",
-      "words": [
+        },
         {
           "word": "Shout,",
           "start": 1494.07,
@@ -43327,8 +41770,8 @@
     {
       "id": 1087,
       "start": 1499.81,
-      "end": 1501.01,
-      "text": "my throat starts hurting",
+      "end": 1501.33,
+      "text": "my throat starts hurting Fam,",
       "words": [
         {
           "word": "my",
@@ -43353,16 +41796,7 @@
           "start": 1500.47,
           "end": 1501.01,
           "probability": 0.9889950752258301
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1088,
-      "start": 1501.01,
-      "end": 1501.33,
-      "text": "Fam,",
-      "words": [
+        },
         {
           "word": "Fam,",
           "start": 1501.01,
@@ -43475,10 +41909,10 @@
       "speaker": "Frisco"
     },
     {
-      "id": 1091,
+      "id": 1092,
       "start": 1503.77,
-      "end": 1504.07,
-      "text": "the eye",
+      "end": 1505.91,
+      "text": "the eye I'm a cussed up alive, always recording",
       "words": [
         {
           "word": "the",
@@ -43491,16 +41925,7 @@
           "start": 1503.95,
           "end": 1504.07,
           "probability": 0.9245985746383667
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1092,
-      "start": 1504.07,
-      "end": 1505.01,
-      "text": "I'm a cussed up alive,",
-      "words": [
+        },
         {
           "word": "I'm",
           "start": 1504.07,
@@ -43530,16 +41955,7 @@
           "start": 1504.71,
           "end": 1505.01,
           "probability": 0.4453534483909607
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1093,
-      "start": 1505.17,
-      "end": 1505.91,
-      "text": "always recording",
-      "words": [
+        },
         {
           "word": "always",
           "start": 1505.17,
@@ -43556,26 +41972,17 @@
       "speaker": "Frisco"
     },
     {
-      "id": 1094,
+      "id": 1095,
       "start": 1505.91,
-      "end": 1506.17,
-      "text": "Boy,",
+      "end": 1507.97,
+      "text": "Boy, but I know we're ripping it right",
       "words": [
         {
           "word": "Boy,",
           "start": 1505.91,
           "end": 1506.17,
           "probability": 0.26905950903892517
-        }
-      ],
-      "speaker": "Frisco"
-    },
-    {
-      "id": 1095,
-      "start": 1506.21,
-      "end": 1507.97,
-      "text": "but I know we're ripping it right",
-      "words": [
+        },
         {
           "word": "but",
           "start": 1506.21,
@@ -43681,8 +42088,8 @@
     {
       "id": 1097,
       "start": 1509.71,
-      "end": 1510.41,
-      "text": "Buy out the bar,",
+      "end": 1510.95,
+      "text": "Buy out the bar, that's me",
       "words": [
         {
           "word": "Buy",
@@ -43707,16 +42114,7 @@
           "start": 1510.29,
           "end": 1510.41,
           "probability": 0.8075066804885864
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 1098,
-      "start": 1510.41,
-      "end": 1510.95,
-      "text": "that's me",
-      "words": [
+        },
         {
           "word": "that's",
           "start": 1510.41,
@@ -43780,8 +42178,8 @@
     {
       "id": 1100,
       "start": 1512.65,
-      "end": 1514.29,
-      "text": "Ten green bottles on the roof of the team",
+      "end": 1513.95,
+      "text": "Ten green bottles on the roof of",
       "words": [
         {
           "word": "Ten",
@@ -43824,7 +42222,16 @@
           "start": 1513.77,
           "end": 1513.95,
           "probability": 0.6200860142707825
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 1101,
+      "start": 1513.95,
+      "end": 1514.63,
+      "text": "the team Boy,",
+      "words": [
         {
           "word": "the",
           "start": 1513.95,
@@ -43836,16 +42243,7 @@
           "start": 1514.11,
           "end": 1514.29,
           "probability": 0.8244529962539673
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 1101,
-      "start": 1514.29,
-      "end": 1514.63,
-      "text": "Boy,",
-      "words": [
+        },
         {
           "word": "Boy,",
           "start": 1514.29,
@@ -44135,10 +42533,10 @@
       "speaker": "Jammer"
     },
     {
-      "id": 1107,
+      "id": 1108,
       "start": 1522.89,
-      "end": 1523.35,
-      "text": "a P",
+      "end": 1524.59,
+      "text": "a P Buy out the bar, that's me",
       "words": [
         {
           "word": "a",
@@ -44151,16 +42549,7 @@
           "start": 1523.05,
           "end": 1523.35,
           "probability": 0.9908697009086609
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 1108,
-      "start": 1523.35,
-      "end": 1524.01,
-      "text": "Buy out the bar,",
-      "words": [
+        },
         {
           "word": "Buy",
           "start": 1523.35,
@@ -44184,16 +42573,7 @@
           "start": 1523.81,
           "end": 1524.01,
           "probability": 0.9986206293106079
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 1109,
-      "start": 1524.01,
-      "end": 1524.59,
-      "text": "that's me",
-      "words": [
+        },
         {
           "word": "that's",
           "start": 1524.01,
@@ -44257,8 +42637,8 @@
     {
       "id": 1111,
       "start": 1526.25,
-      "end": 1527.95,
-      "text": "Ten green bottles on the roof of the team",
+      "end": 1527.53,
+      "text": "Ten green bottles on the roof of",
       "words": [
         {
           "word": "Ten",
@@ -44301,7 +42681,16 @@
           "start": 1527.43,
           "end": 1527.53,
           "probability": 0.9982092380523682
-        },
+        }
+      ],
+      "speaker": "Jammer"
+    },
+    {
+      "id": 1112,
+      "start": 1527.53,
+      "end": 1528.15,
+      "text": "the team Boy,",
+      "words": [
         {
           "word": "the",
           "start": 1527.53,
@@ -44313,16 +42702,7 @@
           "start": 1527.71,
           "end": 1527.95,
           "probability": 0.9988376498222351
-        }
-      ],
-      "speaker": "Jammer"
-    },
-    {
-      "id": 1112,
-      "start": 1527.95,
-      "end": 1528.15,
-      "text": "Boy,",
-      "words": [
+        },
         {
           "word": "Boy,",
           "start": 1527.95,
@@ -44518,8 +42898,8 @@
     {
       "id": 1116,
       "start": 1533.09,
-      "end": 1533.95,
-      "text": "Aim for the target",
+      "end": 1534.67,
+      "text": "Aim for the target Well,",
       "words": [
         {
           "word": "Aim",
@@ -44544,16 +42924,7 @@
           "start": 1533.63,
           "end": 1533.95,
           "probability": 0.9612709879875183
-        }
-      ],
-      "speaker": "unknown"
-    },
-    {
-      "id": 1117,
-      "start": 1533.95,
-      "end": 1534.67,
-      "text": "Well,",
-      "words": [
+        },
         {
           "word": "Well,",
           "start": 1533.95,
@@ -44564,26 +42935,17 @@
       "speaker": "unknown"
     },
     {
-      "id": 1118,
+      "id": 1119,
       "start": 1535.25,
-      "end": 1535.53,
-      "text": "well,",
+      "end": 1536.07,
+      "text": "well, well",
       "words": [
         {
           "word": "well,",
           "start": 1535.25,
           "end": 1535.53,
           "probability": 0.9556661248207092
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1119,
-      "start": 1535.53,
-      "end": 1536.07,
-      "text": "well",
-      "words": [
+        },
         {
           "word": "well",
           "start": 1535.53,
@@ -44893,8 +43255,8 @@
     {
       "id": 1125,
       "start": 1545.31,
-      "end": 1547.07,
-      "text": "And you'll get an elbow drop like well,",
+      "end": 1547.45,
+      "text": "And you'll get an elbow drop like well, well,",
       "words": [
         {
           "word": "And",
@@ -44943,16 +43305,7 @@
           "start": 1546.81,
           "end": 1547.07,
           "probability": 0.3678392469882965
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1126,
-      "start": 1547.17,
-      "end": 1547.45,
-      "text": "well,",
-      "words": [
+        },
         {
           "word": "well,",
           "start": 1547.17,
@@ -44963,56 +43316,29 @@
       "speaker": "JME"
     },
     {
-      "id": 1127,
+      "id": 1129,
       "start": 1547.53,
-      "end": 1547.83,
-      "text": "well",
+      "end": 1548.83,
+      "text": "well Well, well, well,",
       "words": [
         {
           "word": "well",
           "start": 1547.53,
           "end": 1547.83,
           "probability": 0.9964610934257507
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1128,
-      "start": 1547.83,
-      "end": 1547.95,
-      "text": "Well,",
-      "words": [
+        },
         {
           "word": "Well,",
           "start": 1547.83,
           "end": 1547.95,
           "probability": 0.05892154946923256
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1129,
-      "start": 1547.95,
-      "end": 1548.27,
-      "text": "well,",
-      "words": [
+        },
         {
           "word": "well,",
           "start": 1547.95,
           "end": 1548.27,
           "probability": 0.994499921798706
-        }
-      ],
-      "speaker": "JME"
-    },
-    {
-      "id": 1130,
-      "start": 1548.27,
-      "end": 1548.83,
-      "text": "well,",
-      "words": [
+        },
         {
           "word": "well,",
           "start": 1548.27,
@@ -45023,41 +43349,23 @@
       "speaker": "JME"
     },
     {
-      "id": 1131,
+      "id": 1133,
       "start": 1548.83,
-      "end": 1549.11,
-      "text": "well",
+      "end": 1551.35,
+      "text": "well Hey, what did I get?",
       "words": [
         {
           "word": "well",
           "start": 1548.83,
           "end": 1549.11,
           "probability": 0.9856248497962952
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1132,
-      "start": 1549.53,
-      "end": 1549.93,
-      "text": "Hey,",
-      "words": [
+        },
         {
           "word": "Hey,",
           "start": 1549.53,
           "end": 1549.93,
           "probability": 0.08908619731664658
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1133,
-      "start": 1550.11,
-      "end": 1551.35,
-      "text": "what did I get?",
-      "words": [
+        },
         {
           "word": "what",
           "start": 1550.11,
@@ -45088,8 +43396,8 @@
     {
       "id": 1134,
       "start": 1552.55,
-      "end": 1553.19,
-      "text": "In the paper,",
+      "end": 1554.41,
+      "text": "In the paper, one, two, one, two",
       "words": [
         {
           "word": "In",
@@ -45108,61 +43416,25 @@
           "start": 1552.81,
           "end": 1553.19,
           "probability": 0.9813486933708191
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1135,
-      "start": 1553.41,
-      "end": 1553.63,
-      "text": "one,",
-      "words": [
+        },
         {
           "word": "one,",
           "start": 1553.41,
           "end": 1553.63,
           "probability": 0.7018841505050659
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1136,
-      "start": 1553.65,
-      "end": 1553.77,
-      "text": "two,",
-      "words": [
+        },
         {
           "word": "two,",
           "start": 1553.65,
           "end": 1553.77,
           "probability": 0.9972121119499207
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1137,
-      "start": 1554.03,
-      "end": 1554.03,
-      "text": "one,",
-      "words": [
+        },
         {
           "word": "one,",
           "start": 1554.03,
           "end": 1554.03,
           "probability": 0.09845556318759918
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1138,
-      "start": 1554.15,
-      "end": 1554.41,
-      "text": "two",
-      "words": [
+        },
         {
           "word": "two",
           "start": 1554.15,
@@ -45514,8 +43786,8 @@
     {
       "id": 1146,
       "start": 1564.95,
-      "end": 1566.35,
-      "text": "I feel so alive and I couldn't give a",
+      "end": 1566.27,
+      "text": "I feel so alive and I couldn't give",
       "words": [
         {
           "word": "I",
@@ -45564,22 +43836,22 @@
           "start": 1566.07,
           "end": 1566.27,
           "probability": 0.9763203859329224
-        },
-        {
-          "word": "a",
-          "start": 1566.27,
-          "end": 1566.35,
-          "probability": 0.9923871755599976
         }
       ],
       "speaker": "Skepta"
     },
     {
       "id": 1147,
-      "start": 1566.35,
+      "start": 1566.27,
       "end": 1566.71,
-      "text": "damn about",
+      "text": "a damn about",
       "words": [
+        {
+          "word": "a",
+          "start": 1566.27,
+          "end": 1566.35,
+          "probability": 0.9923871755599976
+        },
         {
           "word": "damn",
           "start": 1566.35,
@@ -45766,8 +44038,8 @@
     {
       "id": 1152,
       "start": 1571.85,
-      "end": 1572.91,
-      "text": "When you're looking for Boy,",
+      "end": 1573.33,
+      "text": "When you're looking for Boy, better know,",
       "words": [
         {
           "word": "When",
@@ -45798,16 +44070,7 @@
           "start": 1572.79,
           "end": 1572.91,
           "probability": 0.29021716117858887
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1153,
-      "start": 1572.99,
-      "end": 1573.33,
-      "text": "better know,",
-      "words": [
+        },
         {
           "word": "better",
           "start": 1572.99,
@@ -45826,8 +44089,8 @@
     {
       "id": 1154,
       "start": 1573.45,
-      "end": 1574.61,
-      "text": "better look to the stars",
+      "end": 1575.45,
+      "text": "better look to the stars Boy, better know,",
       "words": [
         {
           "word": "better",
@@ -45858,31 +44121,13 @@
           "start": 1574.19,
           "end": 1574.61,
           "probability": 0.9892675280570984
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1155,
-      "start": 1574.61,
-      "end": 1575.13,
-      "text": "Boy,",
-      "words": [
+        },
         {
           "word": "Boy,",
           "start": 1574.61,
           "end": 1575.13,
           "probability": 0.8193100094795227
-        }
-      ],
-      "speaker": "Skepta"
-    },
-    {
-      "id": 1156,
-      "start": 1575.15,
-      "end": 1575.45,
-      "text": "better know,",
-      "words": [
+        },
         {
           "word": "better",
           "start": 1575.15,
@@ -45899,10 +44144,10 @@
       "speaker": "Skepta"
     },
     {
-      "id": 1157,
+      "id": 1158,
       "start": 1575.61,
-      "end": 1576.13,
-      "text": "Kiss Presents",
+      "end": 1577.51,
+      "text": "Kiss Presents Kicking off the Grime Takeover,",
       "words": [
         {
           "word": "Kiss",
@@ -45915,16 +44160,7 @@
           "start": 1575.75,
           "end": 1576.13,
           "probability": 0.5176628232002258
-        }
-      ],
-      "speaker": "Logan Sama"
-    },
-    {
-      "id": 1158,
-      "start": 1576.13,
-      "end": 1577.51,
-      "text": "Kicking off the Grime Takeover,",
-      "words": [
+        },
         {
           "word": "Kicking",
           "start": 1576.13,
