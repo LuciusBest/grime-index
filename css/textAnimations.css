@@ -18,6 +18,11 @@
     color: red !important;
 }
 
+/* Hovering any word should highlight the full lyrics line */
+#lyrics.module:hover .lyric-word {
+    color: red !important;
+}
+
 /* Speaker */
 /* .speaker-name {
     position: absolute;
