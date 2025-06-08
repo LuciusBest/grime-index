@@ -21,12 +21,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // 📐 Adapter le canvas pour couvrir l'écran (cover, comme en CSS)
     if (videoAspect > screenAspect) {
-      canvas.style.height = "100vh";
-      canvas.style.width = `${videoAspect * window.innerHeight}px`;
+      const height = window.innerHeight;
+      const width = videoAspect * height;
+      canvas.style.height = `${height}px`;
+      canvas.style.width = `${width}px`;
+      video.style.height = `${height}px`;
+      video.style.width = `${width}px`;
     } else {
-      canvas.style.width = "100vw";
-      canvas.style.height = `${window.innerWidth / videoAspect}px`;
+      const width = window.innerWidth;
+      const height = width / videoAspect;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      video.style.width = `${width}px`;
+      video.style.height = `${height}px`;
     }
+
+    video.style.objectFit = "cover";
 
     // 🎯 Définir la vraie résolution du canvas en tenant compte de l’upscale
     canvas.width = canvas.offsetWidth * scale;

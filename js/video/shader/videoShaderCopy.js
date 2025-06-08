@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    video.style.width = `${window.innerWidth}px`;
+    video.style.height = `${window.innerHeight}px`;
+    video.style.objectFit = "cover";
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   }
 
