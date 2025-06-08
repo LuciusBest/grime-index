@@ -1,6 +1,6 @@
 {
   "title": "Logan Sama vs BBK crew 2007",
-  "duration": 538.00,
+  "duration": 538.0,
   "instrumentals": [
     {
       "start": 0.0,
@@ -63,7 +63,7 @@
       "id": 9,
       "start": 0.26,
       "end": 1.72,
-      "text": "Alright it’s the next hype yeah?",
+      "text": "Alright it\u2019s the next hype yeah?",
       "words": [
         {
           "start": 0.26,
@@ -73,7 +73,7 @@
         {
           "start": 0.7,
           "end": 1.04,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 1.04,
@@ -100,30 +100,20 @@
       "instrumental": null
     },
     {
-      "id": 10,
+      "id": 11,
       "start": 1.78,
-      "end": 2.08,
-      "text": "Yes",
+      "end": 3.12,
+      "text": "Yes We\u2019ve been waiting,",
       "words": [
         {
           "start": 1.78,
           "end": 2.08,
           "word": " Yes"
-        }
-      ],
-      "speaker": "Logan Sama",
-      "instrumental": null
-    },
-    {
-      "id": 11,
-      "start": 2.08,
-      "end": 3.12,
-      "text": "We’ve been waiting,",
-      "words": [
+        },
         {
           "start": 2.08,
           "end": 2.84,
-          "word": " We’ve"
+          "word": " We\u2019ve"
         },
         {
           "start": 2.84,
@@ -143,12 +133,12 @@
       "id": 12,
       "start": 3.38,
       "end": 3.88,
-      "text": "we’ve been waiting",
+      "text": "we\u2019ve been waiting",
       "words": [
         {
           "start": 3.38,
           "end": 3.64,
-          "word": " we’ve"
+          "word": " we\u2019ve"
         },
         {
           "start": 3.64,
@@ -165,41 +155,21 @@
       "instrumental": null
     },
     {
-      "id": 13,
+      "id": 15,
       "start": 3.88,
-      "end": 4.28,
-      "text": "Yo,",
+      "end": 4.74,
+      "text": "Yo, yo, yo",
       "words": [
         {
           "start": 3.88,
           "end": 4.28,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 14,
-      "start": 4.3,
-      "end": 4.36,
-      "text": "yo,",
-      "words": [
+        },
         {
           "start": 4.3,
           "end": 4.36,
           "word": " yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 15,
-      "start": 4.44,
-      "end": 4.74,
-      "text": "yo",
-      "words": [
+        },
         {
           "start": 4.44,
           "end": 4.74,
@@ -327,13 +297,13 @@
     {
       "id": 19,
       "start": 8.26,
-      "end": 9.7,
-      "text": "I’ll come for the beans that you",
+      "end": 9.92,
+      "text": "I\u2019ll come for the beans that you stack",
       "words": [
         {
           "start": 8.26,
           "end": 8.8,
-          "word": " I’ll"
+          "word": " I\u2019ll"
         },
         {
           "start": 8.8,
@@ -364,17 +334,7 @@
           "start": 9.6,
           "end": 9.7,
           "word": " you"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 20,
-      "start": 9.7,
-      "end": 9.92,
-      "text": "stack",
-      "words": [
+        },
         {
           "start": 9.7,
           "end": 9.92,
@@ -387,8 +347,8 @@
     {
       "id": 21,
       "start": 9.92,
-      "end": 11.32,
-      "text": "And come for all the food that",
+      "end": 11.62,
+      "text": "And come for all the food that you block",
       "words": [
         {
           "start": 9.92,
@@ -424,17 +384,7 @@
           "start": 11.18,
           "end": 11.32,
           "word": " that"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 22,
-      "start": 11.32,
-      "end": 11.62,
-      "text": "you block",
-      "words": [
+        },
         {
           "start": 11.32,
           "end": 11.4,
@@ -488,7 +438,7 @@
       "id": 24,
       "start": 13.34,
       "end": 15.0,
-      "text": "Your buddies don’t wanna see you shot",
+      "text": "Your buddies don\u2019t wanna see you shot",
       "words": [
         {
           "start": 13.34,
@@ -503,7 +453,7 @@
         {
           "start": 13.94,
           "end": 14.16,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 14.16,
@@ -532,8 +482,8 @@
     {
       "id": 25,
       "start": 15.0,
-      "end": 16.36,
-      "text": "If I kick down the door to",
+      "end": 16.68,
+      "text": "If I kick down the door to your flat",
       "words": [
         {
           "start": 15.0,
@@ -569,17 +519,7 @@
           "start": 16.22,
           "end": 16.36,
           "word": " to"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 26,
-      "start": 16.36,
-      "end": 16.68,
-      "text": "your flat",
-      "words": [
+        },
         {
           "start": 16.36,
           "end": 16.46,
@@ -657,8 +597,8 @@
     {
       "id": 29,
       "start": 18.36,
-      "end": 20.14,
-      "text": "Clear all the things in the house,",
+      "end": 20.42,
+      "text": "Clear all the things in the house, Clear !",
       "words": [
         {
           "start": 18.36,
@@ -694,17 +634,7 @@
           "start": 19.86,
           "end": 20.14,
           "word": " house,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 30,
-      "start": 20.18,
-      "end": 20.42,
-      "text": "Clear !",
-      "words": [
+        },
         {
           "start": 20.18,
           "end": 20.42,
@@ -717,8 +647,8 @@
     {
       "id": 31,
       "start": 20.42,
-      "end": 21.78,
-      "text": "All the things in the fridge,",
+      "end": 22.1,
+      "text": "All the things in the fridge, Smash !",
       "words": [
         {
           "start": 20.42,
@@ -749,17 +679,7 @@
           "start": 21.56,
           "end": 21.78,
           "word": " fridge,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 32,
-      "start": 21.92,
-      "end": 22.1,
-      "text": "Smash !",
-      "words": [
+        },
         {
           "start": 21.92,
           "end": 22.1,
@@ -772,8 +692,8 @@
     {
       "id": 33,
       "start": 22.48,
-      "end": 23.42,
-      "text": "All your blinks on the rack,",
+      "end": 23.84,
+      "text": "All your blinks on the rack, Clear !",
       "words": [
         {
           "start": 22.48,
@@ -804,17 +724,7 @@
           "start": 23.26,
           "end": 23.42,
           "word": " rack,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 34,
-      "start": 23.5,
-      "end": 23.84,
-      "text": "Clear !",
-      "words": [
+        },
         {
           "start": 23.5,
           "end": 23.84,
@@ -827,8 +737,8 @@
     {
       "id": 35,
       "start": 23.84,
-      "end": 24.66,
-      "text": "All your food,",
+      "end": 25.52,
+      "text": "All your food, these toys,  Clear !",
       "words": [
         {
           "start": 23.84,
@@ -844,17 +754,7 @@
           "start": 24.44,
           "end": 24.66,
           "word": " food,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 36,
-      "start": 24.68,
-      "end": 25.1,
-      "text": "these toys,",
-      "words": [
+        },
         {
           "start": 24.68,
           "end": 24.82,
@@ -864,17 +764,7 @@
           "start": 24.82,
           "end": 25.1,
           "word": " toys,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 37,
-      "start": 25.26,
-      "end": 25.52,
-      "text": " Clear !",
-      "words": [
+        },
         {
           "start": 25.26,
           "end": 25.52,
@@ -918,12 +808,12 @@
       "id": 39,
       "start": 26.9,
       "end": 28.54,
-      "text": "won’t get none of your CDs back",
+      "text": "won\u2019t get none of your CDs back",
       "words": [
         {
           "start": 26.9,
           "end": 27.24,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 27.24,
@@ -962,8 +852,8 @@
     {
       "id": 40,
       "start": 28.54,
-      "end": 30.02,
-      "text": "Drag off your curtain rail for the",
+      "end": 30.16,
+      "text": "Drag off your curtain rail for the war",
       "words": [
         {
           "start": 28.54,
@@ -999,17 +889,7 @@
           "start": 29.9,
           "end": 30.02,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 41,
-      "start": 30.02,
-      "end": 30.16,
-      "text": "war",
-      "words": [
+        },
         {
           "start": 30.02,
           "end": 30.16,
@@ -1107,8 +987,8 @@
     {
       "id": 44,
       "start": 33.6,
-      "end": 35.1,
-      "text": "Flipped the mattress and searched for the",
+      "end": 35.3,
+      "text": "Flipped the mattress and searched for the cash",
       "words": [
         {
           "start": 33.6,
@@ -1144,17 +1024,7 @@
           "start": 35.02,
           "end": 35.1,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 45,
-      "start": 35.1,
-      "end": 35.3,
-      "text": "cash",
-      "words": [
+        },
         {
           "start": 35.1,
           "end": 35.3,
@@ -1213,12 +1083,12 @@
       "id": 47,
       "start": 36.88,
       "end": 37.84,
-      "text": "It’s not worth your life,",
+      "text": "It\u2019s not worth your life,",
       "words": [
         {
           "start": 36.88,
           "end": 37.12,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 37.12,
@@ -1277,13 +1147,13 @@
     {
       "id": 49,
       "start": 38.62,
-      "end": 40.14,
-      "text": "It’s too late to lock up the",
+      "end": 40.34,
+      "text": "It\u2019s too late to lock up the latch",
       "words": [
         {
           "start": 38.62,
           "end": 39.1,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 39.1,
@@ -1314,17 +1184,7 @@
           "start": 40.0,
           "end": 40.14,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 50,
-      "start": 40.14,
-      "end": 40.34,
-      "text": "latch",
-      "words": [
+        },
         {
           "start": 40.14,
           "end": 40.34,
@@ -1337,8 +1197,8 @@
     {
       "id": 51,
       "start": 40.34,
-      "end": 41.14,
-      "text": "I can smoke the crow,",
+      "end": 41.6,
+      "text": "I can smoke the crow, relax",
       "words": [
         {
           "start": 40.34,
@@ -1364,17 +1224,7 @@
           "start": 41.0,
           "end": 41.14,
           "word": " crow,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 52,
-      "start": 41.28,
-      "end": 41.6,
-      "text": "relax",
-      "words": [
+        },
         {
           "start": 41.28,
           "end": 41.6,
@@ -1388,12 +1238,12 @@
       "id": 53,
       "start": 42.14,
       "end": 43.64,
-      "text": "I’m not here to control your life",
+      "text": "I\u2019m not here to control your life",
       "words": [
         {
           "start": 42.14,
           "end": 42.5,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 42.5,
@@ -1578,7 +1428,7 @@
       "id": 58,
       "start": 48.08,
       "end": 48.82,
-      "text": "I don’t know why",
+      "text": "I don\u2019t know why",
       "words": [
         {
           "start": 48.08,
@@ -1588,7 +1438,7 @@
         {
           "start": 48.18,
           "end": 48.44,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 48.44,
@@ -1747,8 +1597,8 @@
     {
       "id": 63,
       "start": 53.84,
-      "end": 55.32,
-      "text": "That boy there asked where you gonna",
+      "end": 55.52,
+      "text": "That boy there asked where you gonna die",
       "words": [
         {
           "start": 53.84,
@@ -1784,17 +1634,7 @@
           "start": 55.2,
           "end": 55.32,
           "word": " gonna"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 64,
-      "start": 55.32,
-      "end": 55.52,
-      "text": "die",
-      "words": [
+        },
         {
           "start": 55.32,
           "end": 55.52,
@@ -1805,10 +1645,10 @@
       "instrumental": null
     },
     {
-      "id": 65,
+      "id": 66,
       "start": 55.52,
-      "end": 55.94,
-      "text": "Not bad,",
+      "end": 57.22,
+      "text": "Not bad, your mug don\u2019t fit your guy",
       "words": [
         {
           "start": 55.52,
@@ -1819,17 +1659,7 @@
           "start": 55.7,
           "end": 55.94,
           "word": " bad,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 66,
-      "start": 56.02,
-      "end": 57.22,
-      "text": "your mug don’t fit your guy",
-      "words": [
+        },
         {
           "start": 56.02,
           "end": 56.16,
@@ -1843,7 +1673,7 @@
         {
           "start": 56.38,
           "end": 56.6,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 56.6,
@@ -1898,7 +1728,7 @@
       "id": 68,
       "start": 58.14,
       "end": 58.88,
-      "text": "you won’t be alright",
+      "text": "you won\u2019t be alright",
       "words": [
         {
           "start": 58.14,
@@ -1908,7 +1738,7 @@
         {
           "start": 58.24,
           "end": 58.54,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 58.54,
@@ -2142,8 +1972,8 @@
     {
       "id": 75,
       "start": 65.72,
-      "end": 67.06,
-      "text": "Run off to my living room for",
+      "end": 67.4,
+      "text": "Run off to my living room for his life",
       "words": [
         {
           "start": 65.72,
@@ -2179,17 +2009,7 @@
           "start": 66.92,
           "end": 67.06,
           "word": " for"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 76,
-      "start": 67.06,
-      "end": 67.4,
-      "text": "his life",
-      "words": [
+        },
         {
           "start": 67.06,
           "end": 67.16,
@@ -2207,8 +2027,8 @@
     {
       "id": 77,
       "start": 67.4,
-      "end": 68.72,
-      "text": "Slap bro and I got stains of",
+      "end": 69.02,
+      "text": "Slap bro and I got stains of the night",
       "words": [
         {
           "start": 67.4,
@@ -2244,17 +2064,7 @@
           "start": 68.56,
           "end": 68.72,
           "word": " of"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 78,
-      "start": 68.72,
-      "end": 69.02,
-      "text": "the night",
-      "words": [
+        },
         {
           "start": 68.72,
           "end": 68.82,
@@ -2313,12 +2123,12 @@
       "id": 80,
       "start": 70.54,
       "end": 71.6,
-      "text": "I’m sick when I dream about it",
+      "text": "I\u2019m sick when I dream about it",
       "words": [
         {
           "start": 70.54,
           "end": 70.92,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 70.92,
@@ -2358,12 +2168,12 @@
       "id": 81,
       "start": 71.62,
       "end": 72.54,
-      "text": "I’m more sick than them twice",
+      "text": "I\u2019m more sick than them twice",
       "words": [
         {
           "start": 71.62,
           "end": 71.64,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 71.64,
@@ -2397,8 +2207,8 @@
     {
       "id": 82,
       "start": 72.54,
-      "end": 73.72,
-      "text": "What do you know about the rules?",
+      "end": 74.1,
+      "text": "What do you know about the rules? No bars",
       "words": [
         {
           "start": 72.54,
@@ -2434,17 +2244,7 @@
           "start": 73.56,
           "end": 73.72,
           "word": " rules?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 83,
-      "start": 73.74,
-      "end": 74.1,
-      "text": "No bars",
-      "words": [
+        },
         {
           "start": 73.74,
           "end": 73.88,
@@ -2463,12 +2263,12 @@
       "id": 84,
       "start": 74.1,
       "end": 75.78,
-      "text": "Don’t wanna see man driving his car",
+      "text": "Don\u2019t wanna see man driving his car",
       "words": [
         {
           "start": 74.1,
           "end": 74.58,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 74.58,
@@ -2703,12 +2503,12 @@
       "id": 90,
       "start": 81.74,
       "end": 82.56,
-      "text": "It’s not a bar",
+      "text": "It\u2019s not a bar",
       "words": [
         {
           "start": 81.74,
           "end": 82.1,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 82.1,
@@ -2732,8 +2532,8 @@
     {
       "id": 91,
       "start": 83.14,
-      "end": 83.84,
-      "text": "Drag my life",
+      "end": 84.78,
+      "text": "Drag my life Trace",
       "words": [
         {
           "start": 83.14,
@@ -2749,17 +2549,7 @@
           "start": 83.64,
           "end": 83.84,
           "word": " life"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 92,
-      "start": 84.42,
-      "end": 84.78,
-      "text": "Trace",
-      "words": [
+        },
         {
           "start": 84.42,
           "end": 84.78,
@@ -2807,8 +2597,8 @@
     {
       "id": 94,
       "start": 85.92,
-      "end": 87.38,
-      "text": "If you don’t get out of the",
+      "end": 87.6,
+      "text": "If you don\u2019t get out of the car",
       "words": [
         {
           "start": 85.92,
@@ -2823,7 +2613,7 @@
         {
           "start": 86.72,
           "end": 86.9,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 86.9,
@@ -2844,17 +2634,7 @@
           "start": 87.3,
           "end": 87.38,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 95,
-      "start": 87.38,
-      "end": 87.6,
-      "text": "car",
-      "words": [
+        },
         {
           "start": 87.38,
           "end": 87.6,
@@ -2868,12 +2648,12 @@
       "id": 96,
       "start": 87.6,
       "end": 89.3,
-      "text": "Don’t wanna see man shooting his star",
+      "text": "Don\u2019t wanna see man shooting his star",
       "words": [
         {
           "start": 87.6,
           "end": 87.98,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 87.98,
@@ -2953,7 +2733,7 @@
       "id": 98,
       "start": 90.94,
       "end": 92.16,
-      "text": "I don’t care if you got friends",
+      "text": "I don\u2019t care if you got friends",
       "words": [
         {
           "start": 90.94,
@@ -2963,7 +2743,7 @@
         {
           "start": 91.32,
           "end": 91.58,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 91.58,
@@ -3168,12 +2948,12 @@
       "id": 104,
       "start": 96.86,
       "end": 97.72,
-      "text": "I’m chasing the farm",
+      "text": "I\u2019m chasing the farm",
       "words": [
         {
           "start": 96.86,
           "end": 97.04,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 97.04,
@@ -3197,8 +2977,8 @@
     {
       "id": 105,
       "start": 97.72,
-      "end": 99.2,
-      "text": "Why didn’t they come back from the",
+      "end": 99.42,
+      "text": "Why didn\u2019t they come back from the start?",
       "words": [
         {
           "start": 97.72,
@@ -3208,7 +2988,7 @@
         {
           "start": 98.06,
           "end": 98.34,
-          "word": " didn’t"
+          "word": " didn\u2019t"
         },
         {
           "start": 98.34,
@@ -3234,17 +3014,7 @@
           "start": 99.1,
           "end": 99.2,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 106,
-      "start": 99.2,
-      "end": 99.42,
-      "text": "start?",
-      "words": [
+        },
         {
           "start": 99.2,
           "end": 99.42,
@@ -3302,8 +3072,8 @@
     {
       "id": 108,
       "start": 101.02,
-      "end": 102.44,
-      "text": "While I was playing my bars on",
+      "end": 102.74,
+      "text": "While I was playing my bars on the mic",
       "words": [
         {
           "start": 101.02,
@@ -3339,17 +3109,7 @@
           "start": 102.28,
           "end": 102.44,
           "word": " on"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 109,
-      "start": 102.44,
-      "end": 102.74,
-      "text": "the mic",
-      "words": [
+        },
         {
           "start": 102.44,
           "end": 102.52,
@@ -3365,41 +3125,21 @@
       "instrumental": null
     },
     {
-      "id": 110,
+      "id": 112,
       "start": 102.74,
-      "end": 103.16,
-      "text": "Slap",
+      "end": 106.06,
+      "text": "Slap Kick Now who here wants to fight?",
       "words": [
         {
           "start": 102.74,
           "end": 103.16,
           "word": " Slap"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 111,
-      "start": 104.28,
-      "end": 104.64,
-      "text": "Kick",
-      "words": [
+        },
         {
           "start": 104.28,
           "end": 104.64,
           "word": " Kick"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 112,
-      "start": 104.64,
-      "end": 106.06,
-      "text": "Now who here wants to fight?",
-      "words": [
+        },
         {
           "start": 104.64,
           "end": 105.1,
@@ -3477,8 +3217,8 @@
     {
       "id": 114,
       "start": 107.76,
-      "end": 109.18,
-      "text": "Blacks man’s head with the side of",
+      "end": 109.46,
+      "text": "Blacks man\u2019s head with the side of the mic",
       "words": [
         {
           "start": 107.76,
@@ -3488,7 +3228,7 @@
         {
           "start": 108.3,
           "end": 108.44,
-          "word": " man’s"
+          "word": " man\u2019s"
         },
         {
           "start": 108.44,
@@ -3514,17 +3254,7 @@
           "start": 109.02,
           "end": 109.18,
           "word": " of"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 115,
-      "start": 109.18,
-      "end": 109.46,
-      "text": "the mic",
-      "words": [
+        },
         {
           "start": 109.18,
           "end": 109.24,
@@ -3542,8 +3272,8 @@
     {
       "id": 116,
       "start": 109.46,
-      "end": 110.78,
-      "text": "Jot my shit so no one’s picking",
+      "end": 111.16,
+      "text": "Jot my shit so no one\u2019s picking it light",
       "words": [
         {
           "start": 109.46,
@@ -3573,23 +3303,13 @@
         {
           "start": 110.54,
           "end": 110.64,
-          "word": " one’s"
+          "word": " one\u2019s"
         },
         {
           "start": 110.64,
           "end": 110.78,
           "word": " picking"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 117,
-      "start": 110.78,
-      "end": 111.16,
-      "text": "it light",
-      "words": [
+        },
         {
           "start": 110.78,
           "end": 110.96,
@@ -3607,8 +3327,8 @@
     {
       "id": 118,
       "start": 111.16,
-      "end": 112.52,
-      "text": "Drag my dad to the floor I",
+      "end": 113.44,
+      "text": "Drag my dad to the floor I spite Yo,",
       "words": [
         {
           "start": 111.16,
@@ -3644,32 +3364,12 @@
           "start": 112.42,
           "end": 112.52,
           "word": " I"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 119,
-      "start": 112.52,
-      "end": 112.66,
-      "text": "spite",
-      "words": [
+        },
         {
           "start": 112.52,
           "end": 112.66,
           "word": " spite"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 120,
-      "start": 113.08,
-      "end": 113.44,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 113.08,
           "end": 113.44,
@@ -3757,8 +3457,8 @@
     {
       "id": 123,
       "start": 115.46,
-      "end": 116.1,
-      "text": "I don’t know why",
+      "end": 116.52,
+      "text": "I don\u2019t know why But,",
       "words": [
         {
           "start": 115.46,
@@ -3768,7 +3468,7 @@
         {
           "start": 115.54,
           "end": 115.76,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 115.76,
@@ -3779,17 +3479,7 @@
           "start": 115.88,
           "end": 116.1,
           "word": " why"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 124,
-      "start": 116.1,
-      "end": 116.52,
-      "text": "But,",
-      "words": [
+        },
         {
           "start": 116.1,
           "end": 116.52,
@@ -3967,8 +3657,8 @@
     {
       "id": 130,
       "start": 122.12,
-      "end": 122.88,
-      "text": "I swear he gonna die",
+      "end": 123.38,
+      "text": "I swear he gonna die Not bad,",
       "words": [
         {
           "start": 122.12,
@@ -3994,17 +3684,7 @@
           "start": 122.68,
           "end": 122.88,
           "word": " die"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 131,
-      "start": 122.88,
-      "end": 123.38,
-      "text": "Not bad,",
-      "words": [
+        },
         {
           "start": 122.88,
           "end": 123.08,
@@ -4023,7 +3703,7 @@
       "id": 132,
       "start": 123.42,
       "end": 124.56,
-      "text": "your mug don’t fit your guy",
+      "text": "your mug don\u2019t fit your guy",
       "words": [
         {
           "start": 123.42,
@@ -4038,7 +3718,7 @@
         {
           "start": 123.76,
           "end": 124.0,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 124.0,
@@ -4093,7 +3773,7 @@
       "id": 134,
       "start": 125.56,
       "end": 126.28,
-      "text": "you won’t be alright",
+      "text": "you won\u2019t be alright",
       "words": [
         {
           "start": 125.56,
@@ -4103,7 +3783,7 @@
         {
           "start": 125.66,
           "end": 125.92,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 125.92,
@@ -4407,8 +4087,8 @@
     {
       "id": 143,
       "start": 134.84,
-      "end": 136.18,
-      "text": "Fluff bro and I got strings off",
+      "end": 136.5,
+      "text": "Fluff bro and I got strings off the knives",
       "words": [
         {
           "start": 134.84,
@@ -4444,17 +4124,7 @@
           "start": 135.98,
           "end": 136.18,
           "word": " off"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 144,
-      "start": 136.18,
-      "end": 136.5,
-      "text": "the knives",
-      "words": [
+        },
         {
           "start": 136.18,
           "end": 136.26,
@@ -4518,12 +4188,12 @@
       "id": 146,
       "start": 138.04,
       "end": 138.96,
-      "text": "I’m sick when I drink,",
+      "text": "I\u2019m sick when I drink,",
       "words": [
         {
           "start": 138.04,
           "end": 138.32,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 138.32,
@@ -4552,8 +4222,8 @@
     {
       "id": 147,
       "start": 139.0,
-      "end": 139.86,
-      "text": "I won’t think of them twice",
+      "end": 140.4,
+      "text": "I won\u2019t think of them twice Danger,",
       "words": [
         {
           "start": 139.0,
@@ -4563,7 +4233,7 @@
         {
           "start": 139.06,
           "end": 139.22,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 139.22,
@@ -4584,17 +4254,7 @@
           "start": 139.6,
           "end": 139.86,
           "word": " twice"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 148,
-      "start": 139.86,
-      "end": 140.4,
-      "text": "Danger,",
-      "words": [
+        },
         {
           "start": 139.86,
           "end": 140.4,
@@ -4633,12 +4293,12 @@
       "id": 150,
       "start": 141.42,
       "end": 143.22,
-      "text": "Don’t know we got the shotgun there",
+      "text": "Don\u2019t know we got the shotgun there",
       "words": [
         {
           "start": 141.42,
           "end": 142.08,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 142.08,
@@ -4677,8 +4337,8 @@
     {
       "id": 151,
       "start": 143.22,
-      "end": 144.68,
-      "text": "Cutting man down from the side of",
+      "end": 145.02,
+      "text": "Cutting man down from the side of the stairs",
       "words": [
         {
           "start": 143.22,
@@ -4714,17 +4374,7 @@
           "start": 144.54,
           "end": 144.68,
           "word": " of"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 152,
-      "start": 144.68,
-      "end": 145.02,
-      "text": "the stairs",
-      "words": [
+        },
         {
           "start": 144.68,
           "end": 144.72,
@@ -4740,10 +4390,10 @@
       "instrumental": null
     },
     {
-      "id": 153,
+      "id": 154,
       "start": 147.58,
-      "end": 148.36,
-      "text": "Trust me",
+      "end": 154.26,
+      "text": "Trust me Next time You mad Teeempz Yeah, yeah,",
       "words": [
         {
           "start": 147.58,
@@ -4754,17 +4404,7 @@
           "start": 147.98,
           "end": 148.36,
           "word": " me"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 154,
-      "start": 148.36,
-      "end": 149.28,
-      "text": "Next time",
-      "words": [
+        },
         {
           "start": 148.36,
           "end": 148.84,
@@ -4774,17 +4414,7 @@
           "start": 148.84,
           "end": 149.28,
           "word": " time"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 155,
-      "start": 149.28,
-      "end": 150.38,
-      "text": "You mad",
-      "words": [
+        },
         {
           "start": 149.28,
           "end": 150.04,
@@ -4794,47 +4424,17 @@
           "start": 150.04,
           "end": 150.38,
           "word": " mad"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 156,
-      "start": 151.3,
-      "end": 151.7,
-      "text": "Teeempz",
-      "words": [
+        },
         {
           "start": 151.3,
           "end": 151.7,
           "word": " Teeempz"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 157,
-      "start": 153.6,
-      "end": 154.0,
-      "text": "Yeah,",
-      "words": [
+        },
         {
           "start": 153.6,
           "end": 154.0,
           "word": " Yeah,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 158,
-      "start": 154.0,
-      "end": 154.26,
-      "text": "yeah,",
-      "words": [
+        },
         {
           "start": 154.0,
           "end": 154.26,
@@ -4845,41 +4445,21 @@
       "instrumental": null
     },
     {
-      "id": 159,
+      "id": 161,
       "start": 154.26,
-      "end": 154.54,
-      "text": "yeah,",
+      "end": 155.0,
+      "text": "yeah, yeah, yeah",
       "words": [
         {
           "start": 154.26,
           "end": 154.54,
           "word": " yeah,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 160,
-      "start": 154.54,
-      "end": 154.8,
-      "text": "yeah,",
-      "words": [
+        },
         {
           "start": 154.54,
           "end": 154.8,
           "word": " yeah,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 161,
-      "start": 154.8,
-      "end": 155.0,
-      "text": "yeah",
-      "words": [
+        },
         {
           "start": 154.8,
           "end": 155.0,
@@ -4892,13 +4472,13 @@
     {
       "id": 162,
       "start": 155.0,
-      "end": 155.7,
-      "text": "I’m still about",
+      "end": 158.8,
+      "text": "I\u2019m still about Smiles Alright,",
       "words": [
         {
           "start": 155.0,
           "end": 155.24,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 155.24,
@@ -4909,32 +4489,12 @@
           "start": 155.46,
           "end": 155.7,
           "word": " about"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 163,
-      "start": 157.58,
-      "end": 157.98,
-      "text": "Smiles",
-      "words": [
+        },
         {
           "start": 157.58,
           "end": 157.98,
           "word": " Smiles"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 164,
-      "start": 158.4,
-      "end": 158.8,
-      "text": "Alright,",
-      "words": [
+        },
         {
           "start": 158.4,
           "end": 158.8,
@@ -4948,12 +4508,12 @@
       "id": 165,
       "start": 158.88,
       "end": 159.4,
-      "text": "I’m gonna come back",
+      "text": "I\u2019m gonna come back",
       "words": [
         {
           "start": 158.88,
           "end": 159.08,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 159.08,
@@ -5012,13 +4572,13 @@
     {
       "id": 167,
       "start": 160.06,
-      "end": 161.24,
-      "text": "Won’t get none of your CD’s",
+      "end": 161.56,
+      "text": "Won\u2019t get none of your CD\u2019s Yo",
       "words": [
         {
           "start": 160.06,
           "end": 160.36,
-          "word": " Won’t"
+          "word": " Won\u2019t"
         },
         {
           "start": 160.36,
@@ -5043,18 +4603,8 @@
         {
           "start": 160.82,
           "end": 161.24,
-          "word": " CD’s"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 168,
-      "start": 161.24,
-      "end": 161.56,
-      "text": "Yo",
-      "words": [
+          "word": " CD\u2019s"
+        },
         {
           "start": 161.24,
           "end": 161.56,
@@ -5093,12 +4643,12 @@
       "id": 170,
       "start": 163.36,
       "end": 164.84,
-      "text": "Don’t know we got the shotgun there",
+      "text": "Don\u2019t know we got the shotgun there",
       "words": [
         {
           "start": 163.36,
           "end": 163.56,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 163.56,
@@ -5137,8 +4687,8 @@
     {
       "id": 171,
       "start": 164.84,
-      "end": 166.22,
-      "text": "Cutting man down from the side of",
+      "end": 166.44,
+      "text": "Cutting man down from the side of the stairs",
       "words": [
         {
           "start": 164.84,
@@ -5174,17 +4724,7 @@
           "start": 166.12,
           "end": 166.22,
           "word": " of"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 172,
-      "start": 166.22,
-      "end": 166.44,
-      "text": "the stairs",
-      "words": [
+        },
         {
           "start": 166.22,
           "end": 166.28,
@@ -5202,8 +4742,8 @@
     {
       "id": 173,
       "start": 166.44,
-      "end": 167.96,
-      "text": "See that man trying to run over",
+      "end": 168.24,
+      "text": "See that man trying to run over there",
       "words": [
         {
           "start": 166.44,
@@ -5239,17 +4779,7 @@
           "start": 167.74,
           "end": 167.96,
           "word": " over"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 174,
-      "start": 167.96,
-      "end": 168.24,
-      "text": "there",
-      "words": [
+        },
         {
           "start": 167.96,
           "end": 168.24,
@@ -5263,7 +4793,7 @@
       "id": 175,
       "start": 168.24,
       "end": 169.28,
-      "text": "Cut off the man’s teeth,",
+      "text": "Cut off the man\u2019s teeth,",
       "words": [
         {
           "start": 168.24,
@@ -5283,7 +4813,7 @@
         {
           "start": 168.9,
           "end": 169.1,
-          "word": " man’s"
+          "word": " man\u2019s"
         },
         {
           "start": 169.1,
@@ -5347,8 +4877,8 @@
     {
       "id": 178,
       "start": 170.74,
-      "end": 171.64,
-      "text": "came out over there",
+      "end": 172.04,
+      "text": "came out over there Whoa",
       "words": [
         {
           "start": 170.74,
@@ -5369,17 +4899,7 @@
           "start": 171.36,
           "end": 171.64,
           "word": " there"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 179,
-      "start": 171.64,
-      "end": 172.04,
-      "text": "Whoa",
-      "words": [
+        },
         {
           "start": 171.64,
           "end": 172.04,
@@ -5457,8 +4977,8 @@
     {
       "id": 182,
       "start": 174.16,
-      "end": 174.98,
-      "text": "now he down there",
+      "end": 175.6,
+      "text": "now he down there So",
       "words": [
         {
           "start": 174.16,
@@ -5479,17 +4999,7 @@
           "start": 174.7,
           "end": 174.98,
           "word": " there"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 183,
-      "start": 174.98,
-      "end": 175.6,
-      "text": "So",
-      "words": [
+        },
         {
           "start": 174.98,
           "end": 175.6,
@@ -5503,12 +5013,12 @@
       "id": 184,
       "start": 175.6,
       "end": 176.48,
-      "text": "Don’t come downstairs",
+      "text": "Don\u2019t come downstairs",
       "words": [
         {
           "start": 175.6,
           "end": 175.94,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 175.94,
@@ -5527,8 +5037,8 @@
     {
       "id": 185,
       "start": 176.48,
-      "end": 177.52,
-      "text": "Now he over the",
+      "end": 178.94,
+      "text": "Now he over the Yo, stay down",
       "words": [
         {
           "start": 176.48,
@@ -5549,32 +5059,12 @@
           "start": 177.3,
           "end": 177.52,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 186,
-      "start": 177.52,
-      "end": 178.0,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 177.52,
           "end": 178.0,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 187,
-      "start": 178.46,
-      "end": 178.94,
-      "text": "stay down",
-      "words": [
+        },
         {
           "start": 178.46,
           "end": 178.58,
@@ -5632,13 +5122,13 @@
     {
       "id": 189,
       "start": 180.02,
-      "end": 181.44,
-      "text": "Don’t know he off the air top",
+      "end": 182.1,
+      "text": "Don\u2019t know he off the air top here Yo,",
       "words": [
         {
           "start": 180.02,
           "end": 180.42,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 180.42,
@@ -5669,32 +5159,12 @@
           "start": 181.22,
           "end": 181.44,
           "word": " top"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 190,
-      "start": 181.44,
-      "end": 181.64,
-      "text": "here",
-      "words": [
+        },
         {
           "start": 181.44,
           "end": 181.64,
           "word": " here"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 191,
-      "start": 181.64,
-      "end": 182.1,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 181.64,
           "end": 182.1,
@@ -5748,7 +5218,7 @@
       "id": 193,
       "start": 183.4,
       "end": 185.12,
-      "text": "This year it’s kicking off right here",
+      "text": "This year it\u2019s kicking off right here",
       "words": [
         {
           "start": 183.4,
@@ -5763,7 +5233,7 @@
         {
           "start": 183.96,
           "end": 184.22,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 184.22,
@@ -5793,7 +5263,7 @@
       "id": 194,
       "start": 185.12,
       "end": 186.84,
-      "text": "This year it’s kicking off right here",
+      "text": "This year it\u2019s kicking off right here",
       "words": [
         {
           "start": 185.12,
@@ -5808,7 +5278,7 @@
         {
           "start": 185.66,
           "end": 185.9,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 185.9,
@@ -5837,13 +5307,13 @@
     {
       "id": 195,
       "start": 186.84,
-      "end": 188.46,
-      "text": "Don’t know we got the shotgun there",
+      "end": 189.16,
+      "text": "Don\u2019t know we got the shotgun there Hey",
       "words": [
         {
           "start": 186.84,
           "end": 187.18,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 187.18,
@@ -5874,17 +5344,7 @@
           "start": 188.08,
           "end": 188.46,
           "word": " there"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 196,
-      "start": 188.46,
-      "end": 189.16,
-      "text": "Hey",
-      "words": [
+        },
         {
           "start": 188.46,
           "end": 189.16,
@@ -5897,8 +5357,8 @@
     {
       "id": 197,
       "start": 189.16,
-      "end": 190.22,
-      "text": "If I go make me a boss",
+      "end": 190.82,
+      "text": "If I go make me a boss No one",
       "words": [
         {
           "start": 189.16,
@@ -5934,17 +5394,7 @@
           "start": 189.94,
           "end": 190.22,
           "word": " boss"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 198,
-      "start": 190.22,
-      "end": 190.82,
-      "text": "No one",
-      "words": [
+        },
         {
           "start": 190.22,
           "end": 190.66,
@@ -6023,12 +5473,12 @@
       "id": 201,
       "start": 192.74,
       "end": 193.52,
-      "text": "I’m boy off the ting",
+      "text": "I\u2019m boy off the ting",
       "words": [
         {
           "start": 192.74,
           "end": 192.94,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 192.94,
@@ -6082,13 +5532,13 @@
     {
       "id": 203,
       "start": 194.4,
-      "end": 195.26,
-      "text": "I’m boy off the ting",
+      "end": 195.64,
+      "text": "I\u2019m boy off the ting Whoa",
       "words": [
         {
           "start": 194.4,
           "end": 194.62,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 194.62,
@@ -6109,17 +5559,7 @@
           "start": 195.0,
           "end": 195.26,
           "word": " ting"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 204,
-      "start": 195.26,
-      "end": 195.64,
-      "text": "Whoa",
-      "words": [
+        },
         {
           "start": 195.26,
           "end": 195.64,
@@ -6222,13 +5662,13 @@
     {
       "id": 208,
       "start": 199.52,
-      "end": 200.26,
-      "text": "I’m boy off the ting",
+      "end": 200.72,
+      "text": "I\u2019m boy off the ting Yo, please",
       "words": [
         {
           "start": 199.52,
           "end": 199.7,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 199.7,
@@ -6249,32 +5689,12 @@
           "start": 200.06,
           "end": 200.26,
           "word": " ting"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 209,
-      "start": 200.26,
-      "end": 200.48,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 200.26,
           "end": 200.48,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 210,
-      "start": 200.48,
-      "end": 200.72,
-      "text": "please",
-      "words": [
+        },
         {
           "start": 200.48,
           "end": 200.72,
@@ -6347,8 +5767,8 @@
     {
       "id": 213,
       "start": 204.6,
-      "end": 205.34,
-      "text": "I don’t know why",
+      "end": 205.76,
+      "text": "I don\u2019t know why Fuck",
       "words": [
         {
           "start": 204.6,
@@ -6358,7 +5778,7 @@
         {
           "start": 204.72,
           "end": 204.94,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 204.94,
@@ -6369,17 +5789,7 @@
           "start": 205.06,
           "end": 205.34,
           "word": " why"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 214,
-      "start": 205.34,
-      "end": 205.76,
-      "text": "Fuck",
-      "words": [
+        },
         {
           "start": 205.34,
           "end": 205.76,
@@ -6422,8 +5832,8 @@
     {
       "id": 216,
       "start": 208.1,
-      "end": 208.7,
-      "text": "just in the disguise",
+      "end": 209.2,
+      "text": "just in the disguise Oh",
       "words": [
         {
           "start": 208.1,
@@ -6444,17 +5854,7 @@
           "start": 208.46,
           "end": 208.7,
           "word": " disguise"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 217,
-      "start": 208.7,
-      "end": 209.2,
-      "text": "Oh",
-      "words": [
+        },
         {
           "start": 208.7,
           "end": 209.2,
@@ -6528,12 +5928,12 @@
       "id": 220,
       "start": 212.84,
       "end": 213.84,
-      "text": "Don’t be your guy",
+      "text": "Don\u2019t be your guy",
       "words": [
         {
           "start": 212.84,
           "end": 213.22,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 213.22,
@@ -6588,7 +5988,7 @@
       "id": 222,
       "start": 214.7,
       "end": 215.46,
-      "text": "you won’t be alright",
+      "text": "you won\u2019t be alright",
       "words": [
         {
           "start": 214.7,
@@ -6598,7 +5998,7 @@
         {
           "start": 214.86,
           "end": 215.04,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 215.04,
@@ -6648,7 +6048,7 @@
       "id": 224,
       "start": 217.42,
       "end": 217.42,
-      "text": "you won’t be alright",
+      "text": "you won\u2019t be alright",
       "words": [
         {
           "start": 217.42,
@@ -6658,7 +6058,7 @@
         {
           "start": 217.42,
           "end": 217.42,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 217.42,
@@ -6708,7 +6108,7 @@
       "id": 226,
       "start": 218.44,
       "end": 218.44,
-      "text": "you won’t be alright",
+      "text": "you won\u2019t be alright",
       "words": [
         {
           "start": 218.44,
@@ -6718,7 +6118,7 @@
         {
           "start": 218.44,
           "end": 218.44,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 218.44,
@@ -6738,12 +6138,12 @@
       "id": 227,
       "start": 218.44,
       "end": 218.98,
-      "text": "I’m the boss of a life",
+      "text": "I\u2019m the boss of a life",
       "words": [
         {
           "start": 218.44,
           "end": 218.44,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 218.44,
@@ -6778,12 +6178,12 @@
       "id": 228,
       "start": 220.3,
       "end": 221.04,
-      "text": "I’m a far",
+      "text": "I\u2019m a far",
       "words": [
         {
           "start": 220.3,
           "end": 220.7,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 220.7,
@@ -6803,7 +6203,7 @@
       "id": 229,
       "start": 221.04,
       "end": 234.06,
-      "text": "The Black Nigerian’s way too heavy",
+      "text": "The Black Nigerian\u2019s way too heavy",
       "words": [
         {
           "start": 221.04,
@@ -6818,7 +6218,7 @@
         {
           "start": 226.88,
           "end": 233.38,
-          "word": " Nigerian’s"
+          "word": " Nigerian\u2019s"
         },
         {
           "start": 233.38,
@@ -6842,8 +6242,8 @@
     {
       "id": 230,
       "start": 234.06,
-      "end": 235.3,
-      "text": "Everytime I open my mouth,",
+      "end": 235.5,
+      "text": "Everytime I open my mouth, blood",
       "words": [
         {
           "start": 234.06,
@@ -6869,17 +6269,7 @@
           "start": 235.1,
           "end": 235.3,
           "word": " mouth,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 231,
-      "start": 235.36,
-      "end": 235.5,
-      "text": "blood",
-      "words": [
+        },
         {
           "start": 235.36,
           "end": 235.5,
@@ -6892,8 +6282,8 @@
     {
       "id": 232,
       "start": 235.5,
-      "end": 236.82,
-      "text": "I see a lyric and another MC",
+      "end": 237.5,
+      "text": "I see a lyric and another MC gets buried",
       "words": [
         {
           "start": 235.5,
@@ -6929,17 +6319,7 @@
           "start": 236.48,
           "end": 236.82,
           "word": " MC"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 233,
-      "start": 236.82,
-      "end": 237.5,
-      "text": "gets buried",
-      "words": [
+        },
         {
           "start": 236.82,
           "end": 237.14,
@@ -6955,26 +6335,16 @@
       "instrumental": null
     },
     {
-      "id": 234,
+      "id": 235,
       "start": 237.5,
-      "end": 238.2,
-      "text": "Yeah",
+      "end": 239.18,
+      "text": "Yeah Six feet under",
       "words": [
         {
           "start": 237.5,
           "end": 238.2,
           "word": " Yeah"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 235,
-      "start": 238.2,
-      "end": 239.18,
-      "text": "Six feet under",
-      "words": [
+        },
         {
           "start": 238.2,
           "end": 238.6,
@@ -7082,8 +6452,8 @@
     {
       "id": 238,
       "start": 241.76,
-      "end": 242.48,
-      "text": "a private number",
+      "end": 243.08,
+      "text": "a private number Ring ring",
       "words": [
         {
           "start": 241.76,
@@ -7099,17 +6469,7 @@
           "start": 242.12,
           "end": 242.48,
           "word": " number"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 239,
-      "start": 242.48,
-      "end": 243.08,
-      "text": "Ring ring",
-      "words": [
+        },
         {
           "start": 242.48,
           "end": 242.92,
@@ -7127,8 +6487,8 @@
     {
       "id": 240,
       "start": 243.08,
-      "end": 244.06,
-      "text": "Talk to the Answer Machine",
+      "end": 245.02,
+      "text": "Talk to the Answer Machine Yo Test",
       "words": [
         {
           "start": 243.08,
@@ -7154,32 +6514,12 @@
           "start": 243.78,
           "end": 244.06,
           "word": " Machine"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 241,
-      "start": 244.06,
-      "end": 244.56,
-      "text": "Yo",
-      "words": [
+        },
         {
           "start": 244.06,
           "end": 244.56,
           "word": " Yo"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 242,
-      "start": 244.56,
-      "end": 245.02,
-      "text": "Test",
-      "words": [
+        },
         {
           "start": 244.56,
           "end": 245.02,
@@ -7242,8 +6582,8 @@
     {
       "id": 245,
       "start": 246.24,
-      "end": 247.26,
-      "text": "I just wanna do my part for",
+      "end": 247.54,
+      "text": "I just wanna do my part for the scene",
       "words": [
         {
           "start": 246.24,
@@ -7279,17 +6619,7 @@
           "start": 247.02,
           "end": 247.26,
           "word": " for"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 246,
-      "start": 247.26,
-      "end": 247.54,
-      "text": "the scene",
-      "words": [
+        },
         {
           "start": 247.26,
           "end": 247.34,
@@ -7308,12 +6638,12 @@
       "id": 247,
       "start": 247.54,
       "end": 248.42,
-      "text": "I’m a big man but they’re like",
+      "text": "I\u2019m a big man but they\u2019re like",
       "words": [
         {
           "start": 247.54,
           "end": 247.74,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 247.74,
@@ -7338,7 +6668,7 @@
         {
           "start": 248.3,
           "end": 248.42,
-          "word": " they’re"
+          "word": " they\u2019re"
         },
         {
           "start": 248.42,
@@ -7352,8 +6682,8 @@
     {
       "id": 248,
       "start": 248.44,
-      "end": 249.12,
-      "text": "I don’t wanna see me act like",
+      "end": 249.56,
+      "text": "I don\u2019t wanna see me act like I\u2019m 15",
       "words": [
         {
           "start": 248.44,
@@ -7363,7 +6693,7 @@
         {
           "start": 248.44,
           "end": 248.44,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 248.44,
@@ -7389,21 +6719,11 @@
           "start": 248.98,
           "end": 249.12,
           "word": " like"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 249,
-      "start": 249.12,
-      "end": 249.56,
-      "text": "I’m 15",
-      "words": [
+        },
         {
           "start": 249.12,
           "end": 249.3,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 249.3,
@@ -7415,30 +6735,20 @@
       "instrumental": null
     },
     {
-      "id": 250,
+      "id": 251,
       "start": 249.56,
-      "end": 250.12,
-      "text": "Tramp,",
+      "end": 250.9,
+      "text": "Tramp, it\u2019s a big man ting",
       "words": [
         {
           "start": 249.56,
           "end": 250.12,
           "word": " Tramp,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 251,
-      "start": 250.14,
-      "end": 250.9,
-      "text": "it’s a big man ting",
-      "words": [
+        },
         {
           "start": 250.14,
           "end": 250.3,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 250.3,
@@ -7468,7 +6778,7 @@
       "id": 252,
       "start": 250.9,
       "end": 252.6,
-      "text": "Please stop watching the whip man’s in",
+      "text": "Please stop watching the whip man\u2019s in",
       "words": [
         {
           "start": 250.9,
@@ -7498,7 +6808,7 @@
         {
           "start": 252.18,
           "end": 252.46,
-          "word": " man’s"
+          "word": " man\u2019s"
         },
         {
           "start": 252.46,
@@ -7512,8 +6822,8 @@
     {
       "id": 253,
       "start": 252.6,
-      "end": 254.12,
-      "text": "I don’t wanna be no funky ass",
+      "end": 254.34,
+      "text": "I don\u2019t wanna be no funky ass DJ",
       "words": [
         {
           "start": 252.6,
@@ -7523,7 +6833,7 @@
         {
           "start": 252.94,
           "end": 253.12,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 253.12,
@@ -7549,17 +6859,7 @@
           "start": 253.84,
           "end": 254.12,
           "word": " ass"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 254,
-      "start": 254.12,
-      "end": 254.34,
-      "text": "DJ",
-      "words": [
+        },
         {
           "start": 254.12,
           "end": 254.34,
@@ -7570,10 +6870,10 @@
       "instrumental": null
     },
     {
-      "id": 255,
+      "id": 256,
       "start": 254.34,
-      "end": 254.88,
-      "text": "But man,",
+      "end": 255.34,
+      "text": "But man, I got me on a",
       "words": [
         {
           "start": 254.34,
@@ -7584,17 +6884,7 @@
           "start": 254.68,
           "end": 254.88,
           "word": " man,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 256,
-      "start": 254.88,
-      "end": 255.34,
-      "text": "I got me on a",
-      "words": [
+        },
         {
           "start": 254.88,
           "end": 254.98,
@@ -7910,10 +7200,10 @@
       "instrumental": null
     },
     {
-      "id": 269,
+      "id": 271,
       "start": 269.4,
-      "end": 271.24,
-      "text": "Yes, Lord",
+      "end": 277.38,
+      "text": "Yes, Lord Yeah Yeah",
       "words": [
         {
           "start": 269.4,
@@ -7924,32 +7214,12 @@
           "start": 270.96,
           "end": 271.24,
           "word": " Lord"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 271,
-      "start": 275.72,
-      "end": 276.24,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "start": 275.72,
           "end": 276.24,
           "word": " Yeah"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 272,
-      "start": 276.98,
-      "end": 277.38,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "start": 276.98,
           "end": 277.38,
@@ -7963,12 +7233,12 @@
       "id": 273,
       "start": 277.38,
       "end": 278.8,
-      "text": "It’s a high ting inside",
+      "text": "It\u2019s a high ting inside",
       "words": [
         {
           "start": 277.38,
           "end": 278.02,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 278.02,
@@ -8050,10 +7320,10 @@
       "instrumental": null
     },
     {
-      "id": 277,
+      "id": 278,
       "start": 283.02,
-      "end": 283.88,
-      "text": "Go home",
+      "end": 284.74,
+      "text": "Go home Look in the mirror",
       "words": [
         {
           "start": 283.02,
@@ -8064,17 +7334,7 @@
           "start": 283.6,
           "end": 283.88,
           "word": " home"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 278,
-      "start": 283.88,
-      "end": 284.74,
-      "text": "Look in the mirror",
-      "words": [
+        },
         {
           "start": 283.88,
           "end": 284.22,
@@ -8103,7 +7363,7 @@
       "id": 279,
       "start": 284.74,
       "end": 285.9,
-      "text": "Realise no one’s scared",
+      "text": "Realise no one\u2019s scared",
       "words": [
         {
           "start": 284.74,
@@ -8118,7 +7378,7 @@
         {
           "start": 285.46,
           "end": 285.72,
-          "word": " one’s"
+          "word": " one\u2019s"
         },
         {
           "start": 285.72,
@@ -8248,12 +7508,12 @@
       "id": 284,
       "start": 289.3,
       "end": 290.24,
-      "text": "You’re not hench",
+      "text": "You\u2019re not hench",
       "words": [
         {
           "start": 289.3,
           "end": 289.78,
-          "word": " You’re"
+          "word": " You\u2019re"
         },
         {
           "start": 289.78,
@@ -8273,12 +7533,12 @@
       "id": 285,
       "start": 290.24,
       "end": 291.04,
-      "text": "You’re not bad",
+      "text": "You\u2019re not bad",
       "words": [
         {
           "start": 290.24,
           "end": 290.66,
-          "word": " You’re"
+          "word": " You\u2019re"
         },
         {
           "start": 290.66,
@@ -8297,8 +7557,8 @@
     {
       "id": 286,
       "start": 291.04,
-      "end": 292.44,
-      "text": "You just grew up your face all",
+      "end": 292.72,
+      "text": "You just grew up your face all red",
       "words": [
         {
           "start": 291.04,
@@ -8334,17 +7594,7 @@
           "start": 292.28,
           "end": 292.44,
           "word": " all"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 287,
-      "start": 292.44,
-      "end": 292.72,
-      "text": "red",
-      "words": [
+        },
         {
           "start": 292.44,
           "end": 292.72,
@@ -8357,8 +7607,8 @@
     {
       "id": 288,
       "start": 292.72,
-      "end": 293.94,
-      "text": "Trying to get high off me,",
+      "end": 294.34,
+      "text": "Trying to get high off me, Get air",
       "words": [
         {
           "start": 292.72,
@@ -8389,17 +7639,7 @@
           "start": 293.72,
           "end": 293.94,
           "word": " me,"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 289,
-      "start": 294.0,
-      "end": 294.34,
-      "text": "Get air",
-      "words": [
+        },
         {
           "start": 294.0,
           "end": 294.14,
@@ -8417,8 +7657,8 @@
     {
       "id": 290,
       "start": 294.34,
-      "end": 295.68,
-      "text": "Trying to get high off me,",
+      "end": 295.96,
+      "text": "Trying to get high off me, air",
       "words": [
         {
           "start": 294.34,
@@ -8449,17 +7689,7 @@
           "start": 295.38,
           "end": 295.68,
           "word": " me,"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 291,
-      "start": 295.68,
-      "end": 295.96,
-      "text": "air",
-      "words": [
+        },
         {
           "start": 295.68,
           "end": 295.96,
@@ -8527,8 +7757,8 @@
     {
       "id": 294,
       "start": 297.66,
-      "end": 299.24,
-      "text": "Nobody cares what you got in your",
+      "end": 299.44,
+      "text": "Nobody cares what you got in your hand",
       "words": [
         {
           "start": 297.66,
@@ -8564,17 +7794,7 @@
           "start": 299.12,
           "end": 299.24,
           "word": " your"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 295,
-      "start": 299.24,
-      "end": 299.44,
-      "text": "hand",
-      "words": [
+        },
         {
           "start": 299.24,
           "end": 299.44,
@@ -8587,8 +7807,8 @@
     {
       "id": 296,
       "start": 299.44,
-      "end": 300.88,
-      "text": "Nobody cares what you got in your",
+      "end": 301.08,
+      "text": "Nobody cares what you got in your jeans",
       "words": [
         {
           "start": 299.44,
@@ -8624,17 +7844,7 @@
           "start": 300.78,
           "end": 300.88,
           "word": " your"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 297,
-      "start": 300.88,
-      "end": 301.08,
-      "text": "jeans",
-      "words": [
+        },
         {
           "start": 300.88,
           "end": 301.08,
@@ -8692,8 +7902,8 @@
     {
       "id": 299,
       "start": 302.16,
-      "end": 302.68,
-      "text": "the phone screen",
+      "end": 303.1,
+      "text": "the phone screen Yo",
       "words": [
         {
           "start": 302.16,
@@ -8709,17 +7919,7 @@
           "start": 302.48,
           "end": 302.68,
           "word": " screen"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 300,
-      "start": 302.68,
-      "end": 303.1,
-      "text": "Yo",
-      "words": [
+        },
         {
           "start": 302.68,
           "end": 303.1,
@@ -8733,12 +7933,12 @@
       "id": 301,
       "start": 303.1,
       "end": 304.42,
-      "text": "Don’t bring war to the king",
+      "text": "Don\u2019t bring war to the king",
       "words": [
         {
           "start": 303.1,
           "end": 303.68,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 303.68,
@@ -8772,13 +7972,13 @@
     {
       "id": 302,
       "start": 304.42,
-      "end": 305.92,
-      "text": "Don’t tell me about draw for the",
+      "end": 306.1,
+      "text": "Don\u2019t tell me about draw for the ting",
       "words": [
         {
           "start": 304.42,
           "end": 304.88,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 304.88,
@@ -8809,17 +8009,7 @@
           "start": 305.78,
           "end": 305.92,
           "word": " the"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 303,
-      "start": 305.92,
-      "end": 306.1,
-      "text": "ting",
-      "words": [
+        },
         {
           "start": 305.92,
           "end": 306.1,
@@ -8830,10 +8020,10 @@
       "instrumental": null
     },
     {
-      "id": 304,
+      "id": 305,
       "start": 306.1,
-      "end": 306.4,
-      "text": "Trust me",
+      "end": 306.46,
+      "text": "Trust me Yo",
       "words": [
         {
           "start": 306.1,
@@ -8844,17 +8034,7 @@
           "start": 306.26,
           "end": 306.4,
           "word": " me"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 305,
-      "start": 306.4,
-      "end": 306.46,
-      "text": "Yo",
-      "words": [
+        },
         {
           "start": 306.4,
           "end": 306.46,
@@ -8922,8 +8102,8 @@
     {
       "id": 308,
       "start": 308.2,
-      "end": 309.46,
-      "text": "You get charged more for your trim",
+      "end": 309.86,
+      "text": "You get charged more for your trim Say",
       "words": [
         {
           "start": 308.2,
@@ -8959,17 +8139,7 @@
           "start": 309.28,
           "end": 309.46,
           "word": " trim"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 309,
-      "start": 309.46,
-      "end": 309.86,
-      "text": "Say",
-      "words": [
+        },
         {
           "start": 309.46,
           "end": 309.86,
@@ -8982,8 +8152,8 @@
     {
       "id": 310,
       "start": 309.86,
-      "end": 311.14,
-      "text": "You wanna say him but there’s really",
+      "end": 311.56,
+      "text": "You wanna say him but there\u2019s really no him",
       "words": [
         {
           "start": 309.86,
@@ -9013,23 +8183,13 @@
         {
           "start": 310.88,
           "end": 311.0,
-          "word": " there’s"
+          "word": " there\u2019s"
         },
         {
           "start": 311.0,
           "end": 311.14,
           "word": " really"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 311,
-      "start": 311.14,
-      "end": 311.56,
-      "text": "no him",
-      "words": [
+        },
         {
           "start": 311.14,
           "end": 311.3,
@@ -9045,26 +8205,16 @@
       "instrumental": null
     },
     {
-      "id": 312,
+      "id": 313,
       "start": 311.56,
-      "end": 311.76,
-      "text": "Him",
+      "end": 313.26,
+      "text": "Him Wanna talk hard but you really no brim",
       "words": [
         {
           "start": 311.56,
           "end": 311.76,
           "word": " Him"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 313,
-      "start": 311.76,
-      "end": 312.98,
-      "text": "Wanna talk hard but you really no",
-      "words": [
+        },
         {
           "start": 311.76,
           "end": 311.96,
@@ -9099,17 +8249,7 @@
           "start": 312.84,
           "end": 312.98,
           "word": " no"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 314,
-      "start": 312.98,
-      "end": 313.26,
-      "text": "brim",
-      "words": [
+        },
         {
           "start": 312.98,
           "end": 313.26,
@@ -9120,26 +8260,16 @@
       "instrumental": null
     },
     {
-      "id": 315,
+      "id": 316,
       "start": 313.26,
-      "end": 313.54,
-      "text": "Brim",
+      "end": 314.5,
+      "text": "Brim Brought a kind heart but I can\u2019t",
       "words": [
         {
           "start": 313.26,
           "end": 313.54,
           "word": " Brim"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 316,
-      "start": 313.54,
-      "end": 314.5,
-      "text": "Brought a kind heart but I can’t",
-      "words": [
+        },
         {
           "start": 313.54,
           "end": 313.64,
@@ -9173,17 +8303,17 @@
         {
           "start": 314.28,
           "end": 314.5,
-          "word": " can’t"
+          "word": " can\u2019t"
         }
       ],
       "speaker": "Tempa T",
       "instrumental": null
     },
     {
-      "id": 317,
+      "id": 318,
       "start": 314.5,
-      "end": 314.84,
-      "text": "get dim",
+      "end": 315.04,
+      "text": "get dim What?",
       "words": [
         {
           "start": 314.5,
@@ -9194,17 +8324,7 @@
           "start": 314.64,
           "end": 314.84,
           "word": " dim"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 318,
-      "start": 314.84,
-      "end": 315.04,
-      "text": "What?",
-      "words": [
+        },
         {
           "start": 314.84,
           "end": 315.04,
@@ -9318,7 +8438,7 @@
       "id": 322,
       "start": 317.42,
       "end": 318.24,
-      "text": "I don’t rate him",
+      "text": "I don\u2019t rate him",
       "words": [
         {
           "start": 317.42,
@@ -9328,7 +8448,7 @@
         {
           "start": 317.64,
           "end": 317.88,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 317.88,
@@ -9347,8 +8467,8 @@
     {
       "id": 323,
       "start": 318.24,
-      "end": 319.7,
-      "text": "Hate me but I’m not fake like",
+      "end": 319.94,
+      "text": "Hate me but I\u2019m not fake like him",
       "words": [
         {
           "start": 318.24,
@@ -9368,7 +8488,7 @@
         {
           "start": 319.06,
           "end": 319.18,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 319.18,
@@ -9384,17 +8504,7 @@
           "start": 319.5,
           "end": 319.7,
           "word": " like"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 324,
-      "start": 319.7,
-      "end": 319.94,
-      "text": "him",
-      "words": [
+        },
         {
           "start": 319.7,
           "end": 319.94,
@@ -9407,8 +8517,8 @@
     {
       "id": 325,
       "start": 319.94,
-      "end": 321.4,
-      "text": "If I get started I’m buying off",
+      "end": 321.7,
+      "text": "If I get started I\u2019m buying off tings",
       "words": [
         {
           "start": 319.94,
@@ -9433,7 +8543,7 @@
         {
           "start": 320.86,
           "end": 321.08,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 321.08,
@@ -9444,17 +8554,7 @@
           "start": 321.2,
           "end": 321.4,
           "word": " off"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 326,
-      "start": 321.4,
-      "end": 321.7,
-      "text": "tings",
-      "words": [
+        },
         {
           "start": 321.4,
           "end": 321.7,
@@ -9467,8 +8567,8 @@
     {
       "id": 327,
       "start": 321.7,
-      "end": 322.82,
-      "text": "Brought a bright man but I will",
+      "end": 323.22,
+      "text": "Brought a bright man but I will get grim",
       "words": [
         {
           "start": 321.7,
@@ -9504,17 +8604,7 @@
           "start": 322.68,
           "end": 322.82,
           "word": " will"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 328,
-      "start": 322.82,
-      "end": 323.22,
-      "text": "get grim",
-      "words": [
+        },
         {
           "start": 322.82,
           "end": 323.02,
@@ -9530,26 +8620,16 @@
       "instrumental": null
     },
     {
-      "id": 329,
+      "id": 330,
       "start": 323.22,
-      "end": 323.7,
-      "text": "Look",
+      "end": 325.04,
+      "text": "Look But he\u2019s not beating him",
       "words": [
         {
           "start": 323.22,
           "end": 323.7,
           "word": " Look"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 330,
-      "start": 323.7,
-      "end": 325.04,
-      "text": "But he’s not beating him",
-      "words": [
+        },
         {
           "start": 323.7,
           "end": 324.24,
@@ -9558,7 +8638,7 @@
         {
           "start": 324.24,
           "end": 324.44,
-          "word": " he’s"
+          "word": " he\u2019s"
         },
         {
           "start": 324.44,
@@ -9582,8 +8662,8 @@
     {
       "id": 331,
       "start": 325.04,
-      "end": 326.44,
-      "text": "Wanna go hard but you really not",
+      "end": 327.62,
+      "text": "Wanna go hard but you really not grim But",
       "words": [
         {
           "start": 325.04,
@@ -9619,32 +8699,12 @@
           "start": 326.22,
           "end": 326.44,
           "word": " not"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 332,
-      "start": 326.44,
-      "end": 326.66,
-      "text": "grim",
-      "words": [
+        },
         {
           "start": 326.44,
           "end": 326.66,
           "word": " grim"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 333,
-      "start": 327.26,
-      "end": 327.62,
-      "text": "But",
-      "words": [
+        },
         {
           "start": 327.26,
           "end": 327.62,
@@ -9657,13 +8717,13 @@
     {
       "id": 334,
       "start": 328.34,
-      "end": 329.12,
-      "text": "What’s the ting then?",
+      "end": 329.6,
+      "text": "What\u2019s the ting then? I\u2019m here",
       "words": [
         {
           "start": 328.34,
           "end": 328.7,
-          "word": " What’s"
+          "word": " What\u2019s"
         },
         {
           "start": 328.7,
@@ -9679,21 +8739,11 @@
           "start": 328.98,
           "end": 329.12,
           "word": " then?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 335,
-      "start": 329.22,
-      "end": 329.6,
-      "text": "I’m here",
-      "words": [
+        },
         {
           "start": 329.22,
           "end": 329.4,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 329.4,
@@ -9732,8 +8782,8 @@
     {
       "id": 337,
       "start": 330.1,
-      "end": 331.46,
-      "text": "Last time I saw this guy in",
+      "end": 331.88,
+      "text": "Last time I saw this guy in a Look",
       "words": [
         {
           "start": 330.1,
@@ -9769,32 +8819,12 @@
           "start": 331.28,
           "end": 331.46,
           "word": " in"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 338,
-      "start": 331.46,
-      "end": 331.48,
-      "text": "a",
-      "words": [
+        },
         {
           "start": 331.46,
           "end": 331.48,
           "word": " a"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 339,
-      "start": 331.48,
-      "end": 331.88,
-      "text": "Look",
-      "words": [
+        },
         {
           "start": 331.48,
           "end": 331.88,
@@ -9805,10 +8835,10 @@
       "instrumental": null
     },
     {
-      "id": 340,
+      "id": 341,
       "start": 331.88,
-      "end": 332.54,
-      "text": "Yes Lord",
+      "end": 333.38,
+      "text": "Yes Lord I\u2019ll come again with that",
       "words": [
         {
           "start": 331.88,
@@ -9819,21 +8849,11 @@
           "start": 332.38,
           "end": 332.54,
           "word": " Lord"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 341,
-      "start": 332.54,
-      "end": 333.38,
-      "text": "I’ll come again with that",
-      "words": [
+        },
         {
           "start": 332.54,
           "end": 332.8,
-          "word": " I’ll"
+          "word": " I\u2019ll"
         },
         {
           "start": 332.8,
@@ -9862,8 +8882,8 @@
     {
       "id": 342,
       "start": 333.38,
-      "end": 334.0,
-      "text": "What the hell you",
+      "end": 335.18,
+      "text": "What the hell you Man Yo",
       "words": [
         {
           "start": 333.38,
@@ -9884,32 +8904,12 @@
           "start": 333.76,
           "end": 334.0,
           "word": " you"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 343,
-      "start": 334.0,
-      "end": 334.26,
-      "text": "Man",
-      "words": [
+        },
         {
           "start": 334.0,
           "end": 334.26,
           "word": " Man"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 344,
-      "start": 334.82,
-      "end": 335.18,
-      "text": "Yo",
-      "words": [
+        },
         {
           "start": 334.82,
           "end": 335.18,
@@ -9922,8 +8922,8 @@
     {
       "id": 345,
       "start": 335.18,
-      "end": 335.82,
-      "text": "What the ting then?",
+      "end": 336.56,
+      "text": "What the ting then? Yeah Yo",
       "words": [
         {
           "start": 335.18,
@@ -9944,32 +8944,12 @@
           "start": 335.68,
           "end": 335.82,
           "word": " then?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 346,
-      "start": 335.94,
-      "end": 336.1,
-      "text": "Yeah",
-      "words": [
+        },
         {
           "start": 335.94,
           "end": 336.1,
           "word": " Yeah"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 347,
-      "start": 336.1,
-      "end": 336.56,
-      "text": "Yo",
-      "words": [
+        },
         {
           "start": 336.1,
           "end": 336.56,
@@ -9982,8 +8962,8 @@
     {
       "id": 348,
       "start": 336.56,
-      "end": 337.96,
-      "text": "You wanna say him but you really",
+      "end": 338.38,
+      "text": "You wanna say him but you really no him",
       "words": [
         {
           "start": 336.56,
@@ -10019,17 +8999,7 @@
           "start": 337.76,
           "end": 337.96,
           "word": " really"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 349,
-      "start": 337.96,
-      "end": 338.38,
-      "text": "no him",
-      "words": [
+        },
         {
           "start": 337.96,
           "end": 338.12,
@@ -10047,8 +9017,8 @@
     {
       "id": 350,
       "start": 338.38,
-      "end": 339.76,
-      "text": "Wanna talk hard but you really no",
+      "end": 340.0,
+      "text": "Wanna talk hard but you really no grim",
       "words": [
         {
           "start": 338.38,
@@ -10084,17 +9054,7 @@
           "start": 339.6,
           "end": 339.76,
           "word": " no"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 351,
-      "start": 339.76,
-      "end": 340.0,
-      "text": "grim",
-      "words": [
+        },
         {
           "start": 339.76,
           "end": 340.0,
@@ -10107,8 +9067,8 @@
     {
       "id": 352,
       "start": 340.0,
-      "end": 341.58,
-      "text": "Outside your house I’ll pose for the",
+      "end": 341.74,
+      "text": "Outside your house I\u2019ll pose for the ting",
       "words": [
         {
           "start": 340.0,
@@ -10128,7 +9088,7 @@
         {
           "start": 340.96,
           "end": 341.18,
-          "word": " I’ll"
+          "word": " I\u2019ll"
         },
         {
           "start": 341.18,
@@ -10144,17 +9104,7 @@
           "start": 341.44,
           "end": 341.58,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 353,
-      "start": 341.58,
-      "end": 341.74,
-      "text": "ting",
-      "words": [
+        },
         {
           "start": 341.58,
           "end": 341.74,
@@ -10167,13 +9117,13 @@
     {
       "id": 354,
       "start": 341.74,
-      "end": 342.54,
-      "text": "What’s the ting then?",
+      "end": 343.0,
+      "text": "What\u2019s the ting then? I\u2019m here",
       "words": [
         {
           "start": 341.74,
           "end": 342.14,
-          "word": " What’s"
+          "word": " What\u2019s"
         },
         {
           "start": 342.14,
@@ -10189,21 +9139,11 @@
           "start": 342.4,
           "end": 342.54,
           "word": " then?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 355,
-      "start": 342.64,
-      "end": 343.0,
-      "text": "I’m here",
-      "words": [
+        },
         {
           "start": 342.64,
           "end": 342.84,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 342.84,
@@ -10242,8 +9182,8 @@
     {
       "id": 357,
       "start": 343.52,
-      "end": 344.86,
-      "text": "Last time I saw this guy in",
+      "end": 345.1,
+      "text": "Last time I saw this guy in the dark",
       "words": [
         {
           "start": 343.52,
@@ -10279,17 +9219,7 @@
           "start": 344.7,
           "end": 344.86,
           "word": " in"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 358,
-      "start": 344.86,
-      "end": 345.1,
-      "text": "the dark",
-      "words": [
+        },
         {
           "start": 344.86,
           "end": 344.9,
@@ -10428,7 +9358,7 @@
       "id": 362,
       "start": 348.38,
       "end": 349.56,
-      "text": "He tried to call guys I’m",
+      "text": "He tried to call guys I\u2019m",
       "words": [
         {
           "start": 348.38,
@@ -10458,7 +9388,7 @@
         {
           "start": 349.3,
           "end": 349.56,
-          "word": " I’m"
+          "word": " I\u2019m"
         }
       ],
       "speaker": "Tempa T",
@@ -10467,8 +9397,8 @@
     {
       "id": 363,
       "start": 349.56,
-      "end": 350.16,
-      "text": "Boy of the ting",
+      "end": 351.9,
+      "text": "Boy of the ting Take care",
       "words": [
         {
           "start": 349.56,
@@ -10489,17 +9419,7 @@
           "start": 349.92,
           "end": 350.16,
           "word": " ting"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 364,
-      "start": 350.16,
-      "end": 351.9,
-      "text": "Take care",
-      "words": [
+        },
         {
           "start": 350.16,
           "end": 350.52,
@@ -10647,13 +9567,13 @@
     {
       "id": 369,
       "start": 355.22,
-      "end": 355.94,
-      "text": "What’s the ting then?",
+      "end": 356.4,
+      "text": "What\u2019s the ting then? I\u2019m here",
       "words": [
         {
           "start": 355.22,
           "end": 355.52,
-          "word": " What’s"
+          "word": " What\u2019s"
         },
         {
           "start": 355.52,
@@ -10669,21 +9589,11 @@
           "start": 355.8,
           "end": 355.94,
           "word": " then?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 370,
-      "start": 356.06,
-      "end": 356.4,
-      "text": "I’m here",
-      "words": [
+        },
         {
           "start": 356.06,
           "end": 356.22,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 356.22,
@@ -10922,13 +9832,13 @@
     {
       "id": 379,
       "start": 361.86,
-      "end": 362.66,
-      "text": "What’s the ting then?",
+      "end": 363.12,
+      "text": "What\u2019s the ting then? I\u2019m here",
       "words": [
         {
           "start": 361.86,
           "end": 362.2,
-          "word": " What’s"
+          "word": " What\u2019s"
         },
         {
           "start": 362.2,
@@ -10944,21 +9854,11 @@
           "start": 362.5,
           "end": 362.66,
           "word": " then?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 380,
-      "start": 362.78,
-      "end": 363.12,
-      "text": "I’m here",
-      "words": [
+        },
         {
           "start": 362.78,
           "end": 362.94,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 362.94,
@@ -10972,13 +9872,13 @@
     {
       "id": 381,
       "start": 363.12,
-      "end": 363.56,
-      "text": "It’s a ting,",
+      "end": 363.94,
+      "text": "It\u2019s a ting, boy,",
       "words": [
         {
           "start": 363.12,
           "end": 363.34,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 363.34,
@@ -10989,17 +9889,7 @@
           "start": 363.34,
           "end": 363.56,
           "word": " ting,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 382,
-      "start": 363.66,
-      "end": 363.94,
-      "text": "boy,",
-      "words": [
+        },
         {
           "start": 363.66,
           "end": 363.94,
@@ -11012,13 +9902,13 @@
     {
       "id": 383,
       "start": 364.06,
-      "end": 365.24,
-      "text": "don’t let me boy off the ting,",
+      "end": 365.74,
+      "text": "don\u2019t let me boy off the ting, boy",
       "words": [
         {
           "start": 364.06,
           "end": 364.4,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 364.4,
@@ -11049,17 +9939,7 @@
           "start": 365.06,
           "end": 365.24,
           "word": " ting,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 384,
-      "start": 365.32,
-      "end": 365.74,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 365.32,
           "end": 365.74,
@@ -11072,13 +9952,13 @@
     {
       "id": 385,
       "start": 365.74,
-      "end": 366.98,
-      "text": "Don’t let me boy off the ting,",
+      "end": 367.34,
+      "text": "Don\u2019t let me boy off the ting, boy",
       "words": [
         {
           "start": 365.74,
           "end": 366.08,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 366.08,
@@ -11109,17 +9989,7 @@
           "start": 366.72,
           "end": 366.98,
           "word": " ting,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 386,
-      "start": 367.0,
-      "end": 367.34,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 367.0,
           "end": 367.34,
@@ -11133,12 +10003,12 @@
       "id": 387,
       "start": 367.34,
       "end": 368.34,
-      "text": "Don’t let me boy off,",
+      "text": "Don\u2019t let me boy off,",
       "words": [
         {
           "start": 367.34,
           "end": 367.76,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 367.76,
@@ -11212,8 +10082,8 @@
     {
       "id": 389,
       "start": 369.62,
-      "end": 370.26,
-      "text": "boy off the ting",
+      "end": 370.86,
+      "text": "boy off the ting Like boy,",
       "words": [
         {
           "start": 369.62,
@@ -11234,17 +10104,7 @@
           "start": 370.1,
           "end": 370.26,
           "word": " ting"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 390,
-      "start": 370.26,
-      "end": 370.86,
-      "text": "Like boy,",
-      "words": [
+        },
         {
           "start": 370.26,
           "end": 370.44,
@@ -11262,8 +10122,8 @@
     {
       "id": 391,
       "start": 370.96,
-      "end": 371.98,
-      "text": "then lick off the ting,",
+      "end": 372.36,
+      "text": "then lick off the ting, boy",
       "words": [
         {
           "start": 370.96,
@@ -11289,17 +10149,7 @@
           "start": 371.78,
           "end": 371.98,
           "word": " ting,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 392,
-      "start": 372.1,
-      "end": 372.36,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 372.1,
           "end": 372.36,
@@ -11312,13 +10162,13 @@
     {
       "id": 393,
       "start": 372.36,
-      "end": 373.68,
-      "text": "Don’t let me boy off the ting,",
+      "end": 374.02,
+      "text": "Don\u2019t let me boy off the ting, boy",
       "words": [
         {
           "start": 372.36,
           "end": 372.8,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 372.8,
@@ -11349,17 +10199,7 @@
           "start": 373.44,
           "end": 373.68,
           "word": " ting,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 394,
-      "start": 373.76,
-      "end": 374.02,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 373.76,
           "end": 374.02,
@@ -11485,26 +10325,16 @@
       "instrumental": null
     },
     {
-      "id": 398,
+      "id": 399,
       "start": 377.0,
-      "end": 377.4,
-      "text": "Yo,",
+      "end": 378.62,
+      "text": "Yo, I said danger, danger",
       "words": [
         {
           "start": 377.0,
           "end": 377.4,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 399,
-      "start": 377.54,
-      "end": 378.26,
-      "text": "I said danger,",
-      "words": [
+        },
         {
           "start": 377.54,
           "end": 377.76,
@@ -11519,17 +10349,7 @@
           "start": 377.92,
           "end": 378.26,
           "word": " danger,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 400,
-      "start": 378.38,
-      "end": 378.62,
-      "text": "danger",
-      "words": [
+        },
         {
           "start": 378.38,
           "end": 378.62,
@@ -11543,7 +10363,7 @@
       "id": 401,
       "start": 378.62,
       "end": 380.64,
-      "text": "Somebody tell these babies there’s no space",
+      "text": "Somebody tell these babies there\u2019s no space",
       "words": [
         {
           "start": 378.62,
@@ -11568,7 +10388,7 @@
         {
           "start": 379.94,
           "end": 380.3,
-          "word": " there’s"
+          "word": " there\u2019s"
         },
         {
           "start": 380.3,
@@ -11637,8 +10457,8 @@
     {
       "id": 404,
       "start": 382.24,
-      "end": 383.14,
-      "text": "I send for the head top,",
+      "end": 383.88,
+      "text": "I send for the head top, rearrange up",
       "words": [
         {
           "start": 382.24,
@@ -11669,17 +10489,7 @@
           "start": 382.98,
           "end": 383.14,
           "word": " top,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 405,
-      "start": 383.2,
-      "end": 383.88,
-      "text": "rearrange up",
-      "words": [
+        },
         {
           "start": 383.2,
           "end": 383.42,
@@ -11738,12 +10548,12 @@
       "id": 407,
       "start": 385.04,
       "end": 387.04,
-      "text": "I’m JME multiplied by Maxwell Ranger",
+      "text": "I\u2019m JME multiplied by Maxwell Ranger",
       "words": [
         {
           "start": 385.04,
           "end": 385.3,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 385.3,
@@ -11778,12 +10588,12 @@
       "id": 408,
       "start": 387.04,
       "end": 387.92,
-      "text": "I’m way too serious,",
+      "text": "I\u2019m way too serious,",
       "words": [
         {
           "start": 387.04,
           "end": 387.26,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 387.26,
@@ -11808,7 +10618,7 @@
       "id": 409,
       "start": 388.06,
       "end": 389.34,
-      "text": "if you don’t wanna get taken away",
+      "text": "if you don\u2019t wanna get taken away",
       "words": [
         {
           "start": 388.06,
@@ -11823,7 +10633,7 @@
         {
           "start": 388.36,
           "end": 388.44,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 388.44,
@@ -11853,12 +10663,12 @@
       "id": 410,
       "start": 389.34,
       "end": 390.3,
-      "text": "Don’t talk to the stranger,",
+      "text": "Don\u2019t talk to the stranger,",
       "words": [
         {
           "start": 389.34,
           "end": 389.68,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 389.68,
@@ -11888,12 +10698,12 @@
       "id": 411,
       "start": 390.54,
       "end": 391.16,
-      "text": "I’m in the dark",
+      "text": "I\u2019m in the dark",
       "words": [
         {
           "start": 390.54,
           "end": 390.86,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 390.86,
@@ -11918,7 +10728,7 @@
       "id": 412,
       "start": 391.16,
       "end": 392.1,
-      "text": "Trying to see who’s the strongest",
+      "text": "Trying to see who\u2019s the strongest",
       "words": [
         {
           "start": 391.16,
@@ -11938,7 +10748,7 @@
         {
           "start": 391.52,
           "end": 391.78,
-          "word": " who’s"
+          "word": " who\u2019s"
         },
         {
           "start": 391.78,
@@ -11958,12 +10768,12 @@
       "id": 413,
       "start": 392.1,
       "end": 392.84,
-      "text": "You’re in the dark,",
+      "text": "You\u2019re in the dark,",
       "words": [
         {
           "start": 392.1,
           "end": 392.5,
-          "word": " You’re"
+          "word": " You\u2019re"
         },
         {
           "start": 392.5,
@@ -12057,8 +10867,8 @@
     {
       "id": 416,
       "start": 394.62,
-      "end": 395.96,
-      "text": "I don’t wanna play no screw face",
+      "end": 396.18,
+      "text": "I don\u2019t wanna play no screw face game,",
       "words": [
         {
           "start": 394.62,
@@ -12068,7 +10878,7 @@
         {
           "start": 394.98,
           "end": 395.12,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 395.12,
@@ -12094,17 +10904,7 @@
           "start": 395.72,
           "end": 395.96,
           "word": " face"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 417,
-      "start": 395.96,
-      "end": 396.18,
-      "text": "game,",
-      "words": [
+        },
         {
           "start": 395.96,
           "end": 396.18,
@@ -12115,10 +10915,10 @@
       "instrumental": null
     },
     {
-      "id": 418,
+      "id": 419,
       "start": 396.26,
-      "end": 396.72,
-      "text": "but cuzzy,",
+      "end": 397.32,
+      "text": "but cuzzy, I\u2019m on this",
       "words": [
         {
           "start": 396.26,
@@ -12129,21 +10929,11 @@
           "start": 396.38,
           "end": 396.72,
           "word": " cuzzy,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 419,
-      "start": 396.72,
-      "end": 397.32,
-      "text": "I’m on this",
-      "words": [
+        },
         {
           "start": 396.72,
           "end": 396.86,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 396.86,
@@ -12207,8 +10997,8 @@
     {
       "id": 421,
       "start": 399.08,
-      "end": 400.4,
-      "text": "You need to jam like a wee",
+      "end": 400.62,
+      "text": "You need to jam like a wee boy",
       "words": [
         {
           "start": 399.08,
@@ -12244,17 +11034,7 @@
           "start": 400.24,
           "end": 400.4,
           "word": " wee"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 422,
-      "start": 400.4,
-      "end": 400.62,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 400.4,
           "end": 400.62,
@@ -12267,8 +11047,8 @@
     {
       "id": 423,
       "start": 400.62,
-      "end": 401.66,
-      "text": "You will get left laying on the",
+      "end": 402.24,
+      "text": "You will get left laying on the concrete floor",
       "words": [
         {
           "start": 400.62,
@@ -12304,17 +11084,7 @@
           "start": 401.56,
           "end": 401.66,
           "word": " the"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 424,
-      "start": 401.66,
-      "end": 402.24,
-      "text": "concrete floor",
-      "words": [
+        },
         {
           "start": 401.66,
           "end": 401.98,
@@ -12332,8 +11102,8 @@
     {
       "id": 425,
       "start": 402.24,
-      "end": 403.1,
-      "text": "All you be hearing is,",
+      "end": 404.0,
+      "text": "All you be hearing is, neeno, neeno",
       "words": [
         {
           "start": 402.24,
@@ -12359,32 +11129,12 @@
           "start": 402.82,
           "end": 403.1,
           "word": " is,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 426,
-      "start": 403.16,
-      "end": 403.56,
-      "text": "neeno,",
-      "words": [
+        },
         {
           "start": 403.16,
           "end": 403.56,
           "word": " neeno,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 427,
-      "start": 403.56,
-      "end": 404.0,
-      "text": "neeno",
-      "words": [
+        },
         {
           "start": 403.56,
           "end": 404.0,
@@ -12397,8 +11147,8 @@
     {
       "id": 428,
       "start": 404.0,
-      "end": 404.62,
-      "text": "Look in my boat,",
+      "end": 404.94,
+      "text": "Look in my boat, fine",
       "words": [
         {
           "start": 404.0,
@@ -12419,17 +11169,7 @@
           "start": 404.38,
           "end": 404.62,
           "word": " boat,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 429,
-      "start": 404.68,
-      "end": 404.94,
-      "text": "fine",
-      "words": [
+        },
         {
           "start": 404.68,
           "end": 404.94,
@@ -12443,12 +11183,12 @@
       "id": 430,
       "start": 404.94,
       "end": 406.7,
-      "text": "You’re the reason I wrote this rhyme",
+      "text": "You\u2019re the reason I wrote this rhyme",
       "words": [
         {
           "start": 404.94,
           "end": 405.42,
-          "word": " You’re"
+          "word": " You\u2019re"
         },
         {
           "start": 405.42,
@@ -12485,41 +11225,21 @@
       "instrumental": null
     },
     {
-      "id": 431,
+      "id": 433,
       "start": 406.7,
-      "end": 407.08,
-      "text": "Yo,",
+      "end": 407.86,
+      "text": "Yo, man, I baited, man,",
       "words": [
         {
           "start": 406.7,
           "end": 407.08,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 432,
-      "start": 407.12,
-      "end": 407.26,
-      "text": "man,",
-      "words": [
+        },
         {
           "start": 407.12,
           "end": 407.26,
           "word": " man,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 433,
-      "start": 407.28,
-      "end": 407.72,
-      "text": "I baited,",
-      "words": [
+        },
         {
           "start": 407.28,
           "end": 407.4,
@@ -12529,17 +11249,7 @@
           "start": 407.4,
           "end": 407.72,
           "word": " baited,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 434,
-      "start": 407.72,
-      "end": 407.86,
-      "text": "man,",
-      "words": [
+        },
         {
           "start": 407.72,
           "end": 407.86,
@@ -12552,8 +11262,8 @@
     {
       "id": 435,
       "start": 407.96,
-      "end": 408.36,
-      "text": "I bad man",
+      "end": 408.56,
+      "text": "I bad man Man,",
       "words": [
         {
           "start": 407.96,
@@ -12569,17 +11279,7 @@
           "start": 408.16,
           "end": 408.36,
           "word": " man"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 436,
-      "start": 408.36,
-      "end": 408.56,
-      "text": "Man,",
-      "words": [
+        },
         {
           "start": 408.36,
           "end": 408.56,
@@ -12592,8 +11292,8 @@
     {
       "id": 437,
       "start": 408.58,
-      "end": 409.64,
-      "text": "I ain’t seen a five pound note",
+      "end": 410.06,
+      "text": "I ain\u2019t seen a five pound note in time",
       "words": [
         {
           "start": 408.58,
@@ -12603,7 +11303,7 @@
         {
           "start": 408.66,
           "end": 408.84,
-          "word": " ain’t"
+          "word": " ain\u2019t"
         },
         {
           "start": 408.84,
@@ -12629,17 +11329,7 @@
           "start": 409.44,
           "end": 409.64,
           "word": " note"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 438,
-      "start": 409.64,
-      "end": 410.06,
-      "text": "in time",
-      "words": [
+        },
         {
           "start": 409.64,
           "end": 409.8,
@@ -12655,30 +11345,20 @@
       "instrumental": null
     },
     {
-      "id": 439,
+      "id": 440,
       "start": 410.06,
-      "end": 410.46,
-      "text": "Yo,",
+      "end": 412.28,
+      "text": "Yo, can\u2019t dis a friend of mine Trust me,",
       "words": [
         {
           "start": 410.06,
           "end": 410.46,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 440,
-      "start": 410.52,
-      "end": 411.7,
-      "text": "can’t dis a friend of mine",
-      "words": [
+        },
         {
           "start": 410.52,
           "end": 410.92,
-          "word": " can’t"
+          "word": " can\u2019t"
         },
         {
           "start": 410.92,
@@ -12704,17 +11384,7 @@
           "start": 411.46,
           "end": 411.7,
           "word": " mine"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 441,
-      "start": 411.7,
-      "end": 412.28,
-      "text": "Trust me,",
-      "words": [
+        },
         {
           "start": 411.7,
           "end": 412.06,
@@ -12733,7 +11403,7 @@
       "id": 442,
       "start": 412.34,
       "end": 413.38,
-      "text": "you don’t wanna cross this line",
+      "text": "you don\u2019t wanna cross this line",
       "words": [
         {
           "start": 412.34,
@@ -12743,7 +11413,7 @@
         {
           "start": 412.44,
           "end": 412.62,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 412.62,
@@ -12773,12 +11443,12 @@
       "id": 443,
       "start": 413.38,
       "end": 414.7,
-      "text": "Don’t think you can stand in the",
+      "text": "Don\u2019t think you can stand in the",
       "words": [
         {
           "start": 413.38,
           "end": 413.84,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 413.84,
@@ -12847,13 +11517,13 @@
     {
       "id": 445,
       "start": 415.56,
-      "end": 416.76,
-      "text": "I’d live in next man’s wine",
+      "end": 417.14,
+      "text": "I\u2019d live in next man\u2019s wine Snap,",
       "words": [
         {
           "start": 415.56,
           "end": 415.92,
-          "word": " I’d"
+          "word": " I\u2019d"
         },
         {
           "start": 415.92,
@@ -12873,23 +11543,13 @@
         {
           "start": 416.3,
           "end": 416.6,
-          "word": " man’s"
+          "word": " man\u2019s"
         },
         {
           "start": 416.6,
           "end": 416.76,
           "word": " wine"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 446,
-      "start": 416.76,
-      "end": 417.14,
-      "text": "Snap,",
-      "words": [
+        },
         {
           "start": 416.76,
           "end": 417.14,
@@ -12903,7 +11563,7 @@
       "id": 447,
       "start": 417.38,
       "end": 418.46,
-      "text": "do you think I’m dumb?",
+      "text": "do you think I\u2019m dumb?",
       "words": [
         {
           "start": 417.38,
@@ -12923,7 +11583,7 @@
         {
           "start": 418.04,
           "end": 418.28,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 418.28,
@@ -12937,8 +11597,8 @@
     {
       "id": 448,
       "start": 418.56,
-      "end": 419.32,
-      "text": "Try to boy me,",
+      "end": 419.48,
+      "text": "Try to boy me, no,",
       "words": [
         {
           "start": 418.56,
@@ -12959,17 +11619,7 @@
           "start": 419.16,
           "end": 419.32,
           "word": " me,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 449,
-      "start": 419.34,
-      "end": 419.48,
-      "text": "no,",
-      "words": [
+        },
         {
           "start": 419.34,
           "end": 419.48,
@@ -12982,8 +11632,8 @@
     {
       "id": 450,
       "start": 419.5,
-      "end": 420.08,
-      "text": "that can’t run",
+      "end": 420.96,
+      "text": "that can\u2019t run Yo, you\u2019re lucky",
       "words": [
         {
           "start": 419.5,
@@ -12993,42 +11643,22 @@
         {
           "start": 419.62,
           "end": 419.96,
-          "word": " can’t"
+          "word": " can\u2019t"
         },
         {
           "start": 419.96,
           "end": 420.08,
           "word": " run"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 451,
-      "start": 420.08,
-      "end": 420.54,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 420.08,
           "end": 420.54,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 452,
-      "start": 420.58,
-      "end": 420.96,
-      "text": "you’re lucky",
-      "words": [
+        },
         {
           "start": 420.58,
           "end": 420.84,
-          "word": " you’re"
+          "word": " you\u2019re"
         },
         {
           "start": 420.84,
@@ -13122,8 +11752,8 @@
     {
       "id": 455,
       "start": 423.46,
-      "end": 424.56,
-      "text": "Cause you get your name in your",
+      "end": 425.22,
+      "text": "Cause you get your name in your nightcare dunks",
       "words": [
         {
           "start": 423.46,
@@ -13159,17 +11789,7 @@
           "start": 424.46,
           "end": 424.56,
           "word": " your"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 456,
-      "start": 424.56,
-      "end": 425.22,
-      "text": "nightcare dunks",
-      "words": [
+        },
         {
           "start": 424.56,
           "end": 424.9,
@@ -13257,8 +11877,8 @@
     {
       "id": 459,
       "start": 426.84,
-      "end": 427.92,
-      "text": "You could have your name in your",
+      "end": 428.6,
+      "text": "You could have your name in your Reebok pumps",
       "words": [
         {
           "start": 426.84,
@@ -13294,17 +11914,7 @@
           "start": 427.82,
           "end": 427.92,
           "word": " your"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 460,
-      "start": 427.92,
-      "end": 428.6,
-      "text": "Reebok pumps",
-      "words": [
+        },
         {
           "start": 427.92,
           "end": 428.22,
@@ -13322,13 +11932,13 @@
     {
       "id": 461,
       "start": 428.6,
-      "end": 429.86,
-      "text": "Don’t think you could ever dis my",
+      "end": 430.44,
+      "text": "Don\u2019t think you could ever dis my rock Yo,",
       "words": [
         {
           "start": 428.6,
           "end": 428.94,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 428.94,
@@ -13359,32 +11969,12 @@
           "start": 429.68,
           "end": 429.86,
           "word": " my"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 462,
-      "start": 429.86,
-      "end": 430.18,
-      "text": "rock",
-      "words": [
+        },
         {
           "start": 429.86,
           "end": 430.18,
           "word": " rock"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 463,
-      "start": 430.18,
-      "end": 430.44,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 430.18,
           "end": 430.44,
@@ -13395,41 +11985,21 @@
       "instrumental": null
     },
     {
-      "id": 464,
+      "id": 466,
       "start": 430.44,
-      "end": 430.72,
-      "text": "yo,",
+      "end": 431.24,
+      "text": "yo, yo, yo",
       "words": [
         {
           "start": 430.44,
           "end": 430.72,
           "word": " yo,"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 465,
-      "start": 430.72,
-      "end": 430.84,
-      "text": "yo,",
-      "words": [
+        },
         {
           "start": 430.72,
           "end": 430.84,
           "word": " yo,"
-        }
-      ],
-      "speaker": "Jme",
-      "instrumental": null
-    },
-    {
-      "id": 466,
-      "start": 430.92,
-      "end": 431.24,
-      "text": "yo",
-      "words": [
+        },
         {
           "start": 430.92,
           "end": 431.24,
@@ -13443,7 +12013,7 @@
       "id": 467,
       "start": 431.24,
       "end": 432.96,
-      "text": "You might see me there on Logan’s",
+      "text": "You might see me there on Logan\u2019s",
       "words": [
         {
           "start": 431.24,
@@ -13478,7 +12048,7 @@
         {
           "start": 432.46,
           "end": 432.96,
-          "word": " Logan’s"
+          "word": " Logan\u2019s"
         }
       ],
       "speaker": "Jme",
@@ -13487,8 +12057,8 @@
     {
       "id": 468,
       "start": 432.96,
-      "end": 433.96,
-      "text": "You might see me there",
+      "end": 434.66,
+      "text": "You might see me there Showering,",
       "words": [
         {
           "start": 432.96,
@@ -13514,17 +12084,7 @@
           "start": 433.68,
           "end": 433.96,
           "word": " there"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 469,
-      "start": 433.96,
-      "end": 434.66,
-      "text": "Showering,",
-      "words": [
+        },
         {
           "start": 433.96,
           "end": 434.66,
@@ -13577,13 +12137,13 @@
     {
       "id": 471,
       "start": 435.66,
-      "end": 437.08,
-      "text": "It’s gonna be mine all night this",
+      "end": 437.34,
+      "text": "It\u2019s gonna be mine all night this year",
       "words": [
         {
           "start": 435.66,
           "end": 435.92,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 435.92,
@@ -13614,17 +12174,7 @@
           "start": 436.9,
           "end": 437.08,
           "word": " this"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 472,
-      "start": 437.08,
-      "end": 437.34,
-      "text": "year",
-      "words": [
+        },
         {
           "start": 437.08,
           "end": 437.34,
@@ -13635,10 +12185,10 @@
       "instrumental": null
     },
     {
-      "id": 473,
+      "id": 474,
       "start": 437.34,
-      "end": 438.14,
-      "text": "Staying fat,",
+      "end": 438.98,
+      "text": "Staying fat, claiming that",
       "words": [
         {
           "start": 437.34,
@@ -13649,17 +12199,7 @@
           "start": 437.92,
           "end": 438.14,
           "word": " fat,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 474,
-      "start": 438.28,
-      "end": 438.98,
-      "text": "claiming that",
-      "words": [
+        },
         {
           "start": 438.28,
           "end": 438.72,
@@ -13678,12 +12218,12 @@
       "id": 475,
       "start": 438.98,
       "end": 440.68,
-      "text": "I’m gonna be gon’ clear this year",
+      "text": "I\u2019m gonna be gon\u2019 clear this year",
       "words": [
         {
           "start": 438.98,
           "end": 439.44,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 439.44,
@@ -13698,7 +12238,7 @@
         {
           "start": 439.78,
           "end": 440.0,
-          "word": " gon’"
+          "word": " gon\u2019"
         },
         {
           "start": 440.04,
@@ -13723,12 +12263,12 @@
       "id": 476,
       "start": 440.68,
       "end": 442.36,
-      "text": "There’s no point of staring here",
+      "text": "There\u2019s no point of staring here",
       "words": [
         {
           "start": 440.68,
           "end": 441.2,
-          "word": " There’s"
+          "word": " There\u2019s"
         },
         {
           "start": 441.2,
@@ -13762,8 +12302,8 @@
     {
       "id": 477,
       "start": 442.36,
-      "end": 443.5,
-      "text": "You won’t be high cause I’m shifting",
+      "end": 444.08,
+      "text": "You won\u2019t be high cause I\u2019m shifting fifth there",
       "words": [
         {
           "start": 442.36,
@@ -13773,7 +12313,7 @@
         {
           "start": 442.52,
           "end": 442.7,
-          "word": " won’t"
+          "word": " won\u2019t"
         },
         {
           "start": 442.7,
@@ -13793,23 +12333,13 @@
         {
           "start": 443.12,
           "end": 443.28,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 443.28,
           "end": 443.5,
           "word": " shifting"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 478,
-      "start": 443.5,
-      "end": 444.08,
-      "text": "fifth there",
-      "words": [
+        },
         {
           "start": 443.5,
           "end": 443.82,
@@ -13825,10 +12355,10 @@
       "instrumental": null
     },
     {
-      "id": 479,
+      "id": 480,
       "start": 444.08,
-      "end": 444.96,
-      "text": "Caring hair,",
+      "end": 445.78,
+      "text": "Caring hair, clearing hair",
       "words": [
         {
           "start": 444.08,
@@ -13839,17 +12369,7 @@
           "start": 444.58,
           "end": 444.96,
           "word": " hair,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 480,
-      "start": 445.06,
-      "end": 445.78,
-      "text": "clearing hair",
-      "words": [
+        },
         {
           "start": 445.06,
           "end": 445.42,
@@ -13867,13 +12387,13 @@
     {
       "id": 481,
       "start": 445.78,
-      "end": 446.68,
-      "text": "You’re on point for music,",
+      "end": 447.42,
+      "text": "You\u2019re on point for music, staring hair",
       "words": [
         {
           "start": 445.78,
           "end": 446.0,
-          "word": " You’re"
+          "word": " You\u2019re"
         },
         {
           "start": 446.0,
@@ -13894,17 +12414,7 @@
           "start": 446.38,
           "end": 446.68,
           "word": " music,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 482,
-      "start": 446.76,
-      "end": 447.42,
-      "text": "staring hair",
-      "words": [
+        },
         {
           "start": 446.76,
           "end": 447.02,
@@ -13922,13 +12432,13 @@
     {
       "id": 483,
       "start": 447.42,
-      "end": 449.04,
-      "text": "Don’t wanna see me pacing here",
+      "end": 449.76,
+      "text": "Don\u2019t wanna see me pacing here Great charisma,",
       "words": [
         {
           "start": 447.42,
           "end": 447.88,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 447.88,
@@ -13954,17 +12464,7 @@
           "start": 448.78,
           "end": 449.04,
           "word": " here"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 484,
-      "start": 449.04,
-      "end": 449.76,
-      "text": "Great charisma,",
-      "words": [
+        },
         {
           "start": 449.04,
           "end": 449.46,
@@ -13982,8 +12482,8 @@
     {
       "id": 485,
       "start": 449.84,
-      "end": 450.72,
-      "text": "you can’t take my fare",
+      "end": 451.18,
+      "text": "you can\u2019t take my fare Look,",
       "words": [
         {
           "start": 449.84,
@@ -13993,7 +12493,7 @@
         {
           "start": 449.96,
           "end": 450.16,
-          "word": " can’t"
+          "word": " can\u2019t"
         },
         {
           "start": 450.16,
@@ -14009,17 +12509,7 @@
           "start": 450.5,
           "end": 450.72,
           "word": " fare"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 486,
-      "start": 450.72,
-      "end": 451.18,
-      "text": "Look,",
-      "words": [
+        },
         {
           "start": 450.72,
           "end": 451.18,
@@ -14033,12 +12523,12 @@
       "id": 487,
       "start": 451.28,
       "end": 452.42,
-      "text": "I’m that grizzly bear",
+      "text": "I\u2019m that grizzly bear",
       "words": [
         {
           "start": 451.28,
           "end": 451.64,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 451.64,
@@ -14062,8 +12552,8 @@
     {
       "id": 488,
       "start": 452.42,
-      "end": 453.14,
-      "text": "I take competition,",
+      "end": 454.2,
+      "text": "I take competition, I impairs",
       "words": [
         {
           "start": 452.42,
@@ -14079,17 +12569,7 @@
           "start": 452.76,
           "end": 453.14,
           "word": " competition,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 489,
-      "start": 453.42,
-      "end": 454.2,
-      "text": "I impairs",
-      "words": [
+        },
         {
           "start": 453.42,
           "end": 453.66,
@@ -14108,12 +12588,12 @@
       "id": 490,
       "start": 454.2,
       "end": 455.76,
-      "text": "There’s no point of passing here",
+      "text": "There\u2019s no point of passing here",
       "words": [
         {
           "start": 454.2,
           "end": 454.66,
-          "word": " There’s"
+          "word": " There\u2019s"
         },
         {
           "start": 454.66,
@@ -14147,8 +12627,8 @@
     {
       "id": 491,
       "start": 455.76,
-      "end": 456.88,
-      "text": "I look in your eyes and you’re",
+      "end": 457.48,
+      "text": "I look in your eyes and you\u2019re busting fair",
       "words": [
         {
           "start": 455.76,
@@ -14183,18 +12663,8 @@
         {
           "start": 456.7,
           "end": 456.88,
-          "word": " you’re"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 492,
-      "start": 456.88,
-      "end": 457.48,
-      "text": "busting fair",
-      "words": [
+          "word": " you\u2019re"
+        },
         {
           "start": 456.88,
           "end": 457.18,
@@ -14210,10 +12680,10 @@
       "instrumental": null
     },
     {
-      "id": 493,
+      "id": 494,
       "start": 457.48,
-      "end": 458.36,
-      "text": "Caring hair,",
+      "end": 459.18,
+      "text": "Caring hair, clearing hair",
       "words": [
         {
           "start": 457.48,
@@ -14224,17 +12694,7 @@
           "start": 458.02,
           "end": 458.36,
           "word": " hair,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 494,
-      "start": 458.5,
-      "end": 459.18,
-      "text": "clearing hair",
-      "words": [
+        },
         {
           "start": 458.5,
           "end": 458.9,
@@ -14253,7 +12713,7 @@
       "id": 495,
       "start": 459.18,
       "end": 460.84,
-      "text": "Everyone knows I’m caring hair",
+      "text": "Everyone knows I\u2019m caring hair",
       "words": [
         {
           "start": 459.18,
@@ -14268,7 +12728,7 @@
         {
           "start": 460.04,
           "end": 460.3,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 460.3,
@@ -14287,13 +12747,13 @@
     {
       "id": 496,
       "start": 460.84,
-      "end": 462.34,
-      "text": "Don’t wanna see a mixtape in the",
+      "end": 462.52,
+      "text": "Don\u2019t wanna see a mixtape in the shop",
       "words": [
         {
           "start": 460.84,
           "end": 461.34,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 461.34,
@@ -14324,17 +12784,7 @@
           "start": 462.26,
           "end": 462.34,
           "word": " the"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 497,
-      "start": 462.34,
-      "end": 462.52,
-      "text": "shop",
-      "words": [
+        },
         {
           "start": 462.34,
           "end": 462.52,
@@ -14345,10 +12795,10 @@
       "instrumental": null
     },
     {
-      "id": 498,
+      "id": 499,
       "start": 462.52,
-      "end": 463.18,
-      "text": "Trust me,",
+      "end": 464.74,
+      "text": "Trust me, I\u2019ll be caring there Snap,",
       "words": [
         {
           "start": 462.52,
@@ -14359,21 +12809,11 @@
           "start": 462.94,
           "end": 463.18,
           "word": " me,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 499,
-      "start": 463.26,
-      "end": 464.24,
-      "text": "I’ll be caring there",
-      "words": [
+        },
         {
           "start": 463.26,
           "end": 463.54,
-          "word": " I’ll"
+          "word": " I\u2019ll"
         },
         {
           "start": 463.54,
@@ -14389,17 +12829,7 @@
           "start": 463.92,
           "end": 464.24,
           "word": " there"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 500,
-      "start": 464.24,
-      "end": 464.74,
-      "text": "Snap,",
-      "words": [
+        },
         {
           "start": 464.24,
           "end": 464.74,
@@ -14412,8 +12842,8 @@
     {
       "id": 501,
       "start": 464.78,
-      "end": 465.52,
-      "text": "my face in the mix,",
+      "end": 466.42,
+      "text": "my face in the mix, CD free Chronic,",
       "words": [
         {
           "start": 464.78,
@@ -14439,17 +12869,7 @@
           "start": 465.34,
           "end": 465.52,
           "word": " mix,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 502,
-      "start": 465.54,
-      "end": 466.02,
-      "text": "CD free",
-      "words": [
+        },
         {
           "start": 465.54,
           "end": 465.72,
@@ -14459,17 +12879,7 @@
           "start": 465.72,
           "end": 466.02,
           "word": " free"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 503,
-      "start": 466.02,
-      "end": 466.42,
-      "text": "Chronic,",
-      "words": [
+        },
         {
           "start": 466.02,
           "end": 466.42,
@@ -14482,8 +12892,8 @@
     {
       "id": 504,
       "start": 466.42,
-      "end": 467.18,
-      "text": "holding it down,",
+      "end": 468.1,
+      "text": "holding it down, I swear Furthermore,",
       "words": [
         {
           "start": 466.42,
@@ -14499,17 +12909,7 @@
           "start": 466.98,
           "end": 467.18,
           "word": " down,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 505,
-      "start": 467.24,
-      "end": 467.56,
-      "text": "I swear",
-      "words": [
+        },
         {
           "start": 467.24,
           "end": 467.34,
@@ -14519,17 +12919,7 @@
           "start": 467.34,
           "end": 467.56,
           "word": " swear"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 506,
-      "start": 467.56,
-      "end": 468.1,
-      "text": "Furthermore,",
-      "words": [
+        },
         {
           "start": 467.56,
           "end": 468.1,
@@ -14543,12 +12933,12 @@
       "id": 507,
       "start": 468.36,
       "end": 469.2,
-      "text": "I’m about this year",
+      "text": "I\u2019m about this year",
       "words": [
         {
           "start": 468.36,
           "end": 468.62,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 468.62,
@@ -14602,13 +12992,13 @@
     {
       "id": 509,
       "start": 469.92,
-      "end": 470.96,
-      "text": "don’t settle down this year",
+      "end": 471.3,
+      "text": "don\u2019t settle down this year Yo,",
       "words": [
         {
           "start": 469.92,
           "end": 470.1,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 470.1,
@@ -14629,17 +13019,7 @@
           "start": 470.74,
           "end": 470.96,
           "word": " year"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 510,
-      "start": 470.96,
-      "end": 471.3,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 470.96,
           "end": 471.3,
@@ -14650,30 +13030,20 @@
       "instrumental": null
     },
     {
-      "id": 511,
+      "id": 512,
       "start": 471.3,
-      "end": 471.76,
-      "text": "yo,",
+      "end": 472.64,
+      "text": "yo, it\u2019s mental",
       "words": [
         {
           "start": 471.3,
           "end": 471.76,
           "word": " yo,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 512,
-      "start": 471.82,
-      "end": 472.64,
-      "text": "it’s mental",
-      "words": [
+        },
         {
           "start": 471.82,
           "end": 472.42,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 472.42,
@@ -14793,7 +13163,7 @@
       "id": 516,
       "start": 477.06,
       "end": 477.68,
-      "text": "And it’s been,",
+      "text": "And it\u2019s been,",
       "words": [
         {
           "start": 477.06,
@@ -14803,7 +13173,7 @@
         {
           "start": 477.42,
           "end": 477.56,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 477.56,
@@ -14817,13 +13187,13 @@
     {
       "id": 517,
       "start": 477.74,
-      "end": 478.64,
-      "text": "it’s so temperamental",
+      "end": 479.34,
+      "text": "it\u2019s so temperamental It\u2019s mental",
       "words": [
         {
           "start": 477.74,
           "end": 477.9,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 477.9,
@@ -14834,21 +13204,11 @@
           "start": 477.98,
           "end": 478.64,
           "word": " temperamental"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 518,
-      "start": 478.64,
-      "end": 479.34,
-      "text": "It’s mental",
-      "words": [
+        },
         {
           "start": 478.64,
           "end": 479.2,
-          "word": " It’s"
+          "word": " It\u2019s"
         },
         {
           "start": 479.2,
@@ -14977,8 +13337,8 @@
     {
       "id": 523,
       "start": 482.84,
-      "end": 484.06,
-      "text": "Trying to get all the lost bits",
+      "end": 484.44,
+      "text": "Trying to get all the lost bits of petrol",
       "words": [
         {
           "start": 482.84,
@@ -15014,17 +13374,7 @@
           "start": 483.88,
           "end": 484.06,
           "word": " bits"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 524,
-      "start": 484.06,
-      "end": 484.44,
-      "text": "of petrol",
-      "words": [
+        },
         {
           "start": 484.06,
           "end": 484.22,
@@ -15040,30 +13390,20 @@
       "instrumental": null
     },
     {
-      "id": 525,
+      "id": 526,
       "start": 484.44,
-      "end": 484.9,
-      "text": "See,",
+      "end": 485.36,
+      "text": "See, I\u2019m famous,",
       "words": [
         {
           "start": 484.44,
           "end": 484.9,
           "word": " See,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 526,
-      "start": 484.9,
-      "end": 485.36,
-      "text": "I’m famous,",
-      "words": [
+        },
         {
           "start": 484.9,
           "end": 485.0,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 485.0,
@@ -15077,8 +13417,8 @@
     {
       "id": 527,
       "start": 485.4,
-      "end": 486.48,
-      "text": "but I keep it normal still",
+      "end": 487.42,
+      "text": "but I keep it normal still Real recognizable,",
       "words": [
         {
           "start": 485.4,
@@ -15109,17 +13449,7 @@
           "start": 486.04,
           "end": 486.48,
           "word": " still"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 528,
-      "start": 486.48,
-      "end": 487.42,
-      "text": "Real recognizable,",
-      "words": [
+        },
         {
           "start": 486.48,
           "end": 486.94,
@@ -15135,10 +13465,10 @@
       "instrumental": null
     },
     {
-      "id": 529,
+      "id": 530,
       "start": 487.52,
-      "end": 488.2,
-      "text": "recognize real",
+      "end": 488.8,
+      "text": "recognize real I\u2019m so real,",
       "words": [
         {
           "start": 487.52,
@@ -15149,21 +13479,11 @@
           "start": 487.78,
           "end": 488.2,
           "word": " real"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 530,
-      "start": 488.2,
-      "end": 488.8,
-      "text": "I’m so real,",
-      "words": [
+        },
         {
           "start": 488.2,
           "end": 488.46,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 488.46,
@@ -15217,8 +13537,8 @@
     {
       "id": 532,
       "start": 489.88,
-      "end": 491.2,
-      "text": "Will recognize me when I’m 40",
+      "end": 491.94,
+      "text": "Will recognize me when I\u2019m 40 Like Shorty,",
       "words": [
         {
           "start": 489.88,
@@ -15243,23 +13563,13 @@
         {
           "start": 490.76,
           "end": 490.98,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 490.98,
           "end": 491.2,
           "word": " 40"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 533,
-      "start": 491.2,
-      "end": 491.94,
-      "text": "Like Shorty,",
-      "words": [
+        },
         {
           "start": 491.2,
           "end": 491.48,
@@ -15278,12 +13588,12 @@
       "id": 534,
       "start": 491.94,
       "end": 492.76,
-      "text": "I’ve been real from day",
+      "text": "I\u2019ve been real from day",
       "words": [
         {
           "start": 491.94,
           "end": 492.04,
-          "word": " I’ve"
+          "word": " I\u2019ve"
         },
         {
           "start": 492.04,
@@ -15343,7 +13653,7 @@
       "id": 536,
       "start": 493.56,
       "end": 494.44,
-      "text": "I don’t carry on the way",
+      "text": "I don\u2019t carry on the way",
       "words": [
         {
           "start": 493.56,
@@ -15353,7 +13663,7 @@
         {
           "start": 493.66,
           "end": 493.8,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 493.8,
@@ -15427,8 +13737,8 @@
     {
       "id": 538,
       "start": 496.12,
-      "end": 497.74,
-      "text": "When it’s 2000 and BBK?",
+      "end": 498.08,
+      "text": "When it\u2019s 2000 and BBK? Yo, yo, yo,",
       "words": [
         {
           "start": 496.12,
@@ -15438,7 +13748,7 @@
         {
           "start": 496.32,
           "end": 496.54,
-          "word": " it’s"
+          "word": " it\u2019s"
         },
         {
           "start": 496.54,
@@ -15454,47 +13764,17 @@
           "start": 497.14,
           "end": 497.74,
           "word": " BBK?"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 539,
-      "start": 497.86,
-      "end": 497.92,
-      "text": "Yo,",
-      "words": [
+        },
         {
           "start": 497.86,
           "end": 497.92,
           "word": " Yo,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 540,
-      "start": 497.92,
-      "end": 497.92,
-      "text": "yo,",
-      "words": [
+        },
         {
           "start": 497.92,
           "end": 497.92,
           "word": " yo,"
-        }
-      ],
-      "speaker": "Skepta",
-      "instrumental": null
-    },
-    {
-      "id": 541,
-      "start": 498.02,
-      "end": 498.08,
-      "text": "yo,",
-      "words": [
+        },
         {
           "start": 498.02,
           "end": 498.08,
@@ -15585,30 +13865,20 @@
       "instrumental": null
     },
     {
-      "id": 544,
+      "id": 545,
       "start": 501.0,
-      "end": 501.26,
-      "text": "land",
+      "end": 502.6,
+      "text": "land Don\u2019t try to come catch me by",
       "words": [
         {
           "start": 501.0,
           "end": 501.26,
           "word": " land"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 545,
-      "start": 501.26,
-      "end": 502.6,
-      "text": "Don’t try to come catch me by",
-      "words": [
+        },
         {
           "start": 501.26,
           "end": 501.66,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 501.66,
@@ -15645,10 +13915,10 @@
       "instrumental": null
     },
     {
-      "id": 546,
+      "id": 547,
       "start": 502.6,
-      "end": 502.86,
-      "text": "the man",
+      "end": 504.3,
+      "text": "the man You must have hijacked these in the",
       "words": [
         {
           "start": 502.6,
@@ -15659,17 +13929,7 @@
           "start": 502.64,
           "end": 502.86,
           "word": " man"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 547,
-      "start": 502.86,
-      "end": 504.3,
-      "text": "You must have hijacked these in the",
-      "words": [
+        },
         {
           "start": 502.86,
           "end": 503.26,
@@ -15710,41 +13970,21 @@
       "instrumental": null
     },
     {
-      "id": 548,
+      "id": 550,
       "start": 504.3,
-      "end": 504.52,
-      "text": "ground",
+      "end": 506.28,
+      "text": "ground What? Trust me for my lamb",
       "words": [
         {
           "start": 504.3,
           "end": 504.52,
           "word": " ground"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 549,
-      "start": 504.52,
-      "end": 505.08,
-      "text": "What?",
-      "words": [
+        },
         {
           "start": 504.52,
           "end": 505.08,
           "word": " What?"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 550,
-      "start": 505.2,
-      "end": 506.28,
-      "text": "Trust me for my lamb",
-      "words": [
+        },
         {
           "start": 505.2,
           "end": 505.56,
@@ -15777,8 +14017,8 @@
     {
       "id": 551,
       "start": 506.28,
-      "end": 507.72,
-      "text": "Mash up the whole party when I",
+      "end": 507.94,
+      "text": "Mash up the whole party when I land",
       "words": [
         {
           "start": 506.28,
@@ -15814,17 +14054,7 @@
           "start": 507.58,
           "end": 507.72,
           "word": " I"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 552,
-      "start": 507.72,
-      "end": 507.94,
-      "text": "land",
-      "words": [
+        },
         {
           "start": 507.72,
           "end": 507.94,
@@ -15837,13 +14067,13 @@
     {
       "id": 553,
       "start": 507.94,
-      "end": 509.32,
-      "text": "Don’t try to come catch me by",
+      "end": 509.62,
+      "text": "Don\u2019t try to come catch me by the man",
       "words": [
         {
           "start": 507.94,
           "end": 508.34,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 508.34,
@@ -15874,17 +14104,7 @@
           "start": 509.14,
           "end": 509.32,
           "word": " by"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 554,
-      "start": 509.32,
-      "end": 509.62,
-      "text": "the man",
-      "words": [
+        },
         {
           "start": 509.32,
           "end": 509.38,
@@ -15900,41 +14120,21 @@
       "instrumental": null
     },
     {
-      "id": 555,
+      "id": 557,
       "start": 510.64,
-      "end": 510.84,
-      "text": "Yeah,",
+      "end": 511.46,
+      "text": "Yeah, yeah, yeah",
       "words": [
         {
           "start": 510.64,
           "end": 510.84,
           "word": " Yeah,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 556,
-      "start": 510.84,
-      "end": 511.08,
-      "text": "yeah,",
-      "words": [
+        },
         {
           "start": 510.84,
           "end": 511.08,
           "word": " yeah,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 557,
-      "start": 511.08,
-      "end": 511.46,
-      "text": "yeah",
-      "words": [
+        },
         {
           "start": 511.08,
           "end": 511.46,
@@ -15948,7 +14148,7 @@
       "id": 558,
       "start": 511.46,
       "end": 512.9,
-      "text": "I don’t care what you man say",
+      "text": "I don\u2019t care what you man say",
       "words": [
         {
           "start": 511.46,
@@ -15958,7 +14158,7 @@
         {
           "start": 511.7,
           "end": 511.94,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 511.94,
@@ -15993,12 +14193,12 @@
       "id": 559,
       "start": 512.9,
       "end": 514.2,
-      "text": "I’m a bad man at the end",
+      "text": "I\u2019m a bad man at the end",
       "words": [
         {
           "start": 512.9,
           "end": 513.34,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 513.34,
@@ -16062,13 +14262,13 @@
     {
       "id": 561,
       "start": 514.64,
-      "end": 516.46,
-      "text": "I’m raving six in the morning on",
+      "end": 516.72,
+      "text": "I\u2019m raving six in the morning on a hike",
       "words": [
         {
           "start": 514.64,
           "end": 515.08,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 515.08,
@@ -16099,17 +14299,7 @@
           "start": 516.2,
           "end": 516.46,
           "word": " on"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 562,
-      "start": 516.46,
-      "end": 516.72,
-      "text": "a hike",
-      "words": [
+        },
         {
           "start": 516.46,
           "end": 516.54,
@@ -16127,13 +14317,13 @@
     {
       "id": 563,
       "start": 516.72,
-      "end": 517.9,
-      "text": "Don’t need no MDMA",
+      "end": 518.16,
+      "text": "Don\u2019t need no MDMA What?",
       "words": [
         {
           "start": 516.72,
           "end": 516.94,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 516.94,
@@ -16149,17 +14339,7 @@
           "start": 517.28,
           "end": 517.9,
           "word": " MDMA"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 564,
-      "start": 517.9,
-      "end": 518.16,
-      "text": "What?",
-      "words": [
+        },
         {
           "start": 517.9,
           "end": 518.16,
@@ -16173,7 +14353,7 @@
       "id": 565,
       "start": 518.28,
       "end": 519.6,
-      "text": "I don’t care what you man say",
+      "text": "I don\u2019t care what you man say",
       "words": [
         {
           "start": 518.28,
@@ -16183,7 +14363,7 @@
         {
           "start": 518.5,
           "end": 518.64,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 518.64,
@@ -16218,12 +14398,12 @@
       "id": 566,
       "start": 519.6,
       "end": 520.92,
-      "text": "I’m a bad man at the end",
+      "text": "I\u2019m a bad man at the end",
       "words": [
         {
           "start": 519.6,
           "end": 520.06,
-          "word": " I’m"
+          "word": " I\u2019m"
         },
         {
           "start": 520.06,
@@ -16288,12 +14468,12 @@
       "id": 568,
       "start": 521.38,
       "end": 522.18,
-      "text": "Don’t smoke weed,",
+      "text": "Don\u2019t smoke weed,",
       "words": [
         {
           "start": 521.38,
           "end": 521.74,
-          "word": " Don’t"
+          "word": " Don\u2019t"
         },
         {
           "start": 521.74,
@@ -16313,12 +14493,12 @@
       "id": 569,
       "start": 522.32,
       "end": 523.1,
-      "text": "don’t smoke cigarettes",
+      "text": "don\u2019t smoke cigarettes",
       "words": [
         {
           "start": 522.32,
           "end": 522.6,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 522.6,
@@ -16337,8 +14517,8 @@
     {
       "id": 570,
       "start": 523.1,
-      "end": 524.7,
-      "text": "You man smoke like 20 a day",
+      "end": 525.38,
+      "text": "You man smoke like 20 a day Carry on,",
       "words": [
         {
           "start": 523.1,
@@ -16374,17 +14554,7 @@
           "start": 524.54,
           "end": 524.7,
           "word": " day"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 571,
-      "start": 524.7,
-      "end": 525.38,
-      "text": "Carry on,",
-      "words": [
+        },
         {
           "start": 524.7,
           "end": 525.16,
@@ -16402,13 +14572,13 @@
     {
       "id": 572,
       "start": 525.38,
-      "end": 526.46,
-      "text": "you’ll get sent to your grave",
+      "end": 527.12,
+      "text": "you\u2019ll get sent to your grave Violent,",
       "words": [
         {
           "start": 525.38,
           "end": 525.54,
-          "word": " you’ll"
+          "word": " you\u2019ll"
         },
         {
           "start": 525.54,
@@ -16434,17 +14604,7 @@
           "start": 526.2,
           "end": 526.46,
           "word": " grave"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 573,
-      "start": 526.46,
-      "end": 527.12,
-      "text": "Violent,",
-      "words": [
+        },
         {
           "start": 526.46,
           "end": 527.12,
@@ -16457,13 +14617,13 @@
     {
       "id": 574,
       "start": 527.12,
-      "end": 528.1,
-      "text": "you’ll get sent to your grave",
+      "end": 528.5,
+      "text": "you\u2019ll get sent to your grave In fact,",
       "words": [
         {
           "start": 527.12,
           "end": 527.3,
-          "word": " you’ll"
+          "word": " you\u2019ll"
         },
         {
           "start": 527.3,
@@ -16489,17 +14649,7 @@
           "start": 527.84,
           "end": 528.1,
           "word": " grave"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 575,
-      "start": 528.1,
-      "end": 528.5,
-      "text": "In fact,",
-      "words": [
+        },
         {
           "start": 528.1,
           "end": 528.24,
@@ -16518,12 +14668,12 @@
       "id": 576,
       "start": 528.64,
       "end": 530.16,
-      "text": "you’re gonna have to work flipping hard",
+      "text": "you\u2019re gonna have to work flipping hard",
       "words": [
         {
           "start": 528.64,
           "end": 529.02,
-          "word": " you’re"
+          "word": " you\u2019re"
         },
         {
           "start": 529.02,
@@ -16562,8 +14712,8 @@
     {
       "id": 577,
       "start": 530.16,
-      "end": 531.46,
-      "text": "Do not get sent to your grave",
+      "end": 532.0,
+      "text": "Do not get sent to your grave See,",
       "words": [
         {
           "start": 530.16,
@@ -16599,17 +14749,7 @@
           "start": 531.24,
           "end": 531.46,
           "word": " grave"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 578,
-      "start": 531.46,
-      "end": 532.0,
-      "text": "See,",
-      "words": [
+        },
         {
           "start": 531.46,
           "end": 532.0,
@@ -16667,8 +14807,8 @@
     {
       "id": 580,
       "start": 533.16,
-      "end": 534.52,
-      "text": "I don’t act like I went to",
+      "end": 534.9,
+      "text": "I don\u2019t act like I went to the States",
       "words": [
         {
           "start": 533.16,
@@ -16678,7 +14818,7 @@
         {
           "start": 533.36,
           "end": 533.62,
-          "word": " don’t"
+          "word": " don\u2019t"
         },
         {
           "start": 533.62,
@@ -16704,17 +14844,7 @@
           "start": 534.36,
           "end": 534.52,
           "word": " to"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 581,
-      "start": 534.52,
-      "end": 534.9,
-      "text": "the States",
-      "words": [
+        },
         {
           "start": 534.52,
           "end": 534.62,
@@ -16732,8 +14862,8 @@
     {
       "id": 582,
       "start": 534.9,
-      "end": 536.14,
-      "text": "Go run up your macro,",
+      "end": 536.48,
+      "text": "Go run up your macro, boy",
       "words": [
         {
           "start": 534.9,
@@ -16759,17 +14889,7 @@
           "start": 535.9,
           "end": 536.14,
           "word": " macro,"
-        }
-      ],
-      "speaker": "Tempa T",
-      "instrumental": null
-    },
-    {
-      "id": 583,
-      "start": 536.22,
-      "end": 536.48,
-      "text": "boy",
-      "words": [
+        },
         {
           "start": 536.22,
           "end": 536.48,
@@ -16783,12 +14903,12 @@
       "id": 584,
       "start": 536.48,
       "end": 537.76,
-      "text": "I’ll murk you and all your friends",
+      "text": "I\u2019ll murk you and all your friends",
       "words": [
         {
           "start": 536.48,
           "end": 536.66,
-          "word": " I’ll"
+          "word": " I\u2019ll"
         },
         {
           "start": 536.66,
@@ -16853,7 +14973,7 @@
       "id": 586,
       "start": 540.64,
       "end": 541.56,
-      "text": "To Logan’s summer",
+      "text": "To Logan\u2019s summer",
       "words": [
         {
           "start": 540.64,
@@ -16863,7 +14983,7 @@
         {
           "start": 540.8,
           "end": 541.22,
-          "word": " Logan’s"
+          "word": " Logan\u2019s"
         },
         {
           "start": 541.22,
@@ -16878,7 +14998,7 @@
       "id": 587,
       "start": 541.56,
       "end": 543.26,
-      "text": "Right now you’re listening to KISS",
+      "text": "Right now you\u2019re listening to KISS",
       "words": [
         {
           "start": 541.56,
@@ -16893,7 +15013,7 @@
         {
           "start": 542.16,
           "end": 542.36,
-          "word": " you’re"
+          "word": " you\u2019re"
         },
         {
           "start": 542.36,
