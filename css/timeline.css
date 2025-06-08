@@ -100,13 +100,19 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.speaker-block:hover,
+.instrumental-block:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
 .speaker-block.active {
     transform: translateY(-10px);
     background-color: rgba(255, 255, 255, 0.95);
 }
 
 #TimelineProgress.smooth {
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
 }
 
 #TimelineContainer:hover #TimelineCursorWrapper.smooth {
@@ -142,7 +148,7 @@
     width: 0%;
     background-color: black;
     z-index: 2;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
 }
 
 /* Curseur */
