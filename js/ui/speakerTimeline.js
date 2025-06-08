@@ -17,19 +17,18 @@ loadActiveArchiveData()
     });
     if (lastSpeaker) speakerSegments.push(lastSpeaker);
 
-    const totalTime = Math.max(...segments.map(s => s.end));
+    const totalTime = data.duration || Math.max(...segments.map(s => s.end));
     const speakerContainer = document.getElementById("FriseTemporelle");
     speakerContainer.innerHTML = "";
-    let usedWidth = 0;
 
-    speakerSegments.forEach((seg, i) => {
-      let width = ((seg.end - seg.start) / totalTime) * 100;
-      if (i === speakerSegments.length - 1) width = 100 - usedWidth;
-      else usedWidth += width;
+    speakerSegments.forEach(seg => {
+      const width = ((seg.end - seg.start) / totalTime) * 100;
+      const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "speaker-block";
       div.style.width = `${width}%`;
+      div.style.left = `${left}%`;
       div.textContent = seg.speaker;
       div.title = `${seg.speaker} (${formatTime(seg.start)} - ${formatTime(seg.end)})`;
       div.dataset.speaker = seg.speaker;
@@ -41,16 +40,15 @@ loadActiveArchiveData()
     const instrSegments = data.instrumentals || [];
     const instrContainer = document.getElementById("FriseInstrumentale");
     instrContainer.innerHTML = "";
-    let instrUsedWidth = 0;
 
-    instrSegments.forEach((seg, i) => {
-      let width = ((seg.end - seg.start) / totalTime) * 100;
-      if (i === instrSegments.length - 1) width = 100 - instrUsedWidth;
-      else instrUsedWidth += width;
+    instrSegments.forEach(seg => {
+      const width = ((seg.end - seg.start) / totalTime) * 100;
+      const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "instrumental-block";
       div.style.width = `${width}%`;
+      div.style.left = `${left}%`;
       const key = `${seg.title} – ${seg.artist}`;
       div.textContent = key;
       div.title = `${key} (${formatTime(seg.start)} - ${formatTime(seg.end)})`;
