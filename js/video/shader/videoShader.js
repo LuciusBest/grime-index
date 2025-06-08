@@ -162,17 +162,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🎚️ Bouton pour activer/désactiver l’effet shader
   let shaderEnabled = true;
   if (toggleBtn) {
+    const fxOn = "FX";
+    const fxOff = "<s>FX</s>";
     toggleBtn.addEventListener("click", () => {
       shaderEnabled = !shaderEnabled;
       if (shaderEnabled) {
         canvas.style.display = "block";
         video.style.display = "none";
-        toggleBtn.textContent = "Disable Shader";
+        toggleBtn.innerHTML = fxOn;
       } else {
         canvas.style.display = "none";
         video.style.display = "block";
-        toggleBtn.textContent = "Enable Shader";
+        toggleBtn.innerHTML = fxOff;
       }
     });
+    toggleBtn.innerHTML = fxOn;
   }
 });

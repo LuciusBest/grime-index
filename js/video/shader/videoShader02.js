@@ -123,13 +123,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   video.addEventListener("play", render);
 
   if (toggleBtn) {
+    const fxOn = "FX";
+    const fxOff = "<s>FX</s>";
     let shaderEnabled = true;
     toggleBtn.addEventListener("click", () => {
       shaderEnabled = !shaderEnabled;
       canvas.style.display = shaderEnabled ? "block" : "none";
       video.style.display = shaderEnabled ? "none" : "block";
-      toggleBtn.textContent = shaderEnabled ? "Disable Shader" : "Enable Shader";
+      toggleBtn.innerHTML = shaderEnabled ? fxOn : fxOff;
     });
+    toggleBtn.innerHTML = fxOn;
   }
 
   // 🔧 CHARGEMENT DE L'ARCHIVE ACTIVE SANS MODULE
