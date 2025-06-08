@@ -101,21 +101,24 @@ loadActiveArchiveData()
       friseLyrics.textContent = segment ? segment.text : "";
     };
 
-    video.addEventListener("timeupdate", () => {
-      updateLyrics(video.currentTime);
-      updateTimelineCursor(video.currentTime);
-
+    function updateActiveBlocks(currentTime) {
       document.querySelectorAll(".speaker-block").forEach(block => {
         const start = parseFloat(block.dataset.start);
         const end = parseFloat(block.dataset.end);
-        block.classList.toggle("active", video.currentTime >= start && video.currentTime <= end);
+        block.classList.toggle("active", currentTime >= start && currentTime <= end);
       });
 
       document.querySelectorAll(".instrumental-block").forEach(block => {
         const start = parseFloat(block.dataset.start);
         const end = parseFloat(block.dataset.end);
-        block.classList.toggle("active", video.currentTime >= start && video.currentTime <= end);
+        block.classList.toggle("active", currentTime >= start && currentTime <= end);
       });
+    }
+
+    video.addEventListener("timeupdate", () => {
+      updateLyrics(video.currentTime);
+      updateTimelineCursor(video.currentTime);
+      updateActiveBlocks(video.currentTime);
     });
 
     let isDragging = false;
@@ -139,6 +142,7 @@ loadActiveArchiveData()
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
       updateTimelineCursor(video.currentTime);
+      updateActiveBlocks(video.currentTime);
     }
 
     timeline.addEventListener("mouseleave", () => {
