@@ -129,6 +129,10 @@
     color: red;
 }
 
+.lyric-word.bump:hover {
+    color: red;
+}
+
 /* Speaker */
 .speaker-name {
     position: absolute;
