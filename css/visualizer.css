@@ -107,6 +107,7 @@
     font-variation-settings: "wdth" 20, "wght" 500;
     font-size: 6rem;
     padding-left: 3rem;
+    pointer-events: auto;
 }
 
 .inner_text {
@@ -127,6 +128,15 @@
 
 .lyric-word:hover {
     color: red;
+}
+
+.lyric-word.bump:hover {
+    color: red !important;
+}
+
+/* Hovering any word should highlight the full lyrics line */
+#lyrics.module:hover .lyric-word {
+    color: red !important;
 }
 
 /* Speaker */
