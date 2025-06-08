@@ -32,6 +32,10 @@
     background-color: transparent;
 }
 
+#TimelineRight {
+    width: 60px;
+}
+
 #TimelineLeft button,
 #TimelineRight button {
     border: none;
@@ -40,6 +44,10 @@
     font-size: 14px;
     padding: 4px;
     cursor: pointer;
+}
+
+#TimelineRight input[type="range"] {
+    width: 30px;
 }
 
 /* Zone centrale */

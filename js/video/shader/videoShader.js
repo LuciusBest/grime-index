@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🎥 Récupération des éléments DOM nécessaires
   const video = document.getElementById("background-video");
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
 
   // 🔧 Contexte WebGL
   const gl = canvas.getContext("webgl");

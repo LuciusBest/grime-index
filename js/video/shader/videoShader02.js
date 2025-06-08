@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const video = document.getElementById("background-video");
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
 
   const gl = canvas.getContext("webgl");
   if (!gl) {

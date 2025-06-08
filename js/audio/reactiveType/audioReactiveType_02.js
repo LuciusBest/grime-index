@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
   if (canvas && video) {
     canvas.style.display = "block";
     video.style.display = "none";
