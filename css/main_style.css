@@ -56,7 +56,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* ✅ respecte le ratio */
     z-index: -1;
+}
+
+#background-video {
+    object-fit: cover;
 }

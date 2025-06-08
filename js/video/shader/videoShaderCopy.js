@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const video = document.getElementById("background-video");
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
   const gl = canvas.getContext("webgl");
   
   if (!gl) {
@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    video.style.width = `${window.innerWidth}px`;
+    video.style.height = `${window.innerHeight}px`;
+    video.style.objectFit = "cover";
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   }
 
@@ -126,18 +129,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   let shaderEnabled = true;
 
   if (toggleBtn) {
+    const fxOn = "FX";
+    const fxOff = "<s>FX</s>";
     toggleBtn.addEventListener("click", () => {
       shaderEnabled = !shaderEnabled;
 
       if (shaderEnabled) {
         canvas.style.display = "block";
         video.style.display = "none";
-        toggleBtn.textContent = "Disable Shader";
+        toggleBtn.innerHTML = fxOn;
       } else {
         canvas.style.display = "none";
         video.style.display = "block";
-        toggleBtn.textContent = "Enable Shader";
+        toggleBtn.innerHTML = fxOff;
       }
     });
+    toggleBtn.innerHTML = fxOn;
   }
 });

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const video = document.getElementById("background-video");
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
 
   const gl = canvas.getContext("webgl");
   if (!gl) {
@@ -15,12 +15,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     const screenAspect = window.innerWidth / window.innerHeight;
 
     if (videoAspect > screenAspect) {
-      canvas.style.height = "100vh";
-      canvas.style.width = `${videoAspect * window.innerHeight}px`;
+      const height = window.innerHeight;
+      const width = videoAspect * height;
+      canvas.style.height = `${height}px`;
+      canvas.style.width = `${width}px`;
+      video.style.height = `${height}px`;
+      video.style.width = `${width}px`;
     } else {
-      canvas.style.width = "100vw";
-      canvas.style.height = `${window.innerWidth / videoAspect}px`;
+      const width = window.innerWidth;
+      const height = width / videoAspect;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      video.style.width = `${width}px`;
+      video.style.height = `${height}px`;
     }
+
+    video.style.objectFit = "cover";
 
     canvas.width = canvas.offsetWidth * scale;
     canvas.height = canvas.offsetHeight * scale;
@@ -123,13 +133,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   video.addEventListener("play", render);
 
   if (toggleBtn) {
+    const fxOn = "FX";
+    const fxOff = "<s>FX</s>";
     let shaderEnabled = true;
     toggleBtn.addEventListener("click", () => {
       shaderEnabled = !shaderEnabled;
       canvas.style.display = shaderEnabled ? "block" : "none";
       video.style.display = shaderEnabled ? "none" : "block";
-      toggleBtn.textContent = shaderEnabled ? "Disable Shader" : "Enable Shader";
+      toggleBtn.innerHTML = shaderEnabled ? fxOn : fxOff;
     });
+    toggleBtn.innerHTML = fxOn;
   }
 
   // 🔧 CHARGEMENT DE L'ARCHIVE ACTIVE SANS MODULE

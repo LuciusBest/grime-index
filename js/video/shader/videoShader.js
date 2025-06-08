@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🎥 Récupération des éléments DOM nécessaires
   const video = document.getElementById("background-video");
   const canvas = document.getElementById("video-canvas");
-  const toggleBtn = document.getElementById("toggle-shader");
+  const toggleBtn = document.getElementById("shader-toggle-button");
 
   // 🔧 Contexte WebGL
   const gl = canvas.getContext("webgl");
@@ -21,12 +21,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // 📐 Adapter le canvas pour couvrir l'écran (cover, comme en CSS)
     if (videoAspect > screenAspect) {
-      canvas.style.height = "100vh";
-      canvas.style.width = `${videoAspect * window.innerHeight}px`;
+      const height = window.innerHeight;
+      const width = videoAspect * height;
+      canvas.style.height = `${height}px`;
+      canvas.style.width = `${width}px`;
+      video.style.height = `${height}px`;
+      video.style.width = `${width}px`;
     } else {
-      canvas.style.width = "100vw";
-      canvas.style.height = `${window.innerWidth / videoAspect}px`;
+      const width = window.innerWidth;
+      const height = width / videoAspect;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      video.style.width = `${width}px`;
+      video.style.height = `${height}px`;
     }
+
+    video.style.objectFit = "cover";
 
     // 🎯 Définir la vraie résolution du canvas en tenant compte de l’upscale
     canvas.width = canvas.offsetWidth * scale;
@@ -162,17 +172,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 🎚️ Bouton pour activer/désactiver l’effet shader
   let shaderEnabled = true;
   if (toggleBtn) {
+    const fxOn = "FX";
+    const fxOff = "<s>FX</s>";
     toggleBtn.addEventListener("click", () => {
       shaderEnabled = !shaderEnabled;
       if (shaderEnabled) {
         canvas.style.display = "block";
         video.style.display = "none";
-        toggleBtn.textContent = "Disable Shader";
+        toggleBtn.innerHTML = fxOn;
       } else {
         canvas.style.display = "none";
         video.style.display = "block";
-        toggleBtn.textContent = "Enable Shader";
+        toggleBtn.innerHTML = fxOff;
       }
     });
+    toggleBtn.innerHTML = fxOn;
   }
 });

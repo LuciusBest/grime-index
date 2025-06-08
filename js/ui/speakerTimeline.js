@@ -17,46 +17,50 @@ loadActiveArchiveData()
     });
     if (lastSpeaker) speakerSegments.push(lastSpeaker);
 
-    const totalTime = Math.max(...segments.map(s => s.end));
+    const totalTime = data.duration || Math.max(...segments.map(s => s.end));
     const speakerContainer = document.getElementById("FriseTemporelle");
     speakerContainer.innerHTML = "";
-    let usedWidth = 0;
 
-    speakerSegments.forEach((seg, i) => {
-      let width = ((seg.end - seg.start) / totalTime) * 100;
-      if (i === speakerSegments.length - 1) width = 100 - usedWidth;
-      else usedWidth += width;
+    speakerSegments.forEach(seg => {
+      const widthPercent = ((seg.end - seg.start) / totalTime) * 100;
+      const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "speaker-block";
-      div.style.width = `${width}%`;
+      div.style.width = `calc(${widthPercent}% - 2px)`;
+      div.style.left = `${left}%`;
       div.textContent = seg.speaker;
       div.title = `${seg.speaker} (${formatTime(seg.start)} - ${formatTime(seg.end)})`;
       div.dataset.speaker = seg.speaker;
       div.dataset.start = seg.start;
       div.dataset.end = seg.end;
+      div.addEventListener("click", () => {
+        seekTo(seg.start);
+      });
       speakerContainer.appendChild(div);
     });
 
     const instrSegments = data.instrumentals || [];
     const instrContainer = document.getElementById("FriseInstrumentale");
     instrContainer.innerHTML = "";
-    let instrUsedWidth = 0;
 
-    instrSegments.forEach((seg, i) => {
-      let width = ((seg.end - seg.start) / totalTime) * 100;
-      if (i === instrSegments.length - 1) width = 100 - instrUsedWidth;
-      else instrUsedWidth += width;
+    instrSegments.forEach(seg => {
+      const widthPercent = ((seg.end - seg.start) / totalTime) * 100;
+      const left = (seg.start / totalTime) * 100;
 
       const div = document.createElement("div");
       div.className = "instrumental-block";
-      div.style.width = `${width}%`;
+      div.style.width = `calc(${widthPercent}% - 2px)`;
+      div.style.left = `${left}%`;
       const key = `${seg.title} – ${seg.artist}`;
       div.textContent = key;
       div.title = `${key} (${formatTime(seg.start)} - ${formatTime(seg.end)})`;
       div.dataset.instrumental = key;
       div.dataset.start = seg.start;
       div.dataset.end = seg.end;
+      div.addEventListener("click", () => {
+        seekTo(seg.start);
+      });
       instrContainer.appendChild(div);
     });
 
@@ -79,12 +83,28 @@ loadActiveArchiveData()
       return `${Math.floor(sec)}`;
     }
 
-    function updateTimelineCursor(currentTime) {
+    function seekTo(time) {
+      video.currentTime = time;
+      updateTimelineCursor(time, true);
+      updateLyrics(time);
+      updateActiveBlocks(time);
+    }
+
+    function updateTimelineCursor(currentTime, smooth = false) {
       if (!video.duration || !timeline) return;
       const percent = Math.min(currentTime / video.duration, 1);
       const timelineWidth = timeline.getBoundingClientRect().width;
       const halfCursorWidth = cursorWrapper.offsetWidth / 2;
       const x = clamp(percent * timelineWidth, halfCursorWidth, timelineWidth - halfCursorWidth);
+
+      if (smooth) {
+        progress.classList.add("smooth");
+        cursorWrapper.classList.add("smooth");
+        setTimeout(() => {
+          progress.classList.remove("smooth");
+          cursorWrapper.classList.remove("smooth");
+        }, 300);
+      }
 
       progress.style.width = `${percent * 100}%`;
       cursorWrapper.style.left = `${x}px`;
@@ -103,28 +123,31 @@ loadActiveArchiveData()
       friseLyrics.textContent = segment ? segment.text : "";
     };
 
-    video.addEventListener("timeupdate", () => {
-      updateLyrics(video.currentTime);
-      updateTimelineCursor(video.currentTime);
-
+    function updateActiveBlocks(currentTime) {
       document.querySelectorAll(".speaker-block").forEach(block => {
         const start = parseFloat(block.dataset.start);
         const end = parseFloat(block.dataset.end);
-        block.classList.toggle("active", video.currentTime >= start && video.currentTime <= end);
+        block.classList.toggle("active", currentTime >= start && currentTime <= end);
       });
 
       document.querySelectorAll(".instrumental-block").forEach(block => {
         const start = parseFloat(block.dataset.start);
         const end = parseFloat(block.dataset.end);
-        block.classList.toggle("active", video.currentTime >= start && video.currentTime <= end);
+        block.classList.toggle("active", currentTime >= start && currentTime <= end);
       });
+    }
+
+    video.addEventListener("timeupdate", () => {
+      updateLyrics(video.currentTime);
+      updateTimelineCursor(video.currentTime);
+      updateActiveBlocks(video.currentTime);
     });
 
     let isDragging = false;
 
     timeline.addEventListener("mousedown", (e) => {
       isDragging = true;
-      seekFromEvent(e);
+      seekFromEvent(e, true);
     });
 
     document.addEventListener("mouseup", () => {
@@ -133,14 +156,15 @@ loadActiveArchiveData()
 
     document.addEventListener("mousemove", (e) => {
       if (!isDragging) return;
-      seekFromEvent(e);
+      seekFromEvent(e, false);
     });
 
-    function seekFromEvent(e) {
+    function seekFromEvent(e, smooth) {
       const rect = timeline.getBoundingClientRect();
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
-      updateTimelineCursor(video.currentTime);
+      updateTimelineCursor(video.currentTime, smooth);
+      updateActiveBlocks(video.currentTime);
     }
 
     timeline.addEventListener("mouseleave", () => {

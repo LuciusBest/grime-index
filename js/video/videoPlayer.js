@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("background-video");
   const playPauseBtn = document.getElementById("play-pause");
+  const playIcon =
+    '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="3,2 13,8 3,14" fill="black"/></svg>';
+  const pauseIcon =
+    '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="3" height="12" fill="black"/><rect x="10" y="2" width="3" height="12" fill="black"/></svg>';
+  playPauseBtn.innerHTML = playIcon;
   const progressBar = document.getElementById("TimelineProgress");
   const timelineBar = document.getElementById("CustomTimeline");
   const timeLabel = document.getElementById("TimelineCursorTime");
+  const volumeSlider = document.getElementById("volume-slider");
 
   let isDragging = false;
   const defaultTransition = "width 0.25s ease";
@@ -21,15 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       if (video.paused) {
         await video.play();
-        playPauseBtn.textContent = "⏸️";
+        playPauseBtn.innerHTML = pauseIcon;
       } else {
         video.pause();
-        playPauseBtn.textContent = "▶️";
+        playPauseBtn.innerHTML = playIcon;
       }
     } catch (e) {
       console.error("Erreur lors de la lecture :", e);
     }
   });
+
+  if (volumeSlider) {
+    volumeSlider.addEventListener("input", function () {
+      video.volume = parseFloat(this.value);
+    });
+  }
 
   // ⏱️ Mise à jour temps depuis position x
   const updateVideoTimeFromX = (x) => {
