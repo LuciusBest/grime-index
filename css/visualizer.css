@@ -107,6 +107,7 @@
     font-variation-settings: "wdth" 20, "wght" 500;
     font-size: 6rem;
     padding-left: 3rem;
+    pointer-events: auto;
 }
 
 .inner_text {
