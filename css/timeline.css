@@ -76,6 +76,7 @@
 .speaker-block,
 .instrumental-block {
     position: absolute;
+    height: 18px;
     top: 0;
     bottom: 0;
     display: flex;
