@@ -34,6 +34,9 @@ loadActiveArchiveData()
       div.dataset.speaker = seg.speaker;
       div.dataset.start = seg.start;
       div.dataset.end = seg.end;
+      div.addEventListener("click", () => {
+        seekTo(seg.start);
+      });
       speakerContainer.appendChild(div);
     });
 
@@ -55,6 +58,9 @@ loadActiveArchiveData()
       div.dataset.instrumental = key;
       div.dataset.start = seg.start;
       div.dataset.end = seg.end;
+      div.addEventListener("click", () => {
+        seekTo(seg.start);
+      });
       instrContainer.appendChild(div);
     });
 
@@ -77,12 +83,28 @@ loadActiveArchiveData()
       return `${Math.floor(sec)}`;
     }
 
-    function updateTimelineCursor(currentTime) {
+    function seekTo(time) {
+      video.currentTime = time;
+      updateTimelineCursor(time, true);
+      updateLyrics(time);
+      updateActiveBlocks(time);
+    }
+
+    function updateTimelineCursor(currentTime, smooth = false) {
       if (!video.duration || !timeline) return;
       const percent = Math.min(currentTime / video.duration, 1);
       const timelineWidth = timeline.getBoundingClientRect().width;
       const halfCursorWidth = cursorWrapper.offsetWidth / 2;
       const x = clamp(percent * timelineWidth, halfCursorWidth, timelineWidth - halfCursorWidth);
+
+      if (smooth) {
+        progress.classList.add("smooth");
+        cursorWrapper.classList.add("smooth");
+        setTimeout(() => {
+          progress.classList.remove("smooth");
+          cursorWrapper.classList.remove("smooth");
+        }, 300);
+      }
 
       progress.style.width = `${percent * 100}%`;
       cursorWrapper.style.left = `${x}px`;
@@ -125,7 +147,7 @@ loadActiveArchiveData()
 
     timeline.addEventListener("mousedown", (e) => {
       isDragging = true;
-      seekFromEvent(e);
+      seekFromEvent(e, true);
     });
 
     document.addEventListener("mouseup", () => {
@@ -134,14 +156,14 @@ loadActiveArchiveData()
 
     document.addEventListener("mousemove", (e) => {
       if (!isDragging) return;
-      seekFromEvent(e);
+      seekFromEvent(e, false);
     });
 
-    function seekFromEvent(e) {
+    function seekFromEvent(e, smooth) {
       const rect = timeline.getBoundingClientRect();
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
-      updateTimelineCursor(video.currentTime);
+      updateTimelineCursor(video.currentTime, smooth);
       updateActiveBlocks(video.currentTime);
     }
 
