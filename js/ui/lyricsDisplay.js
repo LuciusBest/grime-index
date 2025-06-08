@@ -30,7 +30,8 @@ loadActiveArchiveData()
       }
       lastTime = currentTime;
 
-      // 🔇 Détection de silence
+      // 🔇 Détection de silence (désactivée)
+      /*
       const previousSegment = [...archiveData.segments]
         .filter(seg => seg.end <= currentTime)
         .sort((a, b) => b.end - a.end)[0];
@@ -54,6 +55,7 @@ loadActiveArchiveData()
       } else {
         silenceActive = false;
       }
+      */
 
       // 🎙 Segment actif
       const newSegment = archiveData.segments.find(
