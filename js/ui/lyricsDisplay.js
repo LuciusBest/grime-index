@@ -2,7 +2,9 @@ import { loadActiveArchiveData } from "../data/dataLinker.js";
 
 const video = document.getElementById("background-video");
 let archiveData = {};
+let segments = [];
 let currentSegmentId = null;
+let currentSegmentIndex = 0;
 const TOLERANCE = 0.03; // secondes
 const SILENCE_THRESHOLD = 2.0; // secondes
 let activeWords = new Set();
@@ -12,9 +14,27 @@ let currentSegment = null;
 let silenceActive = false;
 let lastTime = 0;
 
+function findSegmentIndex(time) {
+  let low = 0;
+  let high = segments.length - 1;
+  while (low <= high) {
+    const mid = Math.floor((low + high) / 2);
+    const seg = segments[mid];
+    if (time < seg.start) {
+      high = mid - 1;
+    } else if (time > seg.end) {
+      low = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+  return Math.max(0, Math.min(low, segments.length - 1));
+}
+
 loadActiveArchiveData()
   .then(json => {
     archiveData = json;
+    segments = archiveData.segments || [];
 
     const lyricsDiv = document.querySelector("#lyrics .inner_text");
     const speakerDiv = document.querySelector("#speaker .inner_text");
@@ -24,6 +44,8 @@ loadActiveArchiveData()
 
     const startLoop = () => {
       if (rafId) cancelAnimationFrame(rafId);
+      currentSegmentIndex = findSegmentIndex(video.currentTime);
+      currentSegment = segments[currentSegmentIndex] || null;
       update();
       rafId = requestAnimationFrame(update);
     };
@@ -40,6 +62,8 @@ loadActiveArchiveData()
       activeWords = new Set();
       currentSegmentId = null;
       lastTime = video.currentTime;
+      currentSegmentIndex = findSegmentIndex(video.currentTime);
+      currentSegment = segments[currentSegmentIndex] || null;
       startLoop();
     });
 
@@ -80,14 +104,16 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      const newSegment = archiveData.segments.find(
-        (seg) => currentTime >= seg.start && currentTime <= seg.end
-      );
-      if (!newSegment) {
+      let seg = segments[currentSegmentIndex];
+      if (!seg || currentTime < seg.start || currentTime > seg.end) {
+        currentSegmentIndex = findSegmentIndex(currentTime);
+        seg = segments[currentSegmentIndex];
+      }
+      if (!seg) {
         rafId = requestAnimationFrame(update);
         return;
       }
-      currentSegment = newSegment;
+      currentSegment = seg;
 
       // 🎤 Speaker
       speakerDiv.textContent = currentSegment.speaker || "";
