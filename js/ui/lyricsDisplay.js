@@ -178,6 +178,11 @@ loadActiveArchiveData()
           span.textContent = word.word;
           span.classList.add("lyric-word");
           span.dataset.wordIndex = index;
+          const wordId = `${currentSegment.start}-${index}`;
+          if (currentTime >= word.start - TOLERANCE) {
+            span.classList.add("bump");
+            activeWords.add(wordId);
+          }
           lyricsDiv.appendChild(span);
           lyricsDiv.appendChild(document.createTextNode(" "));
         });
