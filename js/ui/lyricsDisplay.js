@@ -6,16 +6,6 @@ let currentSegmentId = null;
 const TOLERANCE = 0.03; // secondes
 const SILENCE_THRESHOLD = 2.0; // secondes
 let activeWords = new Set();
-let isSeeking = false;
-
-video.addEventListener("seeking", () => {
-  isSeeking = true;
-  activeWords = new Set();
-});
-
-video.addEventListener("seeked", () => {
-  isSeeking = false;
-});
 
 let currentSegment = null;
 let silenceActive = false;
@@ -31,14 +21,17 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    function update() {
-      if (isSeeking || video.seeking) {
-        requestAnimationFrame(update);
-        return;
-      }
+    const findSegmentIndex = (time) =>
+      archiveData.segments.findIndex(
+        (seg) => time >= seg.start && time <= seg.end
+      );
 
-      const currentTime = video.currentTime;
+    const findSegment = (time) => {
+      const idx = findSegmentIndex(time);
+      return idx >= 0 ? archiveData.segments[idx] : null;
+    };
 
+    function render(currentTime) {
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
         activeWords = new Set();
@@ -73,12 +66,30 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      const newSegment = archiveData.segments.find(
-        (seg) => currentTime >= seg.start && currentTime <= seg.end
+      const idx = findSegmentIndex(currentTime);
+      const newSegment = idx >= 0 ? archiveData.segments[idx] : null;
+
+      const inRange =
+        newSegment && currentTime >= newSegment.start && currentTime <= newSegment.end;
+      console.log(
+        `[DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
+          (newSegment ? `seg ${newSegment.start}-${newSegment.end}` : "no seg") +
+          ` match=${inRange}`
       );
+
       if (!newSegment) {
-        requestAnimationFrame(update);
+        currentSegment = null;
+        currentSegmentId = null;
+        speakerDiv.textContent = "";
+        instrumentalDiv.textContent = "";
+        lyricsDiv.innerHTML = "";
         return;
+      }
+
+      if (!inRange) {
+        console.warn(
+          `[WARN] time ${currentTime.toFixed(2)} outside segment ${newSegment.start}-${newSegment.end}`
+        );
       }
       currentSegment = newSegment;
 
@@ -117,15 +128,56 @@ loadActiveArchiveData()
           el.classList.add("bump");
         }
       });
+    }
 
-      requestAnimationFrame(update);
+    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
+    let rafId = null;
+
+    function rafUpdate() {
+      render(video.currentTime);
+      rafId = requestAnimationFrame(rafUpdate);
+    }
+
+    function frameUpdate(_now, metadata) {
+      const t = metadata.mediaTime;
+      console.log(
+        `[FRAME] currentTime=${video.currentTime.toFixed(2)} mediaTime=${t.toFixed(
+          2
+        )}`
+      );
+      render(t);
+      video.requestVideoFrameCallback(frameUpdate);
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
     video.addEventListener("play", () => {
-      requestAnimationFrame(update);
+      if (useFrameCallback) {
+        video.requestVideoFrameCallback(frameUpdate);
+      } else {
+        rafId = requestAnimationFrame(rafUpdate);
+      }
+    });
+
+    video.addEventListener("seeked", () => {
+      const time = video.currentTime;
+      const seg = findSegment(time);
+      console.log(
+        `[LYRICS] seeked to ${time.toFixed(2)} ` +
+          (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
+      );
+      activeWords = new Set();
+      currentSegmentId = null;
+      render(time);
+    });
+
+    video.addEventListener("pause", () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
     });
   })
   .catch((error) => {
     console.error("❌ Erreur lors du chargement des données :", error);
   });
+
