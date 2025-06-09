@@ -117,8 +117,13 @@ loadActiveArchiveData()
 
     const updateLyrics = (currentTime) => {
       if (!friseLyrics) return;
-      const segment = segments.find(
-        seg => currentTime >= seg.start && currentTime <= seg.end && seg.text
+      const idx = segments.findIndex(
+        (seg) => currentTime >= seg.start && currentTime <= seg.end && seg.text
+      );
+      const segment = idx >= 0 ? segments[idx] : null;
+      console.log(
+        `[TIMELINE DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
+          (segment ? `seg ${segment.start}-${segment.end}` : "no seg")
       );
       friseLyrics.textContent = segment ? segment.text : "";
     };
