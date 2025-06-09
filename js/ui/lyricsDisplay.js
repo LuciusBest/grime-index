@@ -124,6 +124,7 @@ let rafId = null;
       lastTime = video.currentTime;
       stopLoop();
       update();
+      if (!video.paused) startLoop();
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
