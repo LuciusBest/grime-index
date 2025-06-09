@@ -21,9 +21,13 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    function update() {
-      const currentTime = video.currentTime;
+    const findSegment = (time) =>
+      archiveData.segments.find(
+        (seg) => time >= seg.start && time <= seg.end
+      );
 
+    function render(currentTime) {
+      
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
         activeWords = new Set();
@@ -58,11 +62,8 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      const newSegment = archiveData.segments.find(
-        (seg) => currentTime >= seg.start && currentTime <= seg.end
-      );
+      const newSegment = findSegment(currentTime);
       if (!newSegment) {
-        requestAnimationFrame(update);
         return;
       }
       currentSegment = newSegment;
@@ -102,13 +103,28 @@ loadActiveArchiveData()
           el.classList.add("bump");
         }
       });
+    }
 
+    function update() {
+      render(video.currentTime);
       requestAnimationFrame(update);
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
     video.addEventListener("play", () => {
       requestAnimationFrame(update);
+    });
+
+    video.addEventListener("seeked", () => {
+      const time = video.currentTime;
+      const seg = findSegment(time);
+      console.log(
+        `[LYRICS] seeked to ${time.toFixed(2)} ` +
+          (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
+      );
+      activeWords = new Set();
+      currentSegmentId = null;
+      render(time);
     });
   })
   .catch((error) => {

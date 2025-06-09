@@ -143,6 +143,14 @@ loadActiveArchiveData()
       updateActiveBlocks(video.currentTime);
     });
 
+    video.addEventListener("seeked", () => {
+      const t = video.currentTime;
+      console.log(`[TIMELINE] seeked to ${t.toFixed(2)}`);
+      updateLyrics(t);
+      updateTimelineCursor(t);
+      updateActiveBlocks(t);
+    });
+
     let isDragging = false;
 
     timeline.addEventListener("mousedown", (e) => {
