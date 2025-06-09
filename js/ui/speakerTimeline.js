@@ -144,11 +144,14 @@ loadActiveArchiveData()
     });
 
     // Ensure UI syncs exactly after manual seeking
-    video.addEventListener("seeked", () => {
+    const syncUI = () => {
       updateLyrics(video.currentTime);
       updateTimelineCursor(video.currentTime);
       updateActiveBlocks(video.currentTime);
-    });
+    };
+
+    video.addEventListener("seeked", syncUI);
+    video.addEventListener("seeking", syncUI);
 
     let isDragging = false;
 

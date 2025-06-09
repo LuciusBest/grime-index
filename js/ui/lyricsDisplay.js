@@ -24,8 +24,16 @@ loadActiveArchiveData()
 
     const startLoop = () => {
       if (rafId) cancelAnimationFrame(rafId);
+      update();
       rafId = requestAnimationFrame(update);
     };
+
+    video.addEventListener("seeking", () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    });
 
     video.addEventListener("seeked", () => {
       // Clear previous state when seeking to avoid desyncs
