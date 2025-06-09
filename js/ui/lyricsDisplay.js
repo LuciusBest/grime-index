@@ -131,8 +131,12 @@ loadActiveArchiveData()
       });
     }
 
+    let waitingForPlay = false;
+
     function update() {
-      render(video.currentTime);
+      if (!waitingForPlay) {
+        render(video.currentTime);
+      }
       requestAnimationFrame(update);
     }
 
@@ -141,11 +145,16 @@ loadActiveArchiveData()
       requestAnimationFrame(update);
     });
 
-    video.addEventListener("seeked", () => {
+    video.addEventListener("seeking", () => {
+      waitingForPlay = true;
+    });
+
+    video.addEventListener("playing", () => {
+      waitingForPlay = false;
       const time = video.currentTime;
       const seg = findSegment(time);
       console.log(
-        `[LYRICS] seeked to ${time.toFixed(2)} ` +
+        `[LYRICS] playing at ${time.toFixed(2)} ` +
           (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
       );
       activeWords = new Set();
