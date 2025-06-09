@@ -21,6 +21,15 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
+    video.addEventListener("seeked", () => {
+      // Clear previous state when seeking to avoid desyncs
+      activeWords = new Set();
+      currentSegmentId = null;
+      lastTime = video.currentTime;
+      // Force immediate UI update
+      requestAnimationFrame(update);
+    });
+
     function update() {
       const currentTime = video.currentTime;
 

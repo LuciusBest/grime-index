@@ -143,6 +143,13 @@ loadActiveArchiveData()
       updateActiveBlocks(video.currentTime);
     });
 
+    // Ensure UI syncs exactly after manual seeking
+    video.addEventListener("seeked", () => {
+      updateLyrics(video.currentTime);
+      updateTimelineCursor(video.currentTime);
+      updateActiveBlocks(video.currentTime);
+    });
+
     let isDragging = false;
 
     timeline.addEventListener("mousedown", (e) => {
