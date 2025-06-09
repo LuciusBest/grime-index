@@ -117,8 +117,13 @@ loadActiveArchiveData()
 
     const updateLyrics = (currentTime) => {
       if (!friseLyrics) return;
-      const segment = segments.find(
-        seg => currentTime >= seg.start && currentTime <= seg.end && seg.text
+      const idx = segments.findIndex(
+        (seg) => currentTime >= seg.start && currentTime <= seg.end && seg.text
+      );
+      const segment = idx >= 0 ? segments[idx] : null;
+      console.log(
+        `[TIMELINE DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
+          (segment ? `seg ${segment.start}-${segment.end}` : "no seg")
       );
       friseLyrics.textContent = segment ? segment.text : "";
     };
@@ -141,6 +146,54 @@ loadActiveArchiveData()
       updateLyrics(video.currentTime);
       updateTimelineCursor(video.currentTime);
       updateActiveBlocks(video.currentTime);
+    });
+
+    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
+    let rafId = null;
+
+    const updateAll = (t) => {
+      updateLyrics(t);
+      updateTimelineCursor(t);
+      updateActiveBlocks(t);
+    };
+
+    function rafUpdate() {
+      updateAll(video.currentTime);
+      rafId = requestAnimationFrame(rafUpdate);
+    }
+
+    function frameUpdate(_now, metadata) {
+      const t = metadata.mediaTime;
+      console.log(
+        `[TIMELINE FRAME] currentTime=${video.currentTime.toFixed(2)} mediaTime=${t.toFixed(
+          2
+        )}`
+      );
+      updateAll(t);
+      video.requestVideoFrameCallback(frameUpdate);
+    }
+
+    video.addEventListener("play", () => {
+      if (useFrameCallback) {
+        video.requestVideoFrameCallback(frameUpdate);
+      } else {
+        rafId = requestAnimationFrame(rafUpdate);
+      }
+    });
+
+    video.addEventListener("pause", () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    });
+
+    video.addEventListener("seeked", () => {
+      const t = video.currentTime;
+      console.log(`[TIMELINE] seeked to ${t.toFixed(2)}`);
+      updateLyrics(t);
+      updateTimelineCursor(t);
+      updateActiveBlocks(t);
     });
 
     let isDragging = false;

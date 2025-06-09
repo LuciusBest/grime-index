@@ -21,9 +21,18 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    function update() {
-      const currentTime = video.currentTime;
+    const findSegmentIndex = (time) =>
+      archiveData.segments.findIndex(
+        (seg) => time >= seg.start && time <= seg.end
+      );
 
+    const findSegment = (time) => {
+      const idx = findSegmentIndex(time);
+      return idx >= 0 ? archiveData.segments[idx] : null;
+    };
+
+    function render(currentTime) {
+      
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
         activeWords = new Set();
@@ -58,12 +67,30 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      const newSegment = archiveData.segments.find(
-        (seg) => currentTime >= seg.start && currentTime <= seg.end
+      const idx = findSegmentIndex(currentTime);
+      const newSegment = idx >= 0 ? archiveData.segments[idx] : null;
+
+      const inRange =
+        newSegment && currentTime >= newSegment.start && currentTime <= newSegment.end;
+      console.log(
+        `[DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
+          (newSegment ? `seg ${newSegment.start}-${newSegment.end}` : "no seg") +
+          ` match=${inRange}`
       );
+
       if (!newSegment) {
-        requestAnimationFrame(update);
+        currentSegment = null;
+        currentSegmentId = null;
+        speakerDiv.textContent = "";
+        instrumentalDiv.textContent = "";
+        lyricsDiv.innerHTML = "";
         return;
+      }
+
+      if (!inRange) {
+        console.warn(
+          `[WARN] time ${currentTime.toFixed(2)} outside segment ${newSegment.start}-${newSegment.end}`
+        );
       }
       currentSegment = newSegment;
 
@@ -102,13 +129,53 @@ loadActiveArchiveData()
           el.classList.add("bump");
         }
       });
+    }
 
-      requestAnimationFrame(update);
+    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
+    let rafId = null;
+
+    function rafUpdate() {
+      render(video.currentTime);
+      rafId = requestAnimationFrame(rafUpdate);
+    }
+
+    function frameUpdate(_now, metadata) {
+      const t = metadata.mediaTime;
+      console.log(
+        `[FRAME] currentTime=${video.currentTime.toFixed(2)} mediaTime=${t.toFixed(
+          2
+        )}`
+      );
+      render(t);
+      video.requestVideoFrameCallback(frameUpdate);
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
     video.addEventListener("play", () => {
-      requestAnimationFrame(update);
+      if (useFrameCallback) {
+        video.requestVideoFrameCallback(frameUpdate);
+      } else {
+        rafId = requestAnimationFrame(rafUpdate);
+      }
+    });
+
+    video.addEventListener("seeked", () => {
+      const time = video.currentTime;
+      const seg = findSegment(time);
+      console.log(
+        `[LYRICS] seeked to ${time.toFixed(2)} ` +
+          (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
+      );
+      activeWords = new Set();
+      currentSegmentId = null;
+      render(time);
+    });
+
+    video.addEventListener("pause", () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
     });
   })
   .catch((error) => {
