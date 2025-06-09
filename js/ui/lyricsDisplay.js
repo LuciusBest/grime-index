@@ -10,6 +10,7 @@ let activeWords = new Set();
 let currentSegment = null;
 let silenceActive = false;
 let lastTime = 0;
+let waitingForSync = false;
 
 loadActiveArchiveData()
   .then(json => {
@@ -134,7 +135,9 @@ loadActiveArchiveData()
     let rafId = null;
 
     function rafUpdate() {
-      render(video.currentTime);
+      if (!waitingForSync) {
+        render(video.currentTime);
+      }
       rafId = requestAnimationFrame(rafUpdate);
     }
 
@@ -145,7 +148,14 @@ loadActiveArchiveData()
           2
         )}`
       );
-      render(t);
+      if (waitingForSync) {
+        if (Math.abs(t - video.currentTime) < 0.1) {
+          waitingForSync = false;
+          render(video.currentTime);
+        }
+      } else {
+        render(t);
+      }
       video.requestVideoFrameCallback(frameUpdate);
     }
 
@@ -158,7 +168,14 @@ loadActiveArchiveData()
       }
     });
 
+
     let syncTestTimeout = null;
+
+    video.addEventListener("seeking", () => {
+      waitingForSync = true;
+      activeWords = new Set();
+      currentSegmentId = null;
+    });
 
     video.addEventListener("seeked", () => {
       const time = video.currentTime;
@@ -178,10 +195,6 @@ loadActiveArchiveData()
           ? `[SYNC TEST] activeSegment = ${seg.start}-${seg.end} | text = "${seg.text}"`
           : `[SYNC TEST] activeSegment = null`
       );
-
-      activeWords = new Set();
-      currentSegmentId = null;
-      render(time);
 
       if (syncTestTimeout) {
         clearTimeout(syncTestTimeout);
@@ -207,6 +220,7 @@ loadActiveArchiveData()
         cancelAnimationFrame(rafId);
         rafId = null;
       }
+      waitingForSync = false;
     });
   })
   .catch((error) => {

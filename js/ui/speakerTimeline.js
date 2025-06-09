@@ -150,6 +150,7 @@ loadActiveArchiveData()
 
     const useFrameCallback = Boolean(video.requestVideoFrameCallback);
     let rafId = null;
+    let waitingForSync = false;
 
     const updateAll = (t) => {
       updateLyrics(t);
@@ -158,7 +159,9 @@ loadActiveArchiveData()
     };
 
     function rafUpdate() {
-      updateAll(video.currentTime);
+      if (!waitingForSync) {
+        updateAll(video.currentTime);
+      }
       rafId = requestAnimationFrame(rafUpdate);
     }
 
@@ -169,7 +172,14 @@ loadActiveArchiveData()
           2
         )}`
       );
-      updateAll(t);
+      if (waitingForSync) {
+        if (Math.abs(t - video.currentTime) < 0.1) {
+          waitingForSync = false;
+          updateAll(video.currentTime);
+        }
+      } else {
+        updateAll(t);
+      }
       video.requestVideoFrameCallback(frameUpdate);
     }
 
@@ -186,6 +196,11 @@ loadActiveArchiveData()
         cancelAnimationFrame(rafId);
         rafId = null;
       }
+      waitingForSync = false;
+    });
+
+    video.addEventListener("seeking", () => {
+      waitingForSync = true;
     });
 
     video.addEventListener("seeked", () => {
@@ -216,6 +231,7 @@ loadActiveArchiveData()
       const rect = timeline.getBoundingClientRect();
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
+      waitingForSync = true;
       updateTimelineCursor(video.currentTime, smooth);
       updateActiveBlocks(video.currentTime);
     }
