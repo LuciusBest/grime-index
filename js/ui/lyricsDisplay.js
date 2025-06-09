@@ -11,6 +11,7 @@ let currentSegment = null;
 let silenceActive = false;
 let lastTime = 0;
 let waitingForSync = false;
+let rafId = null;
 
 loadActiveArchiveData()
   .then(json => {
@@ -22,20 +23,12 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    function update() {
-      const currentTime = video.currentTime;
-
-      if (waitingForSync) {
-        requestAnimationFrame(update);
-        return;
-      }
-
+    function render(currentTime) {
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
         activeWords = new Set();
       }
       lastTime = currentTime;
-
       // 🔇 Détection de silence (désactivée)
       /*
       const previousSegment = [...archiveData.segments]
@@ -68,7 +61,6 @@ loadActiveArchiveData()
         (seg) => currentTime >= seg.start && currentTime <= seg.end
       );
       if (!newSegment) {
-        requestAnimationFrame(update);
         return;
       }
       currentSegment = newSegment;
@@ -109,7 +101,28 @@ loadActiveArchiveData()
         }
       });
 
-      requestAnimationFrame(update);
+    }
+
+    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
+
+    function rafUpdate() {
+      if (!waitingForSync) {
+        render(video.currentTime);
+      }
+      rafId = requestAnimationFrame(rafUpdate);
+    }
+
+    function frameUpdate(_now, metadata) {
+      const t = metadata.mediaTime;
+      if (waitingForSync) {
+        if (Math.abs(t - video.currentTime) < 0.1) {
+          waitingForSync = false;
+          render(video.currentTime);
+        }
+      } else {
+        render(t);
+      }
+      video.requestVideoFrameCallback(frameUpdate);
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
@@ -121,14 +134,34 @@ loadActiveArchiveData()
     });
 
     video.addEventListener("timeupdate", () => {
-      if (waitingForSync && !video.seeking) {
+      if (!useFrameCallback && waitingForSync && !video.seeking) {
         waitingForSync = false;
       }
     });
 
     video.addEventListener("play", () => {
-      requestAnimationFrame(update);
+      if (useFrameCallback) {
+        video.requestVideoFrameCallback(frameUpdate);
+      } else {
+        rafId = requestAnimationFrame(rafUpdate);
+      }
     });
+
+    video.addEventListener("pause", () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      waitingForSync = false;
+    });
+
+    if (!video.paused) {
+      if (useFrameCallback) {
+        video.requestVideoFrameCallback(frameUpdate);
+      } else {
+        rafId = requestAnimationFrame(rafUpdate);
+      }
+    }
   })
   .catch((error) => {
     console.error("❌ Erreur lors du chargement des données :", error);
