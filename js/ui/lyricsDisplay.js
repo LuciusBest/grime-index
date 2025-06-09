@@ -17,21 +17,35 @@ let currentSegment = null;
 let silenceActive = false;
 let lastTime = 0;
 
+// Returns the index of the segment that actually contains `time`.
+// If `time` falls into a gap, returns -1 rather than the next segment.
 function findSegmentIndex(time) {
   let low = 0;
   let high = segments.length - 1;
+  let candidate = -1;
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
     const seg = segments[mid];
     if (time < seg.start) {
       high = mid - 1;
-    } else if (time > seg.end) {
-      low = mid + 1;
     } else {
-      return mid;
+      candidate = mid;
+      if (time > seg.end) {
+        low = mid + 1;
+      } else {
+        // `time` is within this segment
+        return mid;
+      }
     }
   }
-  return Math.max(0, Math.min(low, segments.length - 1));
+  // If the closest candidate doesn't contain the time, no segment is active
+  if (candidate !== -1) {
+    const seg = segments[candidate];
+    if (time >= seg.start && time <= seg.end) {
+      return candidate;
+    }
+  }
+  return -1;
 }
 
 loadActiveArchiveData()
@@ -48,7 +62,8 @@ loadActiveArchiveData()
     const startLoop = () => {
       if (rafId) cancelAnimationFrame(rafId);
       currentSegmentIndex = findSegmentIndex(video.currentTime);
-      currentSegment = segments[currentSegmentIndex] || null;
+      currentSegment =
+        currentSegmentIndex !== -1 ? segments[currentSegmentIndex] : null;
       update();
       if (DEBUG) console.log("[SYNC] frame end");
       rafId = requestAnimationFrame(update);
@@ -69,7 +84,8 @@ loadActiveArchiveData()
       currentSegmentId = null;
       lastTime = video.currentTime;
       currentSegmentIndex = findSegmentIndex(video.currentTime);
-      currentSegment = segments[currentSegmentIndex] || null;
+      currentSegment =
+        currentSegmentIndex !== -1 ? segments[currentSegmentIndex] : null;
       if (DEBUG && currentSegment) {
         console.log(
           `[SYNC] startLoop segment ${currentSegment.start}-${currentSegment.end}`
@@ -121,10 +137,11 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      let seg = segments[currentSegmentIndex];
+      let seg =
+        currentSegmentIndex !== -1 ? segments[currentSegmentIndex] : null;
       if (!seg || currentTime < seg.start || currentTime > seg.end) {
         currentSegmentIndex = findSegmentIndex(currentTime);
-        seg = segments[currentSegmentIndex];
+        seg = currentSegmentIndex !== -1 ? segments[currentSegmentIndex] : null;
         if (DEBUG && seg) {
           console.log(
             `[SYNC] new segment ${seg.start}-${seg.end} at ${currentTime.toFixed(3)}`
@@ -133,6 +150,11 @@ loadActiveArchiveData()
       }
       if (!seg) {
         if (DEBUG) console.log("[SYNC] no segment", currentTime.toFixed(3));
+        lyricsDiv.innerHTML = "";
+        speakerDiv.textContent = "";
+        instrumentalDiv.textContent = "";
+        currentSegment = null;
+        currentSegmentId = null;
         if (DEBUG) console.log("[SYNC] continue loop");
         rafId = requestAnimationFrame(update);
         return;
@@ -164,7 +186,7 @@ loadActiveArchiveData()
       }
 
       // 📝 Injection mots si changement de segment
-      if (currentSegment.start !== currentSegmentId) {
+      if (currentSegment && currentSegment.start !== currentSegmentId) {
         currentSegmentId = currentSegment.start;
         lyricsDiv.innerHTML = "";
         if (DEBUG) {
