@@ -6,10 +6,22 @@ let currentSegmentId = null;
 const TOLERANCE = 0.03; // secondes
 const SILENCE_THRESHOLD = 2.0; // secondes
 let activeWords = new Set();
+let rafId = null;
 
-let currentSegment = null;
-let silenceActive = false;
-let lastTime = 0;
+  let currentSegment = null;
+  let silenceActive = false;
+  let lastTime = 0;
+
+  function startLoop() {
+    if (rafId === null) rafId = requestAnimationFrame(update);
+  }
+
+  function stopLoop() {
+    if (rafId !== null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  }
 
   loadActiveArchiveData()
   .then(json => {
@@ -50,7 +62,7 @@ let lastTime = 0;
           silenceActive = true;
           lyricsDiv.innerHTML = "<span class='lyric-word'>...</span>";
         }
-        requestAnimationFrame(update);
+        rafId = requestAnimationFrame(update);
         return;
       } else {
         silenceActive = false;
@@ -62,7 +74,7 @@ let lastTime = 0;
         (seg) => currentTime >= seg.start && currentTime <= seg.end
       );
       if (!newSegment) {
-        requestAnimationFrame(update);
+        rafId = requestAnimationFrame(update);
         return;
       }
       currentSegment = newSegment;
@@ -103,23 +115,25 @@ let lastTime = 0;
         }
       });
 
-      requestAnimationFrame(update);
+      rafId = requestAnimationFrame(update);
     }
 
     function resetAndUpdate() {
       activeWords = new Set();
       currentSegmentId = null;
       lastTime = video.currentTime;
+      stopLoop();
       update();
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
-    video.addEventListener("play", () => {
-      requestAnimationFrame(update);
-    });
+    video.addEventListener("play", startLoop);
+    video.addEventListener("pause", stopLoop);
 
     // ♻️ Recalage lors d'un seek
     video.addEventListener("seeked", resetAndUpdate);
+
+    if (!video.paused) startLoop();
   })
   .catch((error) => {
     console.error("❌ Erreur lors du chargement des données :", error);
