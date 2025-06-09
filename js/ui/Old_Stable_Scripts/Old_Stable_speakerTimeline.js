@@ -117,13 +117,8 @@ loadActiveArchiveData()
 
     const updateLyrics = (currentTime) => {
       if (!friseLyrics) return;
-      const idx = segments.findIndex(
-        (seg) => currentTime >= seg.start && currentTime <= seg.end && seg.text
-      );
-      const segment = idx >= 0 ? segments[idx] : null;
-      console.log(
-        `[TIMELINE DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
-          (segment ? `seg ${segment.start}-${segment.end}` : "no seg")
+      const segment = segments.find(
+        seg => currentTime >= seg.start && currentTime <= seg.end && seg.text
       );
       friseLyrics.textContent = segment ? segment.text : "";
     };
@@ -148,69 +143,6 @@ loadActiveArchiveData()
       updateActiveBlocks(video.currentTime);
     });
 
-    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
-    let rafId = null;
-    let waitingForSync = false;
-
-    const updateAll = (t) => {
-      updateLyrics(t);
-      updateTimelineCursor(t);
-      updateActiveBlocks(t);
-    };
-
-    function rafUpdate() {
-      if (!waitingForSync) {
-        updateAll(video.currentTime);
-      }
-      rafId = requestAnimationFrame(rafUpdate);
-    }
-
-    function frameUpdate(_now, metadata) {
-      const t = metadata.mediaTime;
-      console.log(
-        `[TIMELINE FRAME] currentTime=${video.currentTime.toFixed(2)} mediaTime=${t.toFixed(
-          2
-        )}`
-      );
-      if (waitingForSync) {
-        if (Math.abs(t - video.currentTime) < 0.1) {
-          waitingForSync = false;
-          updateAll(video.currentTime);
-        }
-      } else {
-        updateAll(t);
-      }
-      video.requestVideoFrameCallback(frameUpdate);
-    }
-
-    video.addEventListener("play", () => {
-      if (useFrameCallback) {
-        video.requestVideoFrameCallback(frameUpdate);
-      } else {
-        rafId = requestAnimationFrame(rafUpdate);
-      }
-    });
-
-    video.addEventListener("pause", () => {
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-      waitingForSync = false;
-    });
-
-    video.addEventListener("seeking", () => {
-      waitingForSync = true;
-    });
-
-    video.addEventListener("seeked", () => {
-      const t = video.currentTime;
-      console.log(`[TIMELINE] seeked to ${t.toFixed(2)}`);
-      updateLyrics(t);
-      updateTimelineCursor(t);
-      updateActiveBlocks(t);
-    });
-
     let isDragging = false;
 
     timeline.addEventListener("mousedown", (e) => {
@@ -231,7 +163,6 @@ loadActiveArchiveData()
       const rect = timeline.getBoundingClientRect();
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
-      waitingForSync = true;
       updateTimelineCursor(video.currentTime, smooth);
       updateActiveBlocks(video.currentTime);
     }
