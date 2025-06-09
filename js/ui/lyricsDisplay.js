@@ -6,6 +6,16 @@ let currentSegmentId = null;
 const TOLERANCE = 0.03; // secondes
 const SILENCE_THRESHOLD = 2.0; // secondes
 let activeWords = new Set();
+let isSeeking = false;
+
+video.addEventListener("seeking", () => {
+  isSeeking = true;
+  activeWords = new Set();
+});
+
+video.addEventListener("seeked", () => {
+  isSeeking = false;
+});
 
 let currentSegment = null;
 let silenceActive = false;
@@ -22,6 +32,11 @@ loadActiveArchiveData()
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
     function update() {
+      if (isSeeking || video.seeking) {
+        requestAnimationFrame(update);
+        return;
+      }
+
       const currentTime = video.currentTime;
 
       // 🔁 Réinitialisation des animations si retour arrière
