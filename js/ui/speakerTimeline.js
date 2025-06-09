@@ -142,15 +142,23 @@ loadActiveArchiveData()
       });
     }
 
+    let waitingForPlay = false;
+
     video.addEventListener("timeupdate", () => {
+      if (waitingForPlay) return;
       updateLyrics(video.currentTime);
       updateTimelineCursor(video.currentTime);
       updateActiveBlocks(video.currentTime);
     });
 
-    video.addEventListener("seeked", () => {
+    video.addEventListener("seeking", () => {
+      waitingForPlay = true;
+    });
+
+    video.addEventListener("playing", () => {
+      waitingForPlay = false;
       const t = video.currentTime;
-      console.log(`[TIMELINE] seeked to ${t.toFixed(2)}`);
+      console.log(`[TIMELINE] playing at ${t.toFixed(2)}`);
       updateLyrics(t);
       updateTimelineCursor(t);
       updateActiveBlocks(t);
