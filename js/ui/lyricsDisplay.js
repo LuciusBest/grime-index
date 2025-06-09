@@ -22,17 +22,14 @@ loadActiveArchiveData()
     const infoBar = document.getElementById("infoBar");
     if (infoBar) infoBar.textContent = `Now playing: ${archiveData.title || "Archive"}`;
 
-    const findSegmentIndex = (time) =>
-      archiveData.segments.findIndex(
-        (seg) => time >= seg.start && time <= seg.end
-      );
+    function update() {
+      const currentTime = video.currentTime;
 
-    const findSegment = (time) => {
-      const idx = findSegmentIndex(time);
-      return idx >= 0 ? archiveData.segments[idx] : null;
-    };
+      if (waitingForSync) {
+        requestAnimationFrame(update);
+        return;
+      }
 
-    function render(currentTime) {
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
         activeWords = new Set();
@@ -67,30 +64,12 @@ loadActiveArchiveData()
       */
 
       // 🎙 Segment actif
-      const idx = findSegmentIndex(currentTime);
-      const newSegment = idx >= 0 ? archiveData.segments[idx] : null;
-
-      const inRange =
-        newSegment && currentTime >= newSegment.start && currentTime <= newSegment.end;
-      console.log(
-        `[DEBUG] t=${currentTime.toFixed(2)} idx=${idx} ` +
-          (newSegment ? `seg ${newSegment.start}-${newSegment.end}` : "no seg") +
-          ` match=${inRange}`
+      const newSegment = archiveData.segments.find(
+        (seg) => currentTime >= seg.start && currentTime <= seg.end
       );
-
       if (!newSegment) {
-        currentSegment = null;
-        currentSegmentId = null;
-        speakerDiv.textContent = "";
-        instrumentalDiv.textContent = "";
-        lyricsDiv.innerHTML = "";
+        requestAnimationFrame(update);
         return;
-      }
-
-      if (!inRange) {
-        console.warn(
-          `[WARN] time ${currentTime.toFixed(2)} outside segment ${newSegment.start}-${newSegment.end}`
-        );
       }
       currentSegment = newSegment;
 
@@ -129,101 +108,28 @@ loadActiveArchiveData()
           el.classList.add("bump");
         }
       });
-    }
 
-    const useFrameCallback = Boolean(video.requestVideoFrameCallback);
-    let rafId = null;
-
-    function rafUpdate() {
-      if (!waitingForSync) {
-        render(video.currentTime);
-      }
-      rafId = requestAnimationFrame(rafUpdate);
-    }
-
-    function frameUpdate(_now, metadata) {
-      const t = metadata.mediaTime;
-      console.log(
-        `[FRAME] currentTime=${video.currentTime.toFixed(2)} mediaTime=${t.toFixed(
-          2
-        )}`
-      );
-      if (waitingForSync) {
-        if (Math.abs(t - video.currentTime) < 0.1) {
-          waitingForSync = false;
-          render(video.currentTime);
-        }
-      } else {
-        render(t);
-      }
-      video.requestVideoFrameCallback(frameUpdate);
+      requestAnimationFrame(update);
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
-    video.addEventListener("play", () => {
-      if (useFrameCallback) {
-        video.requestVideoFrameCallback(frameUpdate);
-      } else {
-        rafId = requestAnimationFrame(rafUpdate);
-      }
-    });
-
-
-    let syncTestTimeout = null;
-
     video.addEventListener("seeking", () => {
       waitingForSync = true;
       activeWords = new Set();
       currentSegmentId = null;
+      lyricsDiv.innerHTML = "";
     });
 
-    video.addEventListener("seeked", () => {
-      const time = video.currentTime;
-      const seg = findSegment(time);
-      console.log(
-        `[LYRICS] seeked to ${time.toFixed(2)} ` +
-          (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
-      );
-
-      console.log(
-        seg
-          ? `[SYNC TEST] video.currentTime = ${time.toFixed(2)}`
-          : `[SYNC TEST] video.currentTime = ${time.toFixed(2)} (no segment)`
-      );
-      console.log(
-        seg
-          ? `[SYNC TEST] activeSegment = ${seg.start}-${seg.end} | text = "${seg.text}"`
-          : `[SYNC TEST] activeSegment = null`
-      );
-
-      if (syncTestTimeout) {
-        clearTimeout(syncTestTimeout);
+    video.addEventListener("timeupdate", () => {
+      if (waitingForSync && !video.seeking) {
+        waitingForSync = false;
       }
-      syncTestTimeout = setTimeout(() => {
-        const t2 = video.currentTime;
-        const seg2 = findSegment(t2);
-        console.log(
-          seg2
-            ? `[SYNC TEST] +2s video.currentTime = ${t2.toFixed(2)}`
-            : `[SYNC TEST] +2s video.currentTime = ${t2.toFixed(2)} (no segment)`
-        );
-        console.log(
-          seg2
-            ? `[SYNC TEST] activeSegment = ${seg2.start}-${seg2.end} | text = "${seg2.text}"`
-            : `[SYNC TEST] activeSegment = null`
-        );
-      }, 2000);
     });
 
-    video.addEventListener("pause", () => {
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-      waitingForSync = false;
+    video.addEventListener("play", () => {
+      requestAnimationFrame(update);
     });
   })
   .catch((error) => {
     console.error("❌ Erreur lors du chargement des données :", error);
   });
-
