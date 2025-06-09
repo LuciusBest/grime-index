@@ -4,19 +4,19 @@
     {
       "start": 0.0,
       "end": 60.0,
-      "title": "PLACEHOLDER 1",
+      "title": "Instrumental 1",
       "artist": "TODO"
     },
     {
       "start": 60.0,
       "end": 120.0,
-      "title": "PLACEHOLDER 2",
+      "title": "Instrumental 2",
       "artist": "TODO"
     },
     {
       "start": 120.0,
       "end": 180.0,
-      "title": "PLACEHOLDER 3",
+      "title": "Instrumental 3",
       "artist": "TODO"
     }
   ],
