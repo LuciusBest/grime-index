@@ -11,7 +11,7 @@ let currentSegment = null;
 let silenceActive = false;
 let lastTime = 0;
 
-loadActiveArchiveData()
+  loadActiveArchiveData()
   .then(json => {
     archiveData = json;
 
@@ -106,10 +106,20 @@ loadActiveArchiveData()
       requestAnimationFrame(update);
     }
 
+    function resetAndUpdate() {
+      activeWords = new Set();
+      currentSegmentId = null;
+      lastTime = video.currentTime;
+      update();
+    }
+
     // 🔄 Démarre la boucle dès que la vidéo joue
     video.addEventListener("play", () => {
       requestAnimationFrame(update);
     });
+
+    // ♻️ Recalage lors d'un seek
+    video.addEventListener("seeked", resetAndUpdate);
   })
   .catch((error) => {
     console.error("❌ Erreur lors du chargement des données :", error);
