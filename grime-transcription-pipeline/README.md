@@ -6,6 +6,8 @@ Ce dossier regroupe plusieurs notebooks de developpement pour experimenter la tr
 - [Version 06_exp_01](#version-06_exp_01)
 - [Version 06_exp_02](#version-06_exp_02)
 - [Version 06_exp_03](#version-06_exp_03)
+- [Version 06_exp_03_Gemini](#version-06_exp_03_gemini)
+- [Version 06_exp_03_Gemini_revised](#version-06_exp_03_gemini_revised)
 
 ### Version 06_exp_01
 Première adaptation de la version 06 avec Whisper *large* et Pyannote.
@@ -33,3 +35,13 @@ Intégration du téléchargement YouTube et du découpage vidéo.
 - Nettoyage des fichiers intermédiaires après traitement.
 - Nécessite un accès réseau pour télécharger la vidéo.
 
+
+### Version 06_exp_03_Gemini
+Version alternative incluant la cellule de téléchargement proposée par Gemini.
+- Ajout de messages d'erreur détaillés lors du téléchargement et du découpage.
+- Conserve les fonctionnalités de la version 06_exp_03.
+
+### Version 06_exp_03_Gemini_revised
+Amélioration mineure de la version Gemini.
+- Le fichier JSON est nommé d'après `archive_title`.
+- Le champ `probability` est supprimé des mots pour alléger la sortie.
