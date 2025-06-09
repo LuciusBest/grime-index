@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const DEBUG = true;
   const video = document.getElementById("background-video");
   const playPauseBtn = document.getElementById("play-pause");
   const playIcon =
@@ -15,6 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultTransition = "width 0.25s ease";
   progressBar.style.transition = defaultTransition;
 
+  video.addEventListener("seeking", () => {
+    if (DEBUG) console.log("[VIDEO] seeking", video.currentTime.toFixed(3));
+  });
+  video.addEventListener("seeked", () => {
+    if (DEBUG) console.log("[VIDEO] seeked", video.currentTime.toFixed(3));
+  });
+
   // 🔢 Formatage du temps (mm:ss)
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
@@ -28,9 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (video.paused) {
         await video.play();
         playPauseBtn.innerHTML = pauseIcon;
+        if (DEBUG) console.log("[VIDEO] play", video.currentTime.toFixed(3));
       } else {
         video.pause();
         playPauseBtn.innerHTML = playIcon;
+        if (DEBUG) console.log("[VIDEO] pause", video.currentTime.toFixed(3));
       }
     } catch (e) {
       console.error("Erreur lors de la lecture :", e);
@@ -79,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🎥 Mise à jour continue pendant lecture
   video.addEventListener("timeupdate", () => {
+    if (DEBUG) console.log("[VIDEO] timeupdate", video.currentTime.toFixed(3));
     if (video.duration && !isDragging) {
       const percent = video.currentTime / video.duration;
 

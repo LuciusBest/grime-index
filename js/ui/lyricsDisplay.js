@@ -1,5 +1,8 @@
 import { loadActiveArchiveData } from "../data/dataLinker.js";
 
+// Debug flag to toggle verbose logging
+export const DEBUG = true;
+
 const video = document.getElementById("background-video");
 let archiveData = {};
 let segments = [];
@@ -47,10 +50,12 @@ loadActiveArchiveData()
       currentSegmentIndex = findSegmentIndex(video.currentTime);
       currentSegment = segments[currentSegmentIndex] || null;
       update();
+      if (DEBUG) console.log("[SYNC] frame end");
       rafId = requestAnimationFrame(update);
     };
 
     video.addEventListener("seeking", () => {
+      if (DEBUG) console.log("[VIDEO] seeking", video.currentTime.toFixed(3));
       if (rafId) {
         cancelAnimationFrame(rafId);
         rafId = null;
@@ -58,17 +63,28 @@ loadActiveArchiveData()
     });
 
     video.addEventListener("seeked", () => {
+      if (DEBUG) console.log("[VIDEO] seeked", video.currentTime.toFixed(3));
       // Clear previous state when seeking to avoid desyncs
       activeWords = new Set();
       currentSegmentId = null;
       lastTime = video.currentTime;
       currentSegmentIndex = findSegmentIndex(video.currentTime);
       currentSegment = segments[currentSegmentIndex] || null;
+      if (DEBUG && currentSegment) {
+        console.log(
+          `[SYNC] startLoop segment ${currentSegment.start}-${currentSegment.end}`
+        );
+      }
       startLoop();
+    });
+
+    video.addEventListener("timeupdate", () => {
+      if (DEBUG) console.log("[VIDEO] timeupdate", video.currentTime.toFixed(3));
     });
 
     function update() {
       const currentTime = video.currentTime;
+      if (DEBUG) console.log("[VIDEO] update", currentTime.toFixed(3));
 
       // 🔁 Réinitialisation des animations si retour arrière
       if (currentTime < lastTime) {
@@ -96,6 +112,7 @@ loadActiveArchiveData()
           silenceActive = true;
           lyricsDiv.innerHTML = "<span class='lyric-word'>...</span>";
         }
+        if (DEBUG) console.log("[SYNC] continue loop");
         rafId = requestAnimationFrame(update);
         return;
       } else {
@@ -108,26 +125,53 @@ loadActiveArchiveData()
       if (!seg || currentTime < seg.start || currentTime > seg.end) {
         currentSegmentIndex = findSegmentIndex(currentTime);
         seg = segments[currentSegmentIndex];
+        if (DEBUG && seg) {
+          console.log(
+            `[SYNC] new segment ${seg.start}-${seg.end} at ${currentTime.toFixed(3)}`
+          );
+        }
       }
       if (!seg) {
+        if (DEBUG) console.log("[SYNC] no segment", currentTime.toFixed(3));
+        if (DEBUG) console.log("[SYNC] continue loop");
         rafId = requestAnimationFrame(update);
         return;
       }
       currentSegment = seg;
+      if (DEBUG) {
+        console.log(
+          `[LYRICS] active segment ${currentSegment.start}-${currentSegment.end}`
+        );
+      }
 
       // 🎤 Speaker
       speakerDiv.textContent = currentSegment.speaker || "";
+      if (DEBUG) {
+        console.log(
+          `[SPEAKER] ${currentSegment.speaker || "(none)"} ${currentSegment.start}-${currentSegment.end}`
+        );
+      }
 
       // 🎼 Instrumental
       const activeInstrumental = (archiveData.instrumentals || []).find(
         (inst) => currentTime >= inst.start && currentTime <= inst.end
       );
       instrumentalDiv.textContent = activeInstrumental ? activeInstrumental.title : "";
+      if (DEBUG && activeInstrumental) {
+        console.log(
+          `[SYNC] instrumental ${activeInstrumental.title} ${activeInstrumental.start}-${activeInstrumental.end}`
+        );
+      }
 
       // 📝 Injection mots si changement de segment
       if (currentSegment.start !== currentSegmentId) {
         currentSegmentId = currentSegment.start;
         lyricsDiv.innerHTML = "";
+        if (DEBUG) {
+          console.log(
+            `[LYRICS] inject segment ${currentSegment.start}-${currentSegment.end}`
+          );
+        }
 
         (currentSegment.words || []).forEach((word, index) => {
           const span = document.createElement("span");
@@ -148,6 +192,11 @@ loadActiveArchiveData()
         if (!activeWords.has(wordId) && currentTime >= word.start - TOLERANCE) {
           activeWords.add(wordId);
           el.classList.add("bump");
+          if (DEBUG) {
+            console.log(
+              `[LYRICS] bump '${word.word}' at ${word.start} seg ${currentSegment.start}`
+            );
+          }
         }
       });
 
@@ -155,8 +204,12 @@ loadActiveArchiveData()
     }
 
     // 🔄 Démarre la boucle dès que la vidéo joue
-    video.addEventListener("play", startLoop);
+    video.addEventListener("play", () => {
+      if (DEBUG) console.log("[VIDEO] play", video.currentTime.toFixed(3));
+      startLoop();
+    });
     video.addEventListener("pause", () => {
+      if (DEBUG) console.log("[VIDEO] pause", video.currentTime.toFixed(3));
       if (rafId) {
         cancelAnimationFrame(rafId);
         rafId = null;

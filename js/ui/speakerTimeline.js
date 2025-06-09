@@ -1,5 +1,8 @@
 import { loadActiveArchiveData } from "../data/dataLinker.js";
 
+// Toggle verbose logging
+export const DEBUG = true;
+
 loadActiveArchiveData()
   .then(data => {
     const segments = data.segments;
@@ -84,6 +87,7 @@ loadActiveArchiveData()
     }
 
     function seekTo(time) {
+      if (DEBUG) console.log("[VIDEO] seekTo", time);
       video.currentTime = time;
       updateTimelineCursor(time, true);
       updateLyrics(time);
@@ -91,6 +95,7 @@ loadActiveArchiveData()
     }
 
     function updateTimelineCursor(currentTime, smooth = false) {
+      if (DEBUG) console.log("[SYNC] updateTimelineCursor", currentTime);
       if (!video.duration || !timeline) return;
       const percent = Math.min(currentTime / video.duration, 1);
       const timelineWidth = timeline.getBoundingClientRect().width;
@@ -121,6 +126,9 @@ loadActiveArchiveData()
         seg => currentTime >= seg.start && currentTime <= seg.end && seg.text
       );
       friseLyrics.textContent = segment ? segment.text : "";
+      if (DEBUG && segment) {
+        console.log(`[LYRICS] timeline segment ${segment.start}-${segment.end}`);
+      }
     };
 
     function updateActiveBlocks(currentTime) {
@@ -128,6 +136,9 @@ loadActiveArchiveData()
         const start = parseFloat(block.dataset.start);
         const end = parseFloat(block.dataset.end);
         block.classList.toggle("active", currentTime >= start && currentTime <= end);
+        if (DEBUG && block.classList.contains("active")) {
+          console.log(`[SPEAKER] active ${block.dataset.speaker} ${start}-${end}`);
+        }
       });
 
       document.querySelectorAll(".instrumental-block").forEach(block => {
@@ -138,6 +149,7 @@ loadActiveArchiveData()
     }
 
     video.addEventListener("timeupdate", () => {
+      if (DEBUG) console.log("[VIDEO] timeupdate", video.currentTime.toFixed(3));
       updateLyrics(video.currentTime);
       updateTimelineCursor(video.currentTime);
       updateActiveBlocks(video.currentTime);
@@ -145,13 +157,20 @@ loadActiveArchiveData()
 
     // Ensure UI syncs exactly after manual seeking
     const syncUI = () => {
+      if (DEBUG) console.log("[VIDEO] syncUI", video.currentTime.toFixed(3));
       updateLyrics(video.currentTime);
       updateTimelineCursor(video.currentTime);
       updateActiveBlocks(video.currentTime);
     };
 
-    video.addEventListener("seeked", syncUI);
-    video.addEventListener("seeking", syncUI);
+    video.addEventListener("seeked", () => {
+      if (DEBUG) console.log("[VIDEO] seeked", video.currentTime.toFixed(3));
+      syncUI();
+    });
+    video.addEventListener("seeking", () => {
+      if (DEBUG) console.log("[VIDEO] seeking", video.currentTime.toFixed(3));
+      syncUI();
+    });
 
     let isDragging = false;
 
@@ -173,6 +192,7 @@ loadActiveArchiveData()
       const rect = timeline.getBoundingClientRect();
       const percent = (e.clientX - rect.left) / rect.width;
       video.currentTime = clamp(percent, 0, 1) * video.duration;
+      if (DEBUG) console.log("[VIDEO] drag seek", video.currentTime.toFixed(3));
       updateTimelineCursor(video.currentTime, smooth);
       updateActiveBlocks(video.currentTime);
     }
