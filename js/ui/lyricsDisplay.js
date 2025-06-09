@@ -12,17 +12,6 @@ let rafId = null;
   let silenceActive = false;
   let lastTime = 0;
 
-  function startLoop() {
-    if (rafId === null) rafId = requestAnimationFrame(update);
-  }
-
-  function stopLoop() {
-    if (rafId !== null) {
-      cancelAnimationFrame(rafId);
-      rafId = null;
-    }
-  }
-
   loadActiveArchiveData()
   .then(json => {
     archiveData = json;
@@ -116,6 +105,17 @@ let rafId = null;
       });
 
       rafId = requestAnimationFrame(update);
+    }
+
+    function startLoop() {
+      if (rafId === null) rafId = requestAnimationFrame(update);
+    }
+
+    function stopLoop() {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
     }
 
     function resetAndUpdate() {
