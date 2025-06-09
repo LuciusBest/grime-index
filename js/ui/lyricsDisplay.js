@@ -158,6 +158,8 @@ loadActiveArchiveData()
       }
     });
 
+    let syncTestTimeout = null;
+
     video.addEventListener("seeked", () => {
       const time = video.currentTime;
       const seg = findSegment(time);
@@ -165,9 +167,39 @@ loadActiveArchiveData()
         `[LYRICS] seeked to ${time.toFixed(2)} ` +
           (seg ? `-> segment ${seg.start}-${seg.end}` : "-> no segment")
       );
+
+      console.log(
+        seg
+          ? `[SYNC TEST] video.currentTime = ${time.toFixed(2)}`
+          : `[SYNC TEST] video.currentTime = ${time.toFixed(2)} (no segment)`
+      );
+      console.log(
+        seg
+          ? `[SYNC TEST] activeSegment = ${seg.start}-${seg.end} | text = "${seg.text}"`
+          : `[SYNC TEST] activeSegment = null`
+      );
+
       activeWords = new Set();
       currentSegmentId = null;
       render(time);
+
+      if (syncTestTimeout) {
+        clearTimeout(syncTestTimeout);
+      }
+      syncTestTimeout = setTimeout(() => {
+        const t2 = video.currentTime;
+        const seg2 = findSegment(t2);
+        console.log(
+          seg2
+            ? `[SYNC TEST] +2s video.currentTime = ${t2.toFixed(2)}`
+            : `[SYNC TEST] +2s video.currentTime = ${t2.toFixed(2)} (no segment)`
+        );
+        console.log(
+          seg2
+            ? `[SYNC TEST] activeSegment = ${seg2.start}-${seg2.end} | text = "${seg2.text}"`
+            : `[SYNC TEST] activeSegment = null`
+        );
+      }, 2000);
     });
 
     video.addEventListener("pause", () => {
