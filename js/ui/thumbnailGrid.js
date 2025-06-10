@@ -82,9 +82,12 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = "threshold_grey_
   });
 }
 
-export function initThumbnailGrid() {
-  const container = document.getElementById("thumbnail-grid");
+export function initThumbnailGrid(options = {}) {
+  const { containerId = "thumbnail-grid", columns = 2, rows = 2 } = options;
+  const container = document.getElementById(containerId);
   if (!container) return;
+  container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+  container.style.gridAutoRows = `calc(100vh / ${rows})`;
   archives.forEach((arch) => {
     const cell = document.createElement("div");
     cell.classList.add("thumbnail-cell");
@@ -95,4 +98,6 @@ export function initThumbnailGrid() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initThumbnailGrid);
+document.addEventListener("DOMContentLoaded", () =>
+  initThumbnailGrid({ columns: 2, rows: 2 })
+);
