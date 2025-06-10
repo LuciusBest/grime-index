@@ -6,6 +6,7 @@ async function loadShader(gl, name) {
 async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_gradient') {
   const gl = canvas.getContext('webgl');
   if (!gl) return;
+  gl.viewport(0, 0, canvas.width, canvas.height);
 
   const vertexSrc = `attribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_texCoord;\nvoid main(){gl_Position=vec4(a_position,0,1);v_texCoord=a_texCoord;}`;
   const fragSrc = await loadShader(gl, shaderName);
@@ -60,7 +61,18 @@ export async function buildThumbnail(archive) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
   const canvas = document.createElement('canvas');
+  canvas.style.width = '100%';
+  canvas.style.height = '100%';
   cell.appendChild(canvas);
-  await drawFrameToCanvas(archive.file, canvas);
+  await new Promise((resolve) => {
+    requestAnimationFrame(async () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      await drawFrameToCanvas(archive.file, canvas);
+      resolve();
+    });
+  });
   return cell;
 }
