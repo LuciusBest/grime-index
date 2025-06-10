@@ -3,7 +3,7 @@ async function loadShader(gl, name) {
   return res.text();
 }
 
-async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_gradient') {
+async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
   const gl = canvas.getContext('webgl');
   if (!gl) return;
   gl.viewport(0, 0, canvas.width, canvas.height);
@@ -48,7 +48,7 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_
   video.muted = true;
   video.preload = 'auto';
   video.addEventListener('loadedmetadata', () => {
-    const t = Math.random() * video.duration;
+    const t = Math.min(Math.max(time, 0), video.duration || time);
     video.currentTime = t;
   });
   video.addEventListener('seeked', () => {
@@ -78,6 +78,37 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_
   });
 }
 
+async function getThumbnailTimestamp(dataFile) {
+  try {
+    const res = await fetch(`data/${dataFile}`);
+    const data = await res.json();
+    const segments = data.segments || [];
+    const speakerSegments = [];
+    let last = null;
+    segments.forEach(({ speaker, start, end }) => {
+      if (!speaker) return;
+      if (last && last.speaker === speaker) {
+        last.end = end;
+      } else {
+        if (last) speakerSegments.push(last);
+        last = { speaker, start, end };
+      }
+    });
+    if (last) speakerSegments.push(last);
+    let longest = speakerSegments[0];
+    speakerSegments.forEach(seg => {
+      if (!longest || seg.end - seg.start > longest.end - longest.start) {
+        longest = seg;
+      }
+    });
+    if (!longest) return 0;
+    return (longest.start + longest.end) / 2;
+  } catch (err) {
+    console.error('Failed to load archive data', err);
+    return 0;
+  }
+}
+
 export async function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
@@ -92,7 +123,8 @@ export async function buildThumbnail(archive, container) {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
-      await drawFrameToCanvas(archive.file, canvas);
+      const timestamp = await getThumbnailTimestamp(archive.archive);
+      await drawFrameToCanvas(archive.file, canvas, timestamp);
       resolve();
     });
   });
