@@ -1,21 +1,25 @@
 /* Grid layout for landing page */
 
-#thumbnail-grid {
+#thumbnail-grid,
+.thumbnail-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 50vh;
     width: 100%;
-    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
     overflow-y: auto;
 }
 
 .thumbnail-cell {
     position: relative;
     overflow: hidden;
-}
-
-.thumbnail-cell canvas {
     width: 100%;
     height: 100%;
+}
+
+.thumbnail-cell canvas,
+.thumbnail-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
