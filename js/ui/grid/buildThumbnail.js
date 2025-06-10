@@ -57,13 +57,14 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_
   });
 }
 
-export async function buildThumbnail(archive) {
+export async function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
   const canvas = document.createElement('canvas');
   canvas.style.width = '100%';
   canvas.style.height = '100%';
   cell.appendChild(canvas);
+  if (container) container.appendChild(cell);
   await new Promise((resolve) => {
     requestAnimationFrame(async () => {
       const rect = canvas.getBoundingClientRect();
