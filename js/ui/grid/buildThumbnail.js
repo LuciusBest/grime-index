@@ -82,31 +82,14 @@ async function getThumbnailTimestamp(dataFile) {
   try {
     const res = await fetch(`data/${dataFile}`);
     const data = await res.json();
-    const segments = data.segments || [];
-    const speakerSegments = [];
-    let last = null;
-    segments.forEach(({ speaker, start, end }) => {
-      if (!speaker) return;
-      if (last && last.speaker === speaker) {
-        last.end = end;
-      } else {
-        if (last) speakerSegments.push(last);
-        last = { speaker, start, end };
-      }
-    });
-    if (last) speakerSegments.push(last);
-    let longest = speakerSegments[0];
-    speakerSegments.forEach(seg => {
-      if (!longest || seg.end - seg.start > longest.end - longest.start) {
-        longest = seg;
-      }
-    });
-    if (!longest) return 0;
-    return (longest.start + longest.end) / 2;
+    const arr = data.frameThumbnail;
+    if (Array.isArray(arr) && arr.length > 0) {
+      return arr[0];
+    }
   } catch (err) {
     console.error('Failed to load archive data', err);
-    return 0;
   }
+  return 0;
 }
 
 export async function buildThumbnail(archive, container) {
