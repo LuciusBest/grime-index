@@ -1,0 +1,21 @@
+# Grid layout for landing page
+
+#thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 33vh;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.thumbnail-cell {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail-cell canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
