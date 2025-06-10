@@ -53,6 +53,27 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_
   });
   video.addEventListener('seeked', () => {
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
+    const canvasRatio = canvas.width / canvas.height;
+    const videoRatio = video.videoWidth / video.videoHeight;
+    let x0 = 0, x1 = 1, y0 = 0, y1 = 1;
+    if (videoRatio > canvasRatio) {
+      const crop = (1 - canvasRatio / videoRatio) / 2;
+      x0 = crop;
+      x1 = 1 - crop;
+    } else if (videoRatio < canvasRatio) {
+      const crop = (1 - videoRatio / canvasRatio) / 2;
+      y0 = crop;
+      y1 = 1 - crop;
+    }
+    gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      x0, y1,
+      x1, y1,
+      x0, y0,
+      x0, y0,
+      x1, y1,
+      x1, y0,
+    ]), gl.STATIC_DRAW);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
   });
 }
