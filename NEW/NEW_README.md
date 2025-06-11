@@ -15,3 +15,12 @@ Start clean rebuild with placeholder layout, separate from legacy code in `OLD/`
 
 🧠 Purpose:
 Maintain chronological record of every change while rebuilding the interface.
+
+## 2025-06-11 – 15:18
+
+🔧 Added selector grid with placeholders:
+- Updated `css/layout.css` with `.selector-grid` and grid cell styles
+- Modified `js/gridManager.js` to create `selector-grid` containing 9 placeholder cells
+
+🧠 Purpose:
+Prepare layout structure for future thumbnail grid integration.

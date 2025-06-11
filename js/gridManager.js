@@ -8,7 +8,18 @@ function addSelectorCell() {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'selector-cell';
-    cell.textContent = 'Selector here';
+
+    const selectorGrid = document.createElement('div');
+    selectorGrid.className = 'selector-grid';
+
+    for (let i = 1; i <= 9; i++) {
+        const placeholder = document.createElement('div');
+        placeholder.className = 'grid-cell';
+        placeholder.textContent = `Cell ${i}`;
+        selectorGrid.appendChild(placeholder);
+    }
+
+    cell.appendChild(selectorGrid);
     grid.appendChild(cell);
     return cell;
 }
