@@ -106,3 +106,13 @@ Ensure players appear only when thumbnails are clicked and controls stay exclusi
 
 🧠 Purpose:
 Prevent new selector cells from being hidden behind player cells.
+
+## 2025-06-11 – 16:47
+
+🔧 Implemented push-style layout splits:
+- `.selector-cell` and `.player-cell` now transition width and height
+- Added `updateCellStyles` and resized previous cells when creating a new pair
+- Adjusted layout logic in `computeNextArea` to shrink the active area before adding the next
+
+🧠 Purpose:
+Ensure each new cell divides the existing space instead of overlapping previous cells.

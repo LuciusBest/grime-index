@@ -26,6 +26,23 @@ function getLinkedSelector(id) {
     return activeSelectorCells.get(String(id));
 }
 
+function updateCellStyles(area) {
+    const selector = getLinkedSelector(area.id);
+    const player = activePlayerCells.get(String(area.id));
+    if (selector) {
+        selector.style.left = area.x + '%';
+        selector.style.top = area.y + '%';
+        selector.style.width = area.width + '%';
+        selector.style.height = area.height + '%';
+    }
+    if (player) {
+        player.style.left = area.x + '%';
+        player.style.top = area.y + '%';
+        player.style.width = area.width + '%';
+        player.style.height = area.height + '%';
+    }
+}
+
 function computeNextArea() {
     const parent = layoutStack[layoutStack.length - 1];
     const area = {};
@@ -35,13 +52,16 @@ function computeNextArea() {
         area.x = parent.x + parent.width - area.width;
         area.y = parent.y;
         area.orientation = 'horizontal';
+        parent.width /= 2;
     } else {
         area.width = parent.width;
         area.height = parent.height / 2;
         area.x = parent.x;
         area.y = parent.y + parent.height - area.height;
         area.orientation = 'vertical';
+        parent.height /= 2;
     }
+    updateCellStyles(parent);
     return area;
 }
 
