@@ -147,3 +147,12 @@ Begin reusing OLD thumbnail logic so selector cells show video previews.
 
 🧠 Purpose:
 Prevent missing thumbnails by freeing GPU resources and surfacing load errors.
+
+## 2025-06-11 – 20:10
+
+🔧 Added thumbnail load fallback:
+- `js/buildThumbnail.js` now draws an error placeholder when WebGL or the video fails
+- `drawFrameToCanvas` returns a promise resolving after thumbnail success or failure
+
+🧠 Purpose:
+Gracefully handle missing videos so broken thumbnails show a readable message instead of blank canvas.

@@ -3,13 +3,26 @@ async function loadShader(gl, name) {
   return res.text();
 }
 
+function drawErrorPlaceholder(canvas, message) {
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#333';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.font = '16px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+}
+
 async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
-  const gl = canvas.getContext('webgl');
-  if (!gl) {
-    console.warn('WebGL context not available for thumbnail');
-    return;
-  }
-  gl.viewport(0, 0, canvas.width, canvas.height);
+  return new Promise(async (resolve) => {
+    const gl = canvas.getContext('webgl');
+    if (!gl) {
+      console.warn('WebGL context not available for thumbnail');
+      drawErrorPlaceholder(canvas, 'No WebGL');
+      return resolve();
+    }
+    gl.viewport(0, 0, canvas.width, canvas.height);
 
   const vertexSrc = `attribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_texCoord;\nvoid main(){gl_Position=vec4(a_position,0,1);v_texCoord=a_texCoord;}`;
   const fragSrc = await loadShader(gl, shaderName);
@@ -54,8 +67,8 @@ async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'thres
     const t = Math.min(Math.max(time, 0), video.duration || time);
     video.currentTime = t;
   });
-  video.addEventListener('seeked', () => {
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
+    video.addEventListener('seeked', () => {
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
     const canvasRatio = canvas.width / canvas.height;
     const videoRatio = video.videoWidth / video.videoHeight;
     let x0 = 0, x1 = 1, y0 = 0, y1 = 1;
@@ -79,11 +92,17 @@ async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'thres
     ]), gl.STATIC_DRAW);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
     const ext = gl.getExtension('WEBGL_lose_context');
-    if (ext) ext.loseContext();
-  });
+      if (ext) ext.loseContext();
+      resolve();
+    });
 
-  video.addEventListener('error', () => {
-    console.error('Failed to load video', videoSrc);
+    video.addEventListener('error', () => {
+      console.error('Failed to load video', videoSrc);
+      drawErrorPlaceholder(canvas, 'Video missing');
+      const ext = gl.getExtension('WEBGL_lose_context');
+      if (ext) ext.loseContext();
+      resolve();
+    });
   });
 }
 
