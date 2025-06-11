@@ -32,3 +32,36 @@
     image-rendering: auto;
     display: block;
 }
+/* Overall grid layout */
+#overall-grid, .overall-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.selector-cell, .player-cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.selector-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.player-cell video,
+.player-cell canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
