@@ -96,3 +96,13 @@ Demonstrate infinite alternating layout splits triggered via Next buttons.
 
 🧠 Purpose:
 Ensure players appear only when thumbnails are clicked and controls stay exclusive to the topmost cell.
+
+## 2025-06-11 – 16:38
+
+🔧 Fixed selector stacking order:
+- Set `.selector-cell` z-index to 0 and `.player-cell` to 1 in `css/layout.css`
+- Added dynamic z-index assignment in `createSelectorCell` and `createPlayerCell`
+  so new selectors appear above previous players
+
+🧠 Purpose:
+Prevent new selector cells from being hidden behind player cells.

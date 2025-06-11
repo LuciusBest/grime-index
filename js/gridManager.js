@@ -56,6 +56,7 @@ function createSelectorCell(area, id) {
     const cell = document.createElement('div');
     cell.className = 'selector-cell';
     cell.dataset.cellId = id;
+    cell.style.zIndex = id * 2;
     cell.style.left = area.x + '%';
     cell.style.top = area.y + '%';
     cell.style.width = area.width + '%';
@@ -84,6 +85,7 @@ function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     cell.className = 'player-cell';
     cell.dataset.cellId = id;
     cell.dataset.orientation = orientation;
+    cell.style.zIndex = id * 2 + 1;
     cell.style.left = area.x + '%';
     cell.style.top = area.y + '%';
     cell.style.width = area.width + '%';

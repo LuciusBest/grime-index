@@ -24,11 +24,12 @@ html, body {
 
 .selector-cell {
     background-color: blue;
+    z-index: 0;
 }
 
 .player-cell {
     background-color: red;
-    z-index: 10;
+    z-index: 1;
     transition: top 0.3s ease, left 0.3s ease;
 }
 
