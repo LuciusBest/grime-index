@@ -92,6 +92,27 @@ async function getThumbnailTimestamp(dataFile) {
   return 0;
 }
 
+let renderQueue = Promise.resolve();
+
+async function renderThumbnail(canvas, archive) {
+  await new Promise((resolve) => requestAnimationFrame(resolve));
+  const rect = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  const timestamp = await getThumbnailTimestamp(archive.archive);
+  await drawFrameToCanvas(archive.file, canvas, timestamp);
+
+  const gl = canvas.getContext('webgl');
+  gl?.getExtension('WEBGL_lose_context')?.loseContext();
+
+  const img = document.createElement('img');
+  img.src = canvas.toDataURL();
+  img.style.width = '100%';
+  img.style.height = '100%';
+  canvas.replaceWith(img);
+}
+
 export async function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
@@ -100,16 +121,8 @@ export async function buildThumbnail(archive, container) {
   canvas.style.height = '100%';
   cell.appendChild(canvas);
   if (container) container.appendChild(cell);
-  await new Promise((resolve) => {
-    requestAnimationFrame(async () => {
-      const rect = canvas.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
-      const timestamp = await getThumbnailTimestamp(archive.archive);
-      await drawFrameToCanvas(archive.file, canvas, timestamp);
-      resolve();
-    });
-  });
+
+  renderQueue = renderQueue.then(() => renderThumbnail(canvas, archive));
+  await renderQueue;
   return cell;
 }

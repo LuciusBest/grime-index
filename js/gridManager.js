@@ -114,13 +114,13 @@ function createSelectorCell(area, id) {
     selectorGrid.className = 'selector-grid';
     cell.appendChild(selectorGrid);
 
-    archives.forEach(async arch => {
+    for (const arch of archives) {
         const thumb = await buildThumbnail(arch, selectorGrid);
         thumb.dataset.file = arch.file;
         thumb.dataset.archive = arch.archive;
         thumb.dataset.title = arch.archive;
         thumb.addEventListener('click', () => onThumbnailClick(thumb));
-    });
+    }
 
     grid.appendChild(cell);
     return cell;
