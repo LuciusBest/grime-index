@@ -1,6 +1,8 @@
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
 let cellCounter = 0;
+const layoutStack = [{ x: 0, y: 0, width: 100, height: 100 }];
+let nextHorizontal = true;
 
 function trackSelectorCell(id, cell) {
     activeSelectorCells.set(String(id), cell);
@@ -24,18 +26,38 @@ function getLinkedSelector(id) {
     return activeSelectorCells.get(String(id));
 }
 
+function computeNextArea() {
+    const parent = layoutStack[layoutStack.length - 1];
+    const area = {};
+    if (nextHorizontal) {
+        area.width = parent.width / 2;
+        area.height = parent.height;
+        area.x = parent.x + parent.width - area.width;
+        area.y = parent.y;
+    } else {
+        area.width = parent.width;
+        area.height = parent.height / 2;
+        area.x = parent.x;
+        area.y = parent.y + parent.height - area.height;
+    }
+    return area;
+}
+
 function initOverallGrid() {
     const grid = document.getElementById('overall-grid');
     grid.innerHTML = '';
     return grid;
 }
 
-function addSelectorCell() {
+function createSelectorCell(area, id) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
-    const id = cellCounter++;
     cell.className = 'selector-cell';
     cell.dataset.cellId = id;
+    cell.style.left = area.x + '%';
+    cell.style.top = area.y + '%';
+    cell.style.width = area.width + '%';
+    cell.style.height = area.height + '%';
     trackSelectorCell(id, cell);
 
     const selectorGrid = document.createElement('div');
@@ -54,11 +76,16 @@ function addSelectorCell() {
     return cell;
 }
 
-function addPlayerCell(text, id) {
+function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
     cell.dataset.cellId = id;
+    cell.dataset.orientation = orientation;
+    cell.style.left = area.x + '%';
+    cell.style.top = area.y + '%';
+    cell.style.width = area.width + '%';
+    cell.style.height = area.height + '%';
     cell.textContent = text;
 
     const backBtn = document.createElement('button');
@@ -67,12 +94,26 @@ function addPlayerCell(text, id) {
     backBtn.addEventListener('click', () => closePlayerCell(cell));
     cell.appendChild(backBtn);
 
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Next';
+    nextBtn.addEventListener('click', () => handleNext(cell));
+    cell.appendChild(nextBtn);
+
     grid.appendChild(cell);
     trackPlayerCell(id, cell);
-    // allow CSS transition
-    requestAnimationFrame(() => {
-        cell.style.top = '0';
-    });
+
+    if (orientation === 'horizontal') {
+        cell.style.left = area.x + area.width + '%';
+        requestAnimationFrame(() => {
+            cell.style.left = area.x + '%';
+        });
+    } else {
+        cell.style.top = area.y + area.height + '%';
+        requestAnimationFrame(() => {
+            cell.style.top = area.y + '%';
+        });
+    }
     return cell;
 }
 
@@ -83,9 +124,25 @@ function replaceCell(oldCell, newCell) {
     }
 }
 
+function createCellPair() {
+    const area = computeNextArea();
+    const id = cellCounter++;
+    const selector = createSelectorCell(area, id);
+    const player = createPlayerCell(area, id, nextHorizontal ? 'horizontal' : 'vertical');
+    selector.classList.add('disabled');
+    selector.style.pointerEvents = 'none';
+    layoutStack.push(area);
+    nextHorizontal = !nextHorizontal;
+}
+
 function closePlayerCell(playerCell) {
     const id = playerCell.dataset.cellId;
-    playerCell.style.top = '100%';
+    const orientation = playerCell.dataset.orientation;
+    if (orientation === 'horizontal') {
+        playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
+    } else {
+        playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+    }
     playerCell.addEventListener('transitionend', () => {
         playerCell.remove();
         untrackPlayerCell(id);
@@ -98,16 +155,21 @@ function closePlayerCell(playerCell) {
     }, { once: true });
 }
 
+function handleNext(currentPlayer) {
+    createCellPair();
+}
+
 function onThumbnailClick(thumb) {
     const selector = thumb.closest('.selector-cell');
     if (!selector) return;
     const id = selector.dataset.cellId;
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
-    addPlayerCell(thumb.textContent, id);
+    const area = layoutStack[layoutStack.length - 1];
+    createPlayerCell(area, id, 'vertical', thumb.textContent);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     initOverallGrid();
-    addSelectorCell();
+    createSelectorCell(layoutStack[0], cellCounter++);
 });

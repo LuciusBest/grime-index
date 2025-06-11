@@ -65,3 +65,24 @@ Manage multiple cells dynamically and allow returning from the player view.
 
 🧠 Purpose:
 Ensure selectors become clickable again after closing their player cells.
+
+## 2025-06-11 – 16:18
+
+🔧 Refactored layout for iterative growth:
+- Made `.selector-cell` and `.player-cell` absolutely positioned with left/top transitions
+- Added `.next-btn` styling for spawning new cell pairs
+- Prepared CSS transitions for horizontal and vertical sliding
+
+🧠 Purpose:
+Lay groundwork for recursive cell creation and alternating split logic.
+
+## 2025-06-11 – 16:20
+
+🔧 Implemented recursive cell growth logic:
+- Added layout stack and orientation toggle in `js/gridManager.js`
+- Factored cell creation into `createSelectorCell` and `createPlayerCell`
+- Player cells now feature Next buttons that spawn new selector/player pairs
+- Adjusted closing logic to slide out horizontally or vertically
+
+🧠 Purpose:
+Demonstrate infinite alternating layout splits triggered via Next buttons.
