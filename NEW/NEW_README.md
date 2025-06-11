@@ -126,3 +126,14 @@ Ensure each new cell divides the existing space instead of overlapping previous 
 
 🧠 Purpose:
 Maintain visual consistency by giving selectors the same smooth entrance as player cells.
+
+## 2025-06-11 – 17:20
+
+🔧 Integrated archive thumbnails:
+- Copied `buildThumbnail.js` from `OLD/js/ui/grid` and shaders into a new `shaders/` folder
+- Updated `index.html` to load `gridManager.js` as a module
+- Added an `archives` list and thumbnail generation using `buildThumbnail` in `js/gridManager.js`
+- Styled canvas elements inside `.thumbnail-cell` for full-size previews
+
+🧠 Purpose:
+Begin reusing OLD thumbnail logic so selector cells show video previews.
