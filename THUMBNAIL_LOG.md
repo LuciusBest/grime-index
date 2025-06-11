@@ -18,9 +18,16 @@ actual result, and next planned action.
 **Observed:** Only "Loading..." overlays show in each cell. No canvases or images appear, leaving blank cells.
 **Next:** Rework rendering to use a simpler 2D canvas approach and confirm the elements are inserted correctly.
 
+## Commit 8137097 (2025-06-11)
+**Strategy:** Replace WebGL rendering with 2D canvas drawing and convert each canvas to an image once rendered.
+**Steps:** Removed shader code from `buildThumbnail.js`, drew video frames with `drawImage`, kept the sequential queue intact.
+**Expected:** Stable thumbnails matching the previous red threshold style.
+**Observed:** Thumbnails appeared in all cells but showed raw video frames with no red threshold effect.
+**Next:** Post-process the drawn frame to apply the threshold filter using pixel data.
+
 ## Commit <next> (pending)
-**Strategy:** Replace WebGL rendering with 2D canvas drawing. Continue using the sequential queue and export each thumbnail as an image.
-**Steps:** Removed shader code from `buildThumbnail.js` and implemented a simpler `drawImage` approach using a temporary `<video>` element.
-**Expected:** Thumbnails draw reliably without WebGL contexts and appear progressively.
+**Strategy:** Apply a 2D canvas threshold effect after drawing each frame.
+**Steps:** Manipulate `ImageData` pixels so dark areas become transparent and light areas turn solid red.
+**Expected:** Thumbnails appear in red over transparency as before.
 **Observed:** _(pending after test)_
-**Next:** Verify thumbnails display correctly; if not, inspect video loading paths.
+**Next:** Confirm visual output across multiple archives and tweak the threshold value if needed.

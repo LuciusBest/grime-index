@@ -44,6 +44,7 @@ async function getThumbnailTimestamp(dataFile) {
 
 const queue = [];
 let processing = false;
+const THRESHOLD = 120;
 
 async function processQueue() {
   if (processing) return;
@@ -56,6 +57,25 @@ async function processQueue() {
   processing = false;
 }
 
+function applyThresholdEffect(canvas) {
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    if (brightness < THRESHOLD) {
+      data[i + 3] = 0;
+    } else {
+      data[i] = 255;
+      data[i + 1] = 0;
+      data[i + 2] = 0;
+      data[i + 3] = 255;
+    }
+  }
+  ctx.putImageData(imageData, 0, 0);
+}
+
 async function renderThumbnail(canvas, archive) {
   await new Promise((resolve) => requestAnimationFrame(resolve));
   const rect = canvas.getBoundingClientRect();
@@ -66,6 +86,7 @@ async function renderThumbnail(canvas, archive) {
   try {
     const timestamp = await getThumbnailTimestamp(archive.archive);
     await drawFrameToCanvas(archive.file, canvas, timestamp);
+    applyThresholdEffect(canvas);
   } catch (err) {
     console.error('Thumbnail draw failed', err);
     showFallback(canvas);
