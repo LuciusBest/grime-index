@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#overall-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.selector-cell, .player-cell {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.selector-cell {
+    background-color: blue;
+}
+
+.player-cell {
+    background-color: red;
+}
