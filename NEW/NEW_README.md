@@ -137,3 +137,13 @@ Maintain visual consistency by giving selectors the same smooth entrance as play
 
 🧠 Purpose:
 Begin reusing OLD thumbnail logic so selector cells show video previews.
+
+## 2025-06-11 – 20:01
+
+🔧 Improved thumbnail reliability:
+- Released WebGL contexts after drawing in `js/buildThumbnail.js`
+- Added warning when WebGL context creation fails
+- Logged errors when video files cannot load
+
+🧠 Purpose:
+Prevent missing thumbnails by freeing GPU resources and surfacing load errors.

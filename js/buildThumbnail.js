@@ -5,7 +5,10 @@ async function loadShader(gl, name) {
 
 async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
   const gl = canvas.getContext('webgl');
-  if (!gl) return;
+  if (!gl) {
+    console.warn('WebGL context not available for thumbnail');
+    return;
+  }
   gl.viewport(0, 0, canvas.width, canvas.height);
 
   const vertexSrc = `attribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_texCoord;\nvoid main(){gl_Position=vec4(a_position,0,1);v_texCoord=a_texCoord;}`;
@@ -75,6 +78,12 @@ async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'thres
       x1, y0,
     ]), gl.STATIC_DRAW);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
+    const ext = gl.getExtension('WEBGL_lose_context');
+    if (ext) ext.loseContext();
+  });
+
+  video.addEventListener('error', () => {
+    console.error('Failed to load video', videoSrc);
   });
 }
 
