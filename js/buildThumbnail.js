@@ -3,10 +3,14 @@ async function loadShader(gl, name) {
   return res.text();
 }
 
-async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
-  const gl = canvas.getContext('webgl');
-  if (!gl) return;
-  gl.viewport(0, 0, canvas.width, canvas.height);
+function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
+  return new Promise(async (resolve, reject) => {
+    const gl = canvas.getContext('webgl');
+    if (!gl) {
+      reject(new Error('WebGL not supported'));
+      return;
+    }
+    gl.viewport(0, 0, canvas.width, canvas.height);
 
   const vertexSrc = `attribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_texCoord;\nvoid main(){gl_Position=vec4(a_position,0,1);v_texCoord=a_texCoord;}`;
   const fragSrc = await loadShader(gl, shaderName);
@@ -75,6 +79,18 @@ async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'thres
       x1, y0,
     ]), gl.STATIC_DRAW);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
+    resolve();
+  });
+
+    video.addEventListener('error', (e) => {
+      reject(new Error('Video failed to load'));
+    });
+
+    // trigger load
+    if (video.readyState >= 2) {
+      const t = Math.min(Math.max(time, 0), video.duration || time);
+      video.currentTime = t;
+    }
   });
 }
 
@@ -107,7 +123,11 @@ async function renderThumbnail(canvas, archive) {
   gl?.getExtension('WEBGL_lose_context')?.loseContext();
 
   const img = document.createElement('img');
-  img.src = canvas.toDataURL();
+  try {
+    img.src = canvas.toDataURL();
+  } catch (err) {
+    console.error('Failed to export canvas', err);
+  }
   img.style.width = '100%';
   img.style.height = '100%';
   canvas.replaceWith(img);
