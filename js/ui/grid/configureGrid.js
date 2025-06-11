@@ -10,5 +10,5 @@ export function configureGrid(container, type = 'landing') {
       columns = 2;
   }
   container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-  container.style.gridAutoRows = 'auto';
+  container.style.gridAutoRows = '1fr';
 }

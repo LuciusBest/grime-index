@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   createGrid(container);
   configureGrid(container, 'landing');
   for (const arch of archives) {
-    const thumb = await buildThumbnail(arch);
-    container.appendChild(thumb);
+    await buildThumbnail(arch, container);
   }
 });

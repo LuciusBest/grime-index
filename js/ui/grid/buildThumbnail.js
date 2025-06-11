@@ -3,9 +3,10 @@ async function loadShader(gl, name) {
   return res.text();
 }
 
-async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_gradient') {
+async function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_grey_gradient') {
   const gl = canvas.getContext('webgl');
   if (!gl) return;
+  gl.viewport(0, 0, canvas.width, canvas.height);
 
   const vertexSrc = `attribute vec2 a_position;\nattribute vec2 a_texCoord;\nvarying vec2 v_texCoord;\nvoid main(){gl_Position=vec4(a_position,0,1);v_texCoord=a_texCoord;}`;
   const fragSrc = await loadShader(gl, shaderName);
@@ -47,20 +48,68 @@ async function drawFrameToCanvas(videoSrc, canvas, shaderName = 'threshold_grey_
   video.muted = true;
   video.preload = 'auto';
   video.addEventListener('loadedmetadata', () => {
-    const t = Math.random() * video.duration;
+    const t = Math.min(Math.max(time, 0), video.duration || time);
     video.currentTime = t;
   });
   video.addEventListener('seeked', () => {
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, video);
+    const canvasRatio = canvas.width / canvas.height;
+    const videoRatio = video.videoWidth / video.videoHeight;
+    let x0 = 0, x1 = 1, y0 = 0, y1 = 1;
+    if (videoRatio > canvasRatio) {
+      const crop = (1 - canvasRatio / videoRatio) / 2;
+      x0 = crop;
+      x1 = 1 - crop;
+    } else if (videoRatio < canvasRatio) {
+      const crop = (1 - videoRatio / canvasRatio) / 2;
+      y0 = crop;
+      y1 = 1 - crop;
+    }
+    gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      x0, y1,
+      x1, y1,
+      x0, y0,
+      x0, y0,
+      x1, y1,
+      x1, y0,
+    ]), gl.STATIC_DRAW);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
   });
 }
 
-export async function buildThumbnail(archive) {
+async function getThumbnailTimestamp(dataFile) {
+  try {
+    const res = await fetch(`data/${dataFile}`);
+    const data = await res.json();
+    const arr = data.frameThumbnail;
+    if (Array.isArray(arr) && arr.length > 0) {
+      return arr[0];
+    }
+  } catch (err) {
+    console.error('Failed to load archive data', err);
+  }
+  return 0;
+}
+
+export async function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
   const canvas = document.createElement('canvas');
+  canvas.style.width = '100%';
+  canvas.style.height = '100%';
   cell.appendChild(canvas);
-  await drawFrameToCanvas(archive.file, canvas);
+  if (container) container.appendChild(cell);
+  await new Promise((resolve) => {
+    requestAnimationFrame(async () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      const timestamp = await getThumbnailTimestamp(archive.archive);
+      await drawFrameToCanvas(archive.file, canvas, timestamp);
+      resolve();
+    });
+  });
   return cell;
 }
