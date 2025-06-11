@@ -108,7 +108,19 @@ async function getThumbnailTimestamp(dataFile) {
   return 0;
 }
 
-let renderQueue = Promise.resolve();
+const queue = [];
+let processing = false;
+
+async function processQueue() {
+  if (processing) return;
+  processing = true;
+  while (queue.length) {
+    const { canvas, archive, placeholder } = queue.shift();
+    placeholder.replaceWith(canvas);
+    await renderThumbnail(canvas, archive);
+  }
+  processing = false;
+}
 
 async function renderThumbnail(canvas, archive) {
   await new Promise((resolve) => requestAnimationFrame(resolve));
@@ -155,9 +167,13 @@ export function buildThumbnail(archive, container) {
   const canvas = document.createElement('canvas');
   canvas.style.width = '100%';
   canvas.style.height = '100%';
-  cell.appendChild(canvas);
+  const placeholder = document.createElement('div');
+  placeholder.className = 'thumb-fallback';
+  placeholder.textContent = 'Loading...';
+  cell.appendChild(placeholder);
   if (container) container.appendChild(cell);
 
-  renderQueue = renderQueue.then(() => renderThumbnail(canvas, archive));
+  queue.push({ canvas, archive, placeholder });
+  processQueue();
   return cell;
 }
