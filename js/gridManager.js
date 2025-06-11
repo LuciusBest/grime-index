@@ -3,25 +3,25 @@ const activePlayerCells = new Map();
 let cellCounter = 0;
 
 function trackSelectorCell(id, cell) {
-    activeSelectorCells.set(id, cell);
+    activeSelectorCells.set(String(id), cell);
     console.log(`Selector added at ${id}`);
 }
 
 function untrackSelectorCell(id) {
-    activeSelectorCells.delete(id);
+    activeSelectorCells.delete(String(id));
 }
 
 function trackPlayerCell(id, cell) {
-    activePlayerCells.set(id, cell);
+    activePlayerCells.set(String(id), cell);
     console.log(`Player opened at slot ${id}`);
 }
 
 function untrackPlayerCell(id) {
-    activePlayerCells.delete(id);
+    activePlayerCells.delete(String(id));
 }
 
 function getLinkedSelector(id) {
-    return activeSelectorCells.get(id);
+    return activeSelectorCells.get(String(id));
 }
 
 function initOverallGrid() {
@@ -90,7 +90,11 @@ function closePlayerCell(playerCell) {
         playerCell.remove();
         untrackPlayerCell(id);
         const selector = getLinkedSelector(id);
-        if (selector) selector.classList.remove('disabled');
+        if (selector) {
+            selector.classList.remove('disabled');
+            selector.style.pointerEvents = '';
+            console.log(`Selector ${id} re-enabled`);
+        }
     }, { once: true });
 }
 
@@ -99,6 +103,7 @@ function onThumbnailClick(thumb) {
     if (!selector) return;
     const id = selector.dataset.cellId;
     selector.classList.add('disabled');
+    selector.style.pointerEvents = 'none';
     addPlayerCell(thumb.textContent, id);
 }
 

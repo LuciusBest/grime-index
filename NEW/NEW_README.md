@@ -54,3 +54,14 @@ Showcase basic interaction flow between selector thumbnails and player area.
 
 🧠 Purpose:
 Manage multiple cells dynamically and allow returning from the player view.
+
+## 2025-06-11 – 16:02
+
+🔧 Fixed selector re-enable bug:
+- Normalized tracker IDs as strings in `js/gridManager.js`
+- Restored `pointer-events` and removed `.disabled` class when closing a player
+  cell
+- Added console log when a selector is re-enabled
+
+🧠 Purpose:
+Ensure selectors become clickable again after closing their player cells.
