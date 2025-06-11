@@ -82,7 +82,7 @@ function drawFrameToCanvas(videoSrc, canvas, time = 0, shaderName = 'threshold_g
     resolve();
   });
 
-    video.addEventListener('error', (e) => {
+    video.addEventListener('error', () => {
       reject(new Error('Video failed to load'));
     });
 
@@ -116,24 +116,40 @@ async function renderThumbnail(canvas, archive) {
   const dpr = window.devicePixelRatio || 1;
   canvas.width = rect.width * dpr;
   canvas.height = rect.height * dpr;
-  const timestamp = await getThumbnailTimestamp(archive.archive);
-  await drawFrameToCanvas(archive.file, canvas, timestamp);
+
+  try {
+    const timestamp = await getThumbnailTimestamp(archive.archive);
+    await drawFrameToCanvas(archive.file, canvas, timestamp);
+  } catch (err) {
+    console.error('Thumbnail draw failed', err);
+    showFallback(canvas);
+    return;
+  }
 
   const gl = canvas.getContext('webgl');
   gl?.getExtension('WEBGL_lose_context')?.loseContext();
 
-  const img = document.createElement('img');
   try {
-    img.src = canvas.toDataURL();
+    const url = canvas.toDataURL();
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.width = '100%';
+    img.style.height = '100%';
+    canvas.replaceWith(img);
   } catch (err) {
     console.error('Failed to export canvas', err);
+    showFallback(canvas);
   }
-  img.style.width = '100%';
-  img.style.height = '100%';
-  canvas.replaceWith(img);
 }
 
-export async function buildThumbnail(archive, container) {
+function showFallback(canvas) {
+  const fallback = document.createElement('div');
+  fallback.className = 'thumb-fallback';
+  fallback.textContent = 'Thumbnail failed';
+  canvas.replaceWith(fallback);
+}
+
+export function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
   const canvas = document.createElement('canvas');
@@ -143,6 +159,5 @@ export async function buildThumbnail(archive, container) {
   if (container) container.appendChild(cell);
 
   renderQueue = renderQueue.then(() => renderThumbnail(canvas, archive));
-  await renderQueue;
   return cell;
 }
