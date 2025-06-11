@@ -116,3 +116,13 @@ Prevent new selector cells from being hidden behind player cells.
 
 🧠 Purpose:
 Ensure each new cell divides the existing space instead of overlapping previous cells.
+
+## 2025-06-11 – 16:53
+
+🔧 Animated selector cell entrance:
+- Added transition rules specifically for `.selector-cell` in `css/layout.css`
+- Updated `createSelectorCell` in `js/gridManager.js` to start offscreen and
+  slide into place based on orientation
+
+🧠 Purpose:
+Maintain visual consistency by giving selectors the same smooth entrance as player cells.

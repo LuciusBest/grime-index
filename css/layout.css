@@ -20,17 +20,18 @@ html, body {
     font-size: 1.5em;
     position: absolute;
     box-sizing: border-box;
-    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .selector-cell {
     background-color: blue;
     z-index: 0;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .player-cell {
     background-color: red;
     z-index: 1;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .selector-cell.disabled {
