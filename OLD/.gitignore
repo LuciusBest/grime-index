@@ -1,0 +1,7 @@
+# Ignorer les vidéos
+videos/
+*.mp4
+*.mov
+
+# Fichiers système inutiles
+.DS_Store

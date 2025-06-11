@@ -1,7 +1,6 @@
-# Ignorer les vidéos
-videos/
-*.mp4
-*.mov
-
-# Fichiers système inutiles
+# Ignore macOS system files
 .DS_Store
+
+# Ignore generated folders
+videos/
+node_modules/

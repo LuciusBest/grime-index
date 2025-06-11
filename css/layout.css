@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#overall-grid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.selector-cell, .player-cell {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    font-size: 1.5em;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.selector-cell {
+    background-color: blue;
+    z-index: 0;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.player-cell {
+    background-color: red;
+    z-index: 1;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.selector-cell.disabled {
+    pointer-events: none;
+}
+
+.selector-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.selector-grid .thumbnail-cell {
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selector-grid .thumbnail-cell:nth-child(odd) {
+    background-color: #ccc;
+    color: black;
+}
+
+.selector-grid .thumbnail-cell:nth-child(even) {
+    background-color: #444;
+    color: white;
+}
+
+.thumbnail-cell:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.thumbnail-cell canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.return-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 20;
+}
