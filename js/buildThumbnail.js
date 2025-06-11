@@ -44,7 +44,8 @@ async function getThumbnailTimestamp(dataFile) {
 
 const queue = [];
 let processing = false;
-const THRESHOLD = 120;
+// Threshold derived from the original shader (0.22 in 0-1 range)
+const THRESHOLD = Math.round(0.22 * 255);
 
 async function processQueue() {
   if (processing) return;
@@ -62,15 +63,26 @@ function applyThresholdEffect(canvas) {
   if (!ctx) return;
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const data = imageData.data;
-  for (let i = 0; i < data.length; i += 4) {
-    const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
-    if (brightness < THRESHOLD) {
-      data[i + 3] = 0;
-    } else {
-      data[i] = 255;
-      data[i + 1] = 0;
-      data[i + 2] = 0;
-      data[i + 3] = 255;
+  const width = canvas.width;
+  const height = canvas.height;
+  const topColor = [255, 51, 51];
+  const bottomColor = [255, 51, 51];
+  for (let y = 0; y < height; y++) {
+    const t = y / height; // fraction from top (0) to bottom (1)
+    const rGrad = bottomColor[0] * t + topColor[0] * (1 - t);
+    const gGrad = bottomColor[1] * t + topColor[1] * (1 - t);
+    const bGrad = bottomColor[2] * t + topColor[2] * (1 - t);
+    for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * 4;
+      const gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+      if (gray >= THRESHOLD) {
+        data[i + 3] = 0; // transparent
+      } else {
+        data[i] = rGrad;
+        data[i + 1] = gGrad;
+        data[i + 2] = bGrad;
+        data[i + 3] = 255;
+      }
     }
   }
   ctx.putImageData(imageData, 0, 0);

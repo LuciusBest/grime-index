@@ -25,9 +25,9 @@ actual result, and next planned action.
 **Observed:** Thumbnails appeared in all cells but showed raw video frames with no red threshold effect.
 **Next:** Post-process the drawn frame to apply the threshold filter using pixel data.
 
-## Commit <next> (pending)
-**Strategy:** Apply a 2D canvas threshold effect after drawing each frame.
-**Steps:** Manipulate `ImageData` pixels so dark areas become transparent and light areas turn solid red.
-**Expected:** Thumbnails appear in red over transparency as before.
+## Commit <next>
+**Strategy:** Recreate the old shader in 2D canvas. Pixels are converted to grayscale using 0.299/0.587/0.114 weights and compared to a 0.22 threshold. Bright values are cleared, dark ones recoloured with a vertical red gradient.
+**Steps:** Updated `applyThresholdEffect` to loop over each scanline, calculate grayscale, apply transparency above the threshold, and fill remaining pixels with red. Updated README with the new description.
+**Expected:** Thumbnails match the previous shader effect with red silhouettes on transparency.
 **Observed:** _(pending after test)_
-**Next:** Confirm visual output across multiple archives and tweak the threshold value if needed.
+**Next:** Verify visual consistency across archives and adjust the gradient if needed.
