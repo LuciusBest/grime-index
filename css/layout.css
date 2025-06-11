@@ -35,11 +35,24 @@ html, body {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.selector-grid .grid-cell {
-    background-color: #add8e6;
+.selector-grid .thumbnail-cell {
     border: 1px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.selector-grid .thumbnail-cell:nth-child(odd) {
+    background-color: #ccc;
     color: black;
+}
+
+.selector-grid .thumbnail-cell:nth-child(even) {
+    background-color: #444;
+    color: white;
+}
+
+.thumbnail-cell:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

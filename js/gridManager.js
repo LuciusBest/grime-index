@@ -14,7 +14,7 @@ function addSelectorCell() {
 
     for (let i = 1; i <= 9; i++) {
         const placeholder = document.createElement('div');
-        placeholder.className = 'grid-cell';
+        placeholder.className = 'thumbnail-cell';
         placeholder.textContent = `Cell ${i}`;
         selectorGrid.appendChild(placeholder);
     }

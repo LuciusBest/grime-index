@@ -24,3 +24,13 @@ Maintain chronological record of every change while rebuilding the interface.
 
 🧠 Purpose:
 Prepare layout structure for future thumbnail grid integration.
+
+## 2025-06-11 – 15:24
+
+🔧 Updated thumbnail grid styling:
+- Renamed `.grid-cell` class to `.thumbnail-cell` in CSS and JS
+- Added alternating gray backgrounds using `:nth-child` selectors
+- Implemented hover opacity and pointer cursor
+
+🧠 Purpose:
+Improve readability and interactivity of placeholder selector grid.
