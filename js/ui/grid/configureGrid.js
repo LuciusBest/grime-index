@@ -5,6 +5,9 @@ export function configureGrid(container, type = 'landing') {
     case 'landing':
       columns = 2;
       break;
+    case 'selector':
+      columns = 3;
+      break;
     // other types can override columns here
     default:
       columns = 2;
