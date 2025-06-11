@@ -34,3 +34,13 @@ Prepare layout structure for future thumbnail grid integration.
 
 🧠 Purpose:
 Improve readability and interactivity of placeholder selector grid.
+
+## 2025-06-11 – 15:35
+
+🔧 Added player-cell display logic:
+- Clicking a `.thumbnail-cell` now creates a `.player-cell` displaying the same text
+- `.player-cell` animates from bottom to top using CSS transitions
+- Disables the selector after a thumbnail is clicked
+
+🧠 Purpose:
+Showcase basic interaction flow between selector thumbnails and player area.

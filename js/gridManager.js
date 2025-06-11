@@ -16,6 +16,7 @@ function addSelectorCell() {
         const placeholder = document.createElement('div');
         placeholder.className = 'thumbnail-cell';
         placeholder.textContent = `Cell ${i}`;
+        placeholder.addEventListener('click', () => onThumbnailClick(placeholder));
         selectorGrid.appendChild(placeholder);
     }
 
@@ -24,12 +25,16 @@ function addSelectorCell() {
     return cell;
 }
 
-function addPlayerCell() {
+function addPlayerCell(text) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
-    cell.textContent = 'Player here';
+    cell.textContent = text;
     grid.appendChild(cell);
+    // allow CSS transition
+    requestAnimationFrame(() => {
+        cell.style.top = '0';
+    });
     return cell;
 }
 
@@ -38,6 +43,13 @@ function replaceCell(oldCell, newCell) {
     if (grid && oldCell && newCell) {
         grid.replaceChild(newCell, oldCell);
     }
+}
+
+function onThumbnailClick(thumb) {
+    const selector = thumb.closest('.selector-cell');
+    if (!selector) return;
+    selector.classList.add('disabled');
+    addPlayerCell(thumb.textContent);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
