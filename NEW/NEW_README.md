@@ -44,3 +44,13 @@ Improve readability and interactivity of placeholder selector grid.
 
 🧠 Purpose:
 Showcase basic interaction flow between selector thumbnails and player area.
+
+## 2025-06-11 – 15:55
+
+🔧 Added cell trackers and return button:
+- Introduced `activeSelectorCells` and `activePlayerCells` maps in `js/gridManager.js`
+- Player cells now include a `Back` button that slides them out and re-enables the selector
+- Added `.return-btn` styles in `css/layout.css`
+
+🧠 Purpose:
+Manage multiple cells dynamically and allow returning from the player view.

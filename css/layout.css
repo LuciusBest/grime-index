@@ -67,3 +67,10 @@ html, body {
     opacity: 0.8;
     cursor: pointer;
 }
+
+.return-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+}

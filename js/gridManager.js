@@ -1,3 +1,29 @@
+const activeSelectorCells = new Map();
+const activePlayerCells = new Map();
+let cellCounter = 0;
+
+function trackSelectorCell(id, cell) {
+    activeSelectorCells.set(id, cell);
+    console.log(`Selector added at ${id}`);
+}
+
+function untrackSelectorCell(id) {
+    activeSelectorCells.delete(id);
+}
+
+function trackPlayerCell(id, cell) {
+    activePlayerCells.set(id, cell);
+    console.log(`Player opened at slot ${id}`);
+}
+
+function untrackPlayerCell(id) {
+    activePlayerCells.delete(id);
+}
+
+function getLinkedSelector(id) {
+    return activeSelectorCells.get(id);
+}
+
 function initOverallGrid() {
     const grid = document.getElementById('overall-grid');
     grid.innerHTML = '';
@@ -7,7 +33,10 @@ function initOverallGrid() {
 function addSelectorCell() {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
+    const id = cellCounter++;
     cell.className = 'selector-cell';
+    cell.dataset.cellId = id;
+    trackSelectorCell(id, cell);
 
     const selectorGrid = document.createElement('div');
     selectorGrid.className = 'selector-grid';
@@ -25,12 +54,21 @@ function addSelectorCell() {
     return cell;
 }
 
-function addPlayerCell(text) {
+function addPlayerCell(text, id) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
+    cell.dataset.cellId = id;
     cell.textContent = text;
+
+    const backBtn = document.createElement('button');
+    backBtn.className = 'return-btn';
+    backBtn.textContent = 'Back';
+    backBtn.addEventListener('click', () => closePlayerCell(cell));
+    cell.appendChild(backBtn);
+
     grid.appendChild(cell);
+    trackPlayerCell(id, cell);
     // allow CSS transition
     requestAnimationFrame(() => {
         cell.style.top = '0';
@@ -45,11 +83,23 @@ function replaceCell(oldCell, newCell) {
     }
 }
 
+function closePlayerCell(playerCell) {
+    const id = playerCell.dataset.cellId;
+    playerCell.style.top = '100%';
+    playerCell.addEventListener('transitionend', () => {
+        playerCell.remove();
+        untrackPlayerCell(id);
+        const selector = getLinkedSelector(id);
+        if (selector) selector.classList.remove('disabled');
+    }, { once: true });
+}
+
 function onThumbnailClick(thumb) {
     const selector = thumb.closest('.selector-cell');
     if (!selector) return;
+    const id = selector.dataset.cellId;
     selector.classList.add('disabled');
-    addPlayerCell(thumb.textContent);
+    addPlayerCell(thumb.textContent, id);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
