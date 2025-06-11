@@ -86,3 +86,13 @@ Lay groundwork for recursive cell creation and alternating split logic.
 
 🧠 Purpose:
 Demonstrate infinite alternating layout splits triggered via Next buttons.
+
+## 2025-06-11 – 16:31
+
+🔧 Fixed early player creation and control cleanup:
+- Updated `js/gridManager.js` so Next only spawns a new selector
+- Added `addPlayerControls()` helper and removed controls from previous players
+- Player orientation stored with layout areas for proper animations
+
+🧠 Purpose:
+Ensure players appear only when thumbnails are clicked and controls stay exclusive to the topmost cell.

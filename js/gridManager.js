@@ -1,7 +1,7 @@
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
 let cellCounter = 0;
-const layoutStack = [{ x: 0, y: 0, width: 100, height: 100 }];
+const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
 let nextHorizontal = true;
 
 function trackSelectorCell(id, cell) {
@@ -34,11 +34,13 @@ function computeNextArea() {
         area.height = parent.height;
         area.x = parent.x + parent.width - area.width;
         area.y = parent.y;
+        area.orientation = 'horizontal';
     } else {
         area.width = parent.width;
         area.height = parent.height / 2;
         area.x = parent.x;
         area.y = parent.y + parent.height - area.height;
+        area.orientation = 'vertical';
     }
     return area;
 }
@@ -88,18 +90,6 @@ function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     cell.style.height = area.height + '%';
     cell.textContent = text;
 
-    const backBtn = document.createElement('button');
-    backBtn.className = 'return-btn';
-    backBtn.textContent = 'Back';
-    backBtn.addEventListener('click', () => closePlayerCell(cell));
-    cell.appendChild(backBtn);
-
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'next-btn';
-    nextBtn.textContent = 'Next';
-    nextBtn.addEventListener('click', () => handleNext(cell));
-    cell.appendChild(nextBtn);
-
     grid.appendChild(cell);
     trackPlayerCell(id, cell);
 
@@ -117,6 +107,20 @@ function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     return cell;
 }
 
+function addPlayerControls(playerCell) {
+    const backBtn = document.createElement('button');
+    backBtn.className = 'return-btn';
+    backBtn.textContent = 'Back';
+    backBtn.addEventListener('click', () => closePlayerCell(playerCell));
+    playerCell.appendChild(backBtn);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'next-btn';
+    nextBtn.textContent = 'Next';
+    nextBtn.addEventListener('click', () => handleNext(playerCell));
+    playerCell.appendChild(nextBtn);
+}
+
 function replaceCell(oldCell, newCell) {
     const grid = document.getElementById('overall-grid');
     if (grid && oldCell && newCell) {
@@ -127,10 +131,8 @@ function replaceCell(oldCell, newCell) {
 function createCellPair() {
     const area = computeNextArea();
     const id = cellCounter++;
-    const selector = createSelectorCell(area, id);
-    const player = createPlayerCell(area, id, nextHorizontal ? 'horizontal' : 'vertical');
-    selector.classList.add('disabled');
-    selector.style.pointerEvents = 'none';
+    area.id = id;
+    createSelectorCell(area, id);
     layoutStack.push(area);
     nextHorizontal = !nextHorizontal;
 }
@@ -165,8 +167,13 @@ function onThumbnailClick(thumb) {
     const id = selector.dataset.cellId;
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
-    const area = layoutStack[layoutStack.length - 1];
-    createPlayerCell(area, id, 'vertical', thumb.textContent);
+    activePlayerCells.forEach(p => {
+        p.querySelector('.return-btn')?.remove();
+        p.querySelector('.next-btn')?.remove();
+    });
+    const area = layoutStack.find(a => a.id == id);
+    const player = createPlayerCell(area, id, area.orientation, thumb.textContent);
+    addPlayerControls(player);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
