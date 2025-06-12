@@ -45,3 +45,10 @@ actual result, and next planned action.
 **Expected:** Thumbnails appear instantly when selectors are shown with no additional rendering cost.
 **Observed:** Prebuilt images load quickly across all selectors without rebuilding.
 **Next:** Monitor memory impact but keep the preload approach.
+
+## Commit d2866de (2025-06-12)
+**Strategy:** Adjust CSS so preloaded thumbnails do not alter the selector grid layout.
+**Steps:** Added `grid-auto-rows: 1fr` and explicit 100% sizing to `.selector-grid` and `.thumbnail-cell` in `layout.css`.
+**Expected:** The selector grid consistently shows a 3\u00d73 layout with thumbnails filling each cell.
+**Observed:** Thumbnails fit correctly within their cells and the grid no longer stretches vertically.
+**Next:** Continue monitoring grid behavior as more archives are added.
