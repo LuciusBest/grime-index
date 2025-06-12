@@ -157,6 +157,14 @@ body {
     z-index: 20;
 }
 
+.focus-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
 .splitter {
     position: absolute;
     background: black;
