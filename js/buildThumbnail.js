@@ -19,7 +19,23 @@ function drawFrameToCanvas(videoSrc, canvas, time = 0) {
         reject(new Error('2D context not supported'));
         return;
       }
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const vw = video.videoWidth;
+      const vh = video.videoHeight;
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const videoRatio = vw / vh;
+      const canvasRatio = cw / ch;
+      let sx = 0, sy = 0, sw = vw, sh = vh;
+      if (canvasRatio > videoRatio) {
+        // Canvas is wider; crop top/bottom from the video
+        sh = vw / canvasRatio;
+        sy = (vh - sh) / 2;
+      } else if (canvasRatio < videoRatio) {
+        // Canvas is taller; crop left/right
+        sw = vh * canvasRatio;
+        sx = (vw - sw) / 2;
+      }
+      ctx.drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch);
       video.removeAttribute('src');
       resolve();
     });
@@ -111,6 +127,7 @@ async function renderThumbnail(canvas, archive) {
     img.src = url;
     img.style.width = '100%';
     img.style.height = '100%';
+    img.style.objectFit = 'cover';
     canvas.replaceWith(img);
   } catch (err) {
     console.error('Failed to export canvas', err);

@@ -29,5 +29,12 @@ actual result, and next planned action.
 **Strategy:** Recreate the old shader in 2D canvas. Pixels are converted to grayscale using 0.299/0.587/0.114 weights and compared to a 0.22 threshold. Bright values are cleared, dark ones recoloured with a vertical red gradient.
 **Steps:** Updated `applyThresholdEffect` to loop over each scanline, calculate grayscale, apply transparency above the threshold, and fill remaining pixels with red. Updated README with the new description.
 **Expected:** Thumbnails match the previous shader effect with red silhouettes on transparency.
+**Observed:** Thumbnails render, but aspect ratios differ between selector grids, causing distortion.
+**Next:** Crop video frames during capture to emulate `object-fit: cover`.
+
+## Commit <new>
+**Strategy:** Preserve video aspect ratio when drawing to the canvas.
+**Steps:** Updated `drawFrameToCanvas` to calculate crop rectangles and draw with `drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch)`. Added inline `objectFit: cover` style when replacing the canvas with an image.
+**Expected:** All grids display thumbnails that cover their cell without stretching.
 **Observed:** _(pending after test)_
-**Next:** Verify visual consistency across archives and adjust the gradient if needed.
+**Next:** Confirm stable sizing across archives and adjust CSS only if necessary.
