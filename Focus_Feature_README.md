@@ -14,3 +14,9 @@
    promote the chosen cell and reset the layout.
 ⚠️ Uses a simplified approach; IDs are reset which may need refinement.
 📍 Next: Verify that Back/Next still operate correctly after focusing.
+## 2025-06-12 – 14:15
+
+✅ Added cascadePromote to move focused cell upward smoothly.
+💡 Reverse Back logic, iteratively replacing parents after closing children.
+⚠️ Needs testing with various layouts to ensure transitions remain smooth.
+📍 Next: Verify focus maintains Next/Back flow after reset.

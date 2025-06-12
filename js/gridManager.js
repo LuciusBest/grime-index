@@ -418,28 +418,43 @@ async function closeChildren(id) {
     }
 }
 
-async function closePrevious(id) {
-    const ids = Array.from(activePlayerCells.keys())
-        .map(Number)
-        .filter(pid => pid < id)
-        .sort((a, b) => b - a);
-    for (const pid of ids) {
-        const cell = activePlayerCells.get(String(pid));
-        if (cell) {
-            await closePlayerPair(cell);
+async function cascadePromote(id) {
+    let playerCell = activePlayerCells.get(String(id));
+    if (!playerCell) return;
+    while (id > 0) {
+        const parentId = id - 1;
+        const parentCell = activePlayerCells.get(String(parentId));
+        const parentSelector = getLinkedSelector(parentId);
+        const area = layoutStack.find(a => a.id == parentId);
+        if (area) {
+            playerCell.style.left = area.x + '%';
+            playerCell.style.top = area.y + '%';
+            playerCell.style.width = area.width + '%';
+            playerCell.style.height = area.height + '%';
+            playerCell.style.zIndex = parentId * 2 + 1;
+            playerCell.dataset.orientation = area.orientation;
+        }
+        await new Promise(res => playerCell.addEventListener('transitionend', res, { once: true }));
+
+        if (parentCell) {
+            if (parentCell._dispose) parentCell._dispose();
+            const vid = parentCell.querySelector('video');
+            if (vid) vid.pause();
+            if (parentCell._splitter) parentCell._splitter.remove();
+            parentCell.remove();
+            untrackPlayerCell(parentId);
+        }
+
+        if (parentSelector) {
+            await closeSelectorCell(parentSelector);
             await delay(300);
         }
-    }
-}
 
-function promoteToBase(playerCell) {
-    return new Promise(resolve => {
-        playerCell.style.left = '0%';
-        playerCell.style.top = '0%';
-        playerCell.style.width = '100%';
-        playerCell.style.height = '100%';
-        playerCell.addEventListener('transitionend', () => resolve(), { once: true });
-    });
+        activePlayerCells.delete(String(id));
+        playerCell.dataset.cellId = parentId;
+        activePlayerCells.set(String(parentId), playerCell);
+        id = parentId;
+    }
 }
 
 function resetLayoutStack(playerCell) {
@@ -459,8 +474,7 @@ async function focusPlayerCell(id) {
     const playerCell = activePlayerCells.get(String(id));
     if (!playerCell) return;
     await closeChildren(id);
-    await closePrevious(id);
-    await promoteToBase(playerCell);
+    await cascadePromote(id);
     resetLayoutStack(playerCell);
     restoreLastPlayerControls();
 }
