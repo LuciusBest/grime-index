@@ -470,7 +470,7 @@ async function cascadePromote(id) {
         playerCell.dataset.cellId = parentId;
         activePlayerCells.set(String(parentId), playerCell);
         id = parentId;
-        await delay(300);
+        await delay(100);
     }
 }
 

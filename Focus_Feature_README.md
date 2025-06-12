@@ -57,3 +57,10 @@
 💡 cascadePromote now waits for each player and selector pair to finish closing before moving upward.
 ⚠️ Root selector remains disabled after the root player closes.
 📍 Next: monitor for timing issues on slower devices.
+
+## 2025-06-12 – 19:50
+
+✅ Accelerated promotion cascade timing.
+💡 Delay between each step in `cascadePromote` reduced to 0.1s and matching CSS transitions shortened.
+⚠️ Children closing delay remains 0.3s, which may feel inconsistent.
+📍 Next: gather feedback on animation speed and consider aligning child closure timing.

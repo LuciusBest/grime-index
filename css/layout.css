@@ -29,7 +29,7 @@ body {
 .selector-cell {
     background-color: blue;
     z-index: 0;
-    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+    transition: top 0.1s ease, left 0.1s ease, width 0.1s ease, height 0.1s ease;
 }
 
 .player-cell {
@@ -38,7 +38,7 @@ body {
     z-index: 1;
     position: absolute;
     overflow: hidden;
-    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+    transition: top 0.1s ease, left 0.1s ease, width 0.1s ease, height 0.1s ease;
 }
 
 .highlighted-player-cell {
@@ -170,7 +170,7 @@ body {
     background: black;
     pointer-events: none;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .highlighted-player-cell .video-background-layer {
