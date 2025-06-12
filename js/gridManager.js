@@ -288,21 +288,31 @@ function closeSelectorCell(selectorCell) {
 function handleBack(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
     const childId = childSelectors.get(id);
-    const childSelector = childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
+    const childSelector =
+        childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
     const parentSelector = getLinkedSelector(id);
-    const afterClose = () => {
-        if (parentSelector) {
-            parentSelector.classList.remove('disabled');
-            parentSelector.style.pointerEvents = '';
-        }
-        restoreLastPlayerControls();
-    };
-    const closePlayer = () => closePlayerCell(playerCell).then(afterClose);
+
     if (childSelector) {
-        closeSelectorCell(childSelector).then(closePlayer);
-    } else {
-        closePlayer();
+        // Step 1: close only the child selector and keep the player open
+        closeSelectorCell(childSelector).then(() => {
+            restoreLastPlayerControls();
+        });
+        return;
     }
+
+    const afterPlayerClose = () => {
+        if (id > 0 && parentSelector) {
+            // Step 2: after closing the player, also close its selector
+            closeSelectorCell(parentSelector).then(() => {
+                restoreLastPlayerControls();
+            });
+        } else {
+            // id === 0 -> keep selector 0 open
+            restoreLastPlayerControls();
+        }
+    };
+
+    closePlayerCell(playerCell).then(afterPlayerClose);
 }
 
 
