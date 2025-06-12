@@ -225,7 +225,8 @@ function onThumbnailClick(thumb) {
     addPlayerControls(player);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await preloadThumbnails(archives);
     initOverallGrid();
     createSelectorCell(layoutStack[0], cellCounter++);
 });

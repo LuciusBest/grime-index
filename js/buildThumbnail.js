@@ -60,7 +60,9 @@ async function getThumbnailTimestamp(dataFile) {
 
 const THRESHOLD = Math.round(0.22 * 255);
 const THUMB_SIZE = 256;
+const SCALE_FACTOR = 2;
 const thumbnailCache = new Map();
+const pendingCells = new Map();
 
 
 function applyThresholdEffect(canvas) {
@@ -93,16 +95,10 @@ function applyThresholdEffect(canvas) {
   ctx.putImageData(imageData, 0, 0);
 }
 
-async function captureThumbnail(archive, cell = null) {
+async function captureThumbnail(archive, width = THUMB_SIZE, height = THUMB_SIZE) {
   const canvas = document.createElement('canvas');
-  if (cell) {
-    const rect = cell.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-  } else {
-    canvas.width = THUMB_SIZE;
-    canvas.height = THUMB_SIZE;
-  }
+  canvas.width = width * SCALE_FACTOR;
+  canvas.height = height * SCALE_FACTOR;
   try {
     const timestamp = await getThumbnailTimestamp(archive.archive);
     await drawFrameToCanvas(archive.file, canvas, timestamp);
@@ -117,7 +113,6 @@ async function captureThumbnail(archive, cell = null) {
 function createFallback() {
   const fallback = document.createElement('div');
   fallback.className = 'thumb-fallback';
-  fallback.textContent = 'Thumbnail failed';
   return fallback;
 }
 
@@ -134,17 +129,32 @@ export function buildThumbnail(archive, container) {
   } else {
     const placeholder = createFallback();
     cell.appendChild(placeholder);
-    requestAnimationFrame(async () => {
-      const url = await captureThumbnail(archive, cell);
-      if (url) {
-        thumbnailCache.set(archive.file, url);
-        const img = document.createElement('img');
-        img.src = url;
-        cell.replaceChild(img, placeholder);
-      } else {
-        placeholder.textContent = 'Thumbnail failed';
-      }
-    });
+    if (!pendingCells.has(archive.file)) {
+      pendingCells.set(archive.file, []);
+    }
+    pendingCells.get(archive.file).push(cell);
   }
   return cell;
+}
+
+export async function preloadThumbnails(archives) {
+  for (const arch of archives) {
+    if (!thumbnailCache.has(arch.file)) {
+      const url = await captureThumbnail(arch);
+      if (url) {
+        thumbnailCache.set(arch.file, url);
+      }
+    }
+    const cells = pendingCells.get(arch.file);
+    if (cells && thumbnailCache.has(arch.file)) {
+      const url = thumbnailCache.get(arch.file);
+      cells.forEach(cell => {
+        const img = document.createElement('img');
+        img.src = url;
+        cell.innerHTML = '';
+        cell.appendChild(img);
+      });
+      pendingCells.delete(arch.file);
+    }
+  }
 }
