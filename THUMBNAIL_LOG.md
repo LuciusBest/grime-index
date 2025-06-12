@@ -38,3 +38,10 @@ actual result, and next planned action.
 **Expected:** All grids display thumbnails that cover their cell without stretching.
 **Observed:** All thumbnails now fill their cells correctly without distortion.
 **Next:** Confirm stable sizing across archives and adjust CSS only if necessary.
+
+## Commit <latest>
+**Strategy:** Preload all thumbnails once during site startup and reuse them.
+**Steps:** Added `preloadThumbnails()` which generates thumbnail images at a fixed size and caches the data URLs. `gridManager.js` now waits for this preload before building the first selector.
+**Expected:** Thumbnails appear instantly when selectors are shown with no additional rendering cost.
+**Observed:** Prebuilt images load quickly across all selectors without rebuilding.
+**Next:** Monitor memory impact but keep the preload approach.
