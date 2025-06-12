@@ -199,6 +199,24 @@ function addPlayerControls(playerCell, uiLayer) {
     uiLayer.appendChild(nextBtn);
 }
 
+function restoreLastPlayerControls() {
+    if (activePlayerCells.size === 0) return;
+    let lastId = -Infinity;
+    let lastPlayer = null;
+    activePlayerCells.forEach(p => {
+        const pid = parseInt(p.dataset.cellId, 10);
+        if (pid > lastId) {
+            lastId = pid;
+            lastPlayer = p;
+        }
+    });
+    if (!lastPlayer) return;
+    const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
+    if (!uiLayer.querySelector('.return-btn')) {
+        addPlayerControls(lastPlayer, uiLayer);
+    }
+}
+
 function replaceCell(oldCell, newCell) {
     const grid = document.getElementById('overall-grid');
     if (grid && oldCell && newCell) {
@@ -250,15 +268,22 @@ function closeSelectorCell(selectorCell) {
 
 function handleBack(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
-    const selector = getLinkedSelector(id);
-    closePlayerCell(playerCell).then(() => {
-        if (selector && id !== 0) {
-            closeSelectorCell(selector);
-        } else if (selector) {
-            selector.classList.remove('disabled');
-            selector.style.pointerEvents = '';
+    const childId = childSelectors.get(id);
+    const childSelector = childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
+    const parentSelector = getLinkedSelector(id);
+    const afterClose = () => {
+        if (parentSelector) {
+            parentSelector.classList.remove('disabled');
+            parentSelector.style.pointerEvents = '';
         }
-    });
+        restoreLastPlayerControls();
+    };
+    const closePlayer = () => closePlayerCell(playerCell).then(afterClose);
+    if (childSelector) {
+        closeSelectorCell(childSelector).then(closePlayer);
+    } else {
+        closePlayer();
+    }
 }
 
 
