@@ -9,6 +9,9 @@ let cellCounter = 0;
 const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
 let nextHorizontal = true;
 
+let highlightEnabled = false;
+let currentShader = 'threshold_grey_gradient';
+
 const archives = [
     { file: 'videos/Archive_001_LoganSama_JME_NewhamGenerals.mp4', archive: 'ARCHIVE_001_data.json' },
     { file: 'videos/Archive_002_DDoubleE_Footsie_LoganSama.mp4', archive: 'ARCHIVE_002_data.json' },
@@ -37,6 +40,18 @@ function trackPlayerCell(id, cell) {
 
 function untrackPlayerCell(id) {
     activePlayerCells.delete(String(id));
+}
+
+function applyHighlight() {
+    currentShader = highlightEnabled ? 'threshold' : 'threshold_grey_gradient';
+    activePlayerCells.forEach(cell => {
+        if (cell._dispose) cell._dispose();
+        const video = cell.querySelector('video');
+        const canvas = cell.querySelector('canvas');
+        initVideoShader(video, canvas, currentShader).then(dispose => {
+            cell._dispose = dispose;
+        });
+    });
 }
 
 function getLinkedSelector(id) {
@@ -193,7 +208,7 @@ function createPlayerCell(area, id, orientation, archive) {
     trackPlayerCell(id, cell);
 
     requestAnimationFrame(async () => {
-        cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
+        cell._dispose = await initVideoShader(video, canvas, currentShader);
     });
 
     if (orientation === 'horizontal') {
@@ -385,4 +400,13 @@ function onThumbnailClick(thumb) {
 document.addEventListener('DOMContentLoaded', () => {
     initOverallGrid();
     createSelectorCell(layoutStack[0], cellCounter++);
+
+    const btn = document.getElementById('highlight-toggle');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            highlightEnabled = !highlightEnabled;
+            btn.textContent = highlightEnabled ? 'Highlight On' : 'Highlight Off';
+            applyHighlight();
+        });
+    }
 });
