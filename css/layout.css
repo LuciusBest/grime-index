@@ -33,11 +33,16 @@ body {
 }
 
 .player-cell {
-    background-color: #111;
+    background-color: white;
+    cursor: pointer;
     z-index: 1;
     position: absolute;
     overflow: hidden;
     transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.highlighted-player-cell {
+    background-color: #111;
 }
 
 .video-background-layer {

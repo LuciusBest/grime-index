@@ -14,3 +14,10 @@
 ⚠️ Needs testing across multiple player openings and closures.
 📍 Next: Verify audio and visual transitions behave smoothly.
 
+## 2025-06-12 – 11:31
+
+✅ Enabled manual highlight selection by clicking player cells.
+💡 `updateHighlightState()` now accepts a target cell and stores the current highlight; added click listeners to player cells and CSS background tweaks.
+⚠️ Controls inside players might trigger highlighting unintentionally.
+📍 Next: Review interaction with Back/Next buttons and refine styles if needed.
+

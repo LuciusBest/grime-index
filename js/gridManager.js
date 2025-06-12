@@ -8,6 +8,7 @@ const childSelectors = new Map();
 let cellCounter = 0;
 const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
 let nextHorizontal = true;
+let highlightedPlayerCell = null;
 
 const archives = [
     { file: 'videos/Archive_001_LoganSama_JME_NewhamGenerals.mp4', archive: 'ARCHIVE_001_data.json' },
@@ -39,19 +40,21 @@ function untrackPlayerCell(id) {
     activePlayerCells.delete(String(id));
 }
 
-function updateHighlightState() {
-    let latestId = -Infinity;
-    let latestCell = null;
-    activePlayerCells.forEach((cell, key) => {
-        const pid = parseInt(key, 10);
-        if (pid > latestId) {
-            latestId = pid;
-            latestCell = cell;
-        }
-    });
+function updateHighlightState(targetCell = highlightedPlayerCell) {
+    if (!targetCell || !activePlayerCells.has(String(targetCell.dataset.cellId))) {
+        let latestId = -Infinity;
+        activePlayerCells.forEach((cell, key) => {
+            const pid = parseInt(key, 10);
+            if (pid > latestId) {
+                latestId = pid;
+                targetCell = cell;
+            }
+        });
+    }
+    highlightedPlayerCell = targetCell || null;
     activePlayerCells.forEach(cell => {
         const video = cell.querySelector('video');
-        if (cell === latestCell) {
+        if (cell === highlightedPlayerCell) {
             cell.classList.add('highlighted-player-cell');
             if (video) video.muted = false;
         } else {
@@ -213,6 +216,7 @@ function createPlayerCell(area, id, orientation, archive) {
     grid.appendChild(cell);
     if (splitter) cell._splitter = splitter;
     trackPlayerCell(id, cell);
+    cell.addEventListener('click', () => updateHighlightState(cell));
 
     requestAnimationFrame(async () => {
         cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
@@ -229,7 +233,7 @@ function createPlayerCell(area, id, orientation, archive) {
             cell.style.top = area.y + '%';
         });
     }
-    updateHighlightState();
+    updateHighlightState(cell);
     return cell;
 }
 
