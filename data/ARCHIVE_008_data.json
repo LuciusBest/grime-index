@@ -7,102 +7,144 @@
   "instrumentals": [
     {
       "start": 0.0,
-      "end": 60.0,
+      "end": 172.0,
       "title": "CIRCLES",
       "artist": "PREDITAH"
     },
     {
-      "start": 60.0,
-      "end": 120.0,
+      "start": 172.0,
+      "end": 258.0,
       "title": "ROAR",
       "artist": "DARQ E FREAKER"
     },
     {
-      "start": 120.0,
-      "end": 180.0,
+      "start": 245.0,
+      "end": 312.0,
       "title": "NOSEY PARKER",
       "artist": "PREDITAH"
     },
     {
-      "start": 180.0,
-      "end": 240.0,
+      "start": 312.0,
+      "end": 339.0,
+      "title": "ROAR",
+      "artist": "DARQ E FREAKER"
+    },
+    {
+      "start": 312.0,
+      "end": 433.0,
       "title": "SWITCH",
       "artist": "TEEZA"
     },
     {
-      "start": 240.0,
-      "end": 300.0,
+      "start": 433.0,
+      "end": 550.0,
       "title": "OVERDOSE",
       "artist": "PREDITAH"
     },
     {
-      "start": 300.0,
-      "end": 360.0,
+      "start": 550.0,
+      "end": 630.5,
       "title": "NO HOOKS",
       "artist": "TEEZA"
     },
     {
-      "start": 360.0,
-      "end": 420.0,
+      "start": 630.5,
+      "end": 734.0,
       "title": "HARDKORE",
       "artist": "PLASTICIAN"
     },
     {
-      "start": 420.0,
-      "end": 480.0,
+      "start": 725.0,
+      "end": 823.0,
       "title": "BOUNCE",
       "artist": "TEEZA"
     },
     {
-      "start": 480.0,
-      "end": 540.0,
+      "start": 810.0,
+      "end": 890.0,
       "title": "PULSE TAZER",
       "artist": "J BEATZ"
     },
     {
-      "start": 540.0,
-      "end": 600.0,
+      "start": 890.0,
+      "end": 957.0,
       "title": "CENTAUR",
       "artist": "DEXPLICIT"
     },
     {
-      "start": 600.0,
-      "end": 660.0,
+      "start": 940.0,
+      "end": 1053.0,
       "title": "RED BULL",
       "artist": "PREDITAH"
     },
     {
-      "start": 660.0,
-      "end": 720.0,
+      "start": 1053.0,
+      "end": 1120,
       "title": "GUNSLAP",
       "artist": "NU KLEAR"
     },
     {
-      "start": 720.0,
-      "end": 780.0,
+      "start": 1100.0,
+      "end": 1199.5,
       "title": "SHANKLE",
       "artist": "SUKH KNIGHT"
     },
     {
-      "start": 780.0,
-      "end": 840.0,
+      "start": 1203.0,
+      "end": 1280.0,
       "title": "FEEDBACK (J BEATZ REMIX)",
       "artist": "JAMMER"
     },
     {
-      "start": 840.0,
-      "end": 900.0,
+      "start": 1275.0,
+      "end": 1401.0,
       "title": "SUMMER",
       "artist": "RUDE KID"
     },
     {
-      "start": 900.0,
-      "end": 960.0,
+      "start": 1401.0,
+      "end": 0,
       "title": "ATTACK",
       "artist": "PREDITAH"
     }
   ],
-  "reloads": [],
+  "reloads": [
+    {
+      "id": "reload_01",
+      "start": 179.0,
+      "end": 182.0
+    },
+    {
+      "id": "reload_02",
+      "start": 439.7,
+      "end": 442.0
+    },
+    {
+      "id": "reload_03",
+      "start": 636.5,
+      "end": 640.0
+    },
+    {
+      "id": "reload_03",
+      "start": 738.0,
+      "end": 743.0
+    },
+    {
+      "id": "reload_04",
+      "start": 1123.5,
+      "end": 1128.0
+    },
+    {
+      "id": "reload_05",
+      "start": 1199.0,
+      "end": 1203.0
+    },
+    {
+      "id": "reload_06",
+      "start": 1291.5,
+      "end": 1295.0
+    }
+  ],
   "segments": [
     {
       "id": 0,
@@ -123,7 +165,7 @@
           "chorus": false
         }
       ],
-      "speaker": "unknown",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -157,7 +199,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -173,7 +215,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -213,7 +255,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -271,7 +313,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -335,7 +377,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -351,7 +393,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -373,7 +415,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -389,7 +431,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55707,7 +55749,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55723,7 +55765,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55775,7 +55817,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55827,7 +55869,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55891,7 +55933,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55913,7 +55955,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55941,7 +55983,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55957,7 +55999,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -55991,7 +56033,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56055,7 +56097,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56107,7 +56149,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56129,7 +56171,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56163,7 +56205,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56227,7 +56269,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56249,7 +56291,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56301,7 +56343,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56323,7 +56365,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56387,7 +56429,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56433,7 +56475,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56479,7 +56521,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56543,7 +56585,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56589,7 +56631,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56641,7 +56683,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56705,7 +56747,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56727,7 +56769,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56761,7 +56803,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56813,7 +56855,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56877,7 +56919,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56935,7 +56977,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -56951,7 +56993,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -57003,7 +57045,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -57803,7 +57845,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -57855,7 +57897,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -57919,7 +57961,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -57971,7 +58013,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58011,7 +58053,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58027,7 +58069,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58043,7 +58085,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58059,7 +58101,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58075,7 +58117,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     },
     {
@@ -58091,7 +58133,7 @@
           "chorus": false
         }
       ],
-      "speaker": "SPEAKER_00",
+      "speaker": "Logan Sama",
       "instrumental": null
     }
   ],
@@ -58153,7 +58195,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -58217,7 +58259,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -58233,7 +58275,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -58255,7 +58297,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -58271,7 +58313,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -69201,7 +69243,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
@@ -69253,7 +69295,7 @@
             "chorus": false
           }
         ],
-        "speaker": "SPEAKER_00",
+        "speaker": "Logan Sama",
         "instrumental": null
       },
       {
