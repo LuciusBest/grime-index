@@ -64,3 +64,10 @@
 💡 Delay between each step in `cascadePromote` reduced to 0.1s and matching CSS transitions shortened.
 ⚠️ Children closing delay remains 0.3s, which may feel inconsistent.
 📍 Next: gather feedback on animation speed and consider aligning child closure timing.
+
+## 2025-06-12 – 23:01
+
+✅ Restored 0.3s animation speed for all grid transitions.
+💡 Kept the 0.1s step delay only in `cascadePromote` for quick focus promotion.
+⚠️ Need to retest to ensure slower animations still feel responsive.
+📍 Next: measure total cascade duration with the new timings.
