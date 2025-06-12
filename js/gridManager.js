@@ -423,7 +423,25 @@ async function cascadePromote(id) {
     if (!playerCell) return;
     const selfSelector = getLinkedSelector(id);
     if (selfSelector) {
-        await closeSelectorCell(selfSelector);
+        const parentIdAttr = selfSelector.dataset.parentId;
+        if (parentIdAttr !== undefined) {
+            childSelectors.delete(Number(parentIdAttr));
+        }
+        selfSelector.remove();
+        untrackSelectorCell(id);
+        const idx = layoutStack.findIndex(a => a.id == id);
+        if (idx > 0) {
+            const parent = layoutStack[idx - 1];
+            const child = layoutStack[idx];
+            if (child.orientation === 'horizontal') {
+                parent.width *= 2;
+            } else {
+                parent.height *= 2;
+            }
+            layoutStack.splice(idx, 1);
+            nextHorizontal = child.orientation === 'horizontal';
+            updateCellStyles(parent);
+        }
         await delay(300);
     }
     while (id > 0) {

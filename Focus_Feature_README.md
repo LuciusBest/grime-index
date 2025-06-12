@@ -27,3 +27,10 @@
 💡 cascadePromote now removes the target player's selector before promoting.
 ⚠️ Confirm that selector animations complete without glitches on varied grids.
 📍 Next: fine-tune timing so focus feels responsive yet smooth.
+
+## 2025-06-12 – 15:30
+
+✅ Removed focused player's selector immediately on focus.
+💡 Applied the cleanup logic from `closeSelectorCell` without animation.
+⚠️ LayoutStack adjustments need further verification.
+📍 Next: Test focus with multiple nested cells.
