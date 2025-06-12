@@ -38,3 +38,31 @@ actual result, and next planned action.
 **Expected:** All grids display thumbnails that cover their cell without stretching.
 **Observed:** All thumbnails now fill their cells correctly without distortion.
 **Next:** Confirm stable sizing across archives and adjust CSS only if necessary.
+
+## Commit <latest>
+**Strategy:** Preload all thumbnails once during site startup and reuse them.
+**Steps:** Added `preloadThumbnails()` which generates thumbnail images at a fixed size and caches the data URLs. `gridManager.js` now waits for this preload before building the first selector.
+**Expected:** Thumbnails appear instantly when selectors are shown with no additional rendering cost.
+**Observed:** Prebuilt images load quickly across all selectors without rebuilding.
+**Next:** Monitor memory impact but keep the preload approach.
+
+## Commit <newer>
+**Strategy:** Generate thumbnails on demand using each cell's dimensions.**
+**Steps:** Removed the preload step. `captureThumbnail` now sizes its canvas from `getBoundingClientRect()` and `buildThumbnail` replaces the placeholder with the generated image. Inline width/height styles were removed so CSS controls layout.**
+**Expected:** Thumbnail grid stays perfectly balanced with 3×3 layout and no distortions.**
+**Observed:** Thumbnails now fill their cells consistently across all selectors.**
+**Next:** Evaluate performance when many selectors are opened.**
+
+## Commit d2866de (2025-06-12)
+**Strategy:** Adjust CSS so preloaded thumbnails do not alter the selector grid layout.
+**Steps:** Added `grid-auto-rows: 1fr` and explicit 100% sizing to `.selector-grid` and `.thumbnail-cell` in `layout.css`.
+**Expected:** The selector grid consistently shows a 3\u00d73 layout with thumbnails filling each cell.
+**Observed:** Thumbnails fit correctly within their cells and the grid no longer stretches vertically.
+**Next:** Continue monitoring grid behavior as more archives are added.
+
+## Commit e15b3a5 (2025-06-12)
+**Strategy:** Preload thumbnails sequentially and upscale rendering.**
+**Steps:** Implemented `preloadThumbnails` to generate images at double size in archive order. `buildThumbnail` registers cells to fill once cached and removed failure text.**
+**Expected:** Each thumbnail appears sharp and loads one after another in predictable order.**
+**Observed:** Thumbnails now load one by one in order and look noticeably sharper.**
+**Next:** Assess memory usage and tweak resolution if needed.**

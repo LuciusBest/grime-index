@@ -87,6 +87,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+    box-sizing: border-box;
 }
 
 .selector-grid .thumbnail-cell {
@@ -94,6 +98,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .selector-grid .thumbnail-cell:nth-child(odd) {
@@ -122,6 +129,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    image-rendering: auto;
     display: block;
 }
 
@@ -132,8 +140,6 @@ body {
     align-items: center;
     justify-content: center;
     background: #222;
-    color: #eee;
-    font-size: 0.8em;
 }
 
 .return-btn {

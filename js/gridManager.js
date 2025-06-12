@@ -1,10 +1,7 @@
 import { buildThumbnail } from './buildThumbnail.js';
-import { initVideoShader } from './videoShader.js';
 
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
-// Map parent player id -> child selector id
-const childSelectors = new Map();
 let cellCounter = 0;
 const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
 let nextHorizontal = true;
@@ -88,16 +85,12 @@ function initOverallGrid() {
     return grid;
 }
 
-function createSelectorCell(area, id, parentId = null) {
+async function createSelectorCell(area, id) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'selector-cell';
     cell.dataset.cellId = id;
     cell.dataset.orientation = area.orientation;
-    if (parentId !== null) {
-        cell.dataset.parentId = parentId;
-        childSelectors.set(parentId, id);
-    }
     cell.style.zIndex = id * 2;
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
@@ -121,20 +114,19 @@ function createSelectorCell(area, id, parentId = null) {
     selectorGrid.className = 'selector-grid';
     cell.appendChild(selectorGrid);
 
-    grid.appendChild(cell);
-
-    archives.forEach(arch => {
-        const thumb = buildThumbnail(arch, selectorGrid);
+    for (const arch of archives) {
+        const thumb = await buildThumbnail(arch, selectorGrid);
         thumb.dataset.file = arch.file;
         thumb.dataset.archive = arch.archive;
         thumb.dataset.title = arch.archive;
         thumb.addEventListener('click', () => onThumbnailClick(thumb));
-    });
+    }
 
+    grid.appendChild(cell);
     return cell;
 }
 
-function createPlayerCell(area, id, orientation, archive) {
+function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
@@ -145,56 +137,10 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.style.top = area.y + '%';
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
-
-    let splitter = null;
-    if (activePlayerCells.size > 0) {
-        splitter = document.createElement('div');
-        splitter.className = 'splitter';
-        splitter.dataset.forPlayer = id;
-        if (orientation === 'horizontal') {
-            splitter.style.width = '3px';
-            splitter.style.height = area.height + '%';
-            splitter.style.left = area.x + '%';
-            splitter.style.top = area.y + '%';
-        } else {
-            splitter.style.height = '3px';
-            splitter.style.width = area.width + '%';
-            splitter.style.left = area.x + '%';
-            splitter.style.top = area.y + '%';
-        }
-        grid.appendChild(splitter);
-        console.log('Splitter inserted for player', id);
-    }
-
-    const videoLayer = document.createElement('div');
-    videoLayer.className = 'video-background-layer';
-    const uiLayer = document.createElement('div');
-    uiLayer.className = 'ui-foreground-layer';
-
-    const videoWrapper = document.createElement('div');
-    videoWrapper.className = 'video-wrapper';
-
-    const video = document.createElement('video');
-    video.src = archive.file;
-    video.crossOrigin = 'anonymous';
-    video.autoplay = true;
-    video.loop = true;
-    const canvas = document.createElement('canvas');
-
-    videoWrapper.appendChild(video);
-    videoWrapper.appendChild(canvas);
-    videoLayer.appendChild(videoWrapper);
-
-    cell.appendChild(videoLayer);
-    cell.appendChild(uiLayer);
+    cell.textContent = text;
 
     grid.appendChild(cell);
-    if (splitter) cell._splitter = splitter;
     trackPlayerCell(id, cell);
-
-    requestAnimationFrame(async () => {
-        cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
-    });
 
     if (orientation === 'horizontal') {
         cell.style.left = area.x + area.width + '%';
@@ -210,36 +156,18 @@ function createPlayerCell(area, id, orientation, archive) {
     return cell;
 }
 
-function addPlayerControls(playerCell, uiLayer) {
+function addPlayerControls(playerCell) {
     const backBtn = document.createElement('button');
     backBtn.className = 'return-btn';
     backBtn.textContent = 'Back';
-    backBtn.addEventListener('click', () => handleBack(playerCell));
-    uiLayer.appendChild(backBtn);
+    backBtn.addEventListener('click', () => closePlayerCell(playerCell));
+    playerCell.appendChild(backBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
-    uiLayer.appendChild(nextBtn);
-}
-
-function restoreLastPlayerControls() {
-    if (activePlayerCells.size === 0) return;
-    let lastId = -Infinity;
-    let lastPlayer = null;
-    activePlayerCells.forEach(p => {
-        const pid = parseInt(p.dataset.cellId, 10);
-        if (pid > lastId) {
-            lastId = pid;
-            lastPlayer = p;
-        }
-    });
-    if (!lastPlayer) return;
-    const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.return-btn')) {
-        addPlayerControls(lastPlayer, uiLayer);
-    }
+    playerCell.appendChild(nextBtn);
 }
 
 function replaceCell(oldCell, newCell) {
@@ -249,120 +177,37 @@ function replaceCell(oldCell, newCell) {
     }
 }
 
-function createCellPair(parentId) {
+function createCellPair() {
     const area = computeNextArea();
     const id = cellCounter++;
     area.id = id;
-    createSelectorCell(area, id, parentId);
+    createSelectorCell(area, id);
     layoutStack.push(area);
     nextHorizontal = !nextHorizontal;
 }
-function closeSelectorCell(selectorCell) {
-    return new Promise(resolve => {
-        const id = selectorCell.dataset.cellId;
-        const orientation = selectorCell.dataset.orientation;
-        if (orientation === "horizontal") {
-            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + "%";
-        } else {
-            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + "%";
-        }
-        selectorCell.addEventListener("transitionend", () => {
-            const parentId = selectorCell.dataset.parentId;
-            if (parentId !== undefined) {
-                childSelectors.delete(Number(parentId));
-            }
-            selectorCell.remove();
-            untrackSelectorCell(id);
-            const idx = layoutStack.findIndex(a => a.id == id);
-            if (idx > 0) {
-                const parent = layoutStack[idx - 1];
-                const child = layoutStack[idx];
-                if (child.orientation === "horizontal") {
-                    parent.width *= 2;
-                } else {
-                    parent.height *= 2;
-                }
-                layoutStack.splice(idx, 1);
-                nextHorizontal = child.orientation === "horizontal";
-                updateCellStyles(parent);
-            }
-            resolve();
-        }, { once: true });
-    });
-}
-
-function handleBack(playerCell) {
-    const id = parseInt(playerCell.dataset.cellId, 10);
-    const childId = childSelectors.get(id);
-    const childSelector =
-        childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
-    const parentSelector = getLinkedSelector(id);
-
-    if (childSelector) {
-        // Step 1: close only the child selector and keep the player open
-        closeSelectorCell(childSelector).then(() => {
-            restoreLastPlayerControls();
-        });
-        return;
-    }
-
-    const afterPlayerClose = () => {
-        if (id > 0 && parentSelector) {
-            // Step 2: after closing the player, also close its selector
-            closeSelectorCell(parentSelector).then(() => {
-                restoreLastPlayerControls();
-            });
-        } else {
-            // id === 0 -> keep selector 0 open
-            restoreLastPlayerControls();
-        }
-    };
-
-    closePlayerCell(playerCell).then(afterPlayerClose);
-}
-
 
 function closePlayerCell(playerCell) {
-    return new Promise(resolve => {
-        const id = playerCell.dataset.cellId;
-        const orientation = playerCell.dataset.orientation;
-        if (orientation === 'horizontal') {
-            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
-        } else {
-            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+    const id = playerCell.dataset.cellId;
+    const orientation = playerCell.dataset.orientation;
+    if (orientation === 'horizontal') {
+        playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
+    } else {
+        playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+    }
+    playerCell.addEventListener('transitionend', () => {
+        playerCell.remove();
+        untrackPlayerCell(id);
+        const selector = getLinkedSelector(id);
+        if (selector) {
+            selector.classList.remove('disabled');
+            selector.style.pointerEvents = '';
+            console.log(`Selector ${id} re-enabled`);
         }
-        playerCell.addEventListener('transitionend', () => {
-            if (playerCell._dispose) {
-                playerCell._dispose();
-            }
-            const vid = playerCell.querySelector('video');
-            if (vid) vid.pause();
-            if (playerCell._splitter) {
-                playerCell._splitter.remove();
-            }
-            playerCell.remove();
-            untrackPlayerCell(id);
-            const selector = getLinkedSelector(id);
-            if (selector) {
-                selector.classList.remove('disabled');
-                selector.style.pointerEvents = '';
-                console.log(`Selector ${id} re-enabled`);
-            }
-            resolve();
-        }, { once: true });
-    });
+    }, { once: true });
 }
 
 function handleNext(currentPlayer) {
-    const parentId = parseInt(currentPlayer.dataset.cellId, 10);
-    const existingId = childSelectors.get(parentId);
-    if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
-        return; // already open
-    }
-    const nextBtn = currentPlayer.querySelector('.next-btn');
-    if (nextBtn) nextBtn.disabled = true;
-    createCellPair(parentId);
-    if (nextBtn) nextBtn.disabled = false;
+    createCellPair();
 }
 
 function onThumbnailClick(thumb) {
@@ -376,13 +221,12 @@ function onThumbnailClick(thumb) {
         p.querySelector('.next-btn')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
-    const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
-    const player = createPlayerCell(area, id, area.orientation, archive);
-    const uiLayer = player.querySelector('.ui-foreground-layer');
-    addPlayerControls(player, uiLayer);
+    const player = createPlayerCell(area, id, area.orientation, thumb.dataset.title || thumb.textContent);
+    addPlayerControls(player);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await preloadThumbnails(archives);
     initOverallGrid();
     createSelectorCell(layoutStack[0], cellCounter++);
 });

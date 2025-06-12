@@ -58,21 +58,12 @@ async function getThumbnailTimestamp(dataFile) {
   return 0;
 }
 
-const queue = [];
-let processing = false;
-// Threshold derived from the original shader (0.22 in 0-1 range)
 const THRESHOLD = Math.round(0.22 * 255);
+const THUMB_SIZE = 256;
+const SCALE_FACTOR = 2;
+const thumbnailCache = new Map();
+const pendingCells = new Map();
 
-async function processQueue() {
-  if (processing) return;
-  processing = true;
-  while (queue.length) {
-    const { canvas, archive, placeholder } = queue.shift();
-    placeholder.replaceWith(canvas);
-    await renderThumbnail(canvas, archive);
-  }
-  processing = false;
-}
 
 function applyThresholdEffect(canvas) {
   const ctx = canvas.getContext('2d');
@@ -104,57 +95,66 @@ function applyThresholdEffect(canvas) {
   ctx.putImageData(imageData, 0, 0);
 }
 
-async function renderThumbnail(canvas, archive) {
-  await new Promise((resolve) => requestAnimationFrame(resolve));
-  const rect = canvas.getBoundingClientRect();
-  const dpr = window.devicePixelRatio || 1;
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
-
+async function captureThumbnail(archive, width = THUMB_SIZE, height = THUMB_SIZE) {
+  const canvas = document.createElement('canvas');
+  canvas.width = width * SCALE_FACTOR;
+  canvas.height = height * SCALE_FACTOR;
   try {
     const timestamp = await getThumbnailTimestamp(archive.archive);
     await drawFrameToCanvas(archive.file, canvas, timestamp);
     applyThresholdEffect(canvas);
+    return canvas.toDataURL();
   } catch (err) {
     console.error('Thumbnail draw failed', err);
-    showFallback(canvas);
-    return;
-  }
-
-  try {
-    const url = canvas.toDataURL();
-    const img = document.createElement('img');
-    img.src = url;
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    canvas.replaceWith(img);
-  } catch (err) {
-    console.error('Failed to export canvas', err);
-    showFallback(canvas);
+    return null;
   }
 }
 
-function showFallback(canvas) {
+function createFallback() {
   const fallback = document.createElement('div');
   fallback.className = 'thumb-fallback';
-  fallback.textContent = 'Thumbnail failed';
-  canvas.replaceWith(fallback);
+  return fallback;
 }
 
 export function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
-  const canvas = document.createElement('canvas');
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  const placeholder = document.createElement('div');
-  placeholder.className = 'thumb-fallback';
-  placeholder.textContent = 'Loading...';
-  cell.appendChild(placeholder);
   if (container) container.appendChild(cell);
 
-  queue.push({ canvas, archive, placeholder });
-  processQueue();
+  const cached = thumbnailCache.get(archive.file);
+  if (cached) {
+    const img = document.createElement('img');
+    img.src = cached;
+    cell.appendChild(img);
+  } else {
+    const placeholder = createFallback();
+    cell.appendChild(placeholder);
+    if (!pendingCells.has(archive.file)) {
+      pendingCells.set(archive.file, []);
+    }
+    pendingCells.get(archive.file).push(cell);
+  }
   return cell;
+}
+
+export async function preloadThumbnails(archives) {
+  for (const arch of archives) {
+    if (!thumbnailCache.has(arch.file)) {
+      const url = await captureThumbnail(arch);
+      if (url) {
+        thumbnailCache.set(arch.file, url);
+      }
+    }
+    const cells = pendingCells.get(arch.file);
+    if (cells && thumbnailCache.has(arch.file)) {
+      const url = thumbnailCache.get(arch.file);
+      cells.forEach(cell => {
+        const img = document.createElement('img');
+        img.src = url;
+        cell.innerHTML = '';
+        cell.appendChild(img);
+      });
+      pendingCells.delete(arch.file);
+    }
+  }
 }
