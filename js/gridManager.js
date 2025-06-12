@@ -177,8 +177,6 @@ function createPlayerCell(area, id, orientation, archive) {
     video.autoplay = true;
     video.loop = true;
     const canvas = document.createElement('canvas');
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
     videoLayer.appendChild(video);
     videoLayer.appendChild(canvas);
     cell.appendChild(videoLayer);

@@ -2,37 +2,24 @@ export async function initVideoShader(video, canvas, shaderName = 'threshold_gre
   const gl = canvas.getContext('webgl');
   if (!gl) return () => {};
 
-  function resize() {
+  function resizeToVideo() {
     const scale = window.devicePixelRatio || 1;
-    const rect = canvas.parentElement.getBoundingClientRect();
-    const videoAspect = (video.videoWidth || 16) / (video.videoHeight || 9);
-    const containerAspect = rect.width / rect.height;
-    if (videoAspect > containerAspect) {
-      const height = rect.height;
-      const width = videoAspect * height;
-      canvas.style.height = `${height}px`;
-      canvas.style.width = `${width}px`;
-      video.style.height = `${height}px`;
-      video.style.width = `${width}px`;
-    } else {
-      const width = rect.width;
-      const height = width / videoAspect;
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
-      video.style.width = `${width}px`;
-      video.style.height = `${height}px`;
-    }
-    canvas.width = canvas.offsetWidth * scale;
-    canvas.height = canvas.offsetHeight * scale;
+    const width = video.videoWidth || 640;
+    const height = video.videoHeight || 360;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    video.style.width = `${width}px`;
+    video.style.height = `${height}px`;
+    canvas.width = width * scale;
+    canvas.height = height * scale;
     gl.viewport(0, 0, canvas.width, canvas.height);
   }
 
   if (video.readyState >= 1) {
-    resize();
+    resizeToVideo();
   } else {
-    video.addEventListener('loadedmetadata', resize, { once: true });
+    video.addEventListener('loadedmetadata', resizeToVideo, { once: true });
   }
-  window.addEventListener('resize', resize);
 
   const vertexSrc = `
     attribute vec2 a_position;
@@ -124,7 +111,6 @@ export async function initVideoShader(video, canvas, shaderName = 'threshold_gre
     stop();
     const ext = gl.getExtension('WEBGL_lose_context');
     if (ext) ext.loseContext();
-    window.removeEventListener('resize', resize);
     video.removeEventListener('play', start);
     video.removeEventListener('pause', stop);
     video.removeEventListener('ended', stop);
