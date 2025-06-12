@@ -332,7 +332,6 @@ function handleBack(playerCell) {
     const childId = childSelectors.get(id);
     const childSelector =
         childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
-    const parentSelector = getLinkedSelector(id);
 
     if (childSelector) {
         // Step 1: close only the child selector and keep the player open
@@ -342,19 +341,9 @@ function handleBack(playerCell) {
         return;
     }
 
-    const afterPlayerClose = () => {
-        if (id > 0 && parentSelector) {
-            // Step 2: after closing the player, also close its selector
-            closeSelectorCell(parentSelector).then(() => {
-                restoreLastPlayerControls();
-            });
-        } else {
-            // id === 0 -> keep selector 0 open
-            restoreLastPlayerControls();
-        }
-    };
-
-    closePlayerCell(playerCell).then(afterPlayerClose);
+    closePlayerCell(playerCell).then(() => {
+        restoreLastPlayerControls();
+    });
 }
 
 
@@ -362,28 +351,45 @@ function closePlayerCell(playerCell) {
     return new Promise(resolve => {
         const id = playerCell.dataset.cellId;
         const orientation = playerCell.dataset.orientation;
-        if (orientation === 'horizontal') {
-            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
-        } else {
-            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+        const selector = getLinkedSelector(id);
+        if (selector && id > 0) {
+            const selOri = selector.dataset.orientation;
+            if (selOri === "horizontal") {
+                selector.style.left = (parseFloat(selector.style.left) + parseFloat(selector.style.width)) + "%";
+            } else {
+                selector.style.top = (parseFloat(selector.style.top) + parseFloat(selector.style.height)) + "%";
+            }
+        } else if (selector) {
+            selector.classList.remove("disabled");
+            selector.style.pointerEvents = "";
         }
-        playerCell.addEventListener('transitionend', () => {
-            if (playerCell._dispose) {
-                playerCell._dispose();
-            }
-            const vid = playerCell.querySelector('video');
+        if (orientation === "horizontal") {
+            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + "%";
+        } else {
+            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + "%";
+        }
+        playerCell.addEventListener("transitionend", () => {
+            if (playerCell._dispose) playerCell._dispose();
+            const vid = playerCell.querySelector("video");
             if (vid) vid.pause();
-            if (playerCell._splitter) {
-                playerCell._splitter.remove();
-            }
+            if (playerCell._splitter) playerCell._splitter.remove();
             playerCell.remove();
             untrackPlayerCell(id);
             updateHighlightState();
-            const selector = getLinkedSelector(id);
-            if (selector) {
-                selector.classList.remove('disabled');
-                selector.style.pointerEvents = '';
-                console.log(`Selector ${id} re-enabled`);
+            if (selector && id > 0) {
+                const pAttr = selector.dataset.parentId;
+                if (pAttr !== undefined) childSelectors.delete(Number(pAttr));
+                selector.remove();
+                untrackSelectorCell(id);
+                const idx = layoutStack.findIndex(a => a.id == id);
+                if (idx > 0) {
+                    const parent = layoutStack[idx - 1];
+                    const child = layoutStack[idx];
+                    if (child.orientation === "horizontal") parent.width *= 2; else parent.height *= 2;
+                    layoutStack.splice(idx, 1);
+                    nextHorizontal = child.orientation === "horizontal";
+                    updateCellStyles(parent);
+                }
             }
             resolve();
         }, { once: true });
@@ -393,15 +399,8 @@ function closePlayerCell(playerCell) {
 function delay(ms) {
     return new Promise(res => setTimeout(res, ms));
 }
-
 function closePlayerPair(playerCell) {
-    const id = parseInt(playerCell.dataset.cellId, 10);
-    const parentSelector = getLinkedSelector(id);
-    return closePlayerCell(playerCell).then(() => {
-        if (id > 0 && parentSelector) {
-            return closeSelectorCell(parentSelector);
-        }
-    });
+    return closePlayerCell(playerCell);
 }
 
 async function closeChildren(id) {
@@ -453,33 +452,49 @@ async function cascadePromote(id) {
         const parentCell = activePlayerCells.get(String(parentId));
         const parentSelector = getLinkedSelector(parentId);
         const area = layoutStack.find(a => a.id == parentId);
+        if (parentSelector && parentId > 0) {
+            const orient = parentSelector.dataset.orientation;
+            if (orient === "horizontal") {
+                parentSelector.style.left = (parseFloat(parentSelector.style.left) + parseFloat(parentSelector.style.width)) + "%";
+            } else {
+                parentSelector.style.top = (parseFloat(parentSelector.style.top) + parseFloat(parentSelector.style.height)) + "%";
+            }
+        } else if (parentSelector && parentId === 0) {
+            parentSelector.classList.add("disabled");
+            parentSelector.style.pointerEvents = "none";
+        }
         if (area) {
-            playerCell.style.left = area.x + '%';
-            playerCell.style.top = area.y + '%';
-            playerCell.style.width = area.width + '%';
-            playerCell.style.height = area.height + '%';
+            playerCell.style.left = area.x + "%";
+            playerCell.style.top = area.y + "%";
+            playerCell.style.width = area.width + "%";
+            playerCell.style.height = area.height + "%";
             playerCell.style.zIndex = parentId * 2 + 1;
             playerCell.dataset.orientation = area.orientation;
         }
-        await new Promise(res => playerCell.addEventListener('transitionend', res, { once: true }));
-
+        await new Promise(res => playerCell.addEventListener("transitionend", res, { once: true }));
         if (parentCell) {
             if (parentCell._dispose) parentCell._dispose();
-            const vid = parentCell.querySelector('video');
+            const vid = parentCell.querySelector("video");
             if (vid) vid.pause();
             if (parentCell._splitter) parentCell._splitter.remove();
             parentCell.remove();
             untrackPlayerCell(parentId);
         }
-
-        if (parentId > 0 && parentSelector) {
-            await closeSelectorCell(parentSelector);
-            await delay(300);
-        } else if (parentId === 0 && parentSelector) {
-            parentSelector.classList.add('disabled');
-            parentSelector.style.pointerEvents = 'none';
+        if (parentSelector && parentId > 0) {
+            const pAttr = parentSelector.dataset.parentId;
+            if (pAttr !== undefined) childSelectors.delete(Number(pAttr));
+            parentSelector.remove();
+            untrackSelectorCell(parentId);
+            const idx = layoutStack.findIndex(a => a.id == parentId);
+            if (idx > 0) {
+                const parent = layoutStack[idx - 1];
+                const child = layoutStack[idx];
+                if (child.orientation === "horizontal") parent.width *= 2; else parent.height *= 2;
+                layoutStack.splice(idx, 1);
+                nextHorizontal = child.orientation === "horizontal";
+                updateCellStyles(parent);
+            }
         }
-
         activePlayerCells.delete(String(id));
         playerCell.dataset.cellId = parentId;
         activePlayerCells.set(String(parentId), playerCell);

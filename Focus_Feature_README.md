@@ -42,3 +42,11 @@
 💡 Guard clauses skip selector removal at index 0 and disable it temporarily instead.
 ⚠️ Needs verification across complex layouts.
 📍 Next: ensure focus transition keeps controls responsive.
+
+## 2025-06-12 – 17:00
+
+✅ Synchronized removal of splitters and selectors with player transitions.
+💡 closePlayerCell now closes the linked selector at the same time and updates layoutStack once.
+💡 cascadePromote starts closing parent selectors before moving and cleans them in the same callback.
+⚠️ Review cascading delays to ensure smooth focus animations.
+📍 Next: validate on complex grids and check root selector behavior.
