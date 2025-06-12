@@ -51,6 +51,8 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    filter: grayscale(100%) opacity(0.5);
+    transition: filter 0.3s ease;
 }
 
 .video-wrapper {
@@ -156,5 +158,9 @@ body {
     pointer-events: none;
     z-index: 1000;
     transition: all 0.3s ease;
+}
+
+.highlighted-player-cell .video-background-layer {
+    filter: none;
 }
 

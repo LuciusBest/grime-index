@@ -39,6 +39,28 @@ function untrackPlayerCell(id) {
     activePlayerCells.delete(String(id));
 }
 
+function updateHighlightState() {
+    let latestId = -Infinity;
+    let latestCell = null;
+    activePlayerCells.forEach((cell, key) => {
+        const pid = parseInt(key, 10);
+        if (pid > latestId) {
+            latestId = pid;
+            latestCell = cell;
+        }
+    });
+    activePlayerCells.forEach(cell => {
+        const video = cell.querySelector('video');
+        if (cell === latestCell) {
+            cell.classList.add('highlighted-player-cell');
+            if (video) video.muted = false;
+        } else {
+            cell.classList.remove('highlighted-player-cell');
+            if (video) video.muted = true;
+        }
+    });
+}
+
 function getLinkedSelector(id) {
     return activeSelectorCells.get(String(id));
 }
@@ -207,6 +229,7 @@ function createPlayerCell(area, id, orientation, archive) {
             cell.style.top = area.y + '%';
         });
     }
+    updateHighlightState();
     return cell;
 }
 
@@ -342,6 +365,7 @@ function closePlayerCell(playerCell) {
             }
             playerCell.remove();
             untrackPlayerCell(id);
+            updateHighlightState();
             const selector = getLinkedSelector(id);
             if (selector) {
                 selector.classList.remove('disabled');
