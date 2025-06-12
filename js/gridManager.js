@@ -420,85 +420,57 @@ async function closeChildren(id) {
 async function cascadePromote(id) {
     let playerCell = activePlayerCells.get(String(id));
     if (!playerCell) return;
+
     if (playerCell._splitter) {
         playerCell._splitter.remove();
         playerCell._splitter = null;
     }
+
     const selfSelector = getLinkedSelector(id);
     if (id > 0 && selfSelector) {
-        const parentIdAttr = selfSelector.dataset.parentId;
-        if (parentIdAttr !== undefined) {
-            childSelectors.delete(Number(parentIdAttr));
-        }
-        selfSelector.remove();
-        untrackSelectorCell(id);
-        const idx = layoutStack.findIndex(a => a.id == id);
-        if (idx > 0) {
-            const parent = layoutStack[idx - 1];
-            const child = layoutStack[idx];
-            if (child.orientation === 'horizontal') {
-                parent.width *= 2;
-            } else {
-                parent.height *= 2;
-            }
-            layoutStack.splice(idx, 1);
-            nextHorizontal = child.orientation === 'horizontal';
-            updateCellStyles(parent);
-        }
-        await delay(300);
+        await closeSelectorCell(selfSelector);
+    } else if (selfSelector) {
+        selfSelector.classList.add('disabled');
+        selfSelector.style.pointerEvents = 'none';
     }
+
     while (id > 0) {
         const parentId = id - 1;
         const parentCell = activePlayerCells.get(String(parentId));
         const parentSelector = getLinkedSelector(parentId);
         const area = layoutStack.find(a => a.id == parentId);
-        if (parentSelector && parentId > 0) {
-            const orient = parentSelector.dataset.orientation;
-            if (orient === "horizontal") {
-                parentSelector.style.left = (parseFloat(parentSelector.style.left) + parseFloat(parentSelector.style.width)) + "%";
-            } else {
-                parentSelector.style.top = (parseFloat(parentSelector.style.top) + parseFloat(parentSelector.style.height)) + "%";
-            }
-        } else if (parentSelector && parentId === 0) {
-            parentSelector.classList.add("disabled");
-            parentSelector.style.pointerEvents = "none";
-        }
+
         if (area) {
-            playerCell.style.left = area.x + "%";
-            playerCell.style.top = area.y + "%";
-            playerCell.style.width = area.width + "%";
-            playerCell.style.height = area.height + "%";
+            playerCell.style.left = area.x + '%';
+            playerCell.style.top = area.y + '%';
+            playerCell.style.width = area.width + '%';
+            playerCell.style.height = area.height + '%';
             playerCell.style.zIndex = parentId * 2 + 1;
             playerCell.dataset.orientation = area.orientation;
         }
-        await new Promise(res => playerCell.addEventListener("transitionend", res, { once: true }));
+
+        await new Promise(res =>
+            playerCell.addEventListener('transitionend', res, { once: true })
+        );
+
         if (parentCell) {
-            if (parentCell._dispose) parentCell._dispose();
-            const vid = parentCell.querySelector("video");
-            if (vid) vid.pause();
-            if (parentCell._splitter) parentCell._splitter.remove();
-            parentCell.remove();
-            untrackPlayerCell(parentId);
-        }
-        if (parentSelector && parentId > 0) {
-            const pAttr = parentSelector.dataset.parentId;
-            if (pAttr !== undefined) childSelectors.delete(Number(pAttr));
-            parentSelector.remove();
-            untrackSelectorCell(parentId);
-            const idx = layoutStack.findIndex(a => a.id == parentId);
-            if (idx > 0) {
-                const parent = layoutStack[idx - 1];
-                const child = layoutStack[idx];
-                if (child.orientation === "horizontal") parent.width *= 2; else parent.height *= 2;
-                layoutStack.splice(idx, 1);
-                nextHorizontal = child.orientation === "horizontal";
-                updateCellStyles(parent);
+            await closePlayerPair(parentCell);
+            if (parentId === 0 && parentSelector) {
+                parentSelector.classList.add('disabled');
+                parentSelector.style.pointerEvents = 'none';
             }
+        } else if (parentSelector && parentId > 0) {
+            await closeSelectorCell(parentSelector);
+        } else if (parentSelector && parentId === 0) {
+            parentSelector.classList.add('disabled');
+            parentSelector.style.pointerEvents = 'none';
         }
+
         activePlayerCells.delete(String(id));
         playerCell.dataset.cellId = parentId;
         activePlayerCells.set(String(parentId), playerCell);
         id = parentId;
+        await delay(300);
     }
 }
 

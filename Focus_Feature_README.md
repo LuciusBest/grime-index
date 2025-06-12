@@ -50,3 +50,10 @@
 💡 cascadePromote starts closing parent selectors before moving and cleans them in the same callback.
 ⚠️ Review cascading delays to ensure smooth focus animations.
 📍 Next: validate on complex grids and check root selector behavior.
+
+## 2025-06-12 – 18:00
+
+✅ Parents close sequentially during focus cascade.
+💡 cascadePromote now waits for each player and selector pair to finish closing before moving upward.
+⚠️ Root selector remains disabled after the root player closes.
+📍 Next: monitor for timing issues on slower devices.
