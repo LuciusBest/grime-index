@@ -59,3 +59,10 @@ actual result, and next planned action.
 **Expected:** The selector grid consistently shows a 3\u00d73 layout with thumbnails filling each cell.
 **Observed:** Thumbnails fit correctly within their cells and the grid no longer stretches vertically.
 **Next:** Continue monitoring grid behavior as more archives are added.
+
+## Commit e15b3a5 (2025-06-12)
+**Strategy:** Preload thumbnails sequentially and upscale rendering.**
+**Steps:** Implemented `preloadThumbnails` to generate images at double size in archive order. `buildThumbnail` registers cells to fill once cached and removed failure text.**
+**Expected:** Each thumbnail appears sharp and loads one after another in predictable order.**
+**Observed:** Thumbnails now load one by one in order and look noticeably sharper.**
+**Next:** Assess memory usage and tweak resolution if needed.**
