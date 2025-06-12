@@ -421,8 +421,12 @@ async function closeChildren(id) {
 async function cascadePromote(id) {
     let playerCell = activePlayerCells.get(String(id));
     if (!playerCell) return;
+    if (playerCell._splitter) {
+        playerCell._splitter.remove();
+        playerCell._splitter = null;
+    }
     const selfSelector = getLinkedSelector(id);
-    if (selfSelector) {
+    if (id > 0 && selfSelector) {
         const parentIdAttr = selfSelector.dataset.parentId;
         if (parentIdAttr !== undefined) {
             childSelectors.delete(Number(parentIdAttr));
@@ -468,9 +472,12 @@ async function cascadePromote(id) {
             untrackPlayerCell(parentId);
         }
 
-        if (parentSelector) {
+        if (parentId > 0 && parentSelector) {
             await closeSelectorCell(parentSelector);
             await delay(300);
+        } else if (parentId === 0 && parentSelector) {
+            parentSelector.classList.add('disabled');
+            parentSelector.style.pointerEvents = 'none';
         }
 
         activePlayerCells.delete(String(id));

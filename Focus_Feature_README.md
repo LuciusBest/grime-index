@@ -34,3 +34,11 @@
 💡 Applied the cleanup logic from `closeSelectorCell` without animation.
 ⚠️ LayoutStack adjustments need further verification.
 📍 Next: Test focus with multiple nested cells.
+
+## 2025-06-12 – 16:10
+
+✅ Splitter removed when promoting a player.
+✅ Preserved selector-cell-0 during cascade promotions.
+💡 Guard clauses skip selector removal at index 0 and disable it temporarily instead.
+⚠️ Needs verification across complex layouts.
+📍 Next: ensure focus transition keeps controls responsive.
