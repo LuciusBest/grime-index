@@ -1,4 +1,5 @@
 import { buildThumbnail } from './buildThumbnail.js';
+import { initVideoShader } from './videoShader.js';
 
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
@@ -127,7 +128,7 @@ async function createSelectorCell(area, id) {
     return cell;
 }
 
-function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
+function createPlayerCell(area, id, orientation, archive) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
@@ -138,10 +139,31 @@ function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     cell.style.top = area.y + '%';
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
-    cell.textContent = text;
+
+    const videoLayer = document.createElement('div');
+    videoLayer.className = 'video-background-layer';
+    const uiLayer = document.createElement('div');
+    uiLayer.className = 'ui-foreground-layer';
+
+    const video = document.createElement('video');
+    video.src = archive.file;
+    video.crossOrigin = 'anonymous';
+    video.autoplay = true;
+    video.loop = true;
+    const canvas = document.createElement('canvas');
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    videoLayer.appendChild(video);
+    videoLayer.appendChild(canvas);
+    cell.appendChild(videoLayer);
+    cell.appendChild(uiLayer);
 
     grid.appendChild(cell);
     trackPlayerCell(id, cell);
+
+    requestAnimationFrame(async () => {
+        cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
+    });
 
     if (orientation === 'horizontal') {
         cell.style.left = area.x + area.width + '%';
@@ -157,18 +179,18 @@ function createPlayerCell(area, id, orientation, text = `Player ${id}`) {
     return cell;
 }
 
-function addPlayerControls(playerCell) {
+function addPlayerControls(playerCell, uiLayer) {
     const backBtn = document.createElement('button');
     backBtn.className = 'return-btn';
     backBtn.textContent = 'Back';
     backBtn.addEventListener('click', () => closePlayerCell(playerCell));
-    playerCell.appendChild(backBtn);
+    uiLayer.appendChild(backBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
-    playerCell.appendChild(nextBtn);
+    uiLayer.appendChild(nextBtn);
 }
 
 function replaceCell(oldCell, newCell) {
@@ -196,6 +218,11 @@ function closePlayerCell(playerCell) {
         playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
     }
     playerCell.addEventListener('transitionend', () => {
+        if (playerCell._dispose) {
+            playerCell._dispose();
+        }
+        const vid = playerCell.querySelector('video');
+        if (vid) vid.pause();
         playerCell.remove();
         untrackPlayerCell(id);
         const selector = getLinkedSelector(id);
@@ -222,8 +249,10 @@ function onThumbnailClick(thumb) {
         p.querySelector('.next-btn')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
-    const player = createPlayerCell(area, id, area.orientation, thumb.dataset.title || thumb.textContent);
-    addPlayerControls(player);
+    const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
+    const player = createPlayerCell(area, id, area.orientation, archive);
+    const uiLayer = player.querySelector('.ui-foreground-layer');
+    addPlayerControls(player, uiLayer);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

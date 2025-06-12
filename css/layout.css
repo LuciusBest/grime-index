@@ -31,7 +31,25 @@ html, body {
 .player-cell {
     background-color: red;
     z-index: 1;
+    position: absolute;
+    overflow: hidden;
     transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.video-background-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.ui-foreground-layer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
 }
 
 .selector-cell.disabled {
