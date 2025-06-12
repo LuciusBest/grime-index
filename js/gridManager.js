@@ -250,39 +250,44 @@ function closeSelectorCell(selectorCell) {
 
 function handleBack(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
-    const childId = childSelectors.get(id);
-    const nextSelector = childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
-    if (nextSelector) {
-        closeSelectorCell(nextSelector).then(() => closePlayerCell(playerCell));
-    } else {
-        closePlayerCell(playerCell);
-    }
+    const selector = getLinkedSelector(id);
+    closePlayerCell(playerCell).then(() => {
+        if (selector && id !== 0) {
+            closeSelectorCell(selector);
+        } else if (selector) {
+            selector.classList.remove('disabled');
+            selector.style.pointerEvents = '';
+        }
+    });
 }
 
 
 function closePlayerCell(playerCell) {
-    const id = playerCell.dataset.cellId;
-    const orientation = playerCell.dataset.orientation;
-    if (orientation === 'horizontal') {
-        playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
-    } else {
-        playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
-    }
-    playerCell.addEventListener('transitionend', () => {
-        if (playerCell._dispose) {
-            playerCell._dispose();
+    return new Promise(resolve => {
+        const id = playerCell.dataset.cellId;
+        const orientation = playerCell.dataset.orientation;
+        if (orientation === 'horizontal') {
+            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
+        } else {
+            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
         }
-        const vid = playerCell.querySelector('video');
-        if (vid) vid.pause();
-        playerCell.remove();
-        untrackPlayerCell(id);
-        const selector = getLinkedSelector(id);
-        if (selector) {
-            selector.classList.remove('disabled');
-            selector.style.pointerEvents = '';
-            console.log(`Selector ${id} re-enabled`);
-        }
-    }, { once: true });
+        playerCell.addEventListener('transitionend', () => {
+            if (playerCell._dispose) {
+                playerCell._dispose();
+            }
+            const vid = playerCell.querySelector('video');
+            if (vid) vid.pause();
+            playerCell.remove();
+            untrackPlayerCell(id);
+            const selector = getLinkedSelector(id);
+            if (selector) {
+                selector.classList.remove('disabled');
+                selector.style.pointerEvents = '';
+                console.log(`Selector ${id} re-enabled`);
+            }
+            resolve();
+        }, { once: true });
+    });
 }
 
 function handleNext(currentPlayer) {
