@@ -230,6 +230,7 @@ function closeSelectorCell(selectorCell) {
                     parent.height *= 2;
                 }
                 layoutStack.splice(idx, 1);
+                nextHorizontal = child.orientation === "horizontal";
                 updateCellStyles(parent);
             }
             resolve();
