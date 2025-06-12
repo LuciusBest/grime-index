@@ -46,6 +46,13 @@ actual result, and next planned action.
 **Observed:** Prebuilt images load quickly across all selectors without rebuilding.
 **Next:** Monitor memory impact but keep the preload approach.
 
+## Commit <newer>
+**Strategy:** Generate thumbnails on demand using each cell's dimensions.**
+**Steps:** Removed the preload step. `captureThumbnail` now sizes its canvas from `getBoundingClientRect()` and `buildThumbnail` replaces the placeholder with the generated image. Inline width/height styles were removed so CSS controls layout.**
+**Expected:** Thumbnail grid stays perfectly balanced with 3×3 layout and no distortions.**
+**Observed:** Thumbnails now fill their cells consistently across all selectors.**
+**Next:** Evaluate performance when many selectors are opened.**
+
 ## Commit d2866de (2025-06-12)
 **Strategy:** Adjust CSS so preloaded thumbnails do not alter the selector grid layout.
 **Steps:** Added `grid-auto-rows: 1fr` and explicit 100% sizing to `.selector-grid` and `.thumbnail-cell` in `layout.css`.

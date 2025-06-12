@@ -62,16 +62,6 @@ const THRESHOLD = Math.round(0.22 * 255);
 const THUMB_SIZE = 256;
 const thumbnailCache = new Map();
 
-async function generateThumbnailData(archive) {
-  const url = await captureThumbnail(archive);
-  thumbnailCache.set(archive.file, url);
-}
-
-export async function preloadThumbnails(archives) {
-  for (const arch of archives) {
-    await generateThumbnailData(arch);
-  }
-}
 
 function applyThresholdEffect(canvas) {
   const ctx = canvas.getContext('2d');
@@ -103,10 +93,16 @@ function applyThresholdEffect(canvas) {
   ctx.putImageData(imageData, 0, 0);
 }
 
-async function captureThumbnail(archive) {
+async function captureThumbnail(archive, cell = null) {
   const canvas = document.createElement('canvas');
-  canvas.width = THUMB_SIZE;
-  canvas.height = THUMB_SIZE;
+  if (cell) {
+    const rect = cell.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+  } else {
+    canvas.width = THUMB_SIZE;
+    canvas.height = THUMB_SIZE;
+  }
   try {
     const timestamp = await getThumbnailTimestamp(archive.archive);
     await drawFrameToCanvas(archive.file, canvas, timestamp);
@@ -128,19 +124,27 @@ function createFallback() {
 export function buildThumbnail(archive, container) {
   const cell = document.createElement('div');
   cell.classList.add('thumbnail-cell');
-  const url = thumbnailCache.get(archive.file);
-  let node;
-  if (url) {
-    const img = document.createElement('img');
-    img.src = url;
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    node = img;
-  } else {
-    node = createFallback();
-  }
-  cell.appendChild(node);
   if (container) container.appendChild(cell);
+
+  const cached = thumbnailCache.get(archive.file);
+  if (cached) {
+    const img = document.createElement('img');
+    img.src = cached;
+    cell.appendChild(img);
+  } else {
+    const placeholder = createFallback();
+    cell.appendChild(placeholder);
+    requestAnimationFrame(async () => {
+      const url = await captureThumbnail(archive, cell);
+      if (url) {
+        thumbnailCache.set(archive.file, url);
+        const img = document.createElement('img');
+        img.src = url;
+        cell.replaceChild(img, placeholder);
+      } else {
+        placeholder.textContent = 'Thumbnail failed';
+      }
+    });
+  }
   return cell;
 }
