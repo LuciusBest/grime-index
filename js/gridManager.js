@@ -146,6 +146,26 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
 
+    let splitter = null;
+    if (activePlayerCells.size > 0) {
+        splitter = document.createElement('div');
+        splitter.className = 'splitter';
+        splitter.dataset.forPlayer = id;
+        if (orientation === 'horizontal') {
+            splitter.style.width = '3px';
+            splitter.style.height = area.height + '%';
+            splitter.style.left = area.x + '%';
+            splitter.style.top = area.y + '%';
+        } else {
+            splitter.style.height = '3px';
+            splitter.style.width = area.width + '%';
+            splitter.style.left = area.x + '%';
+            splitter.style.top = area.y + '%';
+        }
+        splitter.style.zIndex = cell.style.zIndex;
+        grid.appendChild(splitter);
+    }
+
     const videoLayer = document.createElement('div');
     videoLayer.className = 'video-background-layer';
     const uiLayer = document.createElement('div');
@@ -165,6 +185,7 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.appendChild(uiLayer);
 
     grid.appendChild(cell);
+    if (splitter) cell._splitter = splitter;
     trackPlayerCell(id, cell);
 
     requestAnimationFrame(async () => {
@@ -302,6 +323,9 @@ function closePlayerCell(playerCell) {
             }
             const vid = playerCell.querySelector('video');
             if (vid) vid.pause();
+            if (playerCell._splitter) {
+                playerCell._splitter.remove();
+            }
             playerCell.remove();
             untrackPlayerCell(id);
             const selector = getLinkedSelector(id);
