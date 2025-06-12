@@ -8,20 +8,98 @@
     {
       "start": 0.0,
       "end": 60.0,
-      "title": "PLACEHOLDER 1",
-      "artist": "TODO"
+      "title": "CIRCLES",
+      "artist": "PREDITAH"
     },
     {
       "start": 60.0,
       "end": 120.0,
-      "title": "PLACEHOLDER 2",
-      "artist": "TODO"
+      "title": "ROAR",
+      "artist": "DARQ E FREAKER"
     },
     {
       "start": 120.0,
       "end": 180.0,
-      "title": "PLACEHOLDER 3",
-      "artist": "TODO"
+      "title": "NOSEY PARKER",
+      "artist": "PREDITAH"
+    },
+    {
+      "start": 180.0,
+      "end": 240.0,
+      "title": "SWITCH",
+      "artist": "TEEZA"
+    },
+    {
+      "start": 240.0,
+      "end": 300.0,
+      "title": "OVERDOSE",
+      "artist": "PREDITAH"
+    },
+    {
+      "start": 300.0,
+      "end": 360.0,
+      "title": "NO HOOKS",
+      "artist": "TEEZA"
+    },
+    {
+      "start": 360.0,
+      "end": 420.0,
+      "title": "HARDKORE",
+      "artist": "PLASTICIAN"
+    },
+    {
+      "start": 420.0,
+      "end": 480.0,
+      "title": "BOUNCE",
+      "artist": "TEEZA"
+    },
+    {
+      "start": 480.0,
+      "end": 540.0,
+      "title": "PULSE TAZER",
+      "artist": "J BEATZ"
+    },
+    {
+      "start": 540.0,
+      "end": 600.0,
+      "title": "CENTAUR",
+      "artist": "DEXPLICIT"
+    },
+    {
+      "start": 600.0,
+      "end": 660.0,
+      "title": "RED BULL",
+      "artist": "PREDITAH"
+    },
+    {
+      "start": 660.0,
+      "end": 720.0,
+      "title": "GUNSLAP",
+      "artist": "NU KLEAR"
+    },
+    {
+      "start": 720.0,
+      "end": 780.0,
+      "title": "SHANKLE",
+      "artist": "SUKH KNIGHT"
+    },
+    {
+      "start": 780.0,
+      "end": 840.0,
+      "title": "FEEDBACK (J BEATZ REMIX)",
+      "artist": "JAMMER"
+    },
+    {
+      "start": 840.0,
+      "end": 900.0,
+      "title": "SUMMER",
+      "artist": "RUDE KID"
+    },
+    {
+      "start": 900.0,
+      "end": 960.0,
+      "title": "ATTACK",
+      "artist": "PREDITAH"
     }
   ],
   "reloads": [],
