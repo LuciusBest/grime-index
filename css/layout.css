@@ -53,8 +53,20 @@ body {
     pointer-events: none;
 }
 
-.video-background-layer video,
-.video-background-layer canvas {
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper video,
+.video-wrapper canvas {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
     display: block;
 }
 

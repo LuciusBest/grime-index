@@ -6,10 +6,6 @@ export async function initVideoShader(video, canvas, shaderName = 'threshold_gre
     const scale = window.devicePixelRatio || 1;
     const width = video.videoWidth || 640;
     const height = video.videoHeight || 360;
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
-    video.style.width = `${width}px`;
-    video.style.height = `${height}px`;
     canvas.width = width * scale;
     canvas.height = height * scale;
     gl.viewport(0, 0, canvas.width, canvas.height);

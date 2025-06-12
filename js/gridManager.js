@@ -171,14 +171,20 @@ function createPlayerCell(area, id, orientation, archive) {
     const uiLayer = document.createElement('div');
     uiLayer.className = 'ui-foreground-layer';
 
+    const videoWrapper = document.createElement('div');
+    videoWrapper.className = 'video-wrapper';
+
     const video = document.createElement('video');
     video.src = archive.file;
     video.crossOrigin = 'anonymous';
     video.autoplay = true;
     video.loop = true;
     const canvas = document.createElement('canvas');
-    videoLayer.appendChild(video);
-    videoLayer.appendChild(canvas);
+
+    videoWrapper.appendChild(video);
+    videoWrapper.appendChild(canvas);
+    videoLayer.appendChild(videoWrapper);
+
     cell.appendChild(videoLayer);
     cell.appendChild(uiLayer);
 
