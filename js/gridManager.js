@@ -249,6 +249,15 @@ function addPlayerControls(playerCell, uiLayer) {
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
     uiLayer.appendChild(nextBtn);
+
+    const focusBtn = document.createElement('button');
+    focusBtn.className = 'focus-btn';
+    focusBtn.textContent = 'Focus';
+    focusBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleFocus(playerCell);
+    });
+    uiLayer.appendChild(focusBtn);
 }
 
 function restoreLastPlayerControls() {
@@ -379,6 +388,86 @@ function closePlayerCell(playerCell) {
             resolve();
         }, { once: true });
     });
+}
+
+function delay(ms) {
+    return new Promise(res => setTimeout(res, ms));
+}
+
+function closePlayerPair(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    const parentSelector = getLinkedSelector(id);
+    return closePlayerCell(playerCell).then(() => {
+        if (id > 0 && parentSelector) {
+            return closeSelectorCell(parentSelector);
+        }
+    });
+}
+
+async function closeChildren(id) {
+    const ids = Array.from(activePlayerCells.keys())
+        .map(Number)
+        .filter(pid => pid > id)
+        .sort((a, b) => b - a);
+    for (const pid of ids) {
+        const cell = activePlayerCells.get(String(pid));
+        if (cell) {
+            await closePlayerPair(cell);
+            await delay(300);
+        }
+    }
+}
+
+async function closePrevious(id) {
+    const ids = Array.from(activePlayerCells.keys())
+        .map(Number)
+        .filter(pid => pid < id)
+        .sort((a, b) => b - a);
+    for (const pid of ids) {
+        const cell = activePlayerCells.get(String(pid));
+        if (cell) {
+            await closePlayerPair(cell);
+            await delay(300);
+        }
+    }
+}
+
+function promoteToBase(playerCell) {
+    return new Promise(resolve => {
+        playerCell.style.left = '0%';
+        playerCell.style.top = '0%';
+        playerCell.style.width = '100%';
+        playerCell.style.height = '100%';
+        playerCell.addEventListener('transitionend', () => resolve(), { once: true });
+    });
+}
+
+function resetLayoutStack(playerCell) {
+    const oldId = playerCell.dataset.cellId;
+    layoutStack.length = 1;
+    layoutStack[0] = { x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 };
+    nextHorizontal = true;
+    cellCounter = 1;
+    playerCell.dataset.cellId = 0;
+    playerCell.dataset.orientation = 'vertical';
+    playerCell.style.zIndex = 1;
+    activePlayerCells.delete(String(oldId));
+    activePlayerCells.set('0', playerCell);
+}
+
+async function focusPlayerCell(id) {
+    const playerCell = activePlayerCells.get(String(id));
+    if (!playerCell) return;
+    await closeChildren(id);
+    await closePrevious(id);
+    await promoteToBase(playerCell);
+    resetLayoutStack(playerCell);
+    restoreLastPlayerControls();
+}
+
+function handleFocus(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    focusPlayerCell(id);
 }
 
 function handleNext(currentPlayer) {
