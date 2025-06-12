@@ -10,5 +10,5 @@ Thumbnail rendering experiments are tracked in `THUMBNAIL_LOG.md`.
 - **Observed:** Initial 2D approach drew raw frames with no effect.
 - **Correction:** Pixels are now converted to grayscale and compared against a 0.22 threshold. Bright areas become fully transparent while dark areas are coloured red with a vertical gradient.
 - **Fix:** Video frames are cropped to preserve aspect ratio before export so thumbnails mimic `object-fit: cover` in every grid.
-- **Optimization:** Thumbnails were preloaded once at startup but caused sizing issues.
-- **Fix:** Thumbnails are now generated on demand using each cell's size so the grid stays balanced.
+- **Optimization:** Thumbnails load sequentially in archive order so grids appear in predictable order.
+- **Fix:** Each thumbnail is rendered at twice its display size for sharper images and cached for reuse.

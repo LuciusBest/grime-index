@@ -1,4 +1,5 @@
-import { buildThumbnail } from './buildThumbnail.js';
+import { buildThumbnail, preloadThumbnails } from './buildThumbnail.js';
+import { initVideoShader } from './videoShader.js';
 
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
@@ -225,7 +226,8 @@ function onThumbnailClick(thumb) {
     addPlayerControls(player);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await preloadThumbnails(archives);
     initOverallGrid();
     createSelectorCell(layoutStack[0], cellCounter++);
 });
