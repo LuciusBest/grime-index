@@ -162,8 +162,8 @@ function createPlayerCell(area, id, orientation, archive) {
             splitter.style.left = area.x + '%';
             splitter.style.top = area.y + '%';
         }
-        splitter.style.zIndex = cell.style.zIndex;
         grid.appendChild(splitter);
+        console.log('Splitter inserted for player', id);
     }
 
     const videoLayer = document.createElement('div');
