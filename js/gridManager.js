@@ -421,6 +421,11 @@ async function closeChildren(id) {
 async function cascadePromote(id) {
     let playerCell = activePlayerCells.get(String(id));
     if (!playerCell) return;
+    const selfSelector = getLinkedSelector(id);
+    if (selfSelector) {
+        await closeSelectorCell(selfSelector);
+        await delay(300);
+    }
     while (id > 0) {
         const parentId = id - 1;
         const parentCell = activePlayerCells.get(String(parentId));

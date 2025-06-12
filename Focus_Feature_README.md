@@ -20,3 +20,10 @@
 💡 Reverse Back logic, iteratively replacing parents after closing children.
 ⚠️ Needs testing with various layouts to ensure transitions remain smooth.
 📍 Next: Verify focus maintains Next/Back flow after reset.
+
+## 2025-06-12 – 15:00
+
+✅ Fixed lingering selector when focusing a player.
+💡 cascadePromote now removes the target player's selector before promoting.
+⚠️ Confirm that selector animations complete without glitches on varied grids.
+📍 Next: fine-tune timing so focus feels responsive yet smooth.
