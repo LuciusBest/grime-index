@@ -36,5 +36,5 @@ actual result, and next planned action.
 **Strategy:** Preserve video aspect ratio when drawing to the canvas.
 **Steps:** Updated `drawFrameToCanvas` to calculate crop rectangles and draw with `drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch)`. Added inline `objectFit: cover` style when replacing the canvas with an image.
 **Expected:** All grids display thumbnails that cover their cell without stretching.
-**Observed:** _(pending after test)_
+**Observed:** All thumbnails now fill their cells correctly without distortion.
 **Next:** Confirm stable sizing across archives and adjust CSS only if necessary.

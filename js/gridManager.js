@@ -183,7 +183,7 @@ function addPlayerControls(playerCell, uiLayer) {
     const backBtn = document.createElement('button');
     backBtn.className = 'return-btn';
     backBtn.textContent = 'Back';
-    backBtn.addEventListener('click', () => closePlayerCell(playerCell));
+    backBtn.addEventListener('click', () => handleBack(playerCell));
     uiLayer.appendChild(backBtn);
 
     const nextBtn = document.createElement('button');
@@ -208,6 +208,45 @@ function createCellPair() {
     layoutStack.push(area);
     nextHorizontal = !nextHorizontal;
 }
+function closeSelectorCell(selectorCell) {
+    return new Promise(resolve => {
+        const id = selectorCell.dataset.cellId;
+        const orientation = selectorCell.dataset.orientation;
+        if (orientation === "horizontal") {
+            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + "%";
+        } else {
+            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + "%";
+        }
+        selectorCell.addEventListener("transitionend", () => {
+            selectorCell.remove();
+            untrackSelectorCell(id);
+            const idx = layoutStack.findIndex(a => a.id == id);
+            if (idx > 0) {
+                const parent = layoutStack[idx - 1];
+                const child = layoutStack[idx];
+                if (child.orientation === "horizontal") {
+                    parent.width *= 2;
+                } else {
+                    parent.height *= 2;
+                }
+                layoutStack.splice(idx, 1);
+                updateCellStyles(parent);
+            }
+            resolve();
+        }, { once: true });
+    });
+}
+
+function handleBack(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    const nextSelector = activeSelectorCells.get(String(id + 1));
+    if (nextSelector) {
+        closeSelectorCell(nextSelector).then(() => closePlayerCell(playerCell));
+    } else {
+        closePlayerCell(playerCell);
+    }
+}
+
 
 function closePlayerCell(playerCell) {
     const id = playerCell.dataset.cellId;
