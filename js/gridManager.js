@@ -3,6 +3,8 @@ import { initVideoShader } from './videoShader.js';
 
 const activeSelectorCells = new Map();
 const activePlayerCells = new Map();
+// Map parent player id -> child selector id
+const childSelectors = new Map();
 let cellCounter = 0;
 const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
 let nextHorizontal = true;
@@ -86,12 +88,16 @@ function initOverallGrid() {
     return grid;
 }
 
-async function createSelectorCell(area, id) {
+function createSelectorCell(area, id, parentId = null) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'selector-cell';
     cell.dataset.cellId = id;
     cell.dataset.orientation = area.orientation;
+    if (parentId !== null) {
+        cell.dataset.parentId = parentId;
+        childSelectors.set(parentId, id);
+    }
     cell.style.zIndex = id * 2;
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
@@ -200,11 +206,11 @@ function replaceCell(oldCell, newCell) {
     }
 }
 
-function createCellPair() {
+function createCellPair(parentId) {
     const area = computeNextArea();
     const id = cellCounter++;
     area.id = id;
-    createSelectorCell(area, id);
+    createSelectorCell(area, id, parentId);
     layoutStack.push(area);
     nextHorizontal = !nextHorizontal;
 }
@@ -218,6 +224,10 @@ function closeSelectorCell(selectorCell) {
             selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + "%";
         }
         selectorCell.addEventListener("transitionend", () => {
+            const parentId = selectorCell.dataset.parentId;
+            if (parentId !== undefined) {
+                childSelectors.delete(Number(parentId));
+            }
             selectorCell.remove();
             untrackSelectorCell(id);
             const idx = layoutStack.findIndex(a => a.id == id);
@@ -240,7 +250,8 @@ function closeSelectorCell(selectorCell) {
 
 function handleBack(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
-    const nextSelector = activeSelectorCells.get(String(id + 1));
+    const childId = childSelectors.get(id);
+    const nextSelector = childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
     if (nextSelector) {
         closeSelectorCell(nextSelector).then(() => closePlayerCell(playerCell));
     } else {
@@ -275,7 +286,15 @@ function closePlayerCell(playerCell) {
 }
 
 function handleNext(currentPlayer) {
-    createCellPair();
+    const parentId = parseInt(currentPlayer.dataset.cellId, 10);
+    const existingId = childSelectors.get(parentId);
+    if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
+        return; // already open
+    }
+    const nextBtn = currentPlayer.querySelector('.next-btn');
+    if (nextBtn) nextBtn.disabled = true;
+    createCellPair(parentId);
+    if (nextBtn) nextBtn.disabled = false;
 }
 
 function onThumbnailClick(thumb) {
