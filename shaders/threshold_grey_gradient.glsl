@@ -13,10 +13,7 @@ void main() {
   if (g >= threshold) {
     discard;
   } else {
-    vec3 topColor = vec3(1.0, 0.2, 0.2);    // proche de #FF3333 (rouge clair)
-    vec3 bottomColor = vec3(1.0, 0.2, 0.2); // gris foncé
-    float t = v_texCoord.y;  // 0 = bas, 1 = haut
-    vec3 gradientColor = mix(bottomColor, topColor, t);
-    gl_FragColor = vec4(gradientColor, 1.0);
+    vec3 red = vec3(1.0, 0.0, 0.0);
+    gl_FragColor = vec4(red, 1.0);
   }
 }
