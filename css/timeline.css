@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Baikal';
-    src: url('../assets/fonts/Baikal VAR-VF.ttf') format('truetype');
+    src: url('assets/fonts/Baikal VAR-VF.ttf') format('truetype');
     font-style: normal;
 }
 
