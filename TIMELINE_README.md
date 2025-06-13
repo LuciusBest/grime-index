@@ -23,7 +23,7 @@
 ## 2025-06-13 – 11:00
 
 ✅ Logged integration preparation for the new layout.
-💡 Decided on a dedicated footer (`#timeline-footer`) 70px high and full width with a temporary blue background.
+💡 Decided on a dedicated footer hierarchy: `#main_footer` wraps `#timeline-footer`. The footer remains 70px tall and full width with a temporary blue background.
 ⚠️ No implementation yet – this entry only clarifies upcoming work.
 📍 Next: create the footer container in `index.html` and style it in `layout.css`.
 
@@ -39,11 +39,21 @@
 4. Pause or detach from the previous player to avoid duplicate listeners.
 
 ### ⚠️ Anticipated challenges
+- Race conditions between highlight updates and JSON loading: add an `isLoading` lock or queue to prevent conflicts if the highlight switches before data finishes loading.
+- Proper cleanup of old event listeners: create a `detachTimeline()` function to fully unbind listeners and UI hooks when switching players.
+- Avoid visual artifacts from rapid switches: use `requestAnimationFrame` or a small delay (50–100ms) before attaching the timeline to a new video.
 - Switching JSON data while a previous highlight is still closing or in mid-playback.
 - Ensuring old event listeners and shaders are cleaned up when focus shifts.
 - Handling cases where highlight changes rapidly before data loads.
 
 ### 📍 Precise DOM elements to reuse or refactor
 - Reuse `#TimelineContainer`, `#TimelineLeft`, `#TimelineMiddle`, `#TimelineRight`, `#CustomTimeline`, `#TimelineProgress`, `#TimelineCursorWrapper`, `#TimelineCursorTime`, `#TimelineVerticalLine` from OLD.
-- Add new parent container `#timeline-footer` below `#overall-grid` in `index.html`.
-- Footer will integrate with existing CSS but start with a simple blue background and fixed height (70px).
+ - Add wrapper `#main_footer` below `#overall-grid` in `index.html`; inside it place `#timeline-footer`.
+- `#main_footer` auto height; `#timeline-footer` has fixed 70px height, full width, and a temporary blue background.
+- Preserve original visual design: same class names and CSS from `OLD/css/timeline.css`.
+
+## 2025-06-13 – 12:20
+
+✅ Confirmed footer hierarchy with `#main_footer` containing `#timeline-footer`.
+💡 Timeline DOM from OLD will populate `#timeline-footer`; `#main_footer` allows future footer tools.
+⚠️ Prepare CSS copy from OLD without modifications.
