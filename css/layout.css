@@ -150,21 +150,21 @@ body {
     font-size: 0.8em;
 }
 
-.gm-button {
+.ui-foreground-layer .gm-button {
     position: absolute;
     bottom: 10px;
     z-index: 20;
 }
 
-.gm-button.close {
+.ui-foreground-layer .gm-button.close {
     right: 10px;
 }
 
-.gm-button.next {
+.ui-foreground-layer .gm-button.next {
     left: 10px;
 }
 
-.gm-button.focus {
+.ui-foreground-layer .gm-button.focus {
     left: 50%;
     transform: translateX(-50%);
 }
