@@ -261,18 +261,21 @@ function createPlayerCell(area, id, orientation, archive) {
     return cell;
 }
 
-function addPlayerControls(playerCell, uiLayer) {
+function addPlayerControls(playerCell) {
+    const container =
+        playerCell.querySelector('.grid-manager-UI-container') || playerCell;
+
     const closeBtn = document.createElement('button');
     closeBtn.className = 'close-btn';
     closeBtn.textContent = 'Close';
     closeBtn.addEventListener('click', () => handleClose(playerCell));
-    uiLayer.appendChild(closeBtn);
+    container.appendChild(closeBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
-    uiLayer.appendChild(nextBtn);
+    container.appendChild(nextBtn);
 
     const focusBtn = document.createElement('button');
     focusBtn.className = 'focus-btn';
@@ -281,7 +284,7 @@ function addPlayerControls(playerCell, uiLayer) {
         e.stopPropagation();
         handleFocus(playerCell);
     });
-    uiLayer.appendChild(focusBtn);
+    container.appendChild(focusBtn);
 }
 
 function restoreLastPlayerControls() {
@@ -296,9 +299,8 @@ function restoreLastPlayerControls() {
         }
     });
     if (!lastPlayer) return;
-    const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.close-btn')) {
-        addPlayerControls(lastPlayer, uiLayer);
+    if (!lastPlayer.querySelector('.close-btn')) {
+        addPlayerControls(lastPlayer);
     }
 }
 
@@ -626,14 +628,12 @@ function onThumbnailClick(thumb) {
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
     activePlayerCells.forEach(p => {
-        p.querySelector('.close-btn')?.remove();
         p.querySelector('.next-btn')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
     const player = createPlayerCell(area, id, area.orientation, archive);
-    const uiLayer = player.querySelector('.ui-foreground-layer');
-    addPlayerControls(player, uiLayer);
+    addPlayerControls(player);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
