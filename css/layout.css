@@ -143,25 +143,11 @@ body {
     font-size: 0.8em;
 }
 
-.return-btn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 20;
-}
-
-.next-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 20;
-}
-
+.close-btn,
+.next-btn,
 .focus-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    margin: 5px 0;
     z-index: 20;
 }
 

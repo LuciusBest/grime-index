@@ -47,10 +47,10 @@ Showcase basic interaction flow between selector thumbnails and player area.
 
 ## 2025-06-11 – 15:55
 
-🔧 Added cell trackers and return button:
+🔧 Added cell trackers and close button:
 - Introduced `activeSelectorCells` and `activePlayerCells` maps in `js/gridManager.js`
-- Player cells now include a `Back` button that slides them out and re-enables the selector
-- Added `.return-btn` styles in `css/layout.css`
+- Player cells now include a `Close` button that slides them out and re-enables the selector
+- Added `.close-btn` styles in `css/layout.css`
 
 🧠 Purpose:
 Manage multiple cells dynamically and allow returning from the player view.
@@ -137,3 +137,21 @@ Maintain visual consistency by giving selectors the same smooth entrance as play
 
 🧠 Purpose:
 Begin reusing OLD thumbnail logic so selector cells show video previews.
+
+## 2025-06-13 – 10:00
+
+🔧 Close button now works on any player cell:
+- Introduced `closePlayerAnywhere` and simplified selector removal
+- Remaining players shift upward to fill gaps when a cell closes
+
+🧠 Purpose:
+Improve usability by allowing cells to be closed in any order.
+
+## 2025-06-13 – 10:30
+
+🔧 Refined Next and Close behavior:
+- Only the last active player displays a Next button
+- Closing a player first removes its open child selector if present
+
+🧠 Purpose:
+Prevent branching from intermediate cells and ensure predictable navigation.

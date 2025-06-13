@@ -261,18 +261,21 @@ function createPlayerCell(area, id, orientation, archive) {
     return cell;
 }
 
-function addPlayerControls(playerCell, uiLayer) {
-    const backBtn = document.createElement('button');
-    backBtn.className = 'return-btn';
-    backBtn.textContent = 'Back';
-    backBtn.addEventListener('click', () => handleBack(playerCell));
-    uiLayer.appendChild(backBtn);
+function addPlayerControls(playerCell) {
+    const container =
+        playerCell.querySelector('.grid-manager-UI-container') || playerCell;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'close-btn';
+    closeBtn.textContent = 'Close';
+    closeBtn.addEventListener('click', () => handleClose(playerCell));
+    container.appendChild(closeBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
-    uiLayer.appendChild(nextBtn);
+    container.appendChild(nextBtn);
 
     const focusBtn = document.createElement('button');
     focusBtn.className = 'focus-btn';
@@ -281,7 +284,7 @@ function addPlayerControls(playerCell, uiLayer) {
         e.stopPropagation();
         handleFocus(playerCell);
     });
-    uiLayer.appendChild(focusBtn);
+    container.appendChild(focusBtn);
 }
 
 function restoreLastPlayerControls() {
@@ -296,9 +299,33 @@ function restoreLastPlayerControls() {
         }
     });
     if (!lastPlayer) return;
-    const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.return-btn')) {
-        addPlayerControls(lastPlayer, uiLayer);
+    if (!lastPlayer.querySelector('.close-btn')) {
+        addPlayerControls(lastPlayer);
+    }
+    ensureNextOnLast();
+}
+
+function ensureNextOnLast() {
+    if (activePlayerCells.size === 0) return;
+    let lastId = -Infinity;
+    let lastPlayer = null;
+    activePlayerCells.forEach(p => {
+        p.querySelector('.next-btn')?.remove();
+        const pid = parseInt(p.dataset.cellId, 10);
+        if (pid > lastId) {
+            lastId = pid;
+            lastPlayer = p;
+        }
+    });
+    if (!lastPlayer) return;
+    if (!lastPlayer.querySelector('.next-btn')) {
+        const container =
+            lastPlayer.querySelector('.grid-manager-UI-container') || lastPlayer;
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'next-btn';
+        nextBtn.textContent = 'Next';
+        nextBtn.addEventListener('click', () => handleNext(lastPlayer));
+        container.appendChild(nextBtn);
     }
 }
 
@@ -351,23 +378,43 @@ function closeSelectorCell(selectorCell) {
     });
 }
 
-function handleBack(playerCell) {
+function closeSelectorCellSimple(selectorCell) {
+    return new Promise(resolve => {
+        const orientation = selectorCell.dataset.orientation;
+        if (orientation === 'horizontal') {
+            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + '%';
+        } else {
+            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + '%';
+        }
+        selectorCell.addEventListener('transitionend', () => {
+            const id = selectorCell.dataset.cellId;
+            const parentId = selectorCell.dataset.parentId;
+            if (parentId !== undefined) childSelectors.delete(Number(parentId));
+            selectorCell.remove();
+            untrackSelectorCell(id);
+            resolve();
+        }, { once: true });
+    });
+}
+
+async function handleClose(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
     const childId = childSelectors.get(id);
     const childSelector =
         childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
 
     if (childSelector) {
-        // Step 1: close only the child selector and keep the player open
-        closeSelectorCell(childSelector).then(() => {
-            restoreLastPlayerControls();
-        });
+        await closeSelectorCellSimple(childSelector);
         return;
     }
 
-    closePlayerCell(playerCell).then(() => {
-        restoreLastPlayerControls();
-    });
+    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
+    if (id === maxId) {
+        await closePlayerCell(playerCell);
+    } else {
+        await closePlayerAnywhere(playerCell);
+    }
+    restoreLastPlayerControls();
 }
 
 
@@ -418,6 +465,67 @@ function closePlayerCell(playerCell) {
             resolve();
         }, { once: true });
     });
+}
+
+function closePlayerCellSimple(playerCell) {
+    return new Promise(resolve => {
+        const id = playerCell.dataset.cellId;
+        const orientation = playerCell.dataset.orientation;
+        if (orientation === 'horizontal') {
+            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
+        } else {
+            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+        }
+        playerCell.addEventListener('transitionend', () => {
+            if (playerCell._dispose) playerCell._dispose();
+            const vid = playerCell.querySelector('video');
+            if (vid) vid.pause();
+            if (playerCell._splitter) playerCell._splitter.remove();
+            playerCell.remove();
+            untrackPlayerCell(id);
+            updateHighlightState();
+            resolve();
+        }, { once: true });
+    });
+}
+
+async function closePlayerAnywhere(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    const area = layoutStack.find(a => a.id == id);
+
+    await closePlayerCellSimple(playerCell);
+
+    let prevArea = area;
+    let currentId = id + 1;
+    while (true) {
+        const nextCell = activePlayerCells.get(String(currentId));
+        if (!nextCell) break;
+        const nextArea = layoutStack.find(a => a.id == currentId);
+        nextCell.style.left = prevArea.x + '%';
+        nextCell.style.top = prevArea.y + '%';
+        nextCell.style.width = prevArea.width + '%';
+        nextCell.style.height = prevArea.height + '%';
+        nextCell.style.zIndex = (currentId - 1) * 2 + 1;
+        nextCell.dataset.orientation = prevArea.orientation;
+        await new Promise(res =>
+            nextCell.addEventListener('transitionend', res, { once: true })
+        );
+        activePlayerCells.delete(String(currentId));
+        nextCell.dataset.cellId = currentId - 1;
+        activePlayerCells.set(String(currentId - 1), nextCell);
+        const childId = childSelectors.get(currentId);
+        if (childId !== undefined) {
+            childSelectors.delete(currentId);
+            childSelectors.set(currentId - 1, childId);
+            const childSelector = activeSelectorCells.get(String(childId));
+            if (childSelector) childSelector.dataset.parentId = currentId - 1;
+        }
+        prevArea = nextArea;
+        currentId++;
+    }
+
+    const removed = layoutStack.pop();
+    nextHorizontal = removed.orientation === 'horizontal';
 }
 
 function delay(ms) {
@@ -527,6 +635,9 @@ function handleFocus(playerCell) {
 
 function handleNext(currentPlayer) {
     const parentId = parseInt(currentPlayer.dataset.cellId, 10);
+    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
+    if (parentId !== maxId) return;
+
     const existingId = childSelectors.get(parentId);
     if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
         return; // already open
@@ -544,14 +655,13 @@ function onThumbnailClick(thumb) {
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
     activePlayerCells.forEach(p => {
-        p.querySelector('.return-btn')?.remove();
         p.querySelector('.next-btn')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
     const player = createPlayerCell(area, id, area.orientation, archive);
-    const uiLayer = player.querySelector('.ui-foreground-layer');
-    addPlayerControls(player, uiLayer);
+    addPlayerControls(player);
+    ensureNextOnLast();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
