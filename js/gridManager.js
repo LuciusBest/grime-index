@@ -1,169 +1,190 @@
 import { buildThumbnail } from './buildThumbnail.js';
 import { initVideoShader } from './videoShader.js';
 
-const activeSelectorCells = new Map();
-const activePlayerCells = new Map();
-// Map parent player id -> child selector id
-const childSelectors = new Map();
-let cellCounter = 0;
-const layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
-let nextHorizontal = true;
-let highlightedPlayerCell = null;
+export class GridNavigationManager {
+  constructor() {
+    this.activeSelectorCells = new Map();
+    this.activePlayerCells = new Map();
+    this.childSelectors = new Map();
+    // start with 0 so the initial selector matches the root layout area
+    this.cellCounter = 0;
+    this.layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
+    this.nextHorizontal = true;
+    this.highlightedPlayerCell = null;
+    this.archives = [
+      { file: 'videos/Archive_001_LoganSama_JME_NewhamGenerals.mp4', archive: 'ARCHIVE_001_data.json' },
+      { file: 'videos/Archive_002_DDoubleE_Footsie_LoganSama.mp4', archive: 'ARCHIVE_002_data.json' },
+      { file: 'videos/Archive_003_LoganSama_Skepta_JME_Jammer_Frisco_Shorty.mp4', archive: 'ARCHIVE_003_data.json' },
+      { file: 'videos/Archive_004_ThatsNotMeAllStar_TodlaT.mp4', archive: 'ARCHIVE_004_data.json' },
+      { file: 'videos/Archive_005_KeepinItGrimy_Session_Feat_MerkyAce_MIK_Ego.mp4', archive: 'ARCHIVE_005_data.json' },
+      { file: 'videos/Archive_006_MerkyACE_ Footsie_ TKO_ShifMan_Kiss Sept_5th_2011.mp4', archive: 'ARCHIVE_006_data.json' },
+      { file: 'videos/Archive_007_TempaT_Skepta_JME_LoganSama.mp4', archive: 'ARCHIVE_007_data.json' },
+      { file: 'videos/Archive_008_Scrufizzer_2Face_Teeza_15th_November_2011.mp4', archive: 'ARCHIVE_008_data.json' },
+      { file: 'videos/Archive_009_Trilla_crew_Crib_Session_Part_2TimWestwoodTV.mp4', archive: 'ARCHIVE_009_data.json' },
+    ];
+  }
 
-const archives = [
-    { file: 'videos/Archive_001_LoganSama_JME_NewhamGenerals.mp4', archive: 'ARCHIVE_001_data.json' },
-    { file: 'videos/Archive_002_DDoubleE_Footsie_LoganSama.mp4', archive: 'ARCHIVE_002_data.json' },
-    { file: 'videos/Archive_003_LoganSama_Skepta_JME_Jammer_Frisco_Shorty.mp4', archive: 'ARCHIVE_003_data.json' },
-    { file: 'videos/Archive_004_ThatsNotMeAllStar_TodlaT.mp4', archive: 'ARCHIVE_004_data.json' },
-    { file: 'videos/Archive_005_KeepinItGrimy_Session_Feat_MerkyAce_MIK_Ego.mp4', archive: 'ARCHIVE_005_data.json' },
-    { file: 'videos/Archive_006_MerkyACE_ Footsie_ TKO_ShifMan_Kiss Sept_5th_2011.mp4', archive: 'ARCHIVE_006_data.json' },
-    { file: 'videos/Archive_007_TempaT_Skepta_JME_LoganSama.mp4', archive: 'ARCHIVE_007_data.json' },
-    { file: 'videos/Archive_008_Scrufizzer_2Face_Teeza_15th_November_2011.mp4', archive: 'ARCHIVE_008_data.json' },
-    { file: 'videos/Archive_009_Trilla_crew_Crib_Session_Part_2TimWestwoodTV.mp4', archive: 'ARCHIVE_009_data.json' },
-];
+  trackSelectorCell(id, cell) {
+    this.activeSelectorCells.set(String(id), cell);
+  }
 
-function trackSelectorCell(id, cell) {
-    activeSelectorCells.set(String(id), cell);
-    console.log(`Selector added at ${id}`);
-}
+  untrackSelectorCell(id) {
+    this.activeSelectorCells.delete(String(id));
+  }
 
-function untrackSelectorCell(id) {
-    activeSelectorCells.delete(String(id));
-}
+  trackPlayerCell(id, cell) {
+    this.activePlayerCells.set(String(id), cell);
+  }
 
-function trackPlayerCell(id, cell) {
-    activePlayerCells.set(String(id), cell);
-    console.log(`Player opened at slot ${id}`);
-}
+  untrackPlayerCell(id) {
+    this.activePlayerCells.delete(String(id));
+  }
 
-function untrackPlayerCell(id) {
-    activePlayerCells.delete(String(id));
-}
+  getLinkedSelector(id) {
+    return this.activeSelectorCells.get(String(id));
+  }
 
-function updateHighlightState(targetCell = highlightedPlayerCell) {
-    if (!targetCell || !activePlayerCells.has(String(targetCell.dataset.cellId))) {
-        let latestId = -Infinity;
-        activePlayerCells.forEach((cell, key) => {
-            const pid = parseInt(key, 10);
-            if (pid > latestId) {
-                latestId = pid;
-                targetCell = cell;
-            }
-        });
-    }
-    const previous = highlightedPlayerCell;
-    highlightedPlayerCell = targetCell || null;
-    activePlayerCells.forEach(cell => {
-        const video = cell.querySelector('video');
-        if (cell === highlightedPlayerCell) {
-            cell.classList.add('highlighted-player-cell');
-            if (video) video.muted = false;
-        } else {
-            cell.classList.remove('highlighted-player-cell');
-            if (video) video.muted = true;
+  updateHighlightState(targetCell = this.highlightedPlayerCell) {
+    if (!targetCell || !this.activePlayerCells.has(String(targetCell.dataset.cellId))) {
+      let latestId = -Infinity;
+      this.activePlayerCells.forEach((cell, key) => {
+        const pid = parseInt(key, 10);
+        if (pid > latestId) {
+          latestId = pid;
+          targetCell = cell;
         }
-    });
-    if (highlightedPlayerCell !== previous) {
-        document.dispatchEvent(new CustomEvent('highlightchange', { detail: { cell: highlightedPlayerCell } }));
+      });
     }
-}
+    const previous = this.highlightedPlayerCell;
+    this.highlightedPlayerCell = targetCell || null;
+    this.activePlayerCells.forEach(cell => {
+      const video = cell.querySelector('video');
+      if (cell === this.highlightedPlayerCell) {
+        cell.classList.add('highlighted-player-cell');
+        if (video) video.muted = false;
+      } else {
+        cell.classList.remove('highlighted-player-cell');
+        if (video) video.muted = true;
+      }
+    });
+    if (this.highlightedPlayerCell !== previous) {
+      document.dispatchEvent(new CustomEvent('highlightchange', { detail: { cell: this.highlightedPlayerCell } }));
+    }
+  }
 
-function getLinkedSelector(id) {
-    return activeSelectorCells.get(String(id));
-}
-
-function updateCellStyles(area) {
-    const selector = getLinkedSelector(area.id);
-    const player = activePlayerCells.get(String(area.id));
+  updateCellStyles(area) {
+    const selector = this.getLinkedSelector(area.id);
+    const player = this.activePlayerCells.get(String(area.id));
     if (selector) {
-        selector.style.left = area.x + '%';
-        selector.style.top = area.y + '%';
-        selector.style.width = area.width + '%';
-        selector.style.height = area.height + '%';
+      selector.style.left = area.x + '%';
+      selector.style.top = area.y + '%';
+      selector.style.width = area.width + '%';
+      selector.style.height = area.height + '%';
     }
     if (player) {
-        player.style.left = area.x + '%';
-        player.style.top = area.y + '%';
-        player.style.width = area.width + '%';
-        player.style.height = area.height + '%';
+      player.style.left = area.x + '%';
+      player.style.top = area.y + '%';
+      player.style.width = area.width + '%';
+      player.style.height = area.height + '%';
     }
-}
+  }
 
-function computeNextArea() {
-    const parent = layoutStack[layoutStack.length - 1];
+  computeNextArea() {
+    const parent = this.layoutStack[this.layoutStack.length - 1];
     const area = {};
-    if (nextHorizontal) {
-        area.width = parent.width / 2;
-        area.height = parent.height;
-        area.x = parent.x + parent.width - area.width;
-        area.y = parent.y;
-        area.orientation = 'horizontal';
-        parent.width /= 2;
+    if (this.nextHorizontal) {
+      area.width = parent.width / 2;
+      area.height = parent.height;
+      area.x = parent.x + parent.width - area.width;
+      area.y = parent.y;
+      area.orientation = 'horizontal';
+      parent.width /= 2;
     } else {
-        area.width = parent.width;
-        area.height = parent.height / 2;
-        area.x = parent.x;
-        area.y = parent.y + parent.height - area.height;
-        area.orientation = 'vertical';
-        parent.height /= 2;
+      area.width = parent.width;
+      area.height = parent.height / 2;
+      area.x = parent.x;
+      area.y = parent.y + parent.height - area.height;
+      area.orientation = 'vertical';
+      parent.height /= 2;
     }
-    updateCellStyles(parent);
+    this.updateCellStyles(parent);
     return area;
-}
+  }
 
-function initOverallGrid() {
+  computeUnion(prevArea, nextArea) {
+    if (!nextArea) return { ...prevArea };
+    if (nextArea.orientation === 'horizontal') {
+      return {
+        x: Math.min(prevArea.x, nextArea.x),
+        y: prevArea.y,
+        width: prevArea.width + nextArea.width,
+        height: prevArea.height,
+        orientation: prevArea.orientation,
+        id: prevArea.id,
+      };
+    }
+    return {
+      x: prevArea.x,
+      y: Math.min(prevArea.y, nextArea.y),
+      width: prevArea.width,
+      height: prevArea.height + nextArea.height,
+      orientation: prevArea.orientation,
+      id: prevArea.id,
+    };
+  }
+
+  initOverallGrid() {
     const grid = document.getElementById('overall-grid');
     grid.innerHTML = '';
     return grid;
-}
+  }
 
-function createSelectorCell(area, id, parentId = null) {
+  createSelectorCell(area, id, parentId = null) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'selector-cell';
     cell.dataset.cellId = id;
     cell.dataset.orientation = area.orientation;
     if (parentId !== null) {
-        cell.dataset.parentId = parentId;
-        childSelectors.set(parentId, id);
+      cell.dataset.parentId = parentId;
+      this.childSelectors.set(parentId, id);
     }
     cell.style.zIndex = id * 2;
     cell.style.width = area.width + '%';
     cell.style.height = area.height + '%';
 
     if (area.orientation === 'horizontal') {
-        cell.style.left = area.x + area.width + '%';
-        cell.style.top = area.y + '%';
-        requestAnimationFrame(() => {
-            cell.style.left = area.x + '%';
-        });
-    } else {
+      cell.style.left = area.x + area.width + '%';
+      cell.style.top = area.y + '%';
+      requestAnimationFrame(() => {
         cell.style.left = area.x + '%';
-        cell.style.top = area.y + area.height + '%';
-        requestAnimationFrame(() => {
-            cell.style.top = area.y + '%';
-        });
+      });
+    } else {
+      cell.style.left = area.x + '%';
+      cell.style.top = area.y + area.height + '%';
+      requestAnimationFrame(() => {
+        cell.style.top = area.y + '%';
+      });
     }
-    trackSelectorCell(id, cell);
+    this.trackSelectorCell(id, cell);
 
     const selectorGrid = document.createElement('div');
     selectorGrid.className = 'selector-grid';
     cell.appendChild(selectorGrid);
-
     grid.appendChild(cell);
 
-    archives.forEach(arch => {
-        const thumb = buildThumbnail(arch, selectorGrid);
-        thumb.dataset.file = arch.file;
-        thumb.dataset.archive = arch.archive;
-        thumb.dataset.title = arch.archive;
-        thumb.addEventListener('click', () => onThumbnailClick(thumb));
+    this.archives.forEach(arch => {
+      const thumb = buildThumbnail(arch, selectorGrid);
+      thumb.dataset.file = arch.file;
+      thumb.dataset.archive = arch.archive;
+      thumb.dataset.title = arch.archive;
+      thumb.addEventListener('click', () => this.onThumbnailClick(thumb));
     });
 
     return cell;
-}
+  }
 
-function createPlayerCell(area, id, orientation, archive) {
+  createPlayerCell(area, id, orientation, archive) {
     const grid = document.getElementById('overall-grid');
     const cell = document.createElement('div');
     cell.className = 'player-cell';
@@ -179,23 +200,22 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.style.height = area.height + '%';
 
     let splitter = null;
-    if (activePlayerCells.size > 0) {
-        splitter = document.createElement('div');
-        splitter.className = 'splitter';
-        splitter.dataset.forPlayer = id;
-        if (orientation === 'horizontal') {
-            splitter.style.width = '3px';
-            splitter.style.height = area.height + '%';
-            splitter.style.left = area.x + '%';
-            splitter.style.top = area.y + '%';
-        } else {
-            splitter.style.height = '3px';
-            splitter.style.width = area.width + '%';
-            splitter.style.left = area.x + '%';
-            splitter.style.top = area.y + '%';
-        }
-        grid.appendChild(splitter);
-        console.log('Splitter inserted for player', id);
+    if (this.activePlayerCells.size > 0) {
+      splitter = document.createElement('div');
+      splitter.className = 'splitter';
+      splitter.dataset.forPlayer = id;
+      if (orientation === 'horizontal') {
+        splitter.style.width = '3px';
+        splitter.style.height = area.height + '%';
+        splitter.style.left = area.x + '%';
+        splitter.style.top = area.y + '%';
+      } else {
+        splitter.style.height = '3px';
+        splitter.style.width = area.width + '%';
+        splitter.style.left = area.x + '%';
+        splitter.style.top = area.y + '%';
+      }
+      grid.appendChild(splitter);
     }
 
     const videoLayer = document.createElement('div');
@@ -239,432 +259,435 @@ function createPlayerCell(area, id, orientation, archive) {
 
     grid.appendChild(cell);
     if (splitter) cell._splitter = splitter;
-    trackPlayerCell(id, cell);
-    cell.addEventListener('click', () => updateHighlightState(cell));
+    this.trackPlayerCell(id, cell);
+    cell.addEventListener('click', () => this.updateHighlightState(cell));
 
     requestAnimationFrame(async () => {
-        cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
+      cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
     });
 
     if (orientation === 'horizontal') {
-        cell.style.left = area.x + area.width + '%';
-        requestAnimationFrame(() => {
-            cell.style.left = area.x + '%';
-        });
+      cell.style.left = area.x + area.width + '%';
+      requestAnimationFrame(() => {
+        cell.style.left = area.x + '%';
+      });
     } else {
-        cell.style.top = area.y + area.height + '%';
-        requestAnimationFrame(() => {
-            cell.style.top = area.y + '%';
-        });
+      cell.style.top = area.y + area.height + '%';
+      requestAnimationFrame(() => {
+        cell.style.top = area.y + '%';
+      });
     }
-    updateHighlightState(cell);
+    this.updateHighlightState(cell);
     return cell;
-}
+  }
 
-function addPlayerControls(playerCell) {
-    const container =
-        playerCell.querySelector('.grid-manager-UI-container') || playerCell;
-
+  addPlayerControls(playerCell) {
+    const container = playerCell.querySelector('.grid-manager-UI-container') || playerCell;
     const closeBtn = document.createElement('button');
     closeBtn.className = 'close-btn';
     closeBtn.textContent = 'Close';
-    closeBtn.addEventListener('click', () => handleClose(playerCell));
+    closeBtn.addEventListener('click', () => this.handleClose(playerCell));
     container.appendChild(closeBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
     nextBtn.textContent = 'Next';
-    nextBtn.addEventListener('click', () => handleNext(playerCell));
+    nextBtn.addEventListener('click', () => this.handleNext(playerCell));
     container.appendChild(nextBtn);
 
     const focusBtn = document.createElement('button');
     focusBtn.className = 'focus-btn';
     focusBtn.textContent = 'Focus';
-    focusBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        handleFocus(playerCell);
+    focusBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      this.handleFocus(playerCell);
     });
     container.appendChild(focusBtn);
-}
+  }
 
-function restoreLastPlayerControls() {
-    if (activePlayerCells.size === 0) return;
+  restoreLastPlayerControls() {
+    if (this.activePlayerCells.size === 0) return;
     let lastId = -Infinity;
     let lastPlayer = null;
-    activePlayerCells.forEach(p => {
-        const pid = parseInt(p.dataset.cellId, 10);
-        if (pid > lastId) {
-            lastId = pid;
-            lastPlayer = p;
-        }
+    this.activePlayerCells.forEach(p => {
+      const pid = parseInt(p.dataset.cellId, 10);
+      if (pid > lastId) {
+        lastId = pid;
+        lastPlayer = p;
+      }
     });
     if (!lastPlayer) return;
     if (!lastPlayer.querySelector('.close-btn')) {
-        addPlayerControls(lastPlayer);
+      this.addPlayerControls(lastPlayer);
     }
-    ensureNextOnLast();
-}
+    this.ensureNextOnLast();
+  }
 
-function ensureNextOnLast() {
-    if (activePlayerCells.size === 0) return;
+  ensureNextOnLast() {
+    if (this.activePlayerCells.size === 0) return;
     let lastId = -Infinity;
     let lastPlayer = null;
-    activePlayerCells.forEach(p => {
-        p.querySelector('.next-btn')?.remove();
-        const pid = parseInt(p.dataset.cellId, 10);
-        if (pid > lastId) {
-            lastId = pid;
-            lastPlayer = p;
-        }
+    this.activePlayerCells.forEach(p => {
+      p.querySelector('.next-btn')?.remove();
+      const pid = parseInt(p.dataset.cellId, 10);
+      if (pid > lastId) {
+        lastId = pid;
+        lastPlayer = p;
+      }
     });
     if (!lastPlayer) return;
     if (!lastPlayer.querySelector('.next-btn')) {
-        const container =
-            lastPlayer.querySelector('.grid-manager-UI-container') || lastPlayer;
-        const nextBtn = document.createElement('button');
-        nextBtn.className = 'next-btn';
-        nextBtn.textContent = 'Next';
-        nextBtn.addEventListener('click', () => handleNext(lastPlayer));
-        container.appendChild(nextBtn);
+      const container = lastPlayer.querySelector('.grid-manager-UI-container') || lastPlayer;
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'next-btn';
+      nextBtn.textContent = 'Next';
+      nextBtn.addEventListener('click', () => this.handleNext(lastPlayer));
+      container.appendChild(nextBtn);
     }
-}
+  }
 
-function replaceCell(oldCell, newCell) {
-    const grid = document.getElementById('overall-grid');
-    if (grid && oldCell && newCell) {
-        grid.replaceChild(newCell, oldCell);
-    }
-}
-
-function createCellPair(parentId) {
-    const area = computeNextArea();
-    const id = cellCounter++;
+  createCellPair(parentId) {
+    const area = this.computeNextArea();
+    const id = this.cellCounter++;
     area.id = id;
-    createSelectorCell(area, id, parentId);
-    layoutStack.push(area);
-    nextHorizontal = !nextHorizontal;
-}
-function closeSelectorCell(selectorCell) {
+    this.createSelectorCell(area, id, parentId);
+    this.layoutStack.push(area);
+    this.nextHorizontal = !this.nextHorizontal;
+  }
+
+  closeSelectorCell(selectorCell) {
     return new Promise(resolve => {
+      const id = selectorCell.dataset.cellId;
+      const orientation = selectorCell.dataset.orientation;
+      if (orientation === 'horizontal') {
+        selectorCell.style.left = parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width) + '%';
+      } else {
+        selectorCell.style.top = parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height) + '%';
+      }
+      selectorCell.addEventListener('transitionend', () => {
+        const parentId = selectorCell.dataset.parentId;
+        if (parentId !== undefined) {
+          this.childSelectors.delete(Number(parentId));
+        }
+        selectorCell.remove();
+        this.untrackSelectorCell(id);
+        const idx = this.layoutStack.findIndex(a => a.id == id);
+        if (idx > 0) {
+          const parent = this.layoutStack[idx - 1];
+          const child = this.layoutStack[idx];
+          if (child.orientation === 'horizontal') {
+            parent.width *= 2;
+          } else {
+            parent.height *= 2;
+          }
+          this.layoutStack.splice(idx, 1);
+          this.nextHorizontal = child.orientation === 'horizontal';
+          this.updateCellStyles(parent);
+        }
+        resolve();
+      }, { once: true });
+    });
+  }
+
+  closeSelectorCellSimple(selectorCell) {
+    return new Promise(resolve => {
+      const orientation = selectorCell.dataset.orientation;
+      if (orientation === 'horizontal') {
+        selectorCell.style.left = parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width) + '%';
+      } else {
+        selectorCell.style.top = parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height) + '%';
+      }
+      selectorCell.addEventListener('transitionend', () => {
         const id = selectorCell.dataset.cellId;
-        const orientation = selectorCell.dataset.orientation;
-        if (orientation === "horizontal") {
-            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + "%";
-        } else {
-            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + "%";
-        }
-        selectorCell.addEventListener("transitionend", () => {
-            const parentId = selectorCell.dataset.parentId;
-            if (parentId !== undefined) {
-                childSelectors.delete(Number(parentId));
-            }
-            selectorCell.remove();
-            untrackSelectorCell(id);
-            const idx = layoutStack.findIndex(a => a.id == id);
-            if (idx > 0) {
-                const parent = layoutStack[idx - 1];
-                const child = layoutStack[idx];
-                if (child.orientation === "horizontal") {
-                    parent.width *= 2;
-                } else {
-                    parent.height *= 2;
-                }
-                layoutStack.splice(idx, 1);
-                nextHorizontal = child.orientation === "horizontal";
-                updateCellStyles(parent);
-            }
-            resolve();
-        }, { once: true });
+        const parentId = selectorCell.dataset.parentId;
+        if (parentId !== undefined) this.childSelectors.delete(Number(parentId));
+        selectorCell.remove();
+        this.untrackSelectorCell(id);
+        resolve();
+      }, { once: true });
     });
-}
+  }
 
-function closeSelectorCellSimple(selectorCell) {
+  closePlayerCell(playerCell) {
     return new Promise(resolve => {
-        const orientation = selectorCell.dataset.orientation;
-        if (orientation === 'horizontal') {
-            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + '%';
+      const id = playerCell.dataset.cellId;
+      const orientation = playerCell.dataset.orientation;
+      const selector = this.getLinkedSelector(id);
+      if (selector && id > 0) {
+        const selOri = selector.dataset.orientation;
+        if (selOri === 'horizontal') {
+          selector.style.left = parseFloat(selector.style.left) + parseFloat(selector.style.width) + '%';
         } else {
-            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + '%';
+          selector.style.top = parseFloat(selector.style.top) + parseFloat(selector.style.height) + '%';
         }
-        selectorCell.addEventListener('transitionend', () => {
-            const id = selectorCell.dataset.cellId;
-            const parentId = selectorCell.dataset.parentId;
-            if (parentId !== undefined) childSelectors.delete(Number(parentId));
-            selectorCell.remove();
-            untrackSelectorCell(id);
-            resolve();
-        }, { once: true });
-    });
-}
-
-async function handleClose(playerCell) {
-    const id = parseInt(playerCell.dataset.cellId, 10);
-    const childId = childSelectors.get(id);
-    const childSelector =
-        childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
-
-    if (childSelector) {
-        await closeSelectorCellSimple(childSelector);
-        return;
-    }
-
-    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
-    if (id === maxId) {
-        await closePlayerCell(playerCell);
-    } else {
-        await closePlayerAnywhere(playerCell);
-    }
-    restoreLastPlayerControls();
-}
-
-
-function closePlayerCell(playerCell) {
-    return new Promise(resolve => {
-        const id = playerCell.dataset.cellId;
-        const orientation = playerCell.dataset.orientation;
-        const selector = getLinkedSelector(id);
+      } else if (selector) {
+        selector.classList.remove('disabled');
+        selector.style.pointerEvents = '';
+      }
+      if (orientation === 'horizontal') {
+        playerCell.style.left = parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width) + '%';
+      } else {
+        playerCell.style.top = parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height) + '%';
+      }
+      playerCell.addEventListener('transitionend', () => {
+        if (playerCell._dispose) playerCell._dispose();
+        const vid = playerCell.querySelector('video');
+        if (vid) vid.pause();
+        if (playerCell._splitter) playerCell._splitter.remove();
+        playerCell.remove();
+        this.untrackPlayerCell(id);
+        this.updateHighlightState();
         if (selector && id > 0) {
-            const selOri = selector.dataset.orientation;
-            if (selOri === "horizontal") {
-                selector.style.left = (parseFloat(selector.style.left) + parseFloat(selector.style.width)) + "%";
-            } else {
-                selector.style.top = (parseFloat(selector.style.top) + parseFloat(selector.style.height)) + "%";
-            }
-        } else if (selector) {
-            selector.classList.remove("disabled");
-            selector.style.pointerEvents = "";
+          const pAttr = selector.dataset.parentId;
+          if (pAttr !== undefined) this.childSelectors.delete(Number(pAttr));
+          selector.remove();
+          this.untrackSelectorCell(id);
+          const idx = this.layoutStack.findIndex(a => a.id == id);
+          if (idx > 0) {
+            const parent = this.layoutStack[idx - 1];
+            const child = this.layoutStack[idx];
+            if (child.orientation === 'horizontal') parent.width *= 2; else parent.height *= 2;
+            this.layoutStack.splice(idx, 1);
+            this.nextHorizontal = child.orientation === 'horizontal';
+            this.updateCellStyles(parent);
+          }
         }
-        if (orientation === "horizontal") {
-            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + "%";
-        } else {
-            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + "%";
-        }
-        playerCell.addEventListener("transitionend", () => {
-            if (playerCell._dispose) playerCell._dispose();
-            const vid = playerCell.querySelector("video");
-            if (vid) vid.pause();
-            if (playerCell._splitter) playerCell._splitter.remove();
-            playerCell.remove();
-            untrackPlayerCell(id);
-            updateHighlightState();
-            if (selector && id > 0) {
-                const pAttr = selector.dataset.parentId;
-                if (pAttr !== undefined) childSelectors.delete(Number(pAttr));
-                selector.remove();
-                untrackSelectorCell(id);
-                const idx = layoutStack.findIndex(a => a.id == id);
-                if (idx > 0) {
-                    const parent = layoutStack[idx - 1];
-                    const child = layoutStack[idx];
-                    if (child.orientation === "horizontal") parent.width *= 2; else parent.height *= 2;
-                    layoutStack.splice(idx, 1);
-                    nextHorizontal = child.orientation === "horizontal";
-                    updateCellStyles(parent);
-                }
-            }
-            resolve();
-        }, { once: true });
+        resolve();
+      }, { once: true });
     });
-}
+  }
 
-function closePlayerCellSimple(playerCell) {
+  closePlayerCellSimple(playerCell) {
     return new Promise(resolve => {
-        const id = playerCell.dataset.cellId;
-        const orientation = playerCell.dataset.orientation;
-        if (orientation === 'horizontal') {
-            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
-        } else {
-            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
-        }
-        playerCell.addEventListener('transitionend', () => {
-            if (playerCell._dispose) playerCell._dispose();
-            const vid = playerCell.querySelector('video');
-            if (vid) vid.pause();
-            if (playerCell._splitter) playerCell._splitter.remove();
-            playerCell.remove();
-            untrackPlayerCell(id);
-            updateHighlightState();
-            resolve();
-        }, { once: true });
+      const id = playerCell.dataset.cellId;
+      const orientation = playerCell.dataset.orientation;
+      if (orientation === 'horizontal') {
+        playerCell.style.left = parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width) + '%';
+      } else {
+        playerCell.style.top = parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height) + '%';
+      }
+      playerCell.addEventListener('transitionend', () => {
+        if (playerCell._dispose) playerCell._dispose();
+        const vid = playerCell.querySelector('video');
+        if (vid) vid.pause();
+        if (playerCell._splitter) playerCell._splitter.remove();
+        playerCell.remove();
+        this.untrackPlayerCell(id);
+        this.updateHighlightState();
+        resolve();
+      }, { once: true });
     });
-}
+  }
 
-async function closePlayerAnywhere(playerCell) {
-    const id = parseInt(playerCell.dataset.cellId, 10);
-    const area = layoutStack.find(a => a.id == id);
-
-    await closePlayerCellSimple(playerCell);
-
-    let prevArea = area;
-    let currentId = id + 1;
+  async compactGridFrom(startId) {
+    let prevArea = this.layoutStack[startId];
+    let currentId = startId + 1;
     while (true) {
-        const nextCell = activePlayerCells.get(String(currentId));
-        if (!nextCell) break;
-        const nextArea = layoutStack.find(a => a.id == currentId);
-        nextCell.style.left = prevArea.x + '%';
-        nextCell.style.top = prevArea.y + '%';
-        nextCell.style.width = prevArea.width + '%';
-        nextCell.style.height = prevArea.height + '%';
-        nextCell.style.zIndex = (currentId - 1) * 2 + 1;
-        nextCell.dataset.orientation = prevArea.orientation;
-        await new Promise(res =>
-            nextCell.addEventListener('transitionend', res, { once: true })
-        );
-        activePlayerCells.delete(String(currentId));
-        nextCell.dataset.cellId = currentId - 1;
-        activePlayerCells.set(String(currentId - 1), nextCell);
-        const childId = childSelectors.get(currentId);
-        if (childId !== undefined) {
-            childSelectors.delete(currentId);
-            childSelectors.set(currentId - 1, childId);
-            const childSelector = activeSelectorCells.get(String(childId));
-            if (childSelector) childSelector.dataset.parentId = currentId - 1;
-        }
-        prevArea = nextArea;
-        currentId++;
+      const nextCell = this.activePlayerCells.get(String(currentId));
+      if (!nextCell) break;
+      const nextArea = this.layoutStack[currentId];
+      const merged = this.computeUnion(prevArea, nextArea);
+
+      nextCell.style.left = merged.x + '%';
+      nextCell.style.top = merged.y + '%';
+      nextCell.style.width = merged.width + '%';
+      nextCell.style.height = merged.height + '%';
+      nextCell.style.zIndex = (currentId - 1) * 2 + 1;
+      nextCell.dataset.orientation = merged.orientation;
+
+      await new Promise(res => nextCell.addEventListener('transitionend', res, { once: true }));
+
+      this.activePlayerCells.delete(String(currentId));
+      nextCell.dataset.cellId = currentId - 1;
+      this.activePlayerCells.set(String(currentId - 1), nextCell);
+
+      const childId = this.childSelectors.get(currentId);
+      if (childId !== undefined) {
+        this.childSelectors.delete(currentId);
+        this.childSelectors.set(currentId - 1, childId);
+        const childSelector = this.activeSelectorCells.get(String(childId));
+        if (childSelector) childSelector.dataset.parentId = currentId - 1;
+      }
+
+      this.layoutStack[currentId - 1] = merged;
+      prevArea = nextArea;
+      currentId++;
     }
 
-    const removed = layoutStack.pop();
-    nextHorizontal = removed.orientation === 'horizontal';
-}
+    const removed = this.layoutStack.pop();
+    this.nextHorizontal = removed.orientation === 'horizontal';
+  }
 
-function delay(ms) {
+  async closePlayerAnywhere(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    await this.closePlayerCellSimple(playerCell);
+    await this.compactGridFrom(id);
+  }
+
+  delay(ms) {
     return new Promise(res => setTimeout(res, ms));
-}
-function closePlayerPair(playerCell) {
-    return closePlayerCell(playerCell);
-}
+  }
 
-async function closeChildren(id) {
-    const ids = Array.from(activePlayerCells.keys())
-        .map(Number)
-        .filter(pid => pid > id)
-        .sort((a, b) => b - a);
+  closePlayerPair(playerCell) {
+    return this.closePlayerCell(playerCell);
+  }
+
+  async closeChildren(id) {
+    const ids = Array.from(this.activePlayerCells.keys())
+      .map(Number)
+      .filter(pid => pid > id)
+      .sort((a, b) => b - a);
     for (const pid of ids) {
-        const cell = activePlayerCells.get(String(pid));
-        if (cell) {
-            await closePlayerPair(cell);
-            await delay(300);
-        }
+      const cell = this.activePlayerCells.get(String(pid));
+      if (cell) {
+        await this.closePlayerPair(cell);
+        await this.delay(300);
+      }
     }
-}
+  }
 
-async function cascadePromote(id) {
-    let playerCell = activePlayerCells.get(String(id));
+  async cascadePromote(id) {
+    let playerCell = this.activePlayerCells.get(String(id));
     if (!playerCell) return;
 
     if (playerCell._splitter) {
-        playerCell._splitter.remove();
-        playerCell._splitter = null;
+      playerCell._splitter.remove();
+      playerCell._splitter = null;
     }
 
-    const selfSelector = getLinkedSelector(id);
+    const selfSelector = this.getLinkedSelector(id);
     if (id > 0 && selfSelector) {
-        await closeSelectorCell(selfSelector);
+      await this.closeSelectorCell(selfSelector);
     } else if (selfSelector) {
-        selfSelector.classList.add('disabled');
-        selfSelector.style.pointerEvents = 'none';
+      selfSelector.classList.add('disabled');
+      selfSelector.style.pointerEvents = 'none';
     }
 
     while (id > 0) {
-        const parentId = id - 1;
-        const parentCell = activePlayerCells.get(String(parentId));
-        const parentSelector = getLinkedSelector(parentId);
-        const area = layoutStack.find(a => a.id == parentId);
+      const parentId = id - 1;
+      const parentCell = this.activePlayerCells.get(String(parentId));
+      const parentSelector = this.getLinkedSelector(parentId);
+      const area = this.layoutStack.find(a => a.id == parentId);
 
-        if (area) {
-            playerCell.style.left = area.x + '%';
-            playerCell.style.top = area.y + '%';
-            playerCell.style.width = area.width + '%';
-            playerCell.style.height = area.height + '%';
-            playerCell.style.zIndex = parentId * 2 + 1;
-            playerCell.dataset.orientation = area.orientation;
+      if (area) {
+        playerCell.style.left = area.x + '%';
+        playerCell.style.top = area.y + '%';
+        playerCell.style.width = area.width + '%';
+        playerCell.style.height = area.height + '%';
+        playerCell.style.zIndex = parentId * 2 + 1;
+        playerCell.dataset.orientation = area.orientation;
+      }
+
+      await new Promise(res => playerCell.addEventListener('transitionend', res, { once: true }));
+
+      if (parentCell) {
+        await this.closePlayerPair(parentCell);
+        if (parentId === 0 && parentSelector) {
+          parentSelector.classList.add('disabled');
+          parentSelector.style.pointerEvents = 'none';
         }
+      } else if (parentSelector && parentId > 0) {
+        await this.closeSelectorCell(parentSelector);
+      } else if (parentSelector && parentId === 0) {
+        parentSelector.classList.add('disabled');
+        parentSelector.style.pointerEvents = 'none';
+      }
 
-        await new Promise(res =>
-            playerCell.addEventListener('transitionend', res, { once: true })
-        );
-
-        if (parentCell) {
-            await closePlayerPair(parentCell);
-            if (parentId === 0 && parentSelector) {
-                parentSelector.classList.add('disabled');
-                parentSelector.style.pointerEvents = 'none';
-            }
-        } else if (parentSelector && parentId > 0) {
-            await closeSelectorCell(parentSelector);
-        } else if (parentSelector && parentId === 0) {
-            parentSelector.classList.add('disabled');
-            parentSelector.style.pointerEvents = 'none';
-        }
-
-        activePlayerCells.delete(String(id));
-        playerCell.dataset.cellId = parentId;
-        activePlayerCells.set(String(parentId), playerCell);
-        id = parentId;
-        await delay(100);
+      this.activePlayerCells.delete(String(id));
+      playerCell.dataset.cellId = parentId;
+      this.activePlayerCells.set(String(parentId), playerCell);
+      id = parentId;
+      await this.delay(100);
     }
-}
+  }
 
-function resetLayoutStack(playerCell) {
+  resetLayoutStack(playerCell) {
     const oldId = playerCell.dataset.cellId;
-    layoutStack.length = 1;
-    layoutStack[0] = { x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 };
-    nextHorizontal = true;
-    cellCounter = 1;
+    this.layoutStack.length = 1;
+    this.layoutStack[0] = { x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 };
+    this.nextHorizontal = true;
+    this.cellCounter = 1;
     playerCell.dataset.cellId = 0;
     playerCell.dataset.orientation = 'vertical';
     playerCell.style.zIndex = 1;
-    activePlayerCells.delete(String(oldId));
-    activePlayerCells.set('0', playerCell);
-}
+    this.activePlayerCells.delete(String(oldId));
+    this.activePlayerCells.set('0', playerCell);
+  }
 
-async function focusPlayerCell(id) {
-    const playerCell = activePlayerCells.get(String(id));
+  async focusPlayerCell(id) {
+    const playerCell = this.activePlayerCells.get(String(id));
     if (!playerCell) return;
-    await closeChildren(id);
-    await cascadePromote(id);
-    resetLayoutStack(playerCell);
-    restoreLastPlayerControls();
-}
+    await this.closeChildren(id);
+    await this.cascadePromote(id);
+    this.resetLayoutStack(playerCell);
+    this.restoreLastPlayerControls();
+  }
 
-function handleFocus(playerCell) {
+  handleFocus(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
-    focusPlayerCell(id);
-}
+    this.focusPlayerCell(id);
+  }
 
-function handleNext(currentPlayer) {
+  handleNext(currentPlayer) {
     const parentId = parseInt(currentPlayer.dataset.cellId, 10);
-    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
+    const maxId = Math.max(...Array.from(this.activePlayerCells.keys()).map(Number));
     if (parentId !== maxId) return;
 
-    const existingId = childSelectors.get(parentId);
-    if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
-        return; // already open
+    const existingId = this.childSelectors.get(parentId);
+    if (existingId !== undefined && this.activeSelectorCells.has(String(existingId))) {
+      return; // already open
     }
     const nextBtn = currentPlayer.querySelector('.next-btn');
     if (nextBtn) nextBtn.disabled = true;
-    createCellPair(parentId);
+    this.createCellPair(parentId);
     if (nextBtn) nextBtn.disabled = false;
-}
+  }
 
-function onThumbnailClick(thumb) {
+  async handleClose(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    const childId = this.childSelectors.get(id);
+    const childSelector = childId !== undefined ? this.activeSelectorCells.get(String(childId)) : null;
+
+    if (childSelector) {
+      await this.closeSelectorCell(childSelector);
+      return;
+    }
+
+    const maxId = Math.max(...Array.from(this.activePlayerCells.keys()).map(Number));
+    if (id === maxId) {
+      await this.closePlayerCell(playerCell);
+    } else {
+      await this.closePlayerAnywhere(playerCell);
+    }
+    this.restoreLastPlayerControls();
+  }
+
+  onThumbnailClick(thumb) {
     const selector = thumb.closest('.selector-cell');
     if (!selector) return;
     const id = selector.dataset.cellId;
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
-    activePlayerCells.forEach(p => {
-        p.querySelector('.next-btn')?.remove();
+    this.activePlayerCells.forEach(p => {
+      p.querySelector('.next-btn')?.remove();
     });
-    const area = layoutStack.find(a => a.id == id);
+    const area = this.layoutStack.find(a => a.id == id);
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
-    const player = createPlayerCell(area, id, area.orientation, archive);
-    addPlayerControls(player);
-    ensureNextOnLast();
+    const player = this.createPlayerCell(area, id, area.orientation, archive);
+    this.addPlayerControls(player);
+    this.ensureNextOnLast();
+  }
+
+  init() {
+    this.initOverallGrid();
+    this.createSelectorCell(this.layoutStack[0], this.cellCounter++);
+  }
 }
 
+export const gridManager = new GridNavigationManager();
+
 document.addEventListener('DOMContentLoaded', () => {
-    initOverallGrid();
-    createSelectorCell(layoutStack[0], cellCounter++);
+  gridManager.init();
 });
+
+export default gridManager;
