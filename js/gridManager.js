@@ -111,6 +111,28 @@ export class GridNavigationManager {
     return area;
   }
 
+  computeUnion(prevArea, nextArea) {
+    if (!nextArea) return { ...prevArea };
+    if (nextArea.orientation === 'horizontal') {
+      return {
+        x: Math.min(prevArea.x, nextArea.x),
+        y: prevArea.y,
+        width: prevArea.width + nextArea.width,
+        height: prevArea.height,
+        orientation: prevArea.orientation,
+        id: prevArea.id,
+      };
+    }
+    return {
+      x: prevArea.x,
+      y: Math.min(prevArea.y, nextArea.y),
+      width: prevArea.width,
+      height: prevArea.height + nextArea.height,
+      orientation: prevArea.orientation,
+      id: prevArea.id,
+    };
+  }
+
   initOverallGrid() {
     const grid = document.getElementById('overall-grid');
     grid.innerHTML = '';
@@ -457,28 +479,28 @@ export class GridNavigationManager {
     });
   }
 
-  async closePlayerAnywhere(playerCell) {
-    const id = parseInt(playerCell.dataset.cellId, 10);
-    const area = this.layoutStack.find(a => a.id == id);
-
-    await this.closePlayerCellSimple(playerCell);
-
-    let prevArea = area;
-    let currentId = id + 1;
+  async compactGridFrom(startId) {
+    let prevArea = this.layoutStack[startId];
+    let currentId = startId + 1;
     while (true) {
       const nextCell = this.activePlayerCells.get(String(currentId));
       if (!nextCell) break;
-      const nextArea = this.layoutStack.find(a => a.id == currentId);
-      nextCell.style.left = prevArea.x + '%';
-      nextCell.style.top = prevArea.y + '%';
-      nextCell.style.width = prevArea.width + '%';
-      nextCell.style.height = prevArea.height + '%';
+      const nextArea = this.layoutStack[currentId];
+      const merged = this.computeUnion(prevArea, nextArea);
+
+      nextCell.style.left = merged.x + '%';
+      nextCell.style.top = merged.y + '%';
+      nextCell.style.width = merged.width + '%';
+      nextCell.style.height = merged.height + '%';
       nextCell.style.zIndex = (currentId - 1) * 2 + 1;
-      nextCell.dataset.orientation = prevArea.orientation;
+      nextCell.dataset.orientation = merged.orientation;
+
       await new Promise(res => nextCell.addEventListener('transitionend', res, { once: true }));
+
       this.activePlayerCells.delete(String(currentId));
       nextCell.dataset.cellId = currentId - 1;
       this.activePlayerCells.set(String(currentId - 1), nextCell);
+
       const childId = this.childSelectors.get(currentId);
       if (childId !== undefined) {
         this.childSelectors.delete(currentId);
@@ -486,12 +508,20 @@ export class GridNavigationManager {
         const childSelector = this.activeSelectorCells.get(String(childId));
         if (childSelector) childSelector.dataset.parentId = currentId - 1;
       }
+
+      this.layoutStack[currentId - 1] = merged;
       prevArea = nextArea;
       currentId++;
     }
 
     const removed = this.layoutStack.pop();
     this.nextHorizontal = removed.orientation === 'horizontal';
+  }
+
+  async closePlayerAnywhere(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    await this.closePlayerCellSimple(playerCell);
+    await this.compactGridFrom(id);
   }
 
   delay(ms) {
