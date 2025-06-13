@@ -6,7 +6,8 @@ export class GridNavigationManager {
     this.activeSelectorCells = new Map();
     this.activePlayerCells = new Map();
     this.childSelectors = new Map();
-    this.cellCounter = 1;
+    // start with 0 so the initial selector matches the root layout area
+    this.cellCounter = 0;
     this.layoutStack = [{ x: 0, y: 0, width: 100, height: 100, orientation: 'vertical', id: 0 }];
     this.nextHorizontal = true;
     this.highlightedPlayerCell = null;
