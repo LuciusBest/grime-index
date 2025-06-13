@@ -263,19 +263,19 @@ function createPlayerCell(area, id, orientation, archive) {
 
 function addPlayerControls(playerCell, uiLayer) {
     const closeBtn = document.createElement('button');
-    closeBtn.className = 'close-btn';
+    closeBtn.className = 'gm-button close';
     closeBtn.textContent = 'Close';
     closeBtn.addEventListener('click', () => handleClose(playerCell));
     uiLayer.appendChild(closeBtn);
 
     const nextBtn = document.createElement('button');
-    nextBtn.className = 'next-btn';
+    nextBtn.className = 'gm-button next';
     nextBtn.textContent = 'Next';
     nextBtn.addEventListener('click', () => handleNext(playerCell));
     uiLayer.appendChild(nextBtn);
 
     const focusBtn = document.createElement('button');
-    focusBtn.className = 'focus-btn';
+    focusBtn.className = 'gm-button focus';
     focusBtn.textContent = 'Focus';
     focusBtn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -297,7 +297,7 @@ function restoreLastPlayerControls() {
     });
     if (!lastPlayer) return;
     const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.close-btn')) {
+    if (!uiLayer.querySelector('.gm-button.close')) {
         addPlayerControls(lastPlayer, uiLayer);
     }
 }
@@ -531,7 +531,7 @@ function handleNext(currentPlayer) {
     if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
         return; // already open
     }
-    const nextBtn = currentPlayer.querySelector('.next-btn');
+    const nextBtn = currentPlayer.querySelector('.gm-button.next');
     if (nextBtn) nextBtn.disabled = true;
     createCellPair(parentId);
     if (nextBtn) nextBtn.disabled = false;
@@ -544,8 +544,8 @@ function onThumbnailClick(thumb) {
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
     activePlayerCells.forEach(p => {
-        p.querySelector('.close-btn')?.remove();
-        p.querySelector('.next-btn')?.remove();
+        p.querySelector('.gm-button.close')?.remove();
+        p.querySelector('.gm-button.next')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };

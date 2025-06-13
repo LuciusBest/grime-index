@@ -50,7 +50,7 @@ Showcase basic interaction flow between selector thumbnails and player area.
 🔧 Added cell trackers and close button:
 - Introduced `activeSelectorCells` and `activePlayerCells` maps in `js/gridManager.js`
 - Player cells now include a `Close` button that slides them out and re-enables the selector
-- Added `.close-btn` styles in `css/layout.css`
+- Added `.gm-button.close` styles in `css/layout.css`
 
 🧠 Purpose:
 Manage multiple cells dynamically and allow returning from the player view.
@@ -70,7 +70,7 @@ Ensure selectors become clickable again after closing their player cells.
 
 🔧 Refactored layout for iterative growth:
 - Made `.selector-cell` and `.player-cell` absolutely positioned with left/top transitions
-- Added `.next-btn` styling for spawning new cell pairs
+- Added `.gm-button.next` styling for spawning new cell pairs
 - Prepared CSS transitions for horizontal and vertical sliding
 
 🧠 Purpose:

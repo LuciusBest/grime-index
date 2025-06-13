@@ -150,26 +150,23 @@ body {
     font-size: 0.8em;
 }
 
-.close-btn {
+.gm-button {
     position: absolute;
     bottom: 10px;
+    z-index: 20;
+}
+
+.gm-button.close {
     right: 10px;
-    z-index: 20;
 }
 
-.next-btn {
-    position: absolute;
-    bottom: 10px;
+.gm-button.next {
     left: 10px;
-    z-index: 20;
 }
 
-.focus-btn {
-    position: absolute;
-    bottom: 10px;
+.gm-button.focus {
     left: 50%;
     transform: translateX(-50%);
-    z-index: 20;
 }
 
 
