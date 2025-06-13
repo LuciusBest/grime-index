@@ -256,6 +256,7 @@ function createPlayerCell(area, id, orientation, archive) {
 
     requestAnimationFrame(async () => {
         cell._dispose = await initVideoShader(video, canvas, 'threshold_grey_gradient');
+        if (window.applyShaderState) window.applyShaderState(window.shaderEnabled);
     });
 
     if (orientation === 'horizontal') {
