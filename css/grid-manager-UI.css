@@ -1,0 +1,33 @@
+.grid-manager-UI-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 120px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grid-manager-UI-container .gm-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.grid-manager-UI-container .gm-btn.white {
+    background: white;
+}
+
+.grid-manager-UI-container .gm-btn.grey {
+    background: grey;
+}
+
+.grid-manager-UI-container .gm-btn.black {
+    background: black;
+}
+

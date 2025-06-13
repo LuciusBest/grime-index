@@ -220,6 +220,23 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.appendChild(videoLayer);
     cell.appendChild(uiLayer);
 
+    const gridUiContainer = document.createElement('div');
+    gridUiContainer.className = 'grid-manager-UI-container';
+
+    const btnWhite = document.createElement('button');
+    btnWhite.className = 'gm-btn white';
+    gridUiContainer.appendChild(btnWhite);
+
+    const btnGrey = document.createElement('button');
+    btnGrey.className = 'gm-btn grey';
+    gridUiContainer.appendChild(btnGrey);
+
+    const btnBlack = document.createElement('button');
+    btnBlack.className = 'gm-btn black';
+    gridUiContainer.appendChild(btnBlack);
+
+    cell.appendChild(gridUiContainer);
+
     grid.appendChild(cell);
     if (splitter) cell._splitter = splitter;
     trackPlayerCell(id, cell);
