@@ -110,10 +110,8 @@ function bindTimeline(video) {
 
   const clamp = (x, min, max) => Math.max(min, Math.min(x, max));
   const formatTime = (sec) => {
-    if (!isFinite(sec)) return '0:00';
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60);
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
+    if (!isFinite(sec)) return '0s';
+    return `${Math.floor(sec)}s`;
   };
   const updateActive = (t) => {
     document.querySelectorAll('.speaker-block').forEach(b => {
