@@ -57,3 +57,10 @@
 ✅ Confirmed footer hierarchy with `#main_footer` containing `#timeline-footer`.
 💡 Timeline DOM from OLD will populate `#timeline-footer`; `#main_footer` allows future footer tools.
 ⚠️ Prepare CSS copy from OLD without modifications.
+
+## 2025-06-13 – 14:00
+
+✅ Implemented dynamic timeline binding.
+💡 Added data attributes to player cells and dispatched `highlightchange` events in `gridManager.js`. Created `js/timeline.js` to load archive JSON for the highlighted video and manage listeners.
+⚠️ Needs further testing with rapid highlight changes.
+📍 Next: refine performance and integrate additional footer tools.

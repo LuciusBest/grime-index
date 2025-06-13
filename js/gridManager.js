@@ -51,6 +51,7 @@ function updateHighlightState(targetCell = highlightedPlayerCell) {
             }
         });
     }
+    const previous = highlightedPlayerCell;
     highlightedPlayerCell = targetCell || null;
     activePlayerCells.forEach(cell => {
         const video = cell.querySelector('video');
@@ -62,6 +63,9 @@ function updateHighlightState(targetCell = highlightedPlayerCell) {
             if (video) video.muted = true;
         }
     });
+    if (highlightedPlayerCell !== previous) {
+        document.dispatchEvent(new CustomEvent('highlightchange', { detail: { cell: highlightedPlayerCell } }));
+    }
 }
 
 function getLinkedSelector(id) {
@@ -165,6 +169,9 @@ function createPlayerCell(area, id, orientation, archive) {
     cell.className = 'player-cell';
     cell.dataset.cellId = id;
     cell.dataset.orientation = orientation;
+    cell.dataset.file = archive.file;
+    cell.dataset.archive = archive.archive;
+    if (archive.title) cell.dataset.title = archive.title;
     cell.style.zIndex = id * 2 + 1;
     cell.style.left = area.x + '%';
     cell.style.top = area.y + '%';
