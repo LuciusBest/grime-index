@@ -351,23 +351,44 @@ function closeSelectorCell(selectorCell) {
     });
 }
 
-function handleClose(playerCell) {
+function closeSelectorCellSimple(selectorCell) {
+    return new Promise(resolve => {
+        const orientation = selectorCell.dataset.orientation;
+        if (orientation === 'horizontal') {
+            selectorCell.style.left = (parseFloat(selectorCell.style.left) + parseFloat(selectorCell.style.width)) + '%';
+        } else {
+            selectorCell.style.top = (parseFloat(selectorCell.style.top) + parseFloat(selectorCell.style.height)) + '%';
+        }
+        selectorCell.addEventListener('transitionend', () => {
+            const id = selectorCell.dataset.cellId;
+            const parentId = selectorCell.dataset.parentId;
+            if (parentId !== undefined) childSelectors.delete(Number(parentId));
+            selectorCell.remove();
+            untrackSelectorCell(id);
+            resolve();
+        }, { once: true });
+    });
+}
+
+async function handleClose(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
     const childId = childSelectors.get(id);
     const childSelector =
         childId !== undefined ? activeSelectorCells.get(String(childId)) : null;
 
     if (childSelector) {
-        // Step 1: close only the child selector and keep the player open
-        closeSelectorCell(childSelector).then(() => {
-            restoreLastPlayerControls();
-        });
+        await closeSelectorCellSimple(childSelector);
+    }
+
+    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
+    if (id === maxId) {
+        await closePlayerCell(playerCell);
+        restoreLastPlayerControls();
         return;
     }
 
-    closePlayerCell(playerCell).then(() => {
-        restoreLastPlayerControls();
-    });
+    await closePlayerAnywhere(playerCell);
+    restoreLastPlayerControls();
 }
 
 
@@ -418,6 +439,67 @@ function closePlayerCell(playerCell) {
             resolve();
         }, { once: true });
     });
+}
+
+function closePlayerCellSimple(playerCell) {
+    return new Promise(resolve => {
+        const id = playerCell.dataset.cellId;
+        const orientation = playerCell.dataset.orientation;
+        if (orientation === 'horizontal') {
+            playerCell.style.left = (parseFloat(playerCell.style.left) + parseFloat(playerCell.style.width)) + '%';
+        } else {
+            playerCell.style.top = (parseFloat(playerCell.style.top) + parseFloat(playerCell.style.height)) + '%';
+        }
+        playerCell.addEventListener('transitionend', () => {
+            if (playerCell._dispose) playerCell._dispose();
+            const vid = playerCell.querySelector('video');
+            if (vid) vid.pause();
+            if (playerCell._splitter) playerCell._splitter.remove();
+            playerCell.remove();
+            untrackPlayerCell(id);
+            updateHighlightState();
+            resolve();
+        }, { once: true });
+    });
+}
+
+async function closePlayerAnywhere(playerCell) {
+    const id = parseInt(playerCell.dataset.cellId, 10);
+    const area = layoutStack.find(a => a.id == id);
+
+    await closePlayerCellSimple(playerCell);
+
+    let prevArea = area;
+    let currentId = id + 1;
+    while (true) {
+        const nextCell = activePlayerCells.get(String(currentId));
+        if (!nextCell) break;
+        const nextArea = layoutStack.find(a => a.id == currentId);
+        nextCell.style.left = prevArea.x + '%';
+        nextCell.style.top = prevArea.y + '%';
+        nextCell.style.width = prevArea.width + '%';
+        nextCell.style.height = prevArea.height + '%';
+        nextCell.style.zIndex = (currentId - 1) * 2 + 1;
+        nextCell.dataset.orientation = prevArea.orientation;
+        await new Promise(res =>
+            nextCell.addEventListener('transitionend', res, { once: true })
+        );
+        activePlayerCells.delete(String(currentId));
+        nextCell.dataset.cellId = currentId - 1;
+        activePlayerCells.set(String(currentId - 1), nextCell);
+        const childId = childSelectors.get(currentId);
+        if (childId !== undefined) {
+            childSelectors.delete(currentId);
+            childSelectors.set(currentId - 1, childId);
+            const childSelector = activeSelectorCells.get(String(childId));
+            if (childSelector) childSelector.dataset.parentId = currentId - 1;
+        }
+        prevArea = nextArea;
+        currentId++;
+    }
+
+    const removed = layoutStack.pop();
+    nextHorizontal = removed.orientation === 'horizontal';
 }
 
 function delay(ms) {

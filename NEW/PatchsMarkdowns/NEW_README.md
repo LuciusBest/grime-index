@@ -137,3 +137,12 @@ Maintain visual consistency by giving selectors the same smooth entrance as play
 
 🧠 Purpose:
 Begin reusing OLD thumbnail logic so selector cells show video previews.
+
+## 2025-06-13 – 10:00
+
+🔧 Close button now works on any player cell:
+- Introduced `closePlayerAnywhere` and simplified selector removal
+- Remaining players shift upward to fill gaps when a cell closes
+
+🧠 Purpose:
+Improve usability by allowing cells to be closed in any order.
