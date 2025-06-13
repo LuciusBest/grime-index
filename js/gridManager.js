@@ -223,20 +223,17 @@ function createPlayerCell(area, id, orientation, archive) {
     const gridUiContainer = document.createElement('div');
     gridUiContainer.className = 'grid-manager-UI-container';
 
-    const btnClose = document.createElement('button');
-    btnClose.id = 'close-button';
-    btnClose.className = 'gm-btn';
-    gridUiContainer.appendChild(btnClose);
+    const btnWhite = document.createElement('button');
+    btnWhite.className = 'gm-btn white';
+    gridUiContainer.appendChild(btnWhite);
 
-    const btnFocus = document.createElement('button');
-    btnFocus.id = 'focus-button';
-    btnFocus.className = 'gm-btn';
-    gridUiContainer.appendChild(btnFocus);
+    const btnGrey = document.createElement('button');
+    btnGrey.className = 'gm-btn grey';
+    gridUiContainer.appendChild(btnGrey);
 
-    const btnNext = document.createElement('button');
-    btnNext.id = 'next-button';
-    btnNext.className = 'gm-btn';
-    gridUiContainer.appendChild(btnNext);
+    const btnBlack = document.createElement('button');
+    btnBlack.className = 'gm-btn black';
+    gridUiContainer.appendChild(btnBlack);
 
     cell.appendChild(gridUiContainer);
 
