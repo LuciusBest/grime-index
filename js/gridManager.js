@@ -262,11 +262,11 @@ function createPlayerCell(area, id, orientation, archive) {
 }
 
 function addPlayerControls(playerCell, uiLayer) {
-    const backBtn = document.createElement('button');
-    backBtn.className = 'return-btn';
-    backBtn.textContent = 'Back';
-    backBtn.addEventListener('click', () => handleBack(playerCell));
-    uiLayer.appendChild(backBtn);
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'close-btn';
+    closeBtn.textContent = 'Close';
+    closeBtn.addEventListener('click', () => handleClose(playerCell));
+    uiLayer.appendChild(closeBtn);
 
     const nextBtn = document.createElement('button');
     nextBtn.className = 'next-btn';
@@ -297,7 +297,7 @@ function restoreLastPlayerControls() {
     });
     if (!lastPlayer) return;
     const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.return-btn')) {
+    if (!uiLayer.querySelector('.close-btn')) {
         addPlayerControls(lastPlayer, uiLayer);
     }
 }
@@ -351,7 +351,7 @@ function closeSelectorCell(selectorCell) {
     });
 }
 
-function handleBack(playerCell) {
+function handleClose(playerCell) {
     const id = parseInt(playerCell.dataset.cellId, 10);
     const childId = childSelectors.get(id);
     const childSelector =
@@ -544,7 +544,7 @@ function onThumbnailClick(thumb) {
     selector.classList.add('disabled');
     selector.style.pointerEvents = 'none';
     activePlayerCells.forEach(p => {
-        p.querySelector('.return-btn')?.remove();
+        p.querySelector('.close-btn')?.remove();
         p.querySelector('.next-btn')?.remove();
     });
     const area = layoutStack.find(a => a.id == id);
