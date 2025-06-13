@@ -273,46 +273,6 @@ function createPlayerCell(area, id, orientation, archive) {
     return cell;
 }
 
-function addPlayerControls(playerCell, uiLayer) {
-    const closeBtn = document.createElement('button');
-    closeBtn.className = 'gm-button close';
-    closeBtn.textContent = 'Close';
-    closeBtn.addEventListener('click', () => handleClose(playerCell));
-    uiLayer.appendChild(closeBtn);
-
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'gm-button next';
-    nextBtn.textContent = 'Next';
-    nextBtn.addEventListener('click', () => handleNext(playerCell));
-    uiLayer.appendChild(nextBtn);
-
-    const focusBtn = document.createElement('button');
-    focusBtn.className = 'gm-button focus';
-    focusBtn.textContent = 'Focus';
-    focusBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        handleFocus(playerCell);
-    });
-    uiLayer.appendChild(focusBtn);
-}
-
-function restoreLastPlayerControls() {
-    if (activePlayerCells.size === 0) return;
-    let lastId = -Infinity;
-    let lastPlayer = null;
-    activePlayerCells.forEach(p => {
-        const pid = parseInt(p.dataset.cellId, 10);
-        if (pid > lastId) {
-            lastId = pid;
-            lastPlayer = p;
-        }
-    });
-    if (!lastPlayer) return;
-    const uiLayer = lastPlayer.querySelector('.ui-foreground-layer');
-    if (!uiLayer.querySelector('.gm-button.close')) {
-        addPlayerControls(lastPlayer, uiLayer);
-    }
-}
 
 function replaceCell(oldCell, newCell) {
     const grid = document.getElementById('overall-grid');
@@ -371,15 +331,11 @@ function handleClose(playerCell) {
 
     if (childSelector) {
         // Step 1: close only the child selector and keep the player open
-        closeSelectorCell(childSelector).then(() => {
-            restoreLastPlayerControls();
-        });
+        closeSelectorCell(childSelector);
         return;
     }
 
-    closePlayerCell(playerCell).then(() => {
-        restoreLastPlayerControls();
-    });
+    closePlayerCell(playerCell);
 }
 
 
@@ -529,7 +485,6 @@ async function focusPlayerCell(id) {
     await closeChildren(id);
     await cascadePromote(id);
     resetLayoutStack(playerCell);
-    restoreLastPlayerControls();
 }
 
 function handleFocus(playerCell) {
@@ -561,9 +516,7 @@ function onThumbnailClick(thumb) {
     });
     const area = layoutStack.find(a => a.id == id);
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
-    const player = createPlayerCell(area, id, area.orientation, archive);
-    const uiLayer = player.querySelector('.ui-foreground-layer');
-    addPlayerControls(player, uiLayer);
+    createPlayerCell(area, id, area.orientation, archive);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
