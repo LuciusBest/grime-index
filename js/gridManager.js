@@ -223,17 +223,29 @@ function createPlayerCell(area, id, orientation, archive) {
     const gridUiContainer = document.createElement('div');
     gridUiContainer.className = 'grid-manager-UI-container';
 
-    const btnWhite = document.createElement('button');
-    btnWhite.className = 'gm-btn white';
-    gridUiContainer.appendChild(btnWhite);
+    const focusBtn = document.createElement('button');
+    focusBtn.className = 'gm-button focus';
+    focusBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleFocus(cell);
+    });
+    gridUiContainer.appendChild(focusBtn);
 
-    const btnGrey = document.createElement('button');
-    btnGrey.className = 'gm-btn grey';
-    gridUiContainer.appendChild(btnGrey);
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'gm-button close';
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleClose(cell);
+    });
+    gridUiContainer.appendChild(closeBtn);
 
-    const btnBlack = document.createElement('button');
-    btnBlack.className = 'gm-btn black';
-    gridUiContainer.appendChild(btnBlack);
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'gm-button next';
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleNext(cell);
+    });
+    gridUiContainer.appendChild(nextBtn);
 
     cell.appendChild(gridUiContainer);
 
