@@ -80,6 +80,10 @@
     opacity: 0;
 }
 
+#TimelineMiddle:hover .timeline-row.hidden {
+    opacity: 1;
+}
+
 /* Blocs speaker/instrumental */
 .speaker-block,
 .instrumental-block {

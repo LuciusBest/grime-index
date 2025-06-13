@@ -79,8 +79,14 @@ function bindTimeline(video) {
   const cursor = document.getElementById('TimelineCursorWrapper');
   const cursorTime = document.getElementById('TimelineCursorTime');
   const vertical = document.getElementById('TimelineVerticalLine');
+  const playPause = document.getElementById('play-pause');
+  const volumeSlider = document.getElementById('volume-slider');
   if (!timeline || !progress || !cursor || !cursorTime || !vertical) return;
   let isDragging = false;
+  const playIcon =
+    '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="3,2 13,8 3,14" fill="black"/></svg>';
+  const pauseIcon =
+    '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="3" height="12" fill="black"/><rect x="10" y="2" width="3" height="12" fill="black"/></svg>';
 
   const clamp = (x, min, max) => Math.max(min, Math.min(x, max));
   const formatTime = (sec) => {
@@ -156,12 +162,48 @@ function bindTimeline(video) {
   timeline.addEventListener('mouseleave', onMouseLeave);
   video.addEventListener('timeupdate', onTimeUpdate);
 
+  let playPauseHandler = null;
+  let syncPlay = null;
+  let syncPause = null;
+  let volumeHandler = null;
+  if (playPause) {
+    playPause.innerHTML = video.paused ? playIcon : pauseIcon;
+    playPauseHandler = async () => {
+      try {
+        if (video.paused) {
+          await video.play();
+          playPause.innerHTML = pauseIcon;
+        } else {
+          video.pause();
+          playPause.innerHTML = playIcon;
+        }
+      } catch (err) {
+        console.error('playback error', err);
+      }
+    };
+    playPause.addEventListener('click', playPauseHandler);
+    syncPlay = () => { playPause.innerHTML = pauseIcon; };
+    syncPause = () => { playPause.innerHTML = playIcon; };
+    video.addEventListener('play', syncPlay);
+    video.addEventListener('pause', syncPause);
+  }
+
+  if (volumeSlider) {
+    volumeSlider.value = video.volume;
+    volumeHandler = (e) => { video.volume = parseFloat(e.target.value); };
+    volumeSlider.addEventListener('input', volumeHandler);
+  }
+
   detachCallbacks.push(() => {
     timeline.removeEventListener('mousedown', onMouseDown);
     document.removeEventListener('mouseup', onMouseUp);
     document.removeEventListener('mousemove', onMouseMove);
     timeline.removeEventListener('mouseleave', onMouseLeave);
     video.removeEventListener('timeupdate', onTimeUpdate);
+    if (playPause && playPauseHandler) playPause.removeEventListener('click', playPauseHandler);
+    if (playPause && syncPlay) video.removeEventListener('play', syncPlay);
+    if (playPause && syncPause) video.removeEventListener('pause', syncPause);
+    if (volumeSlider && volumeHandler) volumeSlider.removeEventListener('input', volumeHandler);
   });
 
   if (video.readyState >= 1) updateCursor(video.currentTime);

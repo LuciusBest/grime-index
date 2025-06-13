@@ -64,3 +64,10 @@
 💡 Added data attributes to player cells and dispatched `highlightchange` events in `gridManager.js`. Created `js/timeline.js` to load archive JSON for the highlighted video and manage listeners.
 ⚠️ Needs further testing with rapid highlight changes.
 📍 Next: refine performance and integrate additional footer tools.
+
+## 2025-06-13 – 16:30
+
+✅ Added playback controls wired to the highlighted video.
+💡 `timeline.js` now toggles play/pause and volume via the current video and reveals timeline rows on hover.
+⚠️ Icons update on `play`/`pause` events but might desync if the video is externally paused before binding.
+📍 Next: consider replacing custom binding with `activeMedia.js` for shared state.
