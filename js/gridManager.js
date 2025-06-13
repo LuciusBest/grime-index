@@ -302,6 +302,31 @@ function restoreLastPlayerControls() {
     if (!lastPlayer.querySelector('.close-btn')) {
         addPlayerControls(lastPlayer);
     }
+    ensureNextOnLast();
+}
+
+function ensureNextOnLast() {
+    if (activePlayerCells.size === 0) return;
+    let lastId = -Infinity;
+    let lastPlayer = null;
+    activePlayerCells.forEach(p => {
+        p.querySelector('.next-btn')?.remove();
+        const pid = parseInt(p.dataset.cellId, 10);
+        if (pid > lastId) {
+            lastId = pid;
+            lastPlayer = p;
+        }
+    });
+    if (!lastPlayer) return;
+    if (!lastPlayer.querySelector('.next-btn')) {
+        const container =
+            lastPlayer.querySelector('.grid-manager-UI-container') || lastPlayer;
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'next-btn';
+        nextBtn.textContent = 'Next';
+        nextBtn.addEventListener('click', () => handleNext(lastPlayer));
+        container.appendChild(nextBtn);
+    }
 }
 
 function replaceCell(oldCell, newCell) {
@@ -380,16 +405,15 @@ async function handleClose(playerCell) {
 
     if (childSelector) {
         await closeSelectorCellSimple(childSelector);
+        return;
     }
 
     const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
     if (id === maxId) {
         await closePlayerCell(playerCell);
-        restoreLastPlayerControls();
-        return;
+    } else {
+        await closePlayerAnywhere(playerCell);
     }
-
-    await closePlayerAnywhere(playerCell);
     restoreLastPlayerControls();
 }
 
@@ -611,6 +635,9 @@ function handleFocus(playerCell) {
 
 function handleNext(currentPlayer) {
     const parentId = parseInt(currentPlayer.dataset.cellId, 10);
+    const maxId = Math.max(...Array.from(activePlayerCells.keys()).map(Number));
+    if (parentId !== maxId) return;
+
     const existingId = childSelectors.get(parentId);
     if (existingId !== undefined && activeSelectorCells.has(String(existingId))) {
         return; // already open
@@ -634,6 +661,7 @@ function onThumbnailClick(thumb) {
     const archive = { file: thumb.dataset.file, archive: thumb.dataset.archive, title: thumb.dataset.title || thumb.textContent };
     const player = createPlayerCell(area, id, area.orientation, archive);
     addPlayerControls(player);
+    ensureNextOnLast();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

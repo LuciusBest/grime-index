@@ -146,3 +146,12 @@ Begin reusing OLD thumbnail logic so selector cells show video previews.
 
 🧠 Purpose:
 Improve usability by allowing cells to be closed in any order.
+
+## 2025-06-13 – 10:30
+
+🔧 Refined Next and Close behavior:
+- Only the last active player displays a Next button
+- Closing a player first removes its open child selector if present
+
+🧠 Purpose:
+Prevent branching from intermediate cells and ensure predictable navigation.
