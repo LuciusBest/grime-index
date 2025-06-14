@@ -40,3 +40,9 @@
 ✅ `#liveText` now attaches to the highlighted player cell via `activeMedia` events.
 ✅ Added scaling logic to keep text modules proportional to cell size.
 ⚠️ Monitor highlight swaps to ensure overlays move smoothly.
+
+## 2025-06-14 – Per-Cell Containers
+
+✅ Each player cell now includes an empty `.liveText` placeholder created by `gridManager`.
+✅ The overlay wrapper moves into the highlighted cell's container and only that container stays visible.
+✅ Removed the global `#liveText` element and switched scaling to `font-size` to avoid transforms.

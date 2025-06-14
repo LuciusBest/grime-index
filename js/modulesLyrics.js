@@ -2,8 +2,8 @@ import { activeMedia } from './activeMedia.js';
 
 const TOLERANCE = 0.03;
 
-const liveText = document.getElementById('liveText');
 let currentCell = null;
+let currentContainer = null;
 
 // Build DOM structure
 const wrapper = document.createElement('div');
@@ -15,28 +15,32 @@ wrapper.innerHTML = `
     <div class="module" id="lyrics"><div class="inner_text"></div></div>
   </div>`;
 
-liveText.appendChild(wrapper);
 
 function attachToCell(cell) {
-  if (liveText.parentElement && liveText.parentElement !== cell) {
-    liveText.parentElement.removeChild(liveText);
+  const newContainer = cell ? cell.querySelector('.liveText') : null;
+  if (currentContainer && currentContainer !== newContainer) {
+    currentContainer.classList.remove('active');
+    if (wrapper.parentElement === currentContainer) {
+      currentContainer.removeChild(wrapper);
+    }
   }
-  currentCell = cell;
-  if (cell) {
-    cell.appendChild(liveText);
+  currentCell = cell || null;
+  currentContainer = newContainer;
+  if (newContainer) {
+    newContainer.appendChild(wrapper);
+    newContainer.classList.add('active');
     updateScale();
   }
 }
 
 function updateScale() {
-  if (!currentCell) return;
-  const rect = currentCell.getBoundingClientRect();
+  if (!currentContainer) return;
+  const rect = currentContainer.parentElement.getBoundingClientRect();
   const scale = Math.min(
     rect.width / window.innerWidth,
     rect.height / window.innerHeight
   );
-  wrapper.style.transform = `scale(${scale})`;
-  wrapper.style.transformOrigin = 'top left';
+  wrapper.style.fontSize = `${scale * 100}%`;
 }
 
 window.addEventListener('resize', updateScale);

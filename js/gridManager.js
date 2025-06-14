@@ -219,6 +219,9 @@ function createPlayerCell(area, id, orientation, archive) {
 
     cell.appendChild(videoLayer);
     cell.appendChild(uiLayer);
+    const liveTextDiv = document.createElement('div');
+    liveTextDiv.className = 'liveText';
+    cell.appendChild(liveTextDiv);
 
     const gridUiContainer = document.createElement('div');
     gridUiContainer.className = 'grid-manager-UI-container';

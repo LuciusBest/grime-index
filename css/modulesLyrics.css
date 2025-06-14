@@ -1,5 +1,19 @@
 /* Modules & Lyrics Overlay Styles */
 
+.player-cell .liveText {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 2%;
+    display: none;
+    pointer-events: none;
+}
+
+.player-cell .liveText.active {
+    display: block;
+}
+
 .audioType_wrapper {
     display: flex;
     justify-content: flex-end;
