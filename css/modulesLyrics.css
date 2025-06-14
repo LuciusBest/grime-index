@@ -14,11 +14,6 @@
     display: block;
 }
 
-.player-cell .liveText:hover .inner_text {
-    color: red;
-    transform: translateY(-7px);
-    transition: all 0.3s ease;
-}
 
 .audioType_wrapper {
     display: flex;
