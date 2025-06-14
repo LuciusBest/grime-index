@@ -3,6 +3,7 @@ import { activeMedia } from './activeMedia.js';
 const TOLERANCE = 0.03;
 
 const liveText = document.getElementById('liveText');
+let currentCell = null;
 
 // Build DOM structure
 const wrapper = document.createElement('div');
@@ -16,6 +17,30 @@ wrapper.innerHTML = `
 
 liveText.appendChild(wrapper);
 
+function attachToCell(cell) {
+  if (liveText.parentElement && liveText.parentElement !== cell) {
+    liveText.parentElement.removeChild(liveText);
+  }
+  currentCell = cell;
+  if (cell) {
+    cell.appendChild(liveText);
+    updateScale();
+  }
+}
+
+function updateScale() {
+  if (!currentCell) return;
+  const rect = currentCell.getBoundingClientRect();
+  const scale = Math.min(
+    rect.width / window.innerWidth,
+    rect.height / window.innerHeight
+  );
+  wrapper.style.transform = `scale(${scale})`;
+  wrapper.style.transformOrigin = 'top left';
+}
+
+window.addEventListener('resize', updateScale);
+
 const speakerDiv = wrapper.querySelector('#speaker .inner_text');
 const instrumentalDiv = wrapper.querySelector('#instrumental .inner_text');
 const lyricsDiv = wrapper.querySelector('#lyrics .inner_text');
@@ -24,13 +49,14 @@ let archiveData = null;
 let currentSegmentId = null;
 let activeWords = new Set();
 
-activeMedia.onVideoChange(({ archiveData: data }) => {
+activeMedia.onVideoChange(({ archiveData: data, cell }) => {
   archiveData = data;
   currentSegmentId = null;
   activeWords = new Set();
   lyricsDiv.innerHTML = '';
   speakerDiv.textContent = '';
   instrumentalDiv.textContent = '';
+  attachToCell(cell);
 });
 
 activeMedia.onTimeUpdate(time => {

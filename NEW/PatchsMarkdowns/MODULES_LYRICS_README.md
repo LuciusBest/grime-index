@@ -34,3 +34,9 @@
 ✅ Created dedicated `modulesLyrics.css` with styles copied from legacy `visualizer.css`.
 💡 Utilizes `activeMedia` to track highlighted player and archive data.
 📍 Next: refine positioning and test multiple highlight transitions.
+
+## 2025-06-14 – Player-cell embedding
+
+✅ `#liveText` now attaches to the highlighted player cell via `activeMedia` events.
+✅ Added scaling logic to keep text modules proportional to cell size.
+⚠️ Monitor highlight swaps to ensure overlays move smoothly.
