@@ -1,0 +1,141 @@
+/* Modules & Lyrics Overlay Styles */
+
+.player-cell .liveText {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 2%;
+    display: none;
+    pointer-events: auto;
+}
+
+.player-cell .liveText.active {
+    display: block;
+}
+
+
+.audioType_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1px;
+}
+
+.audioType_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.1em;
+    margin-bottom: 1em;
+    margin-left: 0.3em;
+}
+
+.module {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 500;
+    cursor: pointer;
+}
+
+.inner_text {
+    font-family: 'Baikal', sans-serif;
+    font-size: 1em;
+    line-height: 0.8;
+    display: inline-block;
+    transform-origin: center center;
+    transition: font-size 0.1s ease, font-variation-settings 0.05s ease;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        5px 5px 0 rgba(0, 0, 0, 1);
+    transition: all 0.3s ease;
+}
+
+.module:hover .inner_text {
+    color: red;
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
+}
+
+#speaker .inner_text {
+    font-variation-settings: "wdth" 20, "wght" 600;
+    font-size: 8em;
+    padding-left: 5em;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+#instrumental .inner_text {
+    font-variation-settings: "wdth" 90, "wght" 950;
+    letter-spacing: -0.02em;
+    font-size: 9em;
+    padding-left: 1em;
+}
+
+#lyrics .inner_text {
+    text-transform: none;
+    font-variation-settings: "wdth" 20, "wght" 500;
+    font-size: 6em;
+    padding-left: 3em;
+    pointer-events: auto;
+    line-height: 0.65;
+}
+
+.lyric-word {
+    display: inline-block;
+    transition: transform 0.05s ease, color 0.05s ease;
+    color: white;
+}
+
+.lyric-word.bump {
+    transform: translate(10px, -10px);
+    color: yellow;
+}
+
+.lyric-word:hover {
+    color: red;
+}
+
+.lyric-word.bump:hover {
+    color: red !important;
+}
+
+#lyrics.module:hover .lyric-word {
+    color: red !important;
+}
+
+.speaker-name {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    z-index: 20;
+    pointer-events: auto;
+    font-family: 'Baikal', sans-serif;
+    color: white;
+    transition: transform 0.6s ease, color 0.3s ease;
+}
+
+.speaker-name:hover {
+    color: red;
+    transform: translateY(-7px);
+}

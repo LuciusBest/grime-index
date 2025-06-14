@@ -33,7 +33,9 @@ loadActiveArchiveData()
       const activeInstrumental = (archiveData.instrumentals || []).find(
         (inst) => currentTime >= inst.start && currentTime <= inst.end
       );
-      instrumentalDiv.textContent = activeInstrumental ? activeInstrumental.title : "";
+      // Display only the instrumental title; ignore the artist field
+      const instrumentalTitle = activeInstrumental ? activeInstrumental.title : "";
+      instrumentalDiv.textContent = instrumentalTitle;
 
       // 📝 Injecter les mots si le segment change
       if (currentSegment.start !== currentSegmentId) {
