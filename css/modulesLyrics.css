@@ -115,6 +115,7 @@
     white-space: nowrap;
     z-index: 20;
     pointer-events: auto;
+    font-family: 'Baikal', sans-serif;
     color: white;
     transition: transform 0.6s ease, color 0.3s ease;
 }
