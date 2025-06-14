@@ -75,7 +75,9 @@ activeMedia.onTimeUpdate(time => {
   const activeInstrumental = (archiveData.instrumentals || []).find(
     inst => time >= inst.start && time <= inst.end
   );
-  instrumentalDiv.textContent = activeInstrumental ? activeInstrumental.title : '';
+  // Only display the instrumental title and ignore any artist information
+  const instrumentalTitle = activeInstrumental ? activeInstrumental.title : '';
+  instrumentalDiv.textContent = instrumentalTitle;
 
   if (currentSegment.start !== currentSegmentId) {
     currentSegmentId = currentSegment.start;
