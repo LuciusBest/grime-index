@@ -32,9 +32,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    gap: 0.1rem;
-    margin-bottom: 20px;
-    margin-left: 5px;
+    gap: 0.1em;
+    margin-bottom: 1em;
+    margin-left: 0.3em;
 }
 
 .module {
@@ -51,7 +51,7 @@
 
 .inner_text {
     font-family: 'Baikal', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1em;
     line-height: 0.8;
     display: inline-block;
     transform-origin: center center;
@@ -78,8 +78,8 @@
 
 #speaker .inner_text {
     font-variation-settings: "wdth" 20, "wght" 600;
-    font-size: 8rem;
-    padding-left: 5rem;
+    font-size: 8em;
+    padding-left: 5em;
     position: relative;
     z-index: 10;
     pointer-events: auto;
@@ -88,15 +88,15 @@
 #instrumental .inner_text {
     font-variation-settings: "wdth" 90, "wght" 950;
     letter-spacing: -0.02em;
-    font-size: 9rem;
-    padding-left: 1rem;
+    font-size: 9em;
+    padding-left: 1em;
 }
 
 #lyrics .inner_text {
     text-transform: none;
     font-variation-settings: "wdth" 20, "wght" 500;
-    font-size: 6rem;
-    padding-left: 3rem;
+    font-size: 6em;
+    padding-left: 3em;
     pointer-events: auto;
     line-height: 0.65;
 }

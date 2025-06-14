@@ -4,6 +4,8 @@ const TOLERANCE = 0.03;
 
 let currentCell = null;
 let currentContainer = null;
+let resizeObserverTarget = null;
+const resizeObserver = new ResizeObserver(() => updateScale());
 
 // Build DOM structure
 const wrapper = document.createElement('div');
@@ -24,11 +26,17 @@ function attachToCell(cell) {
       currentContainer.removeChild(wrapper);
     }
   }
+  if (resizeObserverTarget) {
+    resizeObserver.unobserve(resizeObserverTarget);
+    resizeObserverTarget = null;
+  }
   currentCell = cell || null;
   currentContainer = newContainer;
   if (newContainer) {
     newContainer.appendChild(wrapper);
     newContainer.classList.add('active');
+    resizeObserverTarget = newContainer.parentElement;
+    resizeObserver.observe(resizeObserverTarget);
     updateScale();
   }
 }
