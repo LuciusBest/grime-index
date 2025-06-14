@@ -7,11 +7,17 @@
     width: 100%;
     padding-bottom: 2%;
     display: none;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .player-cell .liveText.active {
     display: block;
+}
+
+.player-cell .liveText:hover .inner_text {
+    color: red;
+    transform: translateY(-7px);
+    transition: all 0.3s ease;
 }
 
 .audioType_wrapper {
