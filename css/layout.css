@@ -12,6 +12,7 @@ body {
     height: 100dvh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #overall-grid {
@@ -194,5 +195,15 @@ body {
     width: 100%;
     height: 70px;
     background: black;
+}
+
+#liveText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 70px; /* keep clear of the timeline */
+    pointer-events: none;
+    z-index: 40;
 }
 
