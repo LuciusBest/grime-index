@@ -4,6 +4,25 @@ let queuedCell = null;
 let isLoading = false;
 let detachCallbacks = [];
 
+// global shader toggle state
+window.shaderEnabled = window.shaderEnabled !== false;
+
+function applyShaderState(enable = window.shaderEnabled) {
+  document.querySelectorAll('.player-cell').forEach(cell => {
+    const vid = cell.querySelector('video');
+    const canvas = cell.querySelector('canvas');
+    if (!vid || !canvas) return;
+    if (enable) {
+      canvas.style.display = 'block';
+      vid.style.display = 'none';
+    } else {
+      canvas.style.display = 'none';
+      vid.style.display = 'block';
+    }
+  });
+}
+window.applyShaderState = applyShaderState;
+
 function detachTimeline() {
   detachCallbacks.forEach(fn => fn());
   detachCallbacks = [];
@@ -81,6 +100,7 @@ function bindTimeline(video) {
   const vertical = document.getElementById('TimelineVerticalLine');
   const playPause = document.getElementById('play-pause');
   const volumeSlider = document.getElementById('volume-slider');
+  const shaderBtn = document.getElementById('shader-toggle-button');
   if (!timeline || !progress || !cursor || !cursorTime || !vertical) return;
   let isDragging = false;
   const playIcon =
@@ -90,10 +110,8 @@ function bindTimeline(video) {
 
   const clamp = (x, min, max) => Math.max(min, Math.min(x, max));
   const formatTime = (sec) => {
-    if (!isFinite(sec)) return '0:00';
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60);
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
+    if (!isFinite(sec)) return '0s';
+    return `${Math.floor(sec)}s`;
   };
   const updateActive = (t) => {
     document.querySelectorAll('.speaker-block').forEach(b => {
@@ -194,6 +212,21 @@ function bindTimeline(video) {
     volumeSlider.addEventListener('input', volumeHandler);
   }
 
+  if (shaderBtn) {
+    const fxOn = 'FX';
+    const fxOff = '<s>FX</s>';
+    shaderBtn.innerHTML = window.shaderEnabled ? fxOn : fxOff;
+    const shaderHandler = () => {
+      window.shaderEnabled = !window.shaderEnabled;
+      shaderBtn.innerHTML = window.shaderEnabled ? fxOn : fxOff;
+      if (window.applyShaderState) window.applyShaderState(window.shaderEnabled);
+    };
+    shaderBtn.addEventListener('click', shaderHandler);
+    detachCallbacks.push(() => {
+      shaderBtn.removeEventListener('click', shaderHandler);
+    });
+  }
+
   detachCallbacks.push(() => {
     timeline.removeEventListener('mousedown', onMouseDown);
     document.removeEventListener('mouseup', onMouseUp);
@@ -247,3 +280,4 @@ document.addEventListener('highlightchange', (e) => {
 });
 
 export { attachTimeline, detachTimeline };
+applyShaderState();

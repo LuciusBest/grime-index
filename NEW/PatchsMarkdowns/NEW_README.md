@@ -47,10 +47,10 @@ Showcase basic interaction flow between selector thumbnails and player area.
 
 ## 2025-06-11 – 15:55
 
-🔧 Added cell trackers and return button:
+🔧 Added cell trackers and close button:
 - Introduced `activeSelectorCells` and `activePlayerCells` maps in `js/gridManager.js`
-- Player cells now include a `Back` button that slides them out and re-enables the selector
-- Added `.return-btn` styles in `css/layout.css`
+- Player cells now include a `Close` button that slides them out and re-enables the selector
+- Added `.gm-button.close` styles in `css/layout.css`
 
 🧠 Purpose:
 Manage multiple cells dynamically and allow returning from the player view.
@@ -70,7 +70,7 @@ Ensure selectors become clickable again after closing their player cells.
 
 🔧 Refactored layout for iterative growth:
 - Made `.selector-cell` and `.player-cell` absolutely positioned with left/top transitions
-- Added `.next-btn` styling for spawning new cell pairs
+- Added `.gm-button.next` styling for spawning new cell pairs
 - Prepared CSS transitions for horizontal and vertical sliding
 
 🧠 Purpose:
@@ -137,3 +137,12 @@ Maintain visual consistency by giving selectors the same smooth entrance as play
 
 🧠 Purpose:
 Begin reusing OLD thumbnail logic so selector cells show video previews.
+
+## 2025-06-13 – 12:50
+
+🔧 Added grid manager UI buttons:
+- Replaced color-coded `.gm-btn` controls with `.gm-button.focus`, `.gm-button.close`, and `.gm-button.next`
+- Wired these buttons to `handleFocus`, `handleClose`, and `handleNext` in `js/gridManager.js`
+
+🧠 Purpose:
+Provide working Focus, Close, and Next controls from the corner UI.

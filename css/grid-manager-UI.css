@@ -12,22 +12,21 @@
     justify-content: space-around;
 }
 
-.grid-manager-UI-container .gm-btn {
+.grid-manager-UI-container .gm-button {
     width: 25px;
     height: 25px;
     border: none;
     padding: 0;
     cursor: pointer;
 }
-
-.grid-manager-UI-container .gm-btn.white {
+.grid-manager-UI-container .gm-button.focus {
     background: white;
 }
 
-.grid-manager-UI-container .gm-btn.grey {
+.grid-manager-UI-container .gm-button.close {
     background: grey;
 }
 
-.grid-manager-UI-container .gm-btn.black {
+.grid-manager-UI-container .gm-button.next {
     background: black;
 }
